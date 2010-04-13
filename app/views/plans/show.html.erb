@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @plan.name %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%=h @plan.position %>
+</p>
+
+
+<%= link_to 'Edit', edit_plan_path(@plan) %> |
+<%= link_to 'Back', plans_path %>

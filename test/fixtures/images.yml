@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  position: 1
+  description: MyText
+  plan_x: 1
+  plan_y: 1
+  locator_angle: 1
+  sync_flickr: false
+  flickr_id: MyString
+
+two:
+  name: MyString
+  position: 1
+  description: MyText
+  plan_x: 1
+  plan_y: 1
+  locator_angle: 1
+  sync_flickr: false
+  flickr_id: MyString
