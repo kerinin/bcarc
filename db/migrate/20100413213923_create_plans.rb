@@ -3,6 +3,8 @@ class CreatePlans < ActiveRecord::Migration
     create_table :plans do |t|
       t.string :name
       t.integer :position
+      
+      belongs_to :project
 
       t.timestamps
     end

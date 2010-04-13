@@ -6,6 +6,8 @@ class CreateVideos < ActiveRecord::Migration
       t.text :description
       t.integer :width
       t.integer :height
+      
+      belongs_to :project
 
       t.timestamps
     end

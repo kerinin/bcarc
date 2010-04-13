@@ -9,6 +9,8 @@ class CreateImages < ActiveRecord::Migration
       t.integer :locator_angle
       t.boolean :sync_flickr
       t.string :flickr_id
+      
+      belongs_to :plan, :project
 
       t.timestamps
     end

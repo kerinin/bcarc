@@ -7,6 +7,8 @@ class CreateProjects < ActiveRecord::Migration
       t.string :location
       t.text :description
       t.integer :priority
+      
+      belongs_to :image, :as => :thumbnail_id
 
       t.timestamps
     end
