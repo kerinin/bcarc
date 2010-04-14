@@ -14,6 +14,20 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :pages
   
+  map.namespace :admin do |admin|
+    admin.resources :projects do |project|
+      project.resources :images
+      project.resources :videos
+      project.resources :plans
+    end
+    
+    admin.resources :tags do |tag|
+      tag.resources :projects
+    end
+    
+    admin.resources :pages
+  end
+    
   # Legacy routes
   map.connect 'Work', :controller => :projects, :action => :index
   
