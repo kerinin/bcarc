@@ -9,6 +9,11 @@ class CreateImages < ActiveRecord::Migration
       t.integer :locator_angle
       t.boolean :sync_flickr
       t.string :flickr_id
+
+      t.string :attachment_file_name
+      t.string :attachment_content_type
+      t.integer :attachment_file_size
+      t.datetime :attachment_updated_at
       
       belongs_to :plan, :project
 

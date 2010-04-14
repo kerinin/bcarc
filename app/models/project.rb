@@ -1,6 +1,4 @@
-class Project < ActiveRecord::Base
-  belongs_to :image, :as => :thumbnail
-  
+class Project < ActiveRecord::Base  
   has_many :images
   has_many :videos
   has_many :plans
