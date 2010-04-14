@@ -8,6 +8,7 @@ class ProjectTest < ActiveSupport::TestCase
       
       @image1 = Factory :image
       @image2 = Factory :image
+      @thumbnail = Factory :image
       
       @video1 = Factory :video
       @video2 = Factory :video
@@ -26,8 +27,8 @@ class ProjectTest < ActiveSupport::TestCase
         :plans => [@plan1, @plan2], 
         :images => [@image1, @image2], 
         :videos => [@video1, @video2],
-        :tags => [@tag]
-        #Thumbnail?
+        :tags => [@tag],
+        :thumbnail => @thumbnail
     end
     
     teardown do
@@ -45,6 +46,7 @@ class ProjectTest < ActiveSupport::TestCase
       assert_equal @project.date_completed, @completed
       assert_equal @project.location, '100 5th Street'
       assert_equal @project.priority, 5
+      assert_equal @project.thumbnail, @thumbnail
     end
     
     should "have associated plans" do
