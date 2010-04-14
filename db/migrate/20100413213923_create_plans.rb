@@ -4,7 +4,7 @@ class CreatePlans < ActiveRecord::Migration
       t.string :name
       t.integer :position
       
-      belongs_to :project
+      t.belongs_to :project
 
       t.timestamps
     end

@@ -1,5 +1,6 @@
-=begin
+
 class TgSchema < ActiveRecord::Migration
+=begin
   def self.up
     create_table :blog_post do |t|
       t.integer :id
@@ -117,5 +118,5 @@ class TgSchema < ActiveRecord::Migration
     drop_table :text
     drop_table :video
   end
-end
 =end
+end

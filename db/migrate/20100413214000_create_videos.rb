@@ -6,13 +6,14 @@ class CreateVideos < ActiveRecord::Migration
       t.text :description
       t.integer :width
       t.integer :height
+      t.string :uri
       
       t.string :thumbnail_file_name
       t.string :thumbnail_content_type
       t.integer :thumbnail_file_size
       t.datetime :thumbnail_updated_at
       
-      belongs_to :project
+      t.belongs_to :project
 
       t.timestamps
     end

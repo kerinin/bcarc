@@ -7,12 +7,12 @@ class CreateTags < ActiveRecord::Migration
     end
     
     # generate the join table
-    create_table :tags_projects, :id => false do |t|
+    create_table :projects_tags, :id => false do |t|
       t.column :tag_id, :integer
       t.column :project_id, :integer
     end
-    add_index "tags_projects", "tag_id"
-    add_index "tags_projects", "project_id"
+    add_index "projects_tags", "tag_id"
+    add_index "projects_tags", "project_id"
   end
 
   def self.down

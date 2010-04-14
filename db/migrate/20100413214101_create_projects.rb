@@ -8,7 +8,7 @@ class CreateProjects < ActiveRecord::Migration
       t.text :description
       t.integer :priority
             
-      belongs_to :thumbnail
+      t.belongs_to :thumbnail
 
       t.timestamps
     end

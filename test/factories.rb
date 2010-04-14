@@ -6,3 +6,21 @@
 #  p.available_on Time.gm( '1990' )
 #  p.owner {|u| u.association(:seller) }
 #end
+
+Factory.define :image do |i|
+end
+
+Factory.define :page do |p|
+end
+
+Factory.define :plan do |p|
+end
+
+Factory.define :project do |p|
+end
+
+Factory.define :tag do |t|
+end
+
+Factory.define :video do |v|
+end
