@@ -1,31 +1,50 @@
-<p>
-  <b>Name:</b>
-  <%=h @project.name %>
-</p>
+<% content_for :head %>
+	<link href="/css/header.css" rel="stylesheet" type="text/css" />
+	<link href="/css/project.css" rel="stylesheet" type="text/css" />
+	<link href="/css/footer.css" rel="stylesheet" type="text/css" />
+	<script src="/javascript/raphael-min.js" type="text/javascript"></script>
+	<script src="/javascript/plan.js" type="text/javascript"></script>
+	
+	<title>${project.name} @ Bercy Chen Studio: Architecture + Construction</title>
+	<meta name="keywords" content="${project.name}"/>
+	<meta name="description" content="${project.description}"/>
+<% end %>
 
-<p>
-  <b>Short:</b>
-  <%=h @project.short %>
-</p>
+<% content_for :header %>
+  <ul class="nav_left">
+  	<li py:if="project.plans" style="float:left;">floor plans ></li>
+  	<li py:for="plan in project.plans">
+  		<a py:if="object.plan != plan" href="/Project/${project.link}/maps/${plan.id}" class="plan_link">${plan.name}</a>
+  		<a py:if="object.plan == plan" href="/Project/${project.link}/maps/${plan.id}" class="plan_link current_view">${plan.name}</a>
+  	</li>
+  </ul>
+<% end %>
 
-<p>
-  <b>Date completed:</b>
-  <%=h @project.date_completed %>
-</p>
+<div class="container">
+  <%= render :partial => 'shared/header' %>
+	
+	<%= render :partial => :header %>
+	
+	<div class="content">
+		<div class="prop">
+			<div class="image_container">
+			  <% if @next and project.images.count %>
+			    <%= link_to image_tag(project.images[0], :class => 'description_image'), project_image_url(@next)  %>
+			  <% else %>
+			    <%= image_tag project.images[0], :class => 'description_image' %>
+			  <% end %>
 
-<p>
-  <b>Location:</b>
-  <%=h @project.location %>
-</p>
+				<div class="bold_link">
+					<h1><%= @project.name %></h1>
+					<div class="<%= project.images ? 'description_with_image' : 'description_without_image' %>">${Markup(parselite(project.description))}</div>
+				</div>
+			</div>
+		
+		  <%= render :partial => :plans %>
+		</div>
+	</div>
+	
+	<%= render :partial => :footer %>
+	<%= render :partial => 'shared/footer' %>
+</div>
 
-<p>
-  <b>Description:</b>
-  <%=h @project.description %>
-</p>
-
-<p>
-  <b>Priority:</b>
-  <%=h @project.priority %>
-</p>
-
-<%= link_to 'Back', projects_path %>

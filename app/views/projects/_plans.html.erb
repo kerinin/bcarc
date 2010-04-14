@@ -1,0 +1,10 @@
+<% @project.plans.each do |plan| %>
+  <div id="plan_<%= plan.id %>" class="plan" style="display:none;" >
+    <% @plan.images.each do |locator| %>
+    	<div id="locator_<%= locator.id %>" style="left:<%= locator.plan_x-25 %>px;top:<% locator.plan_y-25 %>px;" class="locator">
+    	  <%= link_to locator_link(locator)%>
+    	</div>
+    <% end %>
+    <%= image_tag plan.attachment.fullsize %>
+  </div>
+<% end %>
