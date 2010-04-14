@@ -105,3 +105,33 @@ Processing VideosController#new (for 0.0.0.0 at 2010-04-14 10:43:42) [GET]
 Rendering template within layouts/videos
 Rendering videos/new
 Completed in 5ms (View: 4, DB: 0) | 200 OK [http://test.host/videos/new]
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 11:29:25) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"2"}
+Rendering template within layouts/images
+Rendering images/show
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 11:29:43) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"2"}
+Rendering template within layouts/images
+Rendering images/show
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 11:30:50) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"2"}
+Rendering template within layouts/images
+Rendering images/show
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 11:31:42) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"2"}
+Rendering template within layouts/images
+Rendering images/show
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 11:32:20) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"2"}
+Rendering template within layouts/images
+Rendering images/show

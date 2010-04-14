@@ -8,18 +8,6 @@ require 'test_helper'
 class ProjectTest < ActiveSupport::TestCase
   context "A project" do
     setup do
-      @plan1 = Factory :plan
-      @plan2 = Factory :plan
-      
-      @image1 = Factory :image
-      @image2 = Factory :image
-      @thumbnail = Factory :image
-      
-      @video1 = Factory :video
-      @video2 = Factory :video
-      
-      @tag = Factory :tag
-      
       @completed = 1.year.ago
       
       @project = Factory :project, 
@@ -29,11 +17,20 @@ class ProjectTest < ActiveSupport::TestCase
         :date_completed => @completed,
         :location => '100 5th Street',
         :priority => 5,
-        :plans => [@plan1, @plan2], 
-        :images => [@image1, @image2], 
-        :videos => [@video1, @video2],
-        :tags => [@tag],
-        :thumbnail => @thumbnail
+        :thumbnail => Factory(:image)
+        
+      @plan1 = Factory :plan, :project => @project
+      @plan2 = Factory :plan, :project => @project
+      
+      @image1 = Factory :image, :project => @project
+      @image2 = Factory :image, :project => @project
+      
+      @video1 = Factory :video, :project => @project
+      @video2 = Factory :video, :project => @project
+      
+      @tag = Factory :tag
+      
+      @project.tags << @tag
     end
     
     teardown do
@@ -51,7 +48,6 @@ class ProjectTest < ActiveSupport::TestCase
       assert_equal @project.date_completed, @completed
       assert_equal @project.location, '100 5th Street'
       assert_equal @project.priority, 5
-      assert_equal @project.thumbnail, @thumbnail
     end
     
     should "have associated plans" do
