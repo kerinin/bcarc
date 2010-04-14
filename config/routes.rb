@@ -1,15 +1,27 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :projects
+  
+  map.root :controller => :projects, :action => :index
+  
+  map.resources :projects do |project|
+    project.resources :images
+    project.resources :videos
+    project.resources :plans
+  end
 
-  map.resources :videos
-
-  map.resources :plans
-
-  map.resources :images
-
-  map.resources :tags
+  map.resources :tags do |tag|
+    tag.resources :projects
+  end
 
   map.resources :pages
+  
+  # Legacy routes
+  map.connect 'Work', :controller => :projects, :action => :index
+  
+  map.connect 'Project/:id', :controller => :projects, :action => :show
+  map.connect 'Project/:project_id/images/:id', :controller => :images, :action => :show
+  map.connect 'Project/:project_id/videos/:id', :controller => :videos, :action => :show
+  
+  map.connect 'Page/:id', :controller => :pages, :action => :show
 
   # The priority is based upon order of creation: first created -> highest priority.
 
