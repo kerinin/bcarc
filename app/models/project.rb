@@ -6,4 +6,6 @@ class Project < ActiveRecord::Base
   belongs_to :thumbnail, :class_name => 'Image'
   
   has_and_belongs_to_many :tags
+  
+  acts_as_wikitext :description
 end

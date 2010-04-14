@@ -6,4 +6,6 @@ class Image < ActiveRecord::Base
                       :path => ":rails_root/public/assets/projects/:id/:style/:basename.:extension"
                       
   belongs_to :project
+  
+  acts_as_wikitext :description
 end

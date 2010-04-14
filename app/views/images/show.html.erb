@@ -41,7 +41,7 @@
 			</center>
 		</div>
 		<div class="media_text bold_link">
-			<p py:replace="Markup(parselite(object.description))">Media Description</p>
+		  <%= @image.description.to_html %>
 		</div>
 	</div>
 	

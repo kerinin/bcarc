@@ -43,7 +43,7 @@ class ActiveSupport::TestCase
 end
 
 ActiveRecord::Base.logger = Logger.new(STDERR)
-ActiveRecord::Base.logger.level = Logger::INFO
+ActiveRecord::Base.logger.level = Logger::WARN
 
 require "#{File.dirname(__FILE__)}/factories"
 

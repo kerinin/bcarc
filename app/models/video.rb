@@ -7,6 +7,8 @@ class Video < ActiveRecord::Base
                       
   belongs_to :project
   
+  acts_as_wikitext :description
+  
   def service
     return 'youtube' if self.uri.include?( 'youtube.com' )
     return 'vimeo' if self.uri.include?( 'vimeo.com' )

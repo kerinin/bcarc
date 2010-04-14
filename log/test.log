@@ -987,3 +987,105 @@ Rendered projects/_header (6.3ms)
 Rendered projects/_footer (0.9ms)
 Rendered shared/_footer (0.9ms)
 Completed in 21ms (View: 14, DB: 9) | 200 OK [http://test.host/projects/2/videos/1]
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 16:55:07) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/application
+Rendering images/show
+Rendered shared/_header (3.9ms)
+Rendered projects/_header (6.7ms)
+Rendered projects/_plans (1.6ms)
+Rendered projects/_footer (1.6ms)
+Rendered shared/_footer (1.5ms)
+Completed in 44ms (View: 37, DB: 4) | 200 OK [http://test.host/projects/1/images/1]
+
+
+Processing PagesController#show (for 0.0.0.0 at 2010-04-14 16:55:07) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering pages/show
+Rendered shared/_header (2.4ms)
+Rendered shared/_footer (0.7ms)
+Completed in 17ms (View: 8, DB: 2) | 200 OK [http://test.host/pages/1]
+
+
+Processing PlansController#show (for 0.0.0.0 at 2010-04-14 16:55:07) [GET]
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+Rendering template within layouts/application
+Rendering plans/show
+Completed in 91ms (View: 3, DB: 3) | 200 OK [http://test.host/projects/2/plans/1]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-04-14 16:55:07) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/application
+Rendering projects/show
+Rendered shared/_header (2.7ms)
+Rendered projects/_header (4.3ms)
+Rendered projects/_plans (0.6ms)
+Rendered projects/_footer (0.6ms)
+Rendered shared/_footer (1.4ms)
+Completed in 18ms (View: 14, DB: 5) | 200 OK [http://test.host/projects/2]
+
+
+Processing VideosController#show (for 0.0.0.0 at 2010-04-14 16:55:07) [GET]
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+Rendering template within layouts/application
+Rendering videos/show
+Rendered shared/_header (2.4ms)
+Rendered projects/_header (4.0ms)
+Rendered projects/_footer (0.7ms)
+Rendered shared/_footer (1.7ms)
+Completed in 20ms (View: 13, DB: 7) | 200 OK [http://test.host/projects/2/videos/1]
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 16:55:22) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/application
+Rendering images/show
+Rendered shared/_header (3.5ms)
+Rendered projects/_header (5.8ms)
+Rendered projects/_plans (1.6ms)
+Rendered projects/_footer (1.6ms)
+Rendered shared/_footer (1.3ms)
+Completed in 27ms (View: 21, DB: 4) | 200 OK [http://test.host/projects/1/images/1]
+
+
+Processing PagesController#show (for 0.0.0.0 at 2010-04-14 16:55:22) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering pages/show
+Rendered shared/_header (2.5ms)
+Rendered shared/_footer (1.1ms)
+Completed in 13ms (View: 8, DB: 2) | 200 OK [http://test.host/pages/1]
+
+
+Processing PlansController#show (for 0.0.0.0 at 2010-04-14 16:55:22) [GET]
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+Rendering template within layouts/application
+Rendering plans/show
+Completed in 84ms (View: 3, DB: 3) | 200 OK [http://test.host/projects/2/plans/1]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-04-14 16:55:22) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/application
+Rendering projects/show
+Rendered shared/_header (3.1ms)
+Rendered projects/_header (4.0ms)
+Rendered projects/_plans (0.6ms)
+Rendered projects/_footer (0.6ms)
+Rendered shared/_footer (0.8ms)
+Completed in 18ms (View: 14, DB: 5) | 200 OK [http://test.host/projects/2]
+
+
+Processing VideosController#show (for 0.0.0.0 at 2010-04-14 16:55:22) [GET]
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+Rendering template within layouts/application
+Rendering videos/show
+Rendered shared/_header (2.4ms)
+Rendered projects/_header (4.2ms)
+Rendered projects/_footer (0.9ms)
+Rendered shared/_footer (0.9ms)
+Completed in 19ms (View: 13, DB: 7) | 200 OK [http://test.host/projects/2/videos/1]

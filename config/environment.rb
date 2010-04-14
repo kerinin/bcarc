@@ -25,6 +25,7 @@ Rails::Initializer.run do |config|
   config.gem "paperclip"
   config.gem "resource_controller"
   config.gem "searchlogic"
+  config.gem "acts_as_markup"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
