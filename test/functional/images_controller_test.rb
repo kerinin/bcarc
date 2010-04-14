@@ -3,13 +3,16 @@ require 'test_helper'
 class ImagesControllerTest < ActionController::TestCase
   context "Given data" do
     setup do
-      @project = Factory :project, :thumbnail => Factory(:image)
+      @project = Factory :project
       
       @image1 = Factory :image, :project => @project
       @image2 = Factory :image, :project => @project
       
       @video1 = Factory :video, :project => @project
       @video2 = Factory :video, :project => @project
+      
+      @project.thumbnail = @image1
+      @project.save!
     end
     
     teardown do

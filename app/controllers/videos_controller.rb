@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
   resource_controller
   
-  actions :only => :show
+  actions :show
 end

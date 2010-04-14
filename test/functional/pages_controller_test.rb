@@ -12,7 +12,7 @@ class PagesControllerTest < ActionController::TestCase
       Page.delete_all
     end
     
-    should_route 'Pages/page_id', :controller => :pages, :id => 'page_id'
+    should_route :get, 'pages/page_id', :controller => :pages, :action => :show, :id => 'page_id'
 
     context "on GET to :show" do
       setup do

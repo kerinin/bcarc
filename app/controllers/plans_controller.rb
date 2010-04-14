@@ -1,5 +1,5 @@
 class PlansController < ApplicationController
   resource_controller
   
-  actions :only => :show
+  actions :show
 end

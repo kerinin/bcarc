@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
   resource_controller
   
-  actions :only => [:show, :index]
+  actions :show, :index
 end

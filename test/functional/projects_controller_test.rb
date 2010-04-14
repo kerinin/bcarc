@@ -18,7 +18,8 @@ class ProjectsControllerTest < ActionController::TestCase
       Video.delete_all
     end
     
-    should_route 'Projects/project_id', :controller => :projects, :id => 'project_id'
+    should_route :get, '', :controller => :projects, :action => :index
+    should_route :get, 'projects/project_id', :controller => :projects, :action => :show, :id => 'project_id'
 
     context "on GET to :show" do
       setup do

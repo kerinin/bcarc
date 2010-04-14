@@ -4,5 +4,5 @@ class ImagesController < ApplicationController
   
   belongs_to :project
   
-  actions :only => :show
+  actions :show
 end

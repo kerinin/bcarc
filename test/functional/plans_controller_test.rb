@@ -22,7 +22,7 @@ class PlansControllerTest < ActionController::TestCase
       Plan.delete_all
     end
     
-    should_route 'Projects/project_id/plans/plan_id', :controller => :plans, :project_id => 'project_id', :id => 'plan_id'
+    should_route :get, 'projects/project_id/plans/plan_id', :controller => :plans, :action => :show, :project_id => 'project_id', :id => 'plan_id'
 
     context "on GET to :show from project" do
       setup do

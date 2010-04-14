@@ -135,3 +135,151 @@ Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 11:32:20) [GET]
   Parameters: {"project_id"=>"1", "id"=>"2"}
 Rendering template within layouts/images
 Rendering images/show
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 11:44:17) [GET]
+  Parameters: {"project_id"=>"2", "id"=>"2"}
+Rendering template within layouts/images
+Rendering images/show
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 11:45:42) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/images
+Rendering images/show
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 11:46:12) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/images
+Rendering images/show
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 11:46:53) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/images
+Rendering images/show
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 11:49:00) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/images
+Rendering images/show
+Completed in 5ms (View: 2, DB: 1) | 200 OK [http://test.host/projects/1/images/1]
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 11:49:15) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/images
+Rendering images/show
+Completed in 5ms (View: 2, DB: 1) | 200 OK [http://test.host/projects/1/images/1]
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 11:49:42) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/images
+Rendering images/show
+Completed in 5ms (View: 2, DB: 1) | 200 OK [http://test.host/projects/1/images/1]
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 11:51:13) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/images
+Rendering images/show
+Completed in 8ms (View: 3, DB: 2) | 200 OK [http://test.host/projects/1/images/1]
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 11:51:25) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/images
+Rendering images/show
+Completed in 8ms (View: 3, DB: 2) | 200 OK [http://test.host/projects/1/images/1]
+
+
+Processing PagesController#show (for 0.0.0.0 at 2010-04-14 11:51:56) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/pages
+Rendering pages/show
+
+
+Processing PagesController#show (for 0.0.0.0 at 2010-04-14 11:52:19) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/pages
+Rendering pages/show
+
+
+Processing PagesController#show (for 0.0.0.0 at 2010-04-14 11:52:45) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/pages
+Rendering pages/show
+Completed in 6ms (View: 2, DB: 1) | 200 OK [http://test.host/pages/1]
+
+
+Processing PagesController#show (for 0.0.0.0 at 2010-04-14 11:53:58) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/pages
+Rendering pages/show
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/pages/1]
+
+
+Processing PlansController#show (for 0.0.0.0 at 2010-04-14 11:54:05) [GET]
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 6ms (View: 2, DB: 2) | 200 OK [http://test.host/projects/2/plans/1]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-04-14 11:55:24) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/projects
+Rendering projects/show
+Completed in 7ms (View: 3, DB: 2) | 200 OK [http://test.host/projects/2]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-04-14 11:55:47) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/projects
+Rendering projects/show
+Completed in 7ms (View: 3, DB: 2) | 200 OK [http://test.host/projects/2]
+
+
+Processing VideosController#show (for 0.0.0.0 at 2010-04-14 11:56:37) [GET]
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+Rendering template within layouts/videos
+Rendering videos/show
+Completed in 6ms (View: 3, DB: 2) | 200 OK [http://test.host/projects/2/videos/1]
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 11:56:48) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/images
+Rendering images/show
+Completed in 8ms (View: 3, DB: 2) | 200 OK [http://test.host/projects/1/images/1]
+
+
+Processing PagesController#show (for 0.0.0.0 at 2010-04-14 11:56:48) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/pages
+Rendering pages/show
+Completed in 6ms (View: 2, DB: 3) | 200 OK [http://test.host/pages/1]
+
+
+Processing PlansController#show (for 0.0.0.0 at 2010-04-14 11:56:48) [GET]
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 5ms (View: 1, DB: 3) | 200 OK [http://test.host/projects/2/plans/1]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-04-14 11:56:48) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/projects
+Rendering projects/show
+Completed in 6ms (View: 2, DB: 4) | 200 OK [http://test.host/projects/2]
+
+
+Processing VideosController#show (for 0.0.0.0 at 2010-04-14 11:56:49) [GET]
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+Rendering template within layouts/videos
+Rendering videos/show
+Completed in 6ms (View: 2, DB: 7) | 200 OK [http://test.host/projects/2/videos/1]
