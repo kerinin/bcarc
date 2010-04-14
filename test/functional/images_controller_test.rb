@@ -1,45 +1,30 @@
 require 'test_helper'
 
 class ImagesControllerTest < ActionController::TestCase
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:images)
-  end
-
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
-  test "should create image" do
-    assert_difference('Image.count') do
-      post :create, :image => { }
+  context "Given data" do
+    setup do
+      @project = Factory :project, :thumbnail => Factory(:image)
+      
+      @image1 = Factory :image, :project => @project
+      @image2 = Factory :image, :project => @project
+      
+      @video1 = Factory :video, :project => @project
+      @video2 = Factory :video, :project => @project
     end
-
-    assert_redirected_to image_path(assigns(:image))
-  end
-
-  test "should show image" do
-    get :show, :id => images(:one).to_param
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get :edit, :id => images(:one).to_param
-    assert_response :success
-  end
-
-  test "should update image" do
-    put :update, :id => images(:one).to_param, :image => { }
-    assert_redirected_to image_path(assigns(:image))
-  end
-
-  test "should destroy image" do
-    assert_difference('Image.count', -1) do
-      delete :destroy, :id => images(:one).to_param
+    
+    teardown do
+      Project.delete_all
+      Image.delete_all
+      Video.delete_all
     end
+    
+    should_route 'Projects/project_id/images/image_id', :controller => :images, :project_id => 'project_id', :id => 'image_id'
 
-    assert_redirected_to images_path
+    context "on GET to :show from project" do
+      setup do
+        get :show, :project_id => @project.to_param, :id => @image1.to_param
+      end
+      should_respond_with :success
+    end
   end
 end

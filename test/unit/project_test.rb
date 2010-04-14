@@ -1,5 +1,10 @@
 require 'test_helper'
 
+
+
+# NOTE: test associated get deleted
+
+
 class ProjectTest < ActiveSupport::TestCase
   context "A project" do
     setup do
