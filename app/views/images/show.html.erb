@@ -1,39 +1,52 @@
-<p>
-  <b>Name:</b>
-  <%=h @image.name %>
-</p>
+<% content_for :head do %>
+  <link href="/css/header.css" rel="stylesheet" type="text/css" />
+  <link href="/css/project.css" rel="stylesheet" type="text/css" />
+  <link href="/css/project_images.css" rel="stylesheet" type="text/css" />
+  <link href="/css/footer.css" rel="stylesheet" type="text/css" />
+  <script src="/javascript/raphael-min.js" type="text/javascript"></script>
+  <script src="/javascript/plan.js" type="text/javascript"></script>
 
-<p>
-  <b>Position:</b>
-  <%=h @image.position %>
-</p>
+  <title>${project.name} - Images (${object.sequencePosition}) @ Bercy Chen Studio: Architecture + Construction</title>
+  <meta name="keywords" content="${project.name}"/>
+  <meta py:if="object.description" name="description" content="${object.description}"/>
+  <meta py:if="not object.description" name="description" content="${project.description}"/>
+<% end %>
 
-<p>
-  <b>Description:</b>
-  <%=h @image.description %>
-</p>
+<% content_for :header do %>
+	<ul class="nav_left">
+		<li py:if="project.plans" style="float:left;">floor plans ></li>
+		<li py:for="plan in project.plans">
+			<a py:if="object.plan != plan" href="/Project/${project.link}/maps/${plan.id}" class="plan_link">${plan.name}</a>
+			<a py:if="object.plan == plan" href="/Project/${project.link}/maps/${plan.id}" class="plan_link current_view">${plan.name}</a>
+		</li>
+	</ul>
+<% end %>
 
-<p>
-  <b>Plan x:</b>
-  <%=h @image.plan_x %>
-</p>
+<div class="container">
+  <%= render :partial => 'shared/header' %>
+  <%= render :partial => 'projects/header' %>
 
-<p>
-  <b>Plan y:</b>
-  <%=h @image.plan_y %>
-</p>
-
-<p>
-  <b>Locator angle:</b>
-  <%=h @image.locator_angle %>
-</p>
-
-<p>
-  <b>Sync flickr:</b>
-  <%=h @image.sync_flickr %>
-</p>
-
-<p>
-  <b>Flickr:</b>
-  <%=h @image.flickr_id %>
-</p>
+	<div class="content">
+		<div class="media">
+			<center>
+  			<div class="image_container">
+  			  <% if @object && !(large && @object.uri_large) %>
+  			    <%= image_tag @object.attachment.fullsize %>
+  			  <% elsif @object && (large && @object.uri_large ) %>
+  			    <%= image_tag @object.attachment.original %>
+  			  <% end %>
+  			</div>
+			
+  			<%= render :partial => 'projects/plans'%>
+			</center>
+		</div>
+		<div class="media_text bold_link">
+			<p py:replace="Markup(parselite(object.description))">Media Description</p>
+		</div>
+	</div>
+	
+	<%= render :partial => 'projects/footer' %>
+	<%= render :partial => 'shared/footer' %>
+</div>
+</body>
+</html>

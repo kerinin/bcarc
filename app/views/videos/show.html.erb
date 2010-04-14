@@ -1,24 +1,46 @@
-<p>
-  <b>Name:</b>
-  <%=h @video.name %>
-</p>
 
-<p>
-  <b>Position:</b>
-  <%=h @video.position %>
-</p>
+<% content_for :head do %>
+	<link href="/css/header.css" rel="stylesheet" type="text/css" />
+	<link href="/css/project.css" rel="stylesheet" type="text/css" />
+	<link href="/css/project_images.css" rel="stylesheet" type="text/css" />
+	<link href="/css/footer.css" rel="stylesheet" type="text/css" />
+	
+	<title>${project.name} - Videos  (${object.sequencePosition}) @ Bercy Chen Studio: Architecture + Construction</title>
+	<meta name="keywords" content="${project.name}"/>
+	<meta py:if="object.description" name="description" content="${object.description}"/>
+	<meta py:if="not object.description" name="description" content="${project.description}"/>
+<% end %>
 
-<p>
-  <b>Description:</b>
-  <%=h @video.description %>
-</p>
+<body>
+<div class="container">
+	<%= render :partial => 'shared/header' %>
+	<%= render :partial => 'projects/header' %>
+	
+	<div class="content">
+		<div class="media" style='padding-top:4em;padding-bottom:4em;'>
+			<center>
+			  <% if @object.service == 'youtube' %>
+  				<object width="<%= object.width %>" height="<%= object.height %>">
+  					<param name="movie" value="<%= @object.uri %>"></param>
+  					<embed src="<%= @object.uri %>" type="application/x-shockwave-flash" width="<%= @object.width %>" height="<%= object.height %>"></embed>
+  				</object>
+	      <% elsif @object.service == 'vimeo' %>
+  				<object width="800" height="450">
+  					<param name="allowfullscreen" value="true" />
+  					<param name="allowscriptaccess" value="always" />
+  					<param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=<%= @object.vimeo_id %>&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1" />
+  					<embed src="http://vimeo.com/moogaloop.swf?clip_id=<%= @object.vimeo_id %>&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1&amp;autoplay=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="800" height="450" />
+  				</object>
+  			<% end %>
+			</center>
+		</div>
+		
+		<div class="media_text">
+			<p py:content="Markup(parselite(object.description))">Media Description</p>
+		</div>
+	</div>
+	
+	<%= render :partial => 'projects/footer' %>
+	<%= render :partial => 'shared/footer' %>
+</div>
 
-<p>
-  <b>Width:</b>
-  <%=h @video.width %>
-</p>
-
-<p>
-  <b>Height:</b>
-  <%=h @video.height %>
-</p>
