@@ -1,14 +1,21 @@
-<p>
-  <b>Name:</b>
-  <%=h @page.name %>
-</p>
+<% content_for :head do %>
+	<link href="/css/header.css" rel="stylesheet" type="text/css" />
+	<link href="/css/page.css" rel="stylesheet" type="text/css" />
+	<link href="/css/footer.css" rel="stylesheet" type="text/css" />
+	
+	<title>${page.name} @ Bercy Chen Studio: Architecture + Construction</title>
+	<meta name="keywords" content="${page.name}"/>
+<% end %>
 
-<p>
-  <b>Position:</b>
-  <%=h @page.position %>
-</p>
 
-<p>
-  <b>Content:</b>
-  <%=h @page.content %>
-</p>
+<div class="container">
+	<%= render :partial => 'shared/header' %>
+	
+	<div class="content">
+  	<h1><%= page.name %></h1>
+  	${Markup(parse(text=page.content,showToc=False))}
+	</div>
+	
+	<%= render :partial => 'shared/footer' %>
+</div>
+
