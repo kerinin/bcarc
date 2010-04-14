@@ -3,7 +3,7 @@
 	<link href="/css/page.css" rel="stylesheet" type="text/css" />
 	<link href="/css/footer.css" rel="stylesheet" type="text/css" />
 	
-	<title>${page.name} @ Bercy Chen Studio: Architecture + Construction</title>
+	<title><%= @page.name %> @ Bercy Chen Studio: Architecture + Construction</title>
 	<meta name="keywords" content="${page.name}"/>
 <% end %>
 
@@ -12,7 +12,7 @@
 	<%= render :partial => 'shared/header' %>
 	
 	<div class="content">
-  	<h1><%= page.name %></h1>
+  	<h1><%= @page.name %></h1>
   	${Markup(parse(text=page.content,showToc=False))}
 	</div>
 	
