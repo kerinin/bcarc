@@ -283,3 +283,707 @@ Processing VideosController#show (for 0.0.0.0 at 2010-04-14 11:56:49) [GET]
 Rendering template within layouts/videos
 Rendering videos/show
 Completed in 6ms (View: 2, DB: 7) | 200 OK [http://test.host/projects/2/videos/1]
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 16:29:53) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/application
+Rendering images/show
+Rendered shared/_header (4.3ms)
+ERROR: compiling _run_erb_app47views47projects47_header46html46erb_locals_header_object RAISED compile error
+/Users/ryan/Documents/bcrails/app/views/projects/_header.html.erb:30: syntax error, unexpected kENSURE, expecting kEND
+/Users/ryan/Documents/bcrails/app/views/projects/_header.html.erb:32: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47projects47_header46html46erb_locals_header_object(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];header = local_assigns[:header];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div class=\"project_header thumb_container\">\n  "
+;  unless @prev.nil? ; @output_buffer.concat "\n  \t<div id=\"prev_button\">\n  \t  "
+
+;  if @prev.class_text == 'images' and @prev == project.images[0] ; @output_buffer.concat "\n  \t    "
+; @output_buffer.concat(( link_to image_tag('images/system/arrow_1_start.gif'), project_url(@project) ).to_s); @output_buffer.concat "\n  \t  "
+;  elsif @prev.class_text == 'images' and @prev != project.images[0] ; @output_buffer.concat "\n  \t    "
+; @output_buffer.concat(( link_to image_tag('images/system/arrow_1_start.gif'), project_image_url(@project, @prev) ).to_s); @output_buffer.concat "\n  \t  "
+;  elsif @prev.class_text == 'videos' ; @output_buffer.concat "\n  \t    "
+; @output_buffer.concat(( link_to image_tag('images/system/arrow_1_start.gif'), project_video_url(@project, @prev) ).to_s); @output_buffer.concat "\n  \t  "
+;  end ; @output_buffer.concat "\n  \t</div>\n  "
+
+;  end ; @output_buffer.concat "\n\n  "
+
+;  @project.images.each do |image| ; @output_buffer.concat "\n    "
+; @output_buffer.concat(( link_to project_image(image), project_image_url(image), {:class => (image == @object ? 'current_image' : nil)} ).to_s); @output_buffer.concat "\n  "
+;  end ; @output_buffer.concat "\n  "
+;  @project.videos.each do |video| ; @output_buffer.concat "\n    "
+; @output_buffer.concat(( link_to project_image(video), project_video_url(video), {:class => (image == @object ? 'current_image' : nil)} ).to_s); @output_buffer.concat "\n  "
+;  end ; @output_buffer.concat "\n\n  "
+
+;  unless @next.nil? ; @output_buffer.concat "\n  \t<div id=\"next_button\">\n  \t  "
+
+;  if @next.class_text == 'images' ; @output_buffer.concat "\n  \t    "
+; @output_buffer.concat(( link_to image_tag('images/system/arrow_r_start.gif'), project_image_url(@project, @next) ).to_s); @output_buffer.concat "\n  \t  "
+;  elsif @next.class_text == 'videos' ; @output_buffer.concat "\n  \t    "
+; @output_buffer.concat(( link_to image_tag('images/system/arrow_r_start.gif'), project_video_url(@project, @next) ).to_s); @output_buffer.concat "\n      "
+;  end ; @output_buffer.concat "\n  \t</div>\n</div>"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/ryan/Documents/bcrails/app/views/projects/_header.html.erb:32:in `compile!'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render_without_template_tracking'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/test_case.rb:20:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:20:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:19:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/partials.rb:184:in `render_partial'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:267:in `render'
+/Users/ryan/Documents/bcrails/app/views/images/show.html.erb:27:in `_run_erb_app47views47images47show46html46erb'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:34:in `send'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:34:in `render_without_template_tracking'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:306:in `with_template'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:30:in `render_without_template_tracking'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/test_case.rb:20:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `call'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `respond'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Library/Ruby/Gems/1.8/gems/resource_controller-0.6.6/lib/resource_controller/helpers/internal.rb:12:in `response_for'
+/Library/Ruby/Gems/1.8/gems/resource_controller-0.6.6/lib/resource_controller/actions.rb:13:in `show'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/test_process.rb:567:in `process_with_test'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/test_process.rb:447:in `process'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/test_process.rb:398:in `get'
+./test/test_helper.rb:57:in `get'
+test/functional/images_controller_test.rb:28:in `__bind_1271280593_120216'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:369:in `call'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:369:in `run_current_setup_blocks'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:368:in `each'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:368:in `run_current_setup_blocks'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:350:in `test: Given data on GET to :show from project should respond with success. '
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/testing/setup_and_teardown.rb:62:in `__send__'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/testing/setup_and_teardown.rb:62:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/ui/testrunnermediator.rb:46:in `run_suite'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:67:in `start_mediator'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:41:in `start'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/ui/testrunnerutilities.rb:29:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/autorunner.rb:216:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/autorunner.rb:12:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit.rb:278
+test/functional/images_controller_test.rb:4
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 16:30:24) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/application
+Rendering images/show
+Rendered shared/_header (3.2ms)
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 16:30:59) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/application
+Rendering images/show
+Rendered shared/_header (5.5ms)
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 16:31:38) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/application
+Rendering images/show
+Rendered shared/_header (3.6ms)
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 16:32:40) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/application
+Rendering images/show
+Rendered shared/_header (7.7ms)
+Rendered projects/_header (6.5ms)
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 16:33:25) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/application
+Rendering images/show
+ERROR: compiling _run_erb_app47views47images47show46html46erb RAISED compile error
+/Users/ryan/Documents/bcrails/app/views/images/show.html.erb:54: syntax error, unexpected kENSURE, expecting ')'
+/Users/ryan/Documents/bcrails/app/views/images/show.html.erb:56: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47images47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  content_for :head do ; @output_buffer.concat "\n  <link href=\"/css/header.css\" rel=\"stylesheet\" type=\"text/css\" />\n  <link href=\"/css/project.css\" rel=\"stylesheet\" type=\"text/css\" />\n  <link href=\"/css/project_images.css\" rel=\"stylesheet\" type=\"text/css\" />\n  <link href=\"/css/footer.css\" rel=\"stylesheet\" type=\"text/css\" />\n  <script src=\"/javascript/raphael-min.js\" type=\"text/javascript\"></script>\n  <script src=\"/javascript/plan.js\" type=\"text/javascript\"></script>\n\n  <title>${project.name} - Images (${object.sequencePosition}) @ Bercy Chen Studio: Architecture + Construction</title>\n  <meta name=\"keywords\" content=\"${project.name}\"/>\n  <meta py:if=\"object.description\" name=\"description\" content=\"${object.description}\"/>\n  <meta py:if=\"not object.description\" name=\"description\" content=\"${project.description}\"/>\n"
+
+
+
+
+
+
+
+
+
+
+
+;  end ; @output_buffer.concat "\n\n"
+
+;  content_for :header do ; @output_buffer.concat "\n\t<ul class=\"nav_left\">\n\t\t<li py:if=\"project.plans\" style=\"float:left;\">floor plans ></li>\n\t\t<li py:for=\"plan in project.plans\">\n\t\t\t<a py:if=\"object.plan != plan\" href=\"/Project/${project.link}/maps/${plan.id}\" class=\"plan_link\">${plan.name}</a>\n\t\t\t<a py:if=\"object.plan == plan\" href=\"/Project/${project.link}/maps/${plan.id}\" class=\"plan_link current_view\">${plan.name}</a>\n\t\t</li>\n\t</ul>\n"
+
+
+
+
+
+
+
+;  end ; @output_buffer.concat "\n\n<div class=\"container\">\n  "
+
+
+; @output_buffer.concat(( render :partial => 'shared/header' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( render :partial => 'projects/header' ).to_s); @output_buffer.concat "\n\n\t<div class=\"content\">\n\t\t<div class=\"media\">\n\t\t\t<center>\n  \t\t\t<div class=\"image_container\">\n  \t\t\t  "
+
+
+
+
+
+; @output_buffer.concat "\n  \t\t\t    "
+; @output_buffer.concat((# image_tag @object.attachment.fullsize ).to_s); @output_buffer.concat "\n  \t\t\t  "
+; @output_buffer.concat "\n  \t\t\t    "
+; @output_buffer.concat((# image_tag @object.attachment.original ).to_s); @output_buffer.concat "\n  \t\t\t  "
+; @output_buffer.concat "\n  \t\t\t</div>\n\t\t\t\n  \t\t\t"
+
+
+; @output_buffer.concat(( render :partial => 'projects/plans').to_s); @output_buffer.concat "\n\t\t\t</center>\n\t\t</div>\n\t\t<div class=\"media_text bold_link\">\n\t\t\t<p py:replace=\"Markup(parselite(object.description))\">Media Description</p>\n\t\t</div>\n\t</div>\n\t\n\t"
+
+
+
+
+
+
+
+; @output_buffer.concat(( render :partial => 'projects/footer' ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( render :partial => 'shared/footer' ).to_s); @output_buffer.concat "\n</div>\n</body>\n</html>\n"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/ryan/Documents/bcrails/app/views/images/show.html.erb:56:in `compile!'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render_without_template_tracking'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/test_case.rb:20:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `call'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `respond'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Library/Ruby/Gems/1.8/gems/resource_controller-0.6.6/lib/resource_controller/helpers/internal.rb:12:in `response_for'
+/Library/Ruby/Gems/1.8/gems/resource_controller-0.6.6/lib/resource_controller/actions.rb:13:in `show'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/test_process.rb:567:in `process_with_test'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/test_process.rb:447:in `process'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/test_process.rb:398:in `get'
+./test/test_helper.rb:57:in `get'
+test/functional/images_controller_test.rb:28:in `__bind_1271280805_661629'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:369:in `call'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:369:in `run_current_setup_blocks'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:368:in `each'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:368:in `run_current_setup_blocks'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:350:in `test: Given data on GET to :show from project should respond with success. '
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/testing/setup_and_teardown.rb:62:in `__send__'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/testing/setup_and_teardown.rb:62:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/ui/testrunnermediator.rb:46:in `run_suite'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:67:in `start_mediator'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:41:in `start'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/ui/testrunnerutilities.rb:29:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/autorunner.rb:216:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/autorunner.rb:12:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit.rb:278
+test/functional/images_controller_test.rb:4
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 16:34:16) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/application
+Rendering images/show
+Rendered shared/_header (3.4ms)
+Rendered projects/_header (8.0ms)
+Rendered projects/_plans (2.1ms)
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 16:34:45) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/application
+Rendering images/show
+Rendered shared/_header (4.4ms)
+Rendered projects/_header (7.8ms)
+Rendered projects/_plans (1.7ms)
+Rendered projects/_footer (1.6ms)
+Rendered shared/_footer (1.3ms)
+Completed in 31ms (View: 23, DB: 4) | 200 OK [http://test.host/projects/1/images/1]
+
+
+Processing PagesController#show (for 0.0.0.0 at 2010-04-14 16:34:58) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering pages/show
+Rendered shared/_header (4.7ms)
+Rendered shared/_footer (1.3ms)
+Completed in 15ms (View: 12, DB: 1) | 200 OK [http://test.host/pages/1]
+
+
+Processing PlansController#show (for 0.0.0.0 at 2010-04-14 16:35:07) [GET]
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+Rendering template within layouts/application
+Rendering plans/show
+Completed in 8ms (View: 5, DB: 2) | 200 OK [http://test.host/projects/2/plans/1]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-04-14 16:35:16) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/application
+Rendering projects/show
+ERROR: compiling _run_erb_app47views47projects47show46html46erb RAISED compile error
+/Users/ryan/Documents/bcrails/app/views/projects/show.html.erb:21: syntax error, unexpected kEND, expecting $end
+;  end ; @output_buffer.concat "\n\n<div class=\"container\">\n  "
+      ^
+Function body:           def _run_erb_app47views47projects47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  content_for :head ; @output_buffer.concat "\n\t<link href=\"/css/header.css\" rel=\"stylesheet\" type=\"text/css\" />\n\t<link href=\"/css/project.css\" rel=\"stylesheet\" type=\"text/css\" />\n\t<link href=\"/css/footer.css\" rel=\"stylesheet\" type=\"text/css\" />\n\t<script src=\"/javascript/raphael-min.js\" type=\"text/javascript\"></script>\n\t<script src=\"/javascript/plan.js\" type=\"text/javascript\"></script>\n\t\n\t<title>${project.name} @ Bercy Chen Studio: Architecture + Construction</title>\n\t<meta name=\"keywords\" content=\"${project.name}\"/>\n\t<meta name=\"description\" content=\"${project.description}\"/>\n"
+
+
+
+
+
+
+
+
+
+;  end ; @output_buffer.concat "\n\n"
+
+;  content_for :header ; @output_buffer.concat "\n  <ul class=\"nav_left\">\n  \t<li py:if=\"project.plans\" style=\"float:left;\">floor plans ></li>\n  \t<li py:for=\"plan in project.plans\">\n  \t\t<a py:if=\"object.plan != plan\" href=\"/Project/${project.link}/maps/${plan.id}\" class=\"plan_link\">${plan.name}</a>\n  \t\t<a py:if=\"object.plan == plan\" href=\"/Project/${project.link}/maps/${plan.id}\" class=\"plan_link current_view\">${plan.name}</a>\n  \t</li>\n  </ul>\n"
+
+
+
+
+
+
+
+;  end ; @output_buffer.concat "\n\n<div class=\"container\">\n  "
+
+
+; @output_buffer.concat(( render :partial => 'shared/header' ).to_s); @output_buffer.concat "\n\t\n\t"
+
+; @output_buffer.concat(( render :partial => :header ).to_s); @output_buffer.concat "\n\t\n\t<div class=\"content\">\n\t\t<div class=\"prop\">\n\t\t\t<div class=\"image_container\">\n\t\t\t  "
+
+
+
+
+;  if @next and project.images.count ; @output_buffer.concat "\n\t\t\t    "
+; @output_buffer.concat(( link_to image_tag(project.images[0], :class => 'description_image'), project_image_url(@next)  ).to_s); @output_buffer.concat "\n\t\t\t  "
+;  else ; @output_buffer.concat "\n\t\t\t    "
+; @output_buffer.concat(( image_tag project.images[0], :class => 'description_image' ).to_s); @output_buffer.concat "\n\t\t\t  "
+;  end ; @output_buffer.concat "\n\n\t\t\t\t<div class=\"bold_link\">\n\t\t\t\t\t<h1>"
+
+
+; @output_buffer.concat(( @project.name ).to_s); @output_buffer.concat "</h1>\n\t\t\t\t\t<div class=\""
+; @output_buffer.concat(( project.images ? 'description_with_image' : 'description_without_image' ).to_s); @output_buffer.concat "\">${Markup(parselite(project.description))}</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\n\t\t  "
+
+
+
+; @output_buffer.concat(( render :partial => :plans ).to_s); @output_buffer.concat "\n\t\t</div>\n\t</div>\n\t\n\t"
+
+
+
+; @output_buffer.concat(( render :partial => :footer ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( render :partial => 'shared/footer' ).to_s); @output_buffer.concat "\n</div>\n\n"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/ryan/Documents/bcrails/app/views/projects/show.html.erb:21:in `compile!'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render_without_template_tracking'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/test_case.rb:20:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `call'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `respond'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Library/Ruby/Gems/1.8/gems/resource_controller-0.6.6/lib/resource_controller/helpers/internal.rb:12:in `response_for'
+/Library/Ruby/Gems/1.8/gems/resource_controller-0.6.6/lib/resource_controller/actions.rb:13:in `show'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/test_process.rb:567:in `process_with_test'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/test_process.rb:447:in `process'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/test_process.rb:398:in `get'
+./test/test_helper.rb:57:in `get'
+test/functional/projects_controller_test.rb:26:in `__bind_1271280916_312847'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:369:in `call'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:369:in `run_current_setup_blocks'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:368:in `each'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:368:in `run_current_setup_blocks'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:350:in `test: Given data on GET to :show should respond with success. '
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/testing/setup_and_teardown.rb:62:in `__send__'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/testing/setup_and_teardown.rb:62:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/ui/testrunnermediator.rb:46:in `run_suite'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:67:in `start_mediator'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:41:in `start'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/ui/testrunnerutilities.rb:29:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/autorunner.rb:216:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/autorunner.rb:12:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit.rb:278
+test/functional/projects_controller_test.rb:4
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-04-14 16:36:19) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/application
+Rendering projects/show
+ERROR: compiling _run_erb_app47views47projects47show46html46erb RAISED compile error
+/Users/ryan/Documents/bcrails/app/views/projects/show.html.erb:52: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47projects47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  content_for :head ; @output_buffer.concat "\n\t<link href=\"/css/header.css\" rel=\"stylesheet\" type=\"text/css\" />\n\t<link href=\"/css/project.css\" rel=\"stylesheet\" type=\"text/css\" />\n\t<link href=\"/css/footer.css\" rel=\"stylesheet\" type=\"text/css\" />\n\t<script src=\"/javascript/raphael-min.js\" type=\"text/javascript\"></script>\n\t<script src=\"/javascript/plan.js\" type=\"text/javascript\"></script>\n\t\n\t<title>${project.name} @ Bercy Chen Studio: Architecture + Construction</title>\n\t<meta name=\"keywords\" content=\"${project.name}\"/>\n\t<meta name=\"description\" content=\"${project.description}\"/>\n"
+
+
+
+
+
+
+
+
+
+;  end ; @output_buffer.concat "\n\n"
+
+;  content_for :header do ; @output_buffer.concat "\n  <ul class=\"nav_left\">\n  \t<li py:if=\"project.plans\" style=\"float:left;\">floor plans ></li>\n  \t<li py:for=\"plan in project.plans\">\n  \t\t<a py:if=\"object.plan != plan\" href=\"/Project/${project.link}/maps/${plan.id}\" class=\"plan_link\">${plan.name}</a>\n  \t\t<a py:if=\"object.plan == plan\" href=\"/Project/${project.link}/maps/${plan.id}\" class=\"plan_link current_view\">${plan.name}</a>\n  \t</li>\n  </ul>\n"
+
+
+
+
+
+
+
+;  end ; @output_buffer.concat "\n\n<div class=\"container\">\n  "
+
+
+; @output_buffer.concat(( render :partial => 'shared/header' ).to_s); @output_buffer.concat "\n\t\n\t"
+
+; @output_buffer.concat(( render :partial => :header ).to_s); @output_buffer.concat "\n\t\n\t<div class=\"content\">\n\t\t<div class=\"prop\">\n\t\t\t<div class=\"image_container\">\n\t\t\t  "
+
+
+
+
+;  if @next and project.images.count ; @output_buffer.concat "\n\t\t\t    "
+; @output_buffer.concat(( link_to image_tag(project.images[0], :class => 'description_image'), project_image_url(@next)  ).to_s); @output_buffer.concat "\n\t\t\t  "
+;  else ; @output_buffer.concat "\n\t\t\t    "
+; @output_buffer.concat(( image_tag project.images[0], :class => 'description_image' ).to_s); @output_buffer.concat "\n\t\t\t  "
+;  end ; @output_buffer.concat "\n\n\t\t\t\t<div class=\"bold_link\">\n\t\t\t\t\t<h1>"
+
+
+; @output_buffer.concat(( @project.name ).to_s); @output_buffer.concat "</h1>\n\t\t\t\t\t<div class=\""
+; @output_buffer.concat(( project.images ? 'description_with_image' : 'description_without_image' ).to_s); @output_buffer.concat "\">${Markup(parselite(project.description))}</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\n\t\t  "
+
+
+
+; @output_buffer.concat(( render :partial => :plans ).to_s); @output_buffer.concat "\n\t\t</div>\n\t</div>\n\t\n\t"
+
+
+
+; @output_buffer.concat(( render :partial => :footer ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( render :partial => 'shared/footer' ).to_s); @output_buffer.concat "\n</div>\n\n"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/ryan/Documents/bcrails/app/views/projects/show.html.erb:52:in `compile!'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render_without_template_tracking'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/test_case.rb:20:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `call'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `respond'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Library/Ruby/Gems/1.8/gems/resource_controller-0.6.6/lib/resource_controller/helpers/internal.rb:12:in `response_for'
+/Library/Ruby/Gems/1.8/gems/resource_controller-0.6.6/lib/resource_controller/actions.rb:13:in `show'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/test_process.rb:567:in `process_with_test'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/test_process.rb:447:in `process'
+/Users/ryan/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/test_process.rb:398:in `get'
+./test/test_helper.rb:57:in `get'
+test/functional/projects_controller_test.rb:26:in `__bind_1271280979_321722'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:369:in `call'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:369:in `run_current_setup_blocks'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:368:in `each'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:368:in `run_current_setup_blocks'
+/Users/ryan/.gem/ruby/1.8/gems/shoulda-2.10.2/lib/shoulda/context.rb:350:in `test: Given data on GET to :show should respond with success. '
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/testing/setup_and_teardown.rb:62:in `__send__'
+/Users/ryan/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/testing/setup_and_teardown.rb:62:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/ui/testrunnermediator.rb:46:in `run_suite'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:67:in `start_mediator'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:41:in `start'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/ui/testrunnerutilities.rb:29:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/autorunner.rb:216:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit/autorunner.rb:12:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/test/unit.rb:278
+test/functional/projects_controller_test.rb:4
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-04-14 16:36:40) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/application
+Rendering projects/show
+Rendered shared/_header (3.1ms)
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-04-14 16:37:29) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/application
+Rendering projects/show
+Rendered shared/_header (3.1ms)
+Rendered projects/_header (6.8ms)
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-04-14 16:38:08) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/application
+Rendering projects/show
+Rendered shared/_header (3.1ms)
+Rendered projects/_header (9.8ms)
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-04-14 16:38:34) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/application
+Rendering projects/show
+Rendered shared/_header (3.1ms)
+Rendered projects/_header (6.5ms)
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-04-14 16:38:45) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/application
+Rendering projects/show
+Rendered shared/_header (3.2ms)
+Rendered projects/_header (6.6ms)
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-04-14 16:39:03) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/application
+Rendering projects/show
+Rendered shared/_header (3.1ms)
+Rendered projects/_header (8.2ms)
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-04-14 16:39:22) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/application
+Rendering projects/show
+Rendered shared/_header (3.1ms)
+Rendered projects/_header (6.6ms)
+Rendered projects/_plans (2.5ms)
+Rendered projects/_footer (2.6ms)
+Rendered shared/_footer (1.6ms)
+Completed in 29ms (View: 23, DB: 3) | 200 OK [http://test.host/projects/2]
+
+
+Processing VideosController#show (for 0.0.0.0 at 2010-04-14 16:39:35) [GET]
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+Rendering template within layouts/application
+Rendering videos/show
+Rendered shared/_header (3.4ms)
+
+
+Processing VideosController#show (for 0.0.0.0 at 2010-04-14 16:40:30) [GET]
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+Rendering template within layouts/application
+Rendering videos/show
+Rendered shared/_header (3.2ms)
+Rendered projects/_header (7.5ms)
+Rendered projects/_footer (2.5ms)
+Rendered shared/_footer (1.7ms)
+Completed in 29ms (View: 23, DB: 4) | 200 OK [http://test.host/projects/2/videos/1]
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-14 16:40:44) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/application
+Rendering images/show
+Rendered shared/_header (3.8ms)
+Rendered projects/_header (6.3ms)
+Rendered projects/_plans (1.8ms)
+Rendered projects/_footer (1.9ms)
+Rendered shared/_footer (1.4ms)
+Completed in 31ms (View: 22, DB: 4) | 200 OK [http://test.host/projects/1/images/1]
+
+
+Processing PagesController#show (for 0.0.0.0 at 2010-04-14 16:40:44) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering pages/show
+Rendered shared/_header (2.3ms)
+Rendered shared/_footer (0.7ms)
+Completed in 12ms (View: 7, DB: 3) | 200 OK [http://test.host/pages/1]
+
+
+Processing PlansController#show (for 0.0.0.0 at 2010-04-14 16:40:45) [GET]
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+Rendering template within layouts/application
+Rendering plans/show
+Completed in 8ms (View: 4, DB: 3) | 200 OK [http://test.host/projects/2/plans/1]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-04-14 16:40:45) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/application
+Rendering projects/show
+Rendered shared/_header (3.7ms)
+Rendered projects/_header (4.7ms)
+Rendered projects/_plans (0.6ms)
+Rendered projects/_footer (0.7ms)
+Rendered shared/_footer (0.9ms)
+Completed in 20ms (View: 15, DB: 5) | 200 OK [http://test.host/projects/2]
+
+
+Processing VideosController#show (for 0.0.0.0 at 2010-04-14 16:40:45) [GET]
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+Rendering template within layouts/application
+Rendering videos/show
+Rendered shared/_header (2.4ms)
+Rendered projects/_header (6.3ms)
+Rendered projects/_footer (0.9ms)
+Rendered shared/_footer (0.9ms)
+Completed in 21ms (View: 14, DB: 9) | 200 OK [http://test.host/projects/2/videos/1]

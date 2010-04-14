@@ -30,11 +30,11 @@
 		<div class="media">
 			<center>
   			<div class="image_container">
-  			  <% if @object && !(large && @object.uri_large) %>
-  			    <%= image_tag @object.attachment.fullsize %>
-  			  <% elsif @object && (large && @object.uri_large ) %>
-  			    <%= image_tag @object.attachment.original %>
-  			  <% end %>
+  			  <%# if @object && !(large && @object.uri_large) %>
+  			    <%#= image_tag @object.attachment.fullsize %>
+  			  <%# elsif @object && (large && @object.uri_large ) %>
+  			    <%#= image_tag @object.attachment.original %>
+  			  <%# end %>
   			</div>
 			
   			<%= render :partial => 'projects/plans'%>

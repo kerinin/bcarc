@@ -12,10 +12,10 @@
   <% end %>
 
   <% @project.images.each do |image| %>
-    <%= link_to project_image(image), project_image_url(image), {:class => (image == @object ? 'current_image' : nil)} %>
+    <%= link_to project_image(image), project_image_url(@project, image), {:class => (image == @object ? 'current_image' : nil)} %>
   <% end %>
   <% @project.videos.each do |video| %>
-    <%= link_to project_image(video), project_video_url(video), {:class => (image == @object ? 'current_image' : nil)} %>
+    <%= link_to project_image(video), project_video_url(@project, video), {:class => (video == @object ? 'current_image' : nil)} %>
   <% end %>
 
   <% unless @next.nil? %>
@@ -26,4 +26,5 @@
   	    <%= link_to image_tag('images/system/arrow_r_start.gif'), project_video_url(@project, @next) %>
       <% end %>
   	</div>
+  <% end %>
 </div>

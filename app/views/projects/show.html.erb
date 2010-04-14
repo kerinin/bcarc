@@ -1,4 +1,4 @@
-<% content_for :head %>
+<% content_for :head do %>
 	<link href="/css/header.css" rel="stylesheet" type="text/css" />
 	<link href="/css/project.css" rel="stylesheet" type="text/css" />
 	<link href="/css/footer.css" rel="stylesheet" type="text/css" />
@@ -10,7 +10,7 @@
 	<meta name="description" content="${project.description}"/>
 <% end %>
 
-<% content_for :header %>
+<% content_for :header do %>
   <ul class="nav_left">
   	<li py:if="project.plans" style="float:left;">floor plans ></li>
   	<li py:for="plan in project.plans">
@@ -23,28 +23,28 @@
 <div class="container">
   <%= render :partial => 'shared/header' %>
 	
-	<%= render :partial => :header %>
+	<%= render :partial => 'header' %>
 	
 	<div class="content">
 		<div class="prop">
 			<div class="image_container">
-			  <% if @next and project.images.count %>
-			    <%= link_to image_tag(project.images[0], :class => 'description_image'), project_image_url(@next)  %>
+			  <% if @next and @project.images.count %>
+			    <%= link_to image_tag(@project.images[0], :class => 'description_image'), project_image_url(@next)  %>
 			  <% else %>
-			    <%= image_tag project.images[0], :class => 'description_image' %>
+			    <%#= image_tag @project.images[0].fullsize, :class => 'description_image' %>
 			  <% end %>
 
 				<div class="bold_link">
 					<h1><%= @project.name %></h1>
-					<div class="<%= project.images ? 'description_with_image' : 'description_without_image' %>">${Markup(parselite(project.description))}</div>
+					<div class="<%= @project.images ? 'description_with_image' : 'description_without_image' %>">${Markup(parselite(@project.description))}</div>
 				</div>
 			</div>
 		
-		  <%= render :partial => :plans %>
+		  <%= render :partial => 'plans' %>
 		</div>
 	</div>
 	
-	<%= render :partial => :footer %>
+	<%= render :partial => 'footer' %>
 	<%= render :partial => 'shared/footer' %>
 </div>
 
