@@ -1,0 +1,43 @@
+<p>
+  <b>Name:</b>
+  <%=h @image.name %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%=h @image.position %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @image.description %>
+</p>
+
+<p>
+  <b>Plan x:</b>
+  <%=h @image.plan_x %>
+</p>
+
+<p>
+  <b>Plan y:</b>
+  <%=h @image.plan_y %>
+</p>
+
+<p>
+  <b>Locator angle:</b>
+  <%=h @image.locator_angle %>
+</p>
+
+<p>
+  <b>Sync flickr:</b>
+  <%=h @image.sync_flickr %>
+</p>
+
+<p>
+  <b>Flickr:</b>
+  <%=h @image.flickr_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

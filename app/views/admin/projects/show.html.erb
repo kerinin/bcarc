@@ -1,0 +1,33 @@
+<p>
+  <b>Name:</b>
+  <%=h @project.name %>
+</p>
+
+<p>
+  <b>Short:</b>
+  <%=h @project.short %>
+</p>
+
+<p>
+  <b>Date completed:</b>
+  <%=h @project.date_completed %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @project.location %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @project.description %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%=h @project.priority %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
