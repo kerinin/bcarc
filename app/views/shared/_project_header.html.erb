@@ -1,0 +1,29 @@
+<div class="project_header thumb_container">
+  <% unless @prev.nil? %>
+  	<div id="prev_button">
+  	  <% if @prev.class_text == 'images' and @prev == project.images[0] %>
+  	    <%= link_to image_tag('images/system/arrow_1_start.gif'), project_url(@project) %>
+  	  <% elsif @prev.class_text == 'images' and @prev != project.images[0] %>
+  	    <%= link_to image_tag('images/system/arrow_1_start.gif'), project_image_url(@project, @prev) %>
+  	  <% elsif @prev.class_text == 'videos' %>
+  	    <%= link_to image_tag('images/system/arrow_1_start.gif'), project_video_url(@project, @prev) %>
+  	  <% end %>
+  	</div>
+  <% end %>
+
+  <% @project.images.each do |image| %>
+    <%= link_to project_image(image), project_image_url(image), {:class => (image == @object ? 'current_image' : nil)} %>
+  <% end %>
+  <% @project.videos.each do |video| %>
+    <%= link_to project_image(video), project_video_url(video), {:class => (image == @object ? 'current_image' : nil)} %>
+  <% end %>
+
+  <% unless @next.nil? %>
+  	<div id="next_button">
+  	  <% if @next.class_text == 'images' %>
+  	    <%= link_to image_tag('images/system/arrow_r_start.gif'), project_image_url(@project, @next) %>
+  	  <% elsif @next.class_text == 'videos' %>
+  	    <%= link_to image_tag('images/system/arrow_r_start.gif'), project_video_url(@project, @next) %>
+      <% end %>
+  	</div>
+</div>

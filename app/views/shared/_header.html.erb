@@ -1,0 +1,16 @@
+<div class="header" >
+	<div class="link_home">
+		<a href="/"><img height="42" width="435" src="/images/system/logo_01.jpg" alt="Bercy Chen Studio LP" fadeover="/images/system/logo_01_over.jpg" /></a>
+	</div>
+	<div class="section_links">
+	  <%= yield :header %>
+		<ul class="nav_right">
+		  <li><%= link_to t('work'), projects_url %></li>
+			<li><%= link_to t('construction'), 'pages/Construction' %></li>
+			<li><%= link_to t('sustainability'), 'pages/Sustainability' %></li>
+			<li><%= link_to t('about'), 'pages/About' %></li>
+			<li><%= link_to t('news'), "http://blog.bcarc.com/category/news/" %></li>
+			<li><%= link_to t('blog'), "http://blog.bcarc.com" %></li>
+		</ul>
+	</div>
+</div>
