@@ -11,53 +11,20 @@
 	<meta name="description" content="Bercy Chen Studio LP is an architecture and urban planning firm with design/build capabilities based in Austin, Texas founded in 2001 by partners Thomas Bercy and Calvin Chen.  Bercy Chen Studio LP is committed to collaborating with clients in identifying design solutions and planning strategies to create innovative designs based on environmentally sustainable and financially viable business models. Having experience as a design/build operation, the firm's first hand knowledge of construction and finance is crucial in ensuring successful project implementation. The firm has been a member of the City of Austin's Green Building Program and USGBC with certified 3 Star projects."/>
 <% end %>
 
-<% content_for :header do %>
-	<ul class="nav_left">
-		<li py:attrs="filter=='All' and {'class':'currentNav'}"><a href="/Work/All/${order}">all</a></li>
-		<li py:for="tag in tags.all()" py:attrs="filter==tag.name and {'class':'currentNav'}"><a href="/Work/${tag.name}/${order}">${tag.name.lower()}</a></li>
-		<li py:if="filter!='Popular'" class="li_spacer"><div>|</div></li>
-		<li py:if="filter!='Popular'" py:attrs="order=='byPopularity' and {'class':'currentNav'}"><a href="/Work/${filter}/byPopularity">popular</a></li>
-		<li py:if="filter!='Popular'" py:attrs="order=='byChronology' and {'class':'currentNav'}"><a href="/Work/${filter}/byChronology">time</a></li>
-	</ul>
-<% end %>
-
 <div class="container">
 
+  <%= render :partial => 'shared/project_index_header' %>
   <%= render :partial => 'shared/header' %>
   
 	<div class="content">
-	  <% if @order == 'byPopularity' %>
-	    <% @projects.each do |project| %>
-  		<div class="work_container" >
-  		  <% if project.object_type == 'project' %>
-  		    <%= image_tag project.thumbnail.indexsize, :class => 'work_thumb' %>
-          <% link_to project_url(project), :class => 'work_text' do %>
-    				<h2><%= project.name %></h2>
-    				<p>${Markup(parselite(project.short))}</p>
-    			<% end %>
-    		<% elsif project.object_type == 'blogpost' %>
-    		  <%= image_tag project.image.indexsize %>
-    		  <% link_to project.permalink, :class => 'work_text' do %>
-    				<h2>Recent News</h2>
-    				<p>${Markup(parselite(project.title))}</p>
-    			<% end %>
-  		</div>
-		<% elsif @order == 'byChronology' %>
-		  <% @projects.keys().sorted.reversed.each do |year| %>
-    		<div class="yeargroup">
-    			<h3><%= year%></h3>
-    			<% @projects[year].each do |project| %>
-      			<div class="work_container" >
-      			  <%= image_tag project.thumbnail.indexsize, :class => 'work_thumb' %>
-              <% link_to project_url(project), :class => 'work_text' do %>
-      					<h2><%= project.name %></h2>
-      					<p>${Markup(parselite(project.short))}</p>
-      				<% end %>
-      			</div>
-    			<% end %>
-    		</div>
-    	<% end %>
-		<% end %>
+    <% @projects.each do |project| %>
+		<div class="work_container" >
+	    <%#= image_tag project.thumbnail.indexsize, :class => 'work_thumb' %>
+      <% link_to project_url(project), :class => 'work_text' do %>
+				<h2><%= project.name %></h2>
+				<%= project.short.to_html %>
+			<% end %>
+		</div>
 	</div>
 	
 	<%= render :partial => 'shared/footer' %>

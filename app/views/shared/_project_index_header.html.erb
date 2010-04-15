@@ -1,0 +1,9 @@
+<% content_for :header do %>
+	<ul class="nav_left">
+		<li py:attrs="filter=='All' and {'class':'currentNav'}"><a href="/Work/All/${order}">all</a></li>
+		<li py:for="tag in tags.all()" py:attrs="filter==tag.name and {'class':'currentNav'}"><a href="/Work/${tag.name}/${order}">${tag.name.lower()}</a></li>
+		<li py:if="filter!='Popular'" class="li_spacer"><div>|</div></li>
+		<li py:if="filter!='Popular'" py:attrs="order=='byPopularity' and {'class':'currentNav'}"><a href="/Work/${filter}/byPopularity">popular</a></li>
+		<li py:if="filter!='Popular'" py:attrs="order=='byChronology' and {'class':'currentNav'}"><a href="/Work/${filter}/byChronology">time</a></li>
+	</ul>
+<% end %>

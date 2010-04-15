@@ -1237,3 +1237,265 @@ Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:10:45) [GET]
 Rendering template within layouts/application
 Rendering tags/show
 Completed in 4ms (View: 2, DB: 2) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:17:57) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_header (3.1ms)
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:17:58) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_header (2.4ms)
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:17:58) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_header (2.4ms)
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:17:58) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_header (2.5ms)
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:18:42) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_header (3.1ms)
+Rendered tags/_by_popularity (78.6ms)
+Rendered shared/_footer (1.6ms)
+Completed in 95ms (View: 91, DB: 2) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:18:42) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_header (2.5ms)
+Rendered tags/_by_popularity (3.9ms)
+Rendered shared/_footer (0.9ms)
+Completed in 12ms (View: 10, DB: 3) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:18:42) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_header (2.4ms)
+Rendered tags/_by_popularity (4.2ms)
+Rendered shared/_footer (0.8ms)
+Completed in 13ms (View: 11, DB: 2) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:18:42) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_header (2.7ms)
+Rendered tags/_by_popularity (3.4ms)
+Rendered shared/_footer (0.8ms)
+Completed in 11ms (View: 9, DB: 3) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:24:24) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_project_index_header (0.7ms)
+Rendered shared/_header (76.9ms)
+Rendered tags/_by_popularity (5.2ms)
+Rendered shared/_footer (1.7ms)
+Completed in 96ms (View: 91, DB: 3) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:24:24) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_project_index_header (0.1ms)
+Rendered shared/_header (2.4ms)
+Rendered tags/_by_popularity (3.9ms)
+Rendered shared/_footer (0.8ms)
+Completed in 12ms (View: 10, DB: 3) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:24:24) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_project_index_header (0.1ms)
+Rendered shared/_header (2.4ms)
+Rendered tags/_by_popularity (3.6ms)
+Rendered shared/_footer (0.8ms)
+Completed in 12ms (View: 10, DB: 2) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:24:24) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_project_index_header (0.1ms)
+Rendered shared/_header (2.4ms)
+Rendered tags/_by_popularity (3.5ms)
+Rendered shared/_footer (0.8ms)
+Completed in 12ms (View: 9, DB: 2) | 200 OK [http://test.host/tags/1]
+
+
+Processing PagesController#show (for 0.0.0.0 at 2010-04-15 10:27:27) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering pages/show
+Rendered shared/_header (3.2ms)
+Rendered shared/_footer (1.3ms)
+Completed in 16ms (View: 11, DB: 2) | 200 OK [http://test.host/pages/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:27:27) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_project_index_header (0.6ms)
+Rendered shared/_header (2.4ms)
+Rendered tags/_by_popularity (4.2ms)
+Rendered shared/_footer (0.8ms)
+Completed in 16ms (View: 12, DB: 7) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:27:27) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_project_index_header (0.2ms)
+Rendered shared/_header (2.5ms)
+Rendered tags/_by_popularity (23.6ms)
+Rendered shared/_footer (1.0ms)
+Completed in 33ms (View: 26, DB: 7) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:27:27) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_project_index_header (0.2ms)
+Rendered shared/_header (2.7ms)
+Rendered tags/_by_popularity (93.9ms)
+Rendered shared/_footer (0.9ms)
+Completed in 103ms (View: 101, DB: 3) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:27:27) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_project_index_header (0.1ms)
+Rendered shared/_header (2.5ms)
+Rendered tags/_by_popularity (3.6ms)
+Rendered shared/_footer (0.8ms)
+Completed in 12ms (View: 10, DB: 3) | 200 OK [http://test.host/tags/1]
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2010-04-15 10:30:38) [GET]
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+Rendering template within layouts/application
+Rendering images/show
+Rendered shared/_project_show_header (0.5ms)
+Rendered shared/_header (3.0ms)
+Rendered projects/_header (9.7ms)
+Rendered projects/_plans (101.3ms)
+Rendered projects/_footer (2.0ms)
+Rendered shared/_footer (1.5ms)
+Completed in 133ms (View: 126, DB: 4) | 200 OK [http://test.host/projects/1/images/1]
+
+
+Processing PagesController#show (for 0.0.0.0 at 2010-04-15 10:30:38) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering pages/show
+Rendered shared/_header (2.6ms)
+Rendered shared/_footer (0.8ms)
+Completed in 12ms (View: 7, DB: 3) | 200 OK [http://test.host/pages/1]
+
+
+Processing PlansController#show (for 0.0.0.0 at 2010-04-15 10:30:38) [GET]
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+Rendering template within layouts/application
+Rendering plans/show
+Completed in 6ms (View: 3, DB: 3) | 200 OK [http://test.host/projects/2/plans/1]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-04-15 10:30:38) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/application
+Rendering projects/show
+Rendered shared/_header (2.6ms)
+Rendered shared/_project_show_header (0.2ms)
+Rendered projects/_header (4.4ms)
+Rendered projects/_plans (0.7ms)
+Rendered projects/_footer (0.7ms)
+Rendered shared/_footer (0.9ms)
+Completed in 18ms (View: 13, DB: 6) | 200 OK [http://test.host/projects/2]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:30:39) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_project_index_header (0.6ms)
+Rendered shared/_header (2.6ms)
+Rendered tags/_by_popularity (3.6ms)
+Rendered shared/_footer (0.8ms)
+Completed in 17ms (View: 12, DB: 6) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:30:39) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_project_index_header (0.1ms)
+Rendered shared/_header (2.4ms)
+Rendered tags/_by_popularity (3.8ms)
+Rendered shared/_footer (0.9ms)
+Completed in 12ms (View: 10, DB: 3) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:30:39) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_project_index_header (0.1ms)
+Rendered shared/_header (2.8ms)
+Rendered tags/_by_popularity (3.8ms)
+Rendered shared/_footer (0.9ms)
+Completed in 12ms (View: 10, DB: 2) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:30:39) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_project_index_header (0.2ms)
+Rendered shared/_header (2.7ms)
+Rendered tags/_by_popularity (4.5ms)
+Rendered shared/_footer (0.9ms)
+Completed in 104ms (View: 101, DB: 3) | 200 OK [http://test.host/tags/1]
+
+
+Processing VideosController#show (for 0.0.0.0 at 2010-04-15 10:30:39) [GET]
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+Rendering template within layouts/application
+Rendering videos/show
+Rendered shared/_header (2.5ms)
+Rendered projects/_header (4.0ms)
+Rendered projects/_footer (0.7ms)
+Rendered shared/_footer (0.8ms)
+Completed in 18ms (View: 12, DB: 5) | 200 OK [http://test.host/projects/2/videos/1]

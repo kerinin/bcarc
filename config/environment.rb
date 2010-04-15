@@ -22,6 +22,7 @@ Rails::Initializer.run do |config|
   config.gem "authlogic"
   config.gem "factory_girl"
   config.gem "shoulda"
+  config.gem "aws-s3", :lib => "aws/s3"
   config.gem "paperclip"
   config.gem "resource_controller"
   config.gem "searchlogic"
