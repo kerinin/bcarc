@@ -7,10 +7,8 @@ ActionController::Routing::Routes.draw do |map|
     project.resources :videos
     project.resources :plans
   end
-
-  map.resources :tags do |tag|
-    tag.resources :projects
-  end
+  
+  map.resources :tags
 
   map.resources :pages
   

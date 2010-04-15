@@ -1,5 +1,9 @@
 class TagsController < ApplicationController
   resource_controller
   
-  actions :only => :show
+  actions :show
+  
+  show.before do
+    @projects = @tag.projects.descend_by_priority
+  end
 end

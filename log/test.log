@@ -1089,3 +1089,151 @@ Rendered projects/_header (4.2ms)
 Rendered projects/_footer (0.9ms)
 Rendered shared/_footer (0.9ms)
 Completed in 19ms (View: 13, DB: 7) | 200 OK [http://test.host/projects/2/videos/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:06:57) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:06:57) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:06:57) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:06:57) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:09:09) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:09:10) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:09:10) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:09:10) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:09:42) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Completed in 8ms (View: 5, DB: 2) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:09:42) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Completed in 4ms (View: 2, DB: 2) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:09:42) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Completed in 4ms (View: 2, DB: 2) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:09:42) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Completed in 3ms (View: 2, DB: 2) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:10:07) [GET]
+  Parameters: {"id"=>"1"}
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:10:07) [GET]
+  Parameters: {"id"=>"1"}
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:10:07) [GET]
+  Parameters: {"id"=>"1"}
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:10:07) [GET]
+  Parameters: {"id"=>"1"}
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:10:29) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Completed in 9ms (View: 5, DB: 2) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:10:29) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Completed in 4ms (View: 2, DB: 3) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:10:29) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Completed in 4ms (View: 2, DB: 2) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:10:29) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Completed in 4ms (View: 2, DB: 2) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:10:45) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Completed in 9ms (View: 5, DB: 2) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:10:45) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Completed in 4ms (View: 2, DB: 3) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:10:45) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Completed in 4ms (View: 2, DB: 2) | 200 OK [http://test.host/tags/1]
+
+
+Processing TagsController#show (for 0.0.0.0 at 2010-04-15 10:10:45) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering tags/show
+Completed in 4ms (View: 2, DB: 2) | 200 OK [http://test.host/tags/1]

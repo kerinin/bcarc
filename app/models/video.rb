@@ -1,9 +1,13 @@
 class Video < ActiveRecord::Base
   has_attached_file :thumbnail, 
-                      :styles => { :thumb => '100x100>' }, 
-                      :default_style => :thumb,
-                      :url => "/assets/videos/:id/:style/:basename.:extension",
-                      :path => ":rails_root/public/assets/videos/:id/:style/:basename.:extension"
+    :styles => { :thumb => '100x100>' }, 
+    :default_style => :thumb,
+    :url => "/assets/videos/:id/:style/:basename.:extension",
+    :path => "videos/:id/:style/:basename.:extension",
+    :storage => :s3,
+    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+    :bucket => 'bcstudio-paperclip'
+
                       
   belongs_to :project
   
