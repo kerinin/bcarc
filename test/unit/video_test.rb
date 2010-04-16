@@ -1,4 +1,4 @@
-require 'test_helper'
+require File.dirname(__FILE__) + '/../test_helper'
 
 class VideoTest < ActiveSupport::TestCase
   context "A video" do

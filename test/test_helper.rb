@@ -45,7 +45,7 @@ end
 ActiveRecord::Base.logger = Logger.new(STDERR)
 ActiveRecord::Base.logger.level = Logger::WARN
 
-require "#{File.dirname(__FILE__)}/factories"
+#require "#{File.dirname(__FILE__)}/factories"
 
 I18n.locale = "en-US"
 
