@@ -1,4 +1,4 @@
-"authlogic"
+"authlogic" --source gems.github.com
 "factory_girl"
 "shoulda"
 "paperclip"
