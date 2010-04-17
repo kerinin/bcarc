@@ -1,7 +1,6 @@
 authlogic
 factory_girl
 shoulda
-paperclip
 resource_controller
 searchlogic
 acts_as_markup
