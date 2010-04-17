@@ -1,6 +1,6 @@
 <div class="header" >
 	<div class="link_home">
-		<a href="/"><img height="42" width="435" src="/images/system/logo_01.jpg" alt="Bercy Chen Studio LP" fadeover="/images/system/logo_01_over.jpg" /></a>
+	  <%= link_to image_tag('logo_01.jpg', :alt => 'Bercy Chen Studio', :size => '435x42', :fadeover => image_path('logo_01_over.jpg') ), '/' %>
 	</div>
 	<div class="section_links">
 	  <%= yield :header %>
