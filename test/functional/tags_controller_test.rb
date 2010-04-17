@@ -23,7 +23,7 @@ class TagsControllerTest < ActionController::TestCase
         get :show, :id => @tag1.to_param
       end
       should_respond_with :success
-      should_assign_to :projects
+      should_assign_to :projects, :tags
       
       should "filter projects" do
         assert assigns['projects'].include? @project1

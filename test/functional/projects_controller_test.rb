@@ -26,6 +26,15 @@ class ProjectsControllerTest < ActionController::TestCase
         get :show, :id => @project.to_param
       end
       should_respond_with :success
+      should_assign_to :tags
+    end
+    
+    context "on GET to :index" do
+      setup do
+        get :index
+      end
+      should_respond_with :success
+      should_assign_to :tags
     end
   end
 end

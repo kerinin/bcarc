@@ -1,10 +1,10 @@
 
 <% content_for :head do %>
-	<link href="/css/header.css" rel="stylesheet" type="text/css" />
-	<link href="/css/project.css" rel="stylesheet" type="text/css" />
-	<link href="/css/project_images.css" rel="stylesheet" type="text/css" />
-	<link href="/css/footer.css" rel="stylesheet" type="text/css" />
-	
+  <%= stylesheet_link_tag 'header' %>
+  <%= stylesheet_link_tag 'project' %>
+  <%= stylesheet_link_tag 'project_images' %>
+  <%= stylesheet_link_tag 'footer' %>
+  
 	<title>${project.name} - Videos  (${object.sequencePosition}) @ Bercy Chen Studio: Architecture + Construction</title>
 	<meta name="keywords" content="${project.name}"/>
 	<meta py:if="object.description" name="description" content="${object.description}"/>

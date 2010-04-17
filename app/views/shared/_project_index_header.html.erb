@@ -1,9 +1,12 @@
 <% content_for :header do %>
 	<ul class="nav_left">
-		<li py:attrs="filter=='All' and {'class':'currentNav'}"><a href="/Work/All/${order}">all</a></li>
-		<li py:for="tag in tags.all()" py:attrs="filter==tag.name and {'class':'currentNav'}"><a href="/Work/${tag.name}/${order}">${tag.name.lower()}</a></li>
-		<li py:if="filter!='Popular'" class="li_spacer"><div>|</div></li>
-		<li py:if="filter!='Popular'" py:attrs="order=='byPopularity' and {'class':'currentNav'}"><a href="/Work/${filter}/byPopularity">popular</a></li>
-		<li py:if="filter!='Popular'" py:attrs="order=='byChronology' and {'class':'currentNav'}"><a href="/Work/${filter}/byChronology">time</a></li>
+	  <li<%= ' class=currentNav' if @tag.nil? %>> <%= link_to t('all'), projects_url %> </li>
+    <% @tags.each do |tag| %>
+      <li<%=' class=currentNav' if @tag == tag %>> <%= link_to t(tag.name), tag_url(tag) %> </li>
+    <% end %>
+
+		<li class="li_spacer"><div>|</div></li>
+		<li<%= ' class=currentNav' if params[:by] == 'popularity' %>> <%= link_to t('popular'), url_for( :overwrite_params => { :by => 'popularity' } ) %> </li>
+		<li<%= ' class=currentNav' if params[:by] == 'chronology' %>> <%= link_to t('_time'), url_for( :overwrite_params => { :by => 'chronology' } ) %> </li>
 	</ul>
 <% end %>

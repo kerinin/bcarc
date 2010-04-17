@@ -29,6 +29,7 @@ class PlansControllerTest < ActionController::TestCase
         get :show, :project_id => @project.to_param, :id => @plan1.to_param
       end
       should_respond_with :success
+      should_assign_to :tags
     end
   end
 end

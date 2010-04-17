@@ -28,6 +28,7 @@ class ImagesControllerTest < ActionController::TestCase
         get :show, :project_id => @project.to_param, :id => @image1.to_param
       end
       should_respond_with :success
+      should_assign_to :tags
     end
   end
 end

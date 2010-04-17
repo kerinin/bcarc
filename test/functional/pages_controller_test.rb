@@ -19,6 +19,7 @@ class PagesControllerTest < ActionController::TestCase
         get :show, :id => @page1.to_param
       end
       should_respond_with :success
+      should_assign_to :tags
     end
   end
 end
