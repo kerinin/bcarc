@@ -10,4 +10,11 @@ class ProjectsController < ApplicationController
       @next = @project.videos[0]
     end
   end
+  
+  private
+  
+  def object
+    @object ||= end_of_association_chain.find_by_permalink!(param) unless param.nil?
+    @object
+  end
 end
