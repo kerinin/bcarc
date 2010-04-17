@@ -10,6 +10,10 @@ class TagsControllerTest < ActionController::TestCase
       @project2 = Factory :project, :tags => [@tag1], :date_completed => 1.months.ago, :priority => 1
       @project3 = Factory :project, :tags => [@tag1], :date_completed => 2.months.ago, :priority => 3
       @project4 = Factory :project, :tags => [@tag2]
+
+      @image1 = Factory :image, :project => @project1
+      @image2 = Factory :image, :project => @project2
+      @image3 = Factory :image, :project => @project3
     end
     
     teardown do

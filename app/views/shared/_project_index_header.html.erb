@@ -4,9 +4,10 @@
     <% @tags.each do |tag| %>
       <li<%=' class=currentNav' if @tag == tag %>> <%= link_to t(tag.name.parameterize('_')).downcase, tag_url(tag) %> </li>
     <% end %>
-
-		<li class="li_spacer"><div>|</div></li>
-		<li<%= ' class=currentNav' if params[:by] == 'popularity' %>> <%= link_to t('popular').downcase, url_for( :overwrite_params => { :by => 'popularity' } ) %> </li>
-		<li<%= ' class=currentNav' if params[:by] == 'chronology' %>> <%= link_to t('_time').downcase, url_for( :overwrite_params => { :by => 'chronology' } ) %> </li>
+    <% unless @tag.nil? %>
+		  <li class="li_spacer"><div>|</div></li>
+		  <li<%= ' class=currentNav' unless params[:by] == 'chronology' %>> <%= link_to t('popular').downcase, url_for( :overwrite_params => { :by => 'popularity' } ) %> </li>
+		  <li<%= ' class=currentNav' if params[:by] == 'chronology' %>> <%= link_to t('_time').downcase, url_for( :overwrite_params => { :by => 'chronology' } ) %> </li>
+    <% end %>
 	</ul>
 <% end %>
