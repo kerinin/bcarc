@@ -3,6 +3,10 @@ class Page < ActiveRecord::Base
   
   acts_as_wikitext :content
   
+  acts_as_list :scope => :page
+  
+  default_scope :order => 'position ASC'
+    
   def to_param
     permalink
   end
