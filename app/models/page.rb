@@ -1,5 +1,6 @@
 class Page < ActiveRecord::Base
-  has_permalink :name
+  #has_permalink :name
+  make_permalink :with => :name
   
   acts_as_wikitext :content
   
@@ -7,7 +8,7 @@ class Page < ActiveRecord::Base
   
   default_scope :order => 'position ASC'
     
-  def to_param
-    permalink
-  end
+  #def to_param
+  #  permalink
+  #end
 end

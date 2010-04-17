@@ -29,6 +29,10 @@ class ImagesControllerTest < ActionController::TestCase
       end
       should_respond_with :success
       should_assign_to :tags
+      
+      should "assign the image" do
+        assert assigns['image'] == @image1
+      end
     end
   end
 end

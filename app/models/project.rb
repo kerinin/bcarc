@@ -7,13 +7,14 @@ class Project < ActiveRecord::Base
   
   has_and_belongs_to_many :tags
   
-  has_permalink :name
+  #has_permalink :name
+  make_permalink :with => :name
   
   acts_as_wikitext :description
   
-  def to_param
-    permalink
-  end
+  #def to_param
+  #  permalink
+  #end
   
   def year
     self.date_completed.strftime('%Y')
