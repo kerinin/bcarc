@@ -1,0 +1,8 @@
+<% thumbnail = project.thumbnail.nil? ? project.images.first : project.thumbnail %>
+<div class="work_container" >
+  <%= image_tag thumbnail.attachment.url(:index), :size => '390x180', :alt => project.name, :class => 'work_thumb' %>
+  <% link_to project_url(project), :class => 'work_text' do %>
+    <h2><%= project.name %></h2>
+    <%= project.short %>
+  <% end %>
+</div>

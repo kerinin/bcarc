@@ -23,6 +23,7 @@
 		<div class="media">
 			<center>
   			<div class="image_container">
+  			  <%= image_tag @image.attachment.url(:full) %>
   			  <%# if @object && !(large && @object.uri_large) %>
   			    <%#= image_tag @object.attachment.fullsize %>
   			  <%# elsif @object && (large && @object.uri_large ) %>

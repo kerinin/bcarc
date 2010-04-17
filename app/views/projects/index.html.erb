@@ -18,13 +18,7 @@
   
 	<div class="content">
     <% @projects.each do |project| %>
-	    <div class="work_container" >
-        <%#= image_tag project.thumbnail.indexsize, :class => 'work_thumb' %>
-        <% link_to project_url(project), :class => 'work_text' do %>
-			    <h2><%= project.name %></h2>
-			    <%= project.short.to_html %>
-		    <% end %>
-	    </div>
+      <%= render :partial => 'shared/work_container', :locals => {:project => project} %>
 		<% end %>
 	</div>
 	
