@@ -13,6 +13,8 @@ class Video < ActiveRecord::Base
   
   acts_as_wikitext :description
   
+  acts_as_list :scope => :project
+  
   def service
     return 'youtube' if self.uri.include?( 'youtube.com' )
     return 'vimeo' if self.uri.include?( 'vimeo.com' )

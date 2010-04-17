@@ -13,34 +13,30 @@
   <meta py:if="not object.description" name="description" content="${project.description}"/>
 <% end %>
 
+<% content_for :nav_left do %>
+  <%= render :partial => 'shared/project_show_nav' %>
+<% end %>
 
-<div class="container">
-  <%= render :partial => 'shared/project_show_header' %>
-  <%= render :partial => 'shared/header' %>
-  <%= render :partial => 'projects/header' %>
+<%= render :partial => 'shared/project_thumbnails' %>
 
-	<div class="content">
-		<div class="media">
-			<center>
-  			<div class="image_container">
-  			  <%= image_tag @image.attachment.url(:full) %>
-  			  <%# if @object && !(large && @object.uri_large) %>
-  			    <%#= image_tag @object.attachment.fullsize %>
-  			  <%# elsif @object && (large && @object.uri_large ) %>
-  			    <%#= image_tag @object.attachment.original %>
-  			  <%# end %>
-  			</div>
-			
-  			<%= render :partial => 'projects/plans'%>
-			</center>
-		</div>
-		<div class="media_text bold_link">
-		  <%= @image.description.to_html %>
-		</div>
+<div class="content">
+	<div class="media">
+		<center>
+			<div class="image_container">
+			  <%= image_tag @image.attachment.url(:full) %>
+			  <%# if @object && !(large && @object.uri_large) %>
+			    <%#= image_tag @object.attachment.fullsize %>
+			  <%# elsif @object && (large && @object.uri_large ) %>
+			    <%#= image_tag @object.attachment.original %>
+			  <%# end %>
+			</div>
+		
+			<%= render :partial => 'projects/plans'%>
+		</center>
 	</div>
-	
-	<%= render :partial => 'projects/footer' %>
-	<%= render :partial => 'shared/footer' %>
+	<div class="media_text bold_link">
+	  <%= @image.description.to_html %>
+	</div>
 </div>
-</body>
-</html>
+
+<%= render :partial => 'shared/project_footer' %>

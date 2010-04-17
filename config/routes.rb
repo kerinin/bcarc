@@ -12,6 +12,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :pages
   
+  map.resources :plans
+  
   map.namespace :admin do |admin|
     admin.resources :projects do |project|
       project.resources :images

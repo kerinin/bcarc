@@ -36,8 +36,38 @@
   </head>
   
   <body bgcolor="#666666" text="#FFFFFF" link="#FF0000" vlink="#FF0000" alink="#FF0000">
-    <%= flash[:notice] %>
-  	
-  	<%= yield %>
+    <div class="container">
+      <div class="header" >
+	      <div class="link_home">
+	        <%= link_to image_tag('logo_01.jpg', :alt => 'Bercy Chen Studio', :size => '435x42', :fadeover => image_path('logo_01_over.jpg') ), '/' %>
+	      </div>
+	      <div class="section_links">
+	      
+	        <%= yield :nav_left %>
+	        
+		      <ul class="nav_right">
+		        <li><%= link_to t('work').downcase, projects_url %></li>
+			      <li><%= link_to t('construction').downcase, 'pages/Construction' %></li>
+			      <li><%= link_to t('sustainability').downcase, 'pages/Sustainability' %></li>
+			      <li><%= link_to t('about').downcase, 'pages/About' %></li>
+			      <li><%= link_to t('news').downcase, "http://blog.bcarc.com/category/news/" %></li>
+			      <li><%= link_to t('blog').downcase, "http://blog.bcarc.com" %></li>
+		      </ul>
+	      </div>
+      </div>
+
+      <%= flash[:notice] %>
+    	
+    	<%= yield %>
+    	
+      <div class="footer">
+	      <div class="credits footer">
+		      <p><strong>Austin</strong> | 1111 E. 11th Street Suite 200  : Austin Texas 78702 : United States of America | +1 512 481 0092</p>
+		      <p><strong>Los Angeles</strong> | 1545 Wilcox Avenue Suite 107 : Los Angeles California 90028 : United States of America | +1 512 481 0092</p>
+		      <p><strong>Asia Pacific</strong> | 7F-1, 333 Chung Hsiao E. Rd. Sec. 4 : Taipei Taiwan : Republic of China | +886 2 2775 5320</p>
+		      <p><a href="mailto:info@bcarc.com">info@bcarc.com</a> | <%= t('copyright') %> | <%= link_to t('subscribe'), "http://eepurl.com/cs8F" %> <%=t('to_our_newsletter')%></p>
+	      </div>
+      </div>
+  	</div>
   </body>
 </html>

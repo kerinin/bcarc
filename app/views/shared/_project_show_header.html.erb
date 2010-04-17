@@ -1,9 +1,0 @@
-<% content_for :header do %>
-  <ul class="nav_left">
-  	<li py:if="project.plans" style="float:left;">floor plans ></li>
-  	<li py:for="plan in project.plans">
-  		<a py:if="object.plan != plan" href="/Project/${project.link}/maps/${plan.id}" class="plan_link">${plan.name}</a>
-  		<a py:if="object.plan == plan" href="/Project/${project.link}/maps/${plan.id}" class="plan_link current_view">${plan.name}</a>
-  	</li>
-  </ul>
-<% end %>

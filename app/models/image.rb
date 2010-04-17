@@ -11,4 +11,6 @@ class Image < ActiveRecord::Base
   belongs_to :project
   
   acts_as_wikitext :description
+  
+  acts_as_list :scope => :project
 end

@@ -11,18 +11,14 @@
 	<meta name="description" content="Bercy Chen Studio LP is an architecture and urban planning firm with design/build capabilities based in Austin, Texas founded in 2001 by partners Thomas Bercy and Calvin Chen.  Bercy Chen Studio LP is committed to collaborating with clients in identifying design solutions and planning strategies to create innovative designs based on environmentally sustainable and financially viable business models. Having experience as a design/build operation, the firm's first hand knowledge of construction and finance is crucial in ensuring successful project implementation. The firm has been a member of the City of Austin's Green Building Program and USGBC with certified 3 Star projects."/>
 <% end %>
 
-<div class="container">
-
-  <%= render :partial => 'shared/project_index_header' %>
-  <%= render :partial => 'shared/header' %>
+<% content_for :nav_left do %>
+  <%= render :partial => 'shared/project_index_nav' %>
+<% end %>
   
-	<div class="content">
-	  <% if params[:by] == 'chronology' %>
-	    <%= render :partial => 'by_chronology' %>
-	  <% else %>
-	    <%= render :partial => 'by_popularity' %>
-	  <% end %>
-	</div>
-	
-	<%= render :partial => 'shared/footer' %>
+<div class="content">
+  <% if params[:by] == 'chronology' %>
+    <%= render :partial => 'by_chronology' %>
+  <% else %>
+    <%= render :partial => 'by_popularity' %>
+  <% end %>
 </div>

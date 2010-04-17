@@ -1,4 +1,3 @@
-
 <% content_for :head do %>
   <%= stylesheet_link_tag 'header' %>
   <%= stylesheet_link_tag 'project' %>
@@ -11,36 +10,36 @@
 	<meta py:if="not object.description" name="description" content="${project.description}"/>
 <% end %>
 
-<body>
-<div class="container">
-	<%= render :partial => 'shared/header' %>
-	<%= render :partial => 'projects/header' %>
+<% content_for :nav_left do %>
+  <%= render :partial => 'shared/project_show_nav' %>
+<% end %>
+
+<%= render :partial => 'shared/project_thumbnails' %>
 	
-	<div class="content">
-		<div class="media" style='padding-top:4em;padding-bottom:4em;'>
-			<center>
-			  <% if @object.service == 'youtube' %>
-  				<object width="<%= object.width %>" height="<%= object.height %>">
-  					<param name="movie" value="<%= @object.uri %>"></param>
-  					<embed src="<%= @object.uri %>" type="application/x-shockwave-flash" width="<%= @object.width %>" height="<%= object.height %>"></embed>
-  				</object>
-	      <% elsif @object.service == 'vimeo' %>
-  				<object width="800" height="450">
-  					<param name="allowfullscreen" value="true" />
-  					<param name="allowscriptaccess" value="always" />
-  					<param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=<%= @object.vimeo_id %>&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1" />
-  					<embed src="http://vimeo.com/moogaloop.swf?clip_id=<%= @object.vimeo_id %>&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1&amp;autoplay=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="800" height="450" />
-  				</object>
-  			<% end %>
-			</center>
-		</div>
-		
-		<div class="media_text">
-		  <%= @video.description.to_html %>
-		</div>
+<div class="content">
+	<div class="media" style='padding-top:4em;padding-bottom:4em;'>
+		<center>
+		  <% if @object.service == 'youtube' %>
+				<object width="<%= object.width %>" height="<%= object.height %>">
+					<param name="movie" value="<%= @object.uri %>"></param>
+					<embed src="<%= @object.uri %>" type="application/x-shockwave-flash" width="<%= @object.width %>" height="<%= object.height %>"></embed>
+				</object>
+      <% elsif @object.service == 'vimeo' %>
+				<object width="800" height="450">
+					<param name="allowfullscreen" value="true" />
+					<param name="allowscriptaccess" value="always" />
+					<param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=<%= @object.vimeo_id %>&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1" />
+					<embed src="http://vimeo.com/moogaloop.swf?clip_id=<%= @object.vimeo_id %>&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1&amp;autoplay=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="800" height="450" />
+				</object>
+			<% end %>
+		</center>
 	</div>
 	
-	<%= render :partial => 'projects/footer' %>
-	<%= render :partial => 'shared/footer' %>
+	<div class="media_text">
+	  <%= @video.description.to_html %>
+	</div>
 </div>
+	
+<%= render :partial => 'shared/project_footer' %>
+
 
