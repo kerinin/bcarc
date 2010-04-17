@@ -3,7 +3,7 @@ class Plan < ActiveRecord::Base
   
   has_many :images
   
-  acts_as_list :scope => 'project'
+  acts_as_list :scope => :project
   
   has_attached_file :attachment, 
     :styles => { :thumb => '55x40#', :full => '800x800>'}, 

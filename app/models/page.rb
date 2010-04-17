@@ -3,7 +3,7 @@ class Page < ActiveRecord::Base
   
   acts_as_wikitext :content
   
-  acts_as_list :scope => :page
+  acts_as_list
   
   default_scope :order => 'position ASC'
     
