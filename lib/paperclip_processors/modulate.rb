@@ -1,8 +1,8 @@
 module Paperclip
-  class Saturation < Paperclip::Thumbnail
+  class Modulate < Paperclip::Thumbnail
 
     def transformation
-      trans = "-saturation #{@saturation.to_s}"
+      trans = "-modulate #{@brightness},#{@saturation},#{@hue}"
     end    
     
     def convert(dst)
@@ -16,13 +16,14 @@ module Paperclip
       
       @options = options
       
-      # defaults to desaturate
-      @saturation = options['saturation'].nil? ? 0.0 : options['saturation'].to_f
+      @brightness = options[:brightness]   ||= 100
+      @saturation = options[:saturation]   ||= 100
+      @hue        = options[:hue]          ||= 100
     end
   
     def make
       @thumbnail = super
-
+      
       dst = Tempfile.new([@basename, @format].compact.join("."))
       dst.binmode    
       

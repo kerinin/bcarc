@@ -2,7 +2,7 @@ class Image < ActiveRecord::Base
   has_attached_file :attachment, 
     :styles => { 
       :thumb => '55x40#', 
-      :thumb_ds => { :processors => [:saturation], :geometry => '55x40#' },
+      :thumb_ds => { :processors => [:modulate], :saturation => 0, :geometry => '55x40#' },
       :index => '390x180#', 
       :full => '800x800>'
     }, 
