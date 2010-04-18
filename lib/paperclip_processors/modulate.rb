@@ -11,15 +11,15 @@ module Paperclip
       dst
     end
         
-    #def initialize(file, options = {}, *args)
-    #  super file, options, attachment, *args
+    def initialize(file, options = {}, *args)
+      super file, options, *args
     #  
     #  @options = options
     #  
     #  @brightness = options[:brightness]   ||= 100
     #  @saturation = options[:saturation]   ||= 100
     #  @hue        = options[:hue]          ||= 100
-    #end
+    end
   
     def make *args
       @thumbnail = super *args
