@@ -11,18 +11,20 @@ module Paperclip
       dst
     end
         
-    def initialize(file, options = {}, attachment = nil)
-      super file, options, attachment
-      
-      @options = options
-      
-      @brightness = options[:brightness]   ||= 100
-      @saturation = options[:saturation]   ||= 100
-      @hue        = options[:hue]          ||= 100
-    end
+    #def initialize(file, options = {}, *args)
+    #  super file, options, attachment, *args
+    #  
+    #  @options = options
+    #  
+    #  @brightness = options[:brightness]   ||= 100
+    #  @saturation = options[:saturation]   ||= 100
+    #  @hue        = options[:hue]          ||= 100
+    #end
   
-    def make
-      @thumbnail = super
+    def make *args
+      @thumbnail = super *args
+      
+      @brightness = @saturation = @hue = 100
       
       dst = Tempfile.new([@basename, @format].compact.join("."))
       dst.binmode    
