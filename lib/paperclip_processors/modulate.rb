@@ -13,9 +13,7 @@ module Paperclip
         
     def initialize(file, options = {}, *args)
       super file, options, *args
-    #  
-    #  @options = options
-    #  
+ 
       @brightness = options[:brightness]   ||= 100
       @saturation = options[:saturation]   ||= 100
       @hue        = options[:hue]          ||= 100
@@ -23,9 +21,7 @@ module Paperclip
   
     def make *args
       @thumbnail = super *args
-      
-      #@brightness = @saturation = @hue = 100
-      
+
       dst = Tempfile.new([@basename, @format].compact.join("."))
       dst.binmode    
       
