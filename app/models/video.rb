@@ -3,18 +3,22 @@ require 'open-uri'
 
 class Video < ActiveRecord::Base
   has_attached_file :thumbnail, 
-    :styles => { :thumb => '100x100>' }, 
+    :styles => { 
+      :thumb => '55x40#' 
+      :thumb_ds => { :geometry => '55x40#', :processors => [:modulate], :saturation => 0 },
+    }, 
     :default_style => :thumb,
     :url => "/assets/videos/:id/:style/:basename.:extension",
     :path => "videos/:id/:style/:basename.:extension",
     :storage => :s3,
     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
-    :bucket => 'bcstudio-paperclip'
+    :bucket => 'bcstudio-rails'
 
                       
   belongs_to :project
   
-  before_validation_on_create :fetch_thumbnail
+  #before_validation_on_create :fetch_thumbnail
+  before_validation :fetch_thumbnail
   
   acts_as_wikitext :description
   
@@ -36,15 +40,13 @@ class Video < ActiveRecord::Base
   private
   
   def fetch_thumbnail
-    case service
-      when 'youtube' then do
-        image_url = "http://img.youtube.com/vi/#{self.youtube_id}/default.jpg"
-      end
-      when 'vimeo' then do
-        xml = open(URI.parse("http://vimeo.com/api/v2/video/#{self.vimeo_id}.xml") )
-        doc = REXML::Document.new(xml.read)
-        image_url = doc.elements['//thumbnail_medium'].text
-      end
+    image_url = case service
+    when 'youtube'
+      image_url = "http://img.youtube.com/vi/#{self.youtube_id}/default.jpg"
+    when 'vimeo'
+      xml = open(URI.parse("http://vimeo.com/api/v2/video/#{self.vimeo_id}.xml") )
+      doc = REXML::Document.new(xml.read)
+      image_url = doc.elements['//thumbnail_medium'].text
     end
     
     # Overlay...
