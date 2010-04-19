@@ -1,3 +1,6 @@
+require 'rexml/document'
+require 'open-uri'
+
 class Video < ActiveRecord::Base
   has_attached_file :thumbnail, 
     :styles => { :thumb => '100x100>' }, 
@@ -10,6 +13,8 @@ class Video < ActiveRecord::Base
 
                       
   belongs_to :project
+  
+  before_validation_on_create :fetch_thumbnail
   
   acts_as_wikitext :description
   
@@ -26,5 +31,31 @@ class Video < ActiveRecord::Base
   
   def vimeo_id
     self.uri.split('/')[-1]
-  end           
+  end
+  
+  private
+  
+  def fetch_thumbnail
+    case service
+      when 'youtube' then do
+        image_url = "http://img.youtube.com/vi/#{self.youtube_id}/default.jpg"
+      end
+      when 'vimeo' then do
+        xml = open(URI.parse("http://vimeo.com/api/v2/video/#{self.vimeo_id}.xml") )
+        doc = REXML::Document.new(xml.read)
+        image_url = doc.elements['//thumbnail_medium'].text
+      end
+    end
+    
+    # Overlay...
+    
+    self.thumbnail = download_remote_image image_url
+  end
+  
+  def download_remote_image image_url
+    io = open(URI.parse(image_url))
+    def io.original_filename; base_uri.path.split('/').last; end
+    io.original_filename.blank? ? nil : io
+  rescue # catch url errors with validations instead of exceptions (Errno::ENOENT, OpenURI::HTTPError, etc...)
+  end    
 end
