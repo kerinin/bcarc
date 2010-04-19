@@ -2,8 +2,6 @@
 
 <%= render :partial => 'admin/shared/project_header' %>
 
-<%= link_to 'New plan', new_admin_project_plan_path(@project) %>
-
 <table>
   <tr>
     <th>Thumbnail</th>
@@ -25,4 +23,8 @@
 
 <br />
 
-<%= link_to 'New plan', new_admin_project_plan_path(@project) %>
+<h2>Upload New Plan</h2>
+<% form_for [:admin,@project,Plan.new], :html => { :multipart => true } do |f| %>
+  <%= f.file_field :attachment %>
+  <%= f.submit 'Upload' %>
+<% end %>
