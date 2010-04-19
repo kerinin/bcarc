@@ -2,32 +2,25 @@
 
 <%= render :partial => 'admin/shared/project_header' %>
 
-<p>(Order)</p>
+<% form_for [:admin, @project] do |f| %>
 
-<table>
-  <tr>
-    <th>Thumb</th>
-    <th>Name</th>
-    <th>Position</th>
-    <th>Description</th>
-    <th>Width</th>
-    <th>Height</th>
-  </tr>
+  <ul id="video-list" style="display:table;">
+    <li style="display:table-row;">
+      <th>Thumb</th>
+      <th>Name</th>
+    </li>
 
-<% @videos.ascend_by_position.each do |video| %>
-  <tr>
-    <td><%= image_tag video.thumbnail.url(:thumb) %></td>
-    <td><%=h video.name %></td>
-    <td><%=h video.position %></td>
-    <td><%=h video.description %></td>
-    <td><%=h video.width %></td>
-    <td><%=h video.height %></td>
-    <td><%= link_to 'Show', project_video_path(@project, video) %></td>
-    <td><%= link_to 'Edit', edit_admin_project_video_path(@project, video) %></td>
-    <td><%= link_to 'Delete', admin_project_video_path(@project,video), :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <% @videos.ascend_by_position.each do |video| %>
+    <li id="item_<%= video.id %>" style="display:table-row", class="draggable">
+      <span style="display:table-cell;" class="dragger"><%= image_tag video.thumbnail.url(:thumb) %></span>
+      <span style="display:table-cell;" class="dragger"><%=h video.name %></span>
+      <span style="display:table-cell;"><%= link_to 'Show', project_video_path(@project, video) %></span>
+      <span style="display:table-cell;"><%= link_to 'Edit', edit_admin_project_video_path(@project, video) %></span>
+      <span style="display:table-cell;"><%= link_to 'Delete', admin_project_video_path(@project,video), :confirm => 'Are you sure?', :method => :delete %></span>
+    </li>
+  <% end %>
+  </ul>
 <% end %>
-</table>
 
 <br />
 
@@ -38,3 +31,5 @@
     <%= f.text_field :uri %>
   </p>
 <% end %>
+
+<%= sortable_element 'video-list', :url => {:action => "sort", :id => @project}, :handle => :dragger, :only => :draggable, :complete => visual_effect(:highlight, "video-list") %>
