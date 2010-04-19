@@ -12,7 +12,7 @@
     <td><%=h tag.name %></td>
     <td><%= link_to 'Show', tag %></td>
     <td><%= link_to 'Edit', edit_admin_tag_path(tag) %></td>
-    <td><%= link_to 'Destroy', edit_admin_tag_path(tag), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', admin_tag_path(tag), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

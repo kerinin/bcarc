@@ -3,6 +3,10 @@ class Admin::PagesController < Admin::BaseController
   
   actions :all
   
+  create.wants.html { redirect_to edit_admin_page_path(@page) }
+  update.wants.html { redirect_to edit_admin_page_path(@page) }
+  destroy.wants.html { redirect_to admin_pages_path }
+  
   private
 
   def collection

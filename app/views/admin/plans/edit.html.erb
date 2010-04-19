@@ -2,7 +2,7 @@
 
 <%= render :partial => 'admin/shared/project_header' %>
 
-<% form_for(@plan) do |f| %>
+<% form_for([:admin, @project, @plan]) do |f| %>
   <%= f.error_messages %>
 
   <%= image_tag @plan.attachment.url(:original) %>

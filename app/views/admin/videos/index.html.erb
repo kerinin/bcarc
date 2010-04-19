@@ -24,7 +24,7 @@
     <td><%=h video.height %></td>
     <td><%= link_to 'Show', project_video_path(@project, video) %></td>
     <td><%= link_to 'Edit', edit_admin_project_video_path(@project, video) %></td>
-    <td><%= link_to 'Destroy', edit_admin_project_video_path(@project,video), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', admin_project_video_path(@project,video), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

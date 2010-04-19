@@ -3,6 +3,10 @@ class Admin::TagsController < Admin::BaseController
   
   actions :all
   
+  create.wants.html { redirect_to edit_admin_tag_path(@tag) }
+  update.wants.html { redirect_to edit_admin_tag_path(@tag) }
+  destroy.wants.html { redirect_to admin_tags_path }
+  
   private
   
   def collection

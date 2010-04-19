@@ -3,6 +3,10 @@ class Admin::ProjectsController < Admin::BaseController
   
   actions :all
   
+  create.wants.html { redirect_to edit_admin_project_path(@project,@plan) }
+  update.wants.html { redirect_to edit_admin_project_path(@project,@plan) }
+  destroy.wants.html { redirect_to admin_projects_path }
+  
   private
   
   def collection

@@ -22,7 +22,7 @@
     <td><%= image.sync_flickr ? 'Yes' : nil %></td>
     <td><%= link_to 'Show', project_image_path(@project,image) %></td>
     <td><%= link_to 'Edit', edit_admin_project_image_path(@project,image) %></td>
-    <td><%= link_to 'Destroy', edit_admin_project_image_path(@project,image), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', admin_project_image_path(@project,image), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

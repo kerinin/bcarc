@@ -6,6 +6,10 @@ class Admin::ImagesController < Admin::BaseController
   
   actions :all
   
+  create.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
+  update.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
+  destroy.wants.html { redirect_to admin_project_images_path(@project) }
+
   private
   
   def collection
