@@ -29,4 +29,9 @@
 
 <br />
 
+<% form_for [:admin,@project,Image.new], :html => { :multipart => true } do |f| %>
+  <%= f.file_field :attachment %>
+  <%= f.submit 'Upload' %>
+<% end %>
+
 <%= link_to 'New image', new_admin_project_image_path(@project) %>
