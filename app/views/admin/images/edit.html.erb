@@ -7,38 +7,28 @@
 
   <%= image_tag @image.attachment.url(:original) %>
   
-  <p>(Project)</p>
-  <p>(Plan)</p>
-  <p>(Use as thumbnail)</p>
-  
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :position %><br />
-    <%= f.text_field :position %>
   </p>
   <p>
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.label :plan_x %><br />
+    <%= f.label :plan_id, 'Plan' %>
+    <%= f.select :plan_id, ( [['(none)',nil]] + @project.plans.map {|plan| [plan.name, plan.id]} ) %>
+
+    <%= f.label :plan_x %>
     <%= f.text_field :plan_x %>
-  </p>
-  <p>
-    <%= f.label :plan_y %><br />
+
+    <%= f.label :plan_y %>
     <%= f.text_field :plan_y %>
-  </p>
-  <p>
-    <%= f.label :locator_angle %><br />
+
+    <%= f.label :locator_angle %>
     <%= f.text_field :locator_angle %>
   </p>
-  <p>
-    <%= f.label :sync_flickr %><br />
-    <%= f.check_box :sync_flickr %>
-  </p>
+  
   <p>
     <%= f.submit 'Update' %>
   </p>
