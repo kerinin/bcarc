@@ -1,7 +1,7 @@
 module Paperclip
-  class Modulate < Paperclip::Thumbnail
+  class Modulate < Paperclip::Processor
 
-    attr_accessor :brightness, :saturation, :hue
+    attr_accessor :file, :brightness, :saturation, :hue
     
     def transformation
       trans = "-modulate #{@brightness},#{@saturation},#{@hue}"
@@ -14,22 +14,18 @@ module Paperclip
     end
         
     def initialize(file, options = {}, *args)
-      super( file, options, *args )
-    
+      @file = file
+      
       @brightness = options[:brightness]   ||= 100
       @saturation = options[:saturation]   ||= 100
       @hue        = options[:hue]          ||= 100
     end
   
     def make( *args )
-      if (@brightness != 100) || (@saturation != 100) || (@hue != 100)
-        dst = Tempfile.new([@basename, @format].compact.join("."))
-        dst.binmode    
+      dst = Tempfile.new([@basename, @format].compact.join("."))
+      dst.binmode
         
-        return convert( super( *args ), dst )
-      else
-        super *args
-      end
+      return convert( @file, dst )
     end
   end
 end
