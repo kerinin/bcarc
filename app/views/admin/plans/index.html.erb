@@ -2,26 +2,24 @@
 
 <%= render :partial => 'admin/shared/project_header' %>
 
-<p>(Order)</p>
+<% form_for [:admin, @project] do |f| %>
+  <ul id="plan-list" style="display:table;">
+    <li style="display:table-row;">
+      <span style="display:table-cell;">Thumbnail</span>
+      <span style="display:table-cell;">Name</span>
+    </li>
 
-<table>
-  <tr>
-    <th>Thumbnail</th>
-    <th>Name</th>
-    <th>Position</th>
-  </tr>
-
-<% @plans.ascend_by_position.each do |plan| %>
-  <tr>
-    <td><%= image_tag plan.attachment.url(:thumb) %></td>
-    <td><%=h plan.name %></td>
-    <td><%=h plan.position %></td>
-    <td><%= link_to 'Show', project_plan_path(@project, plan) %></td>
-    <td><%= link_to 'Edit', edit_admin_project_plan_path(@project, plan) %></td>
-    <td><%= link_to 'Delete', admin_project_plan_path(@project, plan), :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <% @plans.ascend_by_position.each do |plan| %>
+    <li id="item_<%= plan.id %>" style="display:table-row", class="draggable">
+      <span style="display:table-cell;" class="dragger"><%= image_tag plan.attachment.url(:thumb) %></span>
+      <span style="display:table-cell;" class="dragger"><%=h plan.name %></span>
+      <span style="display:table-cell;"><%= link_to 'Show', project_plan_path(@project, plan) %></span>
+      <span style="display:table-cell;"><%= link_to 'Edit', edit_admin_project_plan_path(@project, plan) %></span>
+      <span style="display:table-cell;"><%= link_to 'Delete', admin_project_plan_path(@project, plan), :confirm => 'Are you sure?', :method => :delete %></span>
+    </li>
+  <% end %>
+  </ul>
 <% end %>
-</table>
 
 <br />
 
@@ -30,3 +28,5 @@
   <%= f.file_field :attachment %>
   <%= f.submit 'Upload' %>
 <% end %>
+
+<%= sortable_element 'plan-list', :url => {:action => "sort", :id => @project}, :handle => :dragger, :only => :draggable, :complete => visual_effect(:highlight, "plan-list") %>
