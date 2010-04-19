@@ -3,6 +3,10 @@ class ProjectsController < ApplicationController
   
   actions :show, :index
   
+  index.before do
+    @projects = Project.random( 6, :conditions => { :priority => 1..3 }).sort_by {rand}
+  end
+  
   show.before do
     if @project.images.count > 1
       @next = @project.images[1]
