@@ -1,1038 +1,5 @@
 
 --- 
-plans: 
-  columns: 
-  - id
-  - name
-  - position
-  - attachment_file_name
-  - attachment_content_type
-  - attachment_file_size
-  - attachment_updated_at
-  - project_id
-  - created_at
-  - updated_at
-  records: 
-  - - "10"
-    - 2nd Floor
-    - "1"
-    - /images/tortuga/plans/Tortuga_2nd.jpg
-    - 
-    - 
-    - 
-    - "2"
-    - 2010-04-14 21:32:18.000000-0700
-    - 2010-04-15 21:32:18.000000-0700
-  - - "11"
-    - 1st Floor
-    - "0"
-    - /images/tortuga/plans/Tortuga_1st.jpg
-    - 
-    - 
-    - 
-    - "2"
-    - 2010-04-14 21:32:18.000000-0700
-    - 2010-04-15 21:32:18.000000-0700
-  - - "12"
-    - 2nd Floor
-    - "1"
-    - /images/east11/plans/11th-2nd.jpg
-    - 
-    - 
-    - 
-    - "15"
-    - 2010-04-14 21:32:18.000000-0700
-    - 2010-04-15 21:32:18.000000-0700
-  - - "13"
-    - 1st Floor
-    - "0"
-    - /images/east11/plans/11th-1st.jpg
-    - 
-    - 
-    - 
-    - "15"
-    - 2010-04-14 21:32:18.000000-0700
-    - 2010-04-15 21:32:18.000000-0700
-  - - "14"
-    - 3rd Floor
-    - "2"
-    - /images/east11/plans/11th-3rd.jpg
-    - 
-    - 
-    - 
-    - "15"
-    - 2010-04-14 21:32:18.000000-0700
-    - 2010-04-15 21:32:18.000000-0700
-  - - "15"
-    - 2nd Floor
-    - "1"
-    - /images/annie/plans/annie-2nd.jpg
-    - 
-    - 
-    - 
-    - "1"
-    - 2010-04-14 21:32:18.000000-0700
-    - 2010-04-15 21:32:18.000000-0700
-  - - "16"
-    - 1st Floor
-    - "0"
-    - /images/annie/plans/annie-1st.jpg
-    - 
-    - 
-    - 
-    - "1"
-    - 2010-04-14 21:32:18.000000-0700
-    - 2010-04-15 21:32:18.000000-0700
-  - - "17"
-    - 2nd Floor
-    - "1"
-    - /images/beverly/plans/Beverly_2nd.jpg
-    - 
-    - 
-    - 
-    - "3"
-    - 2010-04-14 21:32:18.000000-0700
-    - 2010-04-15 21:32:18.000000-0700
-  - - "18"
-    - 1st Floor
-    - "0"
-    - /images/beverly/plans/Beverly_1st.jpg
-    - 
-    - 
-    - 
-    - "3"
-    - 2010-04-14 21:32:18.000000-0700
-    - 2010-04-15 21:32:18.000000-0700
-  - - "19"
-    - 3rd Floor
-    - "2"
-    - /images/beverly/plans/Beverly_3rd.jpg
-    - 
-    - 
-    - 
-    - "3"
-    - 2010-04-14 21:32:18.000000-0700
-    - 2010-04-15 21:32:18.000000-0700
-  - - "20"
-    - All
-    - "0"
-    - /images/riverview/plans/Riverview.jpg
-    - 
-    - 
-    - 
-    - "9"
-    - 2010-04-14 21:32:18.000000-0700
-    - 2010-04-15 21:32:18.000000-0700
-
---- 
-videos: 
-  columns: 
-  - id
-  - name
-  - position
-  - description
-  - width
-  - height
-  - uri
-  - thumbnail_file_name
-  - thumbnail_content_type
-  - thumbnail_file_size
-  - thumbnail_updated_at
-  - project_id
-  - created_at
-  - updated_at
-  records: 
-  - - "1"
-    - ""
-    - "1"
-    - ""
-    - "800"
-    - "450"
-    - http://www.youtube.com/v/VpvIGKv_KbU
-    - default.jpg
-    - image/jpeg
-    - "989"
-    - 2010-04-19 13:16:46.000000-0700
-    - "23"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:20.070715-0700
-  - - "2"
-    - ""
-    - "1"
-    - ""
-    - "800"
-    - "450"
-    - http://www.youtube.com/v/X3IQBjUtm5s
-    - default.jpg
-    - image/jpeg
-    - "937"
-    - 2010-04-19 13:16:47.000000-0700
-    - "4"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:20.136141-0700
-  - - "6"
-    - ""
-    - "2"
-    - ""
-    - "800"
-    - "450"
-    - http://www.youtube.com/v/db-hyJS7NWE
-    - default.jpg
-    - image/jpeg
-    - "738"
-    - 2010-04-19 13:16:48.000000-0700
-    - "23"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:20.200238-0700
-  - - "9"
-    - ""
-    - 
-    - ""
-    - 
-    - 
-    - ""
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-15 21:33:04.000000-0700
-  - - "13"
-    - ""
-    - "2"
-    - ""
-    - "640"
-    - "352"
-    - http://vimeo.com/7209745
-    - 30247061_200.jpg
-    - image/jpeg
-    - "959"
-    - 2010-04-19 13:16:49.000000-0700
-    - "25"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:20.296716-0700
-  - - "14"
-    - ""
-    - "1"
-    - ""
-    - "640"
-    - "432"
-    - http://vimeo.com/7152450
-    - 30084345_200.jpg
-    - image/jpeg
-    - "1218"
-    - 2010-04-19 13:16:51.000000-0700
-    - "1"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:20.365385-0700
-  - - "15"
-    - ""
-    - "2"
-    - ""
-    - "640"
-    - "432"
-    - http://vimeo.com/7152894
-    - 30064940_200.jpg
-    - image/jpeg
-    - "1232"
-    - 2010-04-19 13:16:52.000000-0700
-    - "1"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:20.406818-0700
-  - - "16"
-    - ""
-    - "3"
-    - ""
-    - "640"
-    - "432"
-    - http://vimeo.com/7170814
-    - 29954417_200.jpg
-    - image/jpeg
-    - "1127"
-    - 2010-04-19 13:16:53.000000-0700
-    - "1"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:20.447380-0700
-  - - "19"
-    - ""
-    - "1"
-    - ""
-    - 
-    - 
-    - http://vimeo.com/7689995
-    - 33806986_200.jpg
-    - image/jpeg
-    - "1054"
-    - 2010-04-19 13:16:55.000000-0700
-    - "2"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:20.493742-0700
-  - - "20"
-    - ""
-    - "2"
-    - ""
-    - 
-    - 
-    - http://vimeo.com/7690785
-    - 33810317_200.jpg
-    - image/jpeg
-    - "833"
-    - 2010-04-19 13:16:56.000000-0700
-    - "2"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:20.550113-0700
-  - - "21"
-    - ""
-    - "1"
-    - ""
-    - 
-    - 
-    - http://vimeo.com/7950262
-    - 35777488_200.jpg
-    - image/jpeg
-    - "1046"
-    - 2010-04-19 13:16:58.000000-0700
-    - "15"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:20.620913-0700
-  - - "22"
-    - ""
-    - "2"
-    - ""
-    - 
-    - 
-    - http://vimeo.com/7950083
-    - 35775833_200.jpg
-    - image/jpeg
-    - "1130"
-    - 2010-04-19 13:16:59.000000-0700
-    - "15"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:20.668590-0700
-  - - "23"
-    - ""
-    - "3"
-    - ""
-    - 
-    - 
-    - http://vimeo.com/7949338
-    - 35771802_200.jpg
-    - image/jpeg
-    - "1272"
-    - 2010-04-19 13:17:01.000000-0700
-    - "15"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:20.750917-0700
-  - - "24"
-    - ""
-    - "5"
-    - ""
-    - 
-    - 
-    - http://vimeo.com/7950035
-    - 35775472_200.jpg
-    - image/jpeg
-    - "1302"
-    - 2010-04-19 13:17:03.000000-0700
-    - "15"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:20.862269-0700
-  - - "25"
-    - ""
-    - "4"
-    - ""
-    - 
-    - 
-    - http://vimeo.com/7950195
-    - 35776929_200.jpg
-    - image/jpeg
-    - "1074"
-    - 2010-04-19 13:17:05.000000-0700
-    - "15"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:20.917644-0700
-  - - "26"
-    - ""
-    - "1"
-    - ""
-    - 
-    - 
-    - http://vimeo.com/7966275
-    - 35892311_200.jpg
-    - image/jpeg
-    - "762"
-    - 2010-04-19 13:17:06.000000-0700
-    - "29"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:21.020714-0700
-  - - "27"
-    - ""
-    - "2"
-    - ""
-    - 
-    - 
-    - http://vimeo.com/7966311
-    - 35892777_200.jpg
-    - image/jpeg
-    - "1475"
-    - 2010-04-19 13:17:08.000000-0700
-    - "29"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:21.145520-0700
-  - - "28"
-    - ""
-    - "3"
-    - ""
-    - 
-    - 
-    - http://vimeo.com/7966351
-    - 35892716_200.jpg
-    - image/jpeg
-    - "1007"
-    - 2010-04-19 13:17:10.000000-0700
-    - "29"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:21.199390-0700
-  - - "29"
-    - ""
-    - "4"
-    - ""
-    - 
-    - 
-    - http://vimeo.com/7966062
-    - 35891107_200.jpg
-    - image/jpeg
-    - "1196"
-    - 2010-04-19 13:17:11.000000-0700
-    - "29"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:21.283045-0700
-  - - "30"
-    - ""
-    - "5"
-    - ""
-    - 
-    - 
-    - http://vimeo.com/7966189
-    - 35891801_200.jpg
-    - image/jpeg
-    - "1338"
-    - 2010-04-19 13:17:13.000000-0700
-    - "29"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:21.317449-0700
-  - - "31"
-    - ""
-    - "6"
-    - ""
-    - 
-    - 
-    - http://vimeo.com/7965962
-    - 35890778_200.jpg
-    - image/jpeg
-    - "1194"
-    - 2010-04-19 13:17:14.000000-0700
-    - "29"
-    - 2010-04-14 21:33:04.000000-0700
-    - 2010-04-19 14:11:21.353351-0700
-
---- 
-projects: 
-  columns: 
-  - id
-  - name
-  - short
-  - date_completed
-  - location
-  - description
-  - priority
-  - thumbnail_id
-  - created_at
-  - updated_at
-  - permalink
-  records: 
-  - - "1"
-    - Annie Residence
-    - A two-family house built in South Austin
-    - 2002-09-10 00:00:00.000000-0700
-    - ""
-    - |
-      The house was built for two families in Austin and therefore is split into two living areas. The house consists of two pavilions connected by a glass hallway.
-      
-      The design was greatly influenced by different regions and cultures. Both the use of the roof as an outdoor living space and the shading devices are derived from Moorish architecture. The body of water and the spatial continuity between inside and outside was inspired by Asian architecture. while the structural transparency of the volumes and the minimalist aspect of the interior was derived from Japanese pavilions.
-      
-      The house is constructed of a modular steel frame. The frame is infilled with prefab thermasteel panels to minimize construction on-site waste. The structural frame is exposed, showing the construction process and articulating the house's facades. The repetitive modular method, as well as the prefabrication allowed for greater efficiency during construction.
-      
-      
-      [http://www.3d-vantage.com/bcarc3d/home.html Take a look around the house ]
-
-    - "1"
-    - "214"
-    - 2010-04-14 21:32:32.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - annie-residence
-  - - "2"
-    - The Peninsula Residence on Lake Austin
-    - ""
-    - 2009-01-01 00:00:00.000000-0800
-    - ""
-    - The project begins with a 1980's home-builder house fronting on lake austin. The original design did not harness views to the lake and Mount Bonnell, nor did it respect the ecological sensitivity of its site.  The challenge was to develop a sensitive and inventive result out of a pre-existing condition. Through the use of glass, steel, detailing and light the home has been adaptively reinvented. Reflection, translucency, color and geometry conspire to bring natural light deep into the house. A new solarium, pool, and vegetative roof are tuned to interact with the natural context. Exterior materials and refined detailing of the roof structure give the volume clean lines and a bold presence, while abstracting the form of the original dormers and gable roof. Further connecting the home to its site, the roof begins to dissolve where a glass clad chimney and slatted wood screen stand in relief against the sky.
-    - "1"
-    - "506"
-    - 2010-04-14 21:32:32.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - the-peninsula-residence-on-lake-austin
-  - - "3"
-    - Beverly Skyline Residence
-    - A single-family remodel based on the notions of recycling, reuse, and the integration of built space and environment
-    - 2007-01-15 00:00:00.000000-0800
-    - ""
-    - |-
-      Our concept revolved around the notions of recycling a building, reusing natural and manmade resources and reclaiming the ancient ideal that buildings can and should be sacred places, especially the home.
-      
-      The project began as a modest remodel, but turned into a full master-planning for the site; including complete interior and exterior recycle, an addition to an existing 1970's home, as well as re-organization of the garden. As the original house was poorly sited, a large motivation of the design was to reconnect the house with its site by utilizing the steep topography to capture the expansive views.
-      
-      One goal was to integrate the architecture with the native garden and creek at the bottom of the property. To fully enjoy the reclaimed views, the house is wrapped by exterior decks with glass railings. The inspiration is kiyomizu temple in kyoto, japan, (founded 7th century a.d.) which sits above the landscape and provides panoramic views of the city.
-      
-      In the spirit of reclaiming value, recycled materials are employed at every possible opportunity. The front facade of the house is comprised of recycled glass blocks, which were provided by the owner as a condition of the commission. the originally monolithic nature of the house is further dematerialized through the use of slats installed as rain screens. This wall assembly seems to dissolve the facade of the house, particularly at corner conditions.
-      
-      The project also makes extensive use of harvested rainwater stored in pools and reservoirs to re-connect the house with its site. The water system lends a sense of drama to the intervention. a series of cascading ponds serve as part of the rain water collection system on the utilitarian level. On the aesthetic level it provides a peaceful transition between the landscape and the architecture. 
-      
-      The selection of plants in the garden are primarily plants native to the central texas region. This minimizes the usage of water, and follows principles of xeriscaping. The garden is planned around existing mature trees and shrubs with various ground covers and perennials. The intention was to preserve the characteristic of the site as much as possible and retain the essence of a landscape native to the edwards plateau in the hill country.
-    - "1"
-    - "38"
-    - 2010-04-14 21:32:32.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - beverly-skyline-residence
-  - - "4"
-    - Skybridge Condominiums
-    - A 120-unit residential development surrounding a central park.
-    - 2009-06-15 00:00:00.000000-0700
-    - ""
-    - |-
-      The project is a $19m residential condominium complex in South Austin with roughly 120 units of varying size. The project includes a club house, workout area, basketball courts, pool & spa, outdoor ampitheater, volleyball courts, and hike/bike trail.
-      
-      The project was organized as a ribbon of townhouse-style units surrounding a central park. The ribbon is ringed by a landscaped hike/bike trail.  The design emphasizes shared green space and creates a sense of community by embracing a semi-private interior courtyard.
-      
-      The monumental skybridge which connects the perimiter ribbon contains four ADA-accessible studio units.
-      
-      Construction is currently under way, although an expected completion date has not yet been announced.
-    - "4"
-    - "371"
-    - 2010-04-14 21:32:32.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - skybridge-condominiums
-  - - "5"
-    - Bosque de la Lomas Residence
-    - ""
-    - 2004-04-22 00:00:00.000000-0700
-    - ""
-    - ""
-    - "8"
-    - "52"
-    - 2010-04-14 21:32:32.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - bosque-de-la-lomas-residence
-  - - "6"
-    - Hether Residence
-    - ""
-    - 
-    - ""
-    - |-
-      A modern house with guest residence united by a 130' long lap pool.
-      
-      Wood slats are mounted on operable hydraulic doors. Residence sited amongst mature oaks.
-    - "5"
-    - 
-    - 2010-04-14 21:32:32.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - hether-residence
-  - - "7"
-    - Lago Vista Lake House
-    - |
-      Commissioned by a highly creative family including a painter, writer and set-designer, the lago vista residence is a vacation home which doubles as an artists' retreat.
-
-    - 2004-04-04 00:00:00.000000-0800
-    - ""
-    - "Commissioned by a highly creative family including a painter, writer and set-designer, the lago vista residence is a vacation home which doubles as an artists' retreat.\r\n\
-      \r\n\
-      The house is a simple shed structure with a large cantilevering roof covering an expansive exterior patio.  Cantilevered structure is further expressed in the foundation in order to convey a sense of levitation.\r\n\
-      \r\n\
-      The entry side of the house is expressed as a wood box containing the functional aspects of the program. Having passed through the utilitarian core, the house opens on all sides toward the patio and creek beyond. "
-    - "4"
-    - "63"
-    - 2010-04-14 21:32:32.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - lago-vista-lake-house
-  - - "8"
-    - Murphy Residence
-    - ""
-    - 2006-10-13 00:00:00.000000-0700
-    - ""
-    - ""
-    - "6"
-    - "69"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - murphy-residence
-  - - "9"
-    - Riverview Gardens
-    - ""
-    - 2008-05-04 00:00:00.000000-0700
-    - ""
-    - |-
-      Three houses located on Austin's East Side a few blocks north of the river.  The houses are lifted off the ground level to create an elevated 2-story plan centered around a partially enclosed interior courtyard.
-      
-      The plan frames an axial view towards the lake and arranges spaces along this axis in order of increasing privacy.  
-      
-      One of the three houses is currently for sale - for more information search for 2113 Riverview [http://www.everyaustinhomesearch.com here]
-    - "2"
-    - "732"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - riverview-gardens
-  - - "10"
-    - Rolling Wood Residence
-    - ""
-    - 2004-02-17 00:00:00.000000-0800
-    - ""
-    - ""
-    - "9"
-    - 
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - rolling-wood-residence
-  - - "11"
-    - Volente Residence
-    - ""
-    - 2008-06-12 00:00:00.000000-0700
-    - ""
-    - ""
-    - "5"
-    - "481"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - volente-residence
-  - - "12"
-    - Granite Shoals Residence
-    - ""
-    - 2004-06-07 00:00:00.000000-0700
-    - ""
-    - ""
-    - "7"
-    - 
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - granite-shoals-residence
-  - - "13"
-    - Factory People (now American Apparel)
-    - A unique boutique combining fashion, music, art and literature inspired by Andy Warhol's factory. Designed for a creative, multi-purpose environment in the heart of Austin's SOCO District.
-    - 2003-10-13 00:00:00.000000-0700
-    - ""
-    - |-
-      A unique boutique combining fashion, music, art and literature inspired by Andy Warhol's factory. Designed for a creative, multi-purpose environment in the heart of Austin's SOCO District.
-      
-      Factory People was selected by GQ magazine in 2006 as one of the Top 100 boutiques in America.
-    - "6"
-    - "103"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - factory-people-now-american-apparel
-  - - "14"
-    - Mototek
-    - ""
-    - 2006-07-06 00:00:00.000000-0700
-    - ""
-    - ""
-    - "9"
-    - "545"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - mototek
-  - - "15"
-    - E 11th St Multi-Use Development
-    - A three story mixed use project in the revitalized 11th Street Corridor of Austin TX. The ground floor is divided between an art gallery and boutique retail outlet. The second floor is reserved for office tenants with residential spaces occupying the top floor.
-    - 2008-07-15 00:00:00.000000-0700
-    - ""
-    - |
-      1111 east 11th is a three story mixed use project in the revitalized 11th Street Corridor of Austin TX. The ground floor is divided between an art gallery and boutique retail outlet. The second floor is reserved for office tenants with residential spaces occupying the top floor.
-      
-      Formally, the shifting floor plates align with area landmarks such as the Texas State Capitol and the UT Austin Tower. The form mimics the geological exfoliation of the central Texas landscape, which can be found at the `Enchanted Rock`, the Texas version of Australia's Ayres Rock.
-      
-      The resultant space is a series of unexpected terraces and canopies drawing one outdoors. The cantilevered second floor provides a respite of shade from the intense Texas sun at the entry. The floor plates step back at the rear of the structure allowing it to mediate between the commercial scale of the front and the residential in the back.
-
-    - "4"
-    - "444"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - e-11th-st-multi-use-development
-  - - "17"
-    - Malinalco Retreat
-    - Malinalco luxury spa resort is a project located two hours outside of Mexico City, in a valley between Nevado do Toluca and Popocatepetl, two of Mexico's highest volcanic peaks.
-    - 2003-03-03 00:00:00.000000-0800
-    - ""
-    - "Malinalco luxury spa resort is a project located two hours outside of Mexico City, in a valley between Nevado do Toluca and Popocatepetl, two of Mexico's highest volcanic peaks.\r\n\
-      \r\n\
-      The amenities of the 45 room eco-retreat includes temazcal (pre-columbian sauna) spa treatment, yoga and meditation rooms. The client wished to create a place that is aware of the unique pre-Columbian culture of the land. The concept is to revive the once intimate relationship with nature established by the Aztec culture. The design was inspired by their reverence for precious natural resources, the legend of the rain god Tlaloc, and the poetic view of the mountain as a water jar with waterfalls as gifts from the gods.\r\n\
-      \r\n\
-      A rainwater collection cistern that serves both as a look out/folly, also distributes water throughout the resort to individual villas. The openings in the wall align with Aztec cosmology marking significant dates on their calendar. \r\n\
-      \r\n\
-      The landscaping of the resort is conceived as a floating Persian carpet of flowers and vegetation to be enjoyed from terraces of various elevations, not unlike the near by Terraces at Teotenango. The Malinalco Valley is a unique site for wintering Monarch butterflies from all over North America. The design for the shape of the resort was also inspired by the Sun & Moon Lagoon in the crater of Nevado de Taoluca.\r\n\
-      \r\n\
-      Floating circular villas provide panoramic view of the beautiful mountain ranges near by, guests can swim in the pool with indigenous Mallinali plants and water lilies providing privacy. The circular shape is inspired by the local temple of Jaguar, one of the only pre-Columbian temples excavated from a mountain side, and also by the circular Kiva of the American Southwest. "
-    - "4"
-    - "472"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - malinalco-retreat
-  - - "18"
-    - Self-Sustaining House Competition
-    - ""
-    - 2006-02-06 00:00:00.000000-0800
-    - ""
-    - |-
-      Horizontal silvered-mylar parabolic reflectors under the roof focusing the sun onto copper pipes to pre heat water (800 liters /day to 100 c).
-      
-      Outside parabolic reflectors finish the work to make low-pressure steam.
-      
-      Steam is expanded through a turbine to drive an electric generator and an air compressor. Electricity is stored in batteries, and compressed air in cooling tanks.
-      
-      Final expansion of steam is thru an ejector to create flash vaporization for chilled water.
-      
-      Steam is condensed and stored as hot distilled water.
-      
-      Final products:
-      * Distilled water (hot/cold) for consumption, or heating and cooling.
-      * Compressed air for driving ceiling fans, and expanded as a nontoxic refrigerant for freezer and refrigerator.
-      * Battery/rectifier of ac or dc electricity.
-    - "4"
-    - "519"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - self-sustaining-house-competition
-  - - "19"
-    - Taichung Opera House
-    - ""
-    - 2006-11-07 00:00:00.000000-0800
-    - ""
-    - |
-      The proposal for the Taichung Metropolitan Opera House takes as its beginning the urban condition of the site. The question of imminent urban density, or a density which has yet to materialize, was a driving consideration for the proposal. The strategy seeks to define a privileged precinct for the performing arts while also providing an amenity for the public. The proposal seeks to establish a threshold between the condition of the city and the experience of the Taichung Metropolitan Opera House by creating a wall of water around three sides of the project site. This wall will serve not as a boundary, but as a filter between the city and the arts. The lights and sounds of the city are not obscured, but rather softened by the screen of water in order that the life of the city can be sensed more quietly. Conversely, the life inside the performing arts precinct is transmitted through the water wall to the city beyond. As an instance, the main performing spaces are adjacent to the water wall such that activity within them is suggested to the city beyond. The water wall is created on the urban boundaries of the site and is omitted toward the park space thereby allowing dramatic views of the Taichung Metropolitan Opera House from the civic complex. In passing from the city to the Taichung Metropolitan Opera House, the visitor passes through the water wall in an act of metaphorical cleansing thereby becoming more fully receptive to the performances within. In order to preserve the sanctity of the performing precinct, the utilitarian spaces are located below ground level around the perimeter of the site. Shopping and creative workshops occupy a unique and dramatic location in the water covered step-well.
-
-    - "4"
-    - "591"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - taichung-opera-house
-  - - "20"
-    - Urban Reserve
-    - Winning entry in national design competition for one of the first sustainable housing developments in the US.
-    - 
-    - ""
-    - |-
-      The proposal for 35 Vanguard Way establishes a highly rational plan arrangement augmented with three primary experiential and functional amenities.
-      
-      The rectangular layout seeks to maximize natural cooling by limiting the width to a single room's depth and opening the house on both long facades for cross ventilation. The plan also utilizes the existing topography in order to define spaces. The program elements are arranged along a privacy gradient beginning with the most intimate spaces to the east and the increasingly public spaces progressing westward. To strengthen this strategy, the floor plate steps down with the contours in order to provide increasing ceiling heights with increasing publicness. This technique serves to limit the overall building height in an effort to be less conspicuous to its neighbors.
-      
-      The rational layout is set off first by a proposed green roof. The scheme understands this roof as both an amenity for the inhabitants as well as an energy efficient roof assembly. The green roof, furthermore, contributes to the re-circulating water system of the proposal. Rain water from the roof is directed to a catch-pond at the street side of the house. The filtered water is directed into a reflecting pool running along the southern facade which, as the grade recedes, becomes a plunge pool at the western edge of the house. Surplus water from the system will be stored for irrigation purposes. The mediating element between the house, roof garden and water system is the ramp along the southern facade. The proposal understands the ramp as a fundamentally celebratory solution to descending vertical circulation. The gradual ascent of the ramp also encourages contemplation of the garden and surroundings. The ramp also serves as a strategic shading device which, as it begins its trajectory, permits morning light into the sleeping spaces. As it approaches the roof, the ramp has gained enough elevation to provide shade for the public spaces without hindering views.
-      
-      The structure of the house is a steel frame with hollow core concrete floor and roof planks. The cores serve as ducts for the ventilation system while the prefabricated planks allow for considerable structural and constructional efficiencies. This final detail serves to underscore the proposal's key concept as the integration of amenity and utility.
-    - "6"
-    - "600"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - urban-reserve
-  - - "22"
-    - Asian American Resource Center
-    - ""
-    - 2008-06-09 00:00:00.000000-0700
-    - ""
-    - ""
-    - "5"
-    - "459"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - asian-american-resource-center
-  - - "23"
-    - Nahua Tower
-    - A proposed 34 story tower to be built in downtown Austin on Lady Bird Lake.
-    - 2008-02-11 00:00:00.000000-0800
-    - ""
-    - "The Nahua Tower was proposed to be built in cooperation with the Mexican American Cultural Center (MACC) in Austin Texas.  The tower will be built as an annex to the existing cultural center and provide an extension to the MACC\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2s existing facilities as well as residential condominiums.  The base of the tower contains event, retail, and restaurant spaces, while the upper 28 floors are primarily residential condominiums.\r\n\
-      \r\n\
-      The project takes inspiration from pre-colombian pyramidal architecture and incorporates these vernacular precedents into a modern tower using many traditional materials such as copper, onyx, and pit-house style bermed construction."
-    - "4"
-    - "289"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - nahua-tower
-  - - "25"
-    - Baja Spa & Resort
-    - The first phase of an 800 acre luxury spa resort in Baja California Sur, one hour north of Loreto, in the Bahia Concepcion, facing the Cortez Inland Sea.
-    - 2008-05-05 00:00:00.000000-0700
-    - ""
-    - |-
-      This is the first phase of an 800 acre luxury spa resort in Baja California Sur, one hour north of Loreto, in the Bahia Concepcion, facing the Cortez Inland Sea.
-      
-      The design concept was to defer to the unspoiled natural beauty of the area.  Situated on the edge of the Sonoran Desert region where 10 meter tall Suguaro cactus punctuate the seemingly endless horizons of mountain ranges and the ocean. 
-      
-      The beach front residential units are separated by 2 story ram-earth wall grow organically from the local landscape, with seashells from local beaches imprinted in the wall.  Each villa offset slightly from the next to allow uninterrupted vista into the Bahia Concepcion for miles. 
-      
-      The design is simple and orthogonal, The residences are 2 concrete volumes stacked and turned 90 degree from each other. The openings and the general orientation of the villas maximize one's view of the spectacular sunrise to the desert mountains on the peninsula across the bay, rendering the landscape from blue, purple, orange and pink depending on the time of the day, like living with a life size Turner in one's living room.
-      
-      One enter the second floor of the residence by ascending a wooden ramp which conceal and stunning landscape, only revealing the drama upon reaching the generous roofdeck area.
-      
-      The 2 courtyards on both the ocean and mountain front are shaded by stretched canvas which allow slits of sunlight washing over the ram-earth wall like a sundial, marking the passage of time.
-      
-      The residential villas are approximately 2000 s.f. each in enclosed space.
-    - "4"
-    - "389"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - baja-spa-resort
-  - - "26"
-    - "Cheongna City Tower - Korea "
-    - Competition proposal for Cheonga City
-    - 2008-02-13 00:00:00.000000-0800
-    - ""
-    - |-
-      This proposal seeks to solve the paradox of creating something international yet Korean; of designing something distinctly modern but with traditional sensibilities; of creating a delicate harmony between the urban and natural worlds; and of embracing the individual while addressing the global.
-      
-      With this in mind, the proposal strives to provide an iconic symbol for Cheongna which will serve as a regional, national and international landmark and an urban garden which will provide a unique resource for the inhabitants of Cheonga.
-    - "5"
-    - "408"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - cheongna-city-tower-korea
-  - - "27"
-    - Solidarity Museum - Poland
-    - ""
-    - 2007-04-09 00:00:00.000000-0700
-    - ""
-    - |-
-      On the 14th of August 1980, at the outset of the shipyard strike, an attempt was made to isolate the citizens of Gdansk from their fellow countrymen; phone lines were cut, mail was censored, televisions and newspapers went about business as usual. Remarkably, despite the censorship efforts, the population sensed the urgency and magnitude of the situation. They communicated without speaking, felt each other without touching, and listened without hearing and ultimately, the strikes spread throughout the country. The success of the movement can be traced, not to a violent show of force, but rather, to a quiet show of unity.
-      
-      Through light and transparency, our design seeks to register this aspect of the Solidarity movement of sensing the presence of others without direct contact. The existing Solidarity Square Monument is veiled by 21 poplar trees, each representing one the points of the Gdansk Accord.  The building form incorporates the circular geometry established by the monument without being consumed by it, acknowledging the past while looking to the future.
-      
-      A cloister surrounds a winter garden which takes the shape of a central courtyard. Symbolic of energy, life and renewal this concept can be found in nature in the form of a tree growing out the stump of one previous. The garden is meant to be a counterpoint to the monastic, tranquil settings of the exhibit space. It's our endeavor to capture both the melancholic, sad moments in addition to the moments of inspiration and exhalation. This duality, reflective of Poland at the time of the shipyard strike, is paramount to our design. The country was unified as it never had been before or since. Yet, this unity came at the expense of extreme economic crisis, lack of food, low wages and high inflation. The ESC should tell the entire story of Solidarity not simply the results of the toil.
-    - "4"
-    - "413"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - solidarity-museum-poland
-  - - "28"
-    - Urban Forest - Stockholm Library
-    - ""
-    - 2007-05-31 00:00:00.000000-0700
-    - ""
-    - The new library extension faces the challenge of needing to compliment without competing, and should, in fact, ought to heighten the iconic value of the building and urban concept around it.  Therefore, the design was molded by a desire to showcase the hidden side of the Asplund library, out of respect to the architecture and its author, and also out of an inherant need to create a strong public tie between the site and the Odenplan.  By linking the back corner of the library and following the Odenplan's defining street line, the result is a large covered plaza with tall tree-like columns (both solid and translucent), which perfectly frame the library.  It is reminiscent of Asplund's striking chapel entries at the Woodland cemetery.  The column grid, in fact, also subtly marks his original proposed locations of the library's annexes.  Finally, in effort to support the plaza and to encourage public attention, several enticing programs are located on the ground level that will encourage round-the-clock activity amongst the community.
-    - "4"
-    - "425"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - urban-forest-stockholm-library
-  - - "29"
-    - Block 19 - mixed-use
-    - |
-      Located in the Revitalization District of East 11th Street, this Vertical Mixed Use project is a unique focal point in a quickly growing neighborhood. The project includes 11 retail stores and offices, 20 residential condominiums, and roof top decks accessible by all residents. 
-
-    - 2009-06-15 00:00:00.000000-0700
-    - ""
-    - |-
-      Located in the Revitalization District of East 11th Street, this Vertical Mixed Use project will become unique focal point in a quickly growing neighborhood. The project includes 11 retail stores and offices, 20 residential condominiums, and roof top decks accessible by all residents. The unique solar screen on the south and west facades is just one of the many aspects of the design that contributes to the 3-Star Green Building Rating.
-      
-      The East 11th Street neighborhood in Austin has seen considerable change since 2001. Once a largely ignored portion of Austin, E. 11th Street is now home to many different retail shops, restaurants, offices, and cultural groups. Block 19 seeks to capture this diversity by developing a dynamic and creative environment for its residents, combining retail shops and small commercial offices with residential units on the upper floors. On the fourth floor are two green roofs; each with a wonderful view into downtown.
-      
-      The design of the building incorporates modest materials in creative and dynamic ways. The entire ground level is full height glass mounted in front of a steel structure. This gives the illusion of the entire building floating on cubes of glass. To further enhance the visual `lightness` of the building, the entrance to the site is under a long span steel truss that supports 2 stories of residential units across a 65 ft span. The upper south and west facades are shielded from the hot Texas sun with a multi-faceted steel panel screen which double as a shading device and guardrails for the residential balconies.
-      
-      Instead of relying on expensive, high maintenance green `gadgets`, Block 19 showcases the architects' incorporation of sustainability into the fundamentals of the building. In addition to the steel sunscreen, features such as insulated Low-E glazing, recycled and recyclable materials, no VOC paint, R-19 insulated walls, R-30 insulated roof, passive insect control, construction waste recycling, and low impact native landscaping all work together to make the East Village Lofts a healthy building for the residents and the community.
-    - "3"
-    - "669"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - block-19-mixed-use
-  - - "30"
-    - Bahia Concepcion
-    - ""
-    - 
-    - ""
-    - ""
-    - "7"
-    - "484"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - bahia-concepcion
-  - - "31"
-    - "Green Water Redevelopment "
-    - A proposal for downtown Austin designed in collaboration with Foster and Partners. We propose a world class, uniquely Austin, 21st century urban neighborhood, converging around two elegant spires.  Not buildings in the conventional sense of the word, but more appropriately two vertical green extensions of the beloved Lady Bird Lake park reaching into the sky.
-    - 2008-08-14 00:00:00.000000-0700
-    - ""
-    - |-
-      A proposal for downtown Austin designed in collaboration with Foster and Partners. We propose a world class, uniquely Austin, 21st century urban neighborhood, converging around two elegant spires.  Not buildings in the conventional sense of the word, but more appropriately two vertical green extensions of the beloved Lady Bird Lake park reaching into the sky.
-      
-      The two spires will taper back in deference to Shoal Creek and Town Lake.  They will appear more like two natural peaks rising in concert with the enchanting Texas Hill Country.
-      
-      Approaching River City Green along the hike and bike trail, one will observe a ribbon of native plants, Oak, Maple and Pine trees swaying on tiered balconies.  Together they form an extension of the park as they rise into the sky and change with the seasons.
-      
-      We envision a great room in the pinnacle of the highest pillar as an observation solarium, a sky garden accessible to everyone who lives in and visits our beautiful green city; imagine Downtown's own Mt. Bonnell lookout.
-      
-      We propose an elevator system that generates power as it glides between levels.  An intelligent double skin system which moderates the harsh sun, while allowing for better cross ventilation and minimal heating and cooling.  We will draw from Foster and Partners' pioneering design to inspire new paradigms.  Design such as their LEED certified Gold Hearst building in New York City which reduced the amount of steel needed by 20%.
-    - "4"
-    - "530"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - green-water-redevelopment
-  - - "32"
-    - Miami Waterworks
-    - Conversion of an existing waterworks facility into a gateway & orientation building for the new Arts district in downtown Miami. Next to the Herzog & De Meuron designed Miami Art Museum
-    - 2008-08-06 00:00:00.000000-0700
-    - ""
-    - Conversion of an existing waterworks facility into a gateway & orientation building for the new Arts district in downtown Miami. Next to the Herzog & De Meuron designed Miami Art Museum
-    - "6"
-    - "534"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - miami-waterworks
-  - - "34"
-    - G.H. Residence
-    - ""
-    - 2009-05-07 00:00:00.000000-0700
-    - ""
-    - |-
-      Gibbs Hollow Residence was conceived less as a house, but more as an extension and outgrowth of the limestone and aquifers of the Central Texas geography. The roof structure is configured so as to create a natural basin for the collection of rainwater, not unlike the vernal pools found in the outcroppings of Enchanted Rock. These basins harness additional natural flows through the use of photovoltaic and solar hot-water panels. The water, electricity and heat which are harvested on the roof tie into an extensive climate conditioning system which utilizes water source heat pumps and radiant loops to supply both the heating and cooling for the residence. The climate system is connected to geothermal ground loops as well as pools and water features thereby establishing a system of heat exchange which minimizes reliance on electricity or gas.
-      
-      The primary formal gesture of the project inserts two long native limestone walls into the site. The walls serve as the boundary demarking domesticated space with the vegetation outbound of these walls being native while the interior spaces are more lush and tropical. The program of the residence is configured along the stone walls each of which serves as the spine for the public and private wings, respectively. The offset between the main wings establish an exterior courtyard which will serve as an extended living space for much of the year. The siting of the boundary walls and building elements was informed by the presence and preservation of three mature native oaks.
-    - "1"
-    - "581"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - g-h-residence
-  - - "35"
-    - Mango Financial
-    - ""
-    - 2009-04-12 00:00:00.000000-0700
-    - ""
-    - |-
-      Mango Financial, Inc. is an innovative consumer financial services company that seeks to empower underserved customers in the U.S. to achieve their financial goals.
-      
-      [www.mangomoney.com]
-    - "2"
-    - 
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - mango-financial
-  - - "38"
-    - Re:Vision Dallas
-    - A research proposal investigating new strategies for developing urban communities developed as part of the Re:Vision Dallas competition.
-    - 
-    - ""
-    - "Bercy Chen Studio recently competed in the [http://www.urbanrevision.com/competitions/revision-dallas Re:Vision Dallas] design competition. According to the competition brief, \"Re:Vision Dallas is a chance to propel design beyond the typical, beyond the norm and to lay the foundation for a future of sustainable development we all hope is inevitable. It\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2s a chance to create a block that does no harm, to people or place. A chance to encourage and value relationships, while fostering respect for nature and our neighbors, privacy and resources, economy and consumption. It\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2s a chance to change how we live and connect, how we interact and collaborate\xC3\xA2\xE2\x82\xAC\xE2\x80\x9Dhow we live in a space throughout our life and the life cycle of the space.\"\r\n\
-      \r\n\
-      The Re:vision Dallas competition requested a self-sustaining city block in a downtown without very many of the things that normally make city centers successful. Our proposal sought to establish an icon for this part of downtown both to draw people to the site but also to serve as an architectural proposition that accounts for the ambition of the competition brief\r\n\
-      \r\n\
-      The organizers\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2 request for a realistic proposal suggested a strategy of phasing out the work. Not only may phasing be necessary fiscally, it is a way for the project to evolve over time with respect to its urban viability. Change will bring with it all the complexity of reality, and a proposal which allows for evolution in response to external stimuli should end up being more robust and whole.\r\n\
-      \r\n\
-      Our competition entry explored a range of housing types from single family to efficiency units. In a global perspective such housing typologies are not new. However, the idea of moving a suburban typology to downtown Dallas and arraying it alongside urban sleeping pods is a novel concept in Dallas, Texas.\r\n\
-      \r\n\
-      Our proposal suggested the potential of collaborating with a social service organization. We utilized this component as a way to begin thinking about new modes of housing and shared space (the shared kitchen or assembly space for example). Additionally, such an organization\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2s focus on training and life skills was a perfect combination with the larger scale urban farming component of the proposal.\r\n\
-      \r\n\
-      Our proposal sought to involve a high degree of systems integration which, when combined with the program requirement of zero waste-water runoff, suggested a development which not only harvested rainwater, but which utilized it as many ways as possible."
-    - "6"
-    - "636"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - re-vision-dallas
-  - - "48"
-    - Bluff House
-    - House overlooking Lake Austin.
-    - 2008-11-12 00:00:00.000000-0800
-    - Austin, Texas
-    - Located on a bluff overlooking Lake Austin, the project needed to place both the living spaces as well as outdoor spaces fronting on the view. In order to maintain both a connection with Lake Austin and views of the Texas Hill Country, the program was pushed close to the crest of the hill with the pool perched overlooking the lake. The design elevated the main living areas and provided exterior spaces beneath the structure. A reflective glass-tile soffit was used to bring reflected light deep into the covered exterior spaces.
-    - "5"
-    - "599"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - bluff-house
-  - - "50"
-    - Red Bluff Residence
-    - A 1400-sf residence near Town Lake in Austin TX
-    - 
-    - ""
-    - "A 1400-sf residence located in Austin, Texas near Town Lake.  The project touches on architecture as site-specific installation art and as an extension of the landscape.  As with many of our designs, influence is often drawn from vernacular precedents of various cultures.  While the essence of the project is conversant with a Pit House, the roof form has been largely influenced by the ancient art of origami\r\n\
-      \r\n\
-      The house\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2s relationship to the landscape both in terms of approach as well as building performance references the oldst housing typology in North America; the pit house.  Like a pit house, the house will undergo a 7-foot excavation gaining benefits from the earth\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2s mass to maintain thermal comfort throughout the year.  Such architectural settings create opportunities for maximum energy efficiency using a proposed Integrated Hydronic HVAC system.  \r\n\
-      \r\n\
-      The house integrates hydronic heating & cooling, geothermal heat exchange, phase-change thermal heat storage, rainwater collection and a green roof into an integrated system encompassing.  "
-    - "4"
-    - "655"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - red-bluff-residence
-  - - "51"
-    - Jade
-    - ""
-    - 2009-03-11 00:00:00.000000-0700
-    - Austin TX
-    - ""
-    - "4"
-    - "673"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - jade
-  - - "52"
-    - Mint Trail
-    - A residential renovations currently in the design phase
-    - 2009-09-25 00:00:00.000000-0700
-    - ""
-    - ""
-    - "5"
-    - 
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - mint-trail
-  - - "53"
-    - Benetton Tehran
-    - Competition entry for a tower in Tehran
-    - 2009-03-25 00:00:00.000000-0700
-    - Tehran, Iran
-    - ""
-    - "4"
-    - "696"
-    - 2010-04-14 21:32:33.000000-0700
-    - 2010-04-17 17:48:44.000000-0700
-    - benetton-tehran
-
---- 
-tags: 
-  columns: 
-  - id
-  - name
-  - created_at
-  - updated_at
-  - permalink
-  records: 
-  - - "1"
-    - Residential
-    - 2010-04-14 21:32:47.000000-0700
-    - 2010-04-17 17:48:53.000000-0700
-    - residential
-  - - "2"
-    - Commercial
-    - 2010-04-14 21:32:47.000000-0700
-    - 2010-04-17 17:48:53.000000-0700
-    - commercial
-  - - "3"
-    - Cultural
-    - 2010-04-14 21:32:47.000000-0700
-    - 2010-04-17 17:48:53.000000-0700
-    - cultural
-  - - "4"
-    - Master Planning
-    - 2010-04-14 21:32:47.000000-0700
-    - 2010-04-17 17:48:53.000000-0700
-    - master-planning
-
---- 
 pages: 
   columns: 
   - id
@@ -1312,6 +279,109 @@ pages:
     - 2010-04-14 21:32:01.000000-0700
     - 2010-04-17 18:00:27.000000-0700
     - sustainability
+
+--- 
+tags: 
+  columns: 
+  - id
+  - name
+  - created_at
+  - updated_at
+  - permalink
+  records: 
+  - - "1"
+    - Residential
+    - 2010-04-14 21:32:47.000000-0700
+    - 2010-04-17 17:48:53.000000-0700
+    - residential
+  - - "2"
+    - Commercial
+    - 2010-04-14 21:32:47.000000-0700
+    - 2010-04-17 17:48:53.000000-0700
+    - commercial
+  - - "3"
+    - Cultural
+    - 2010-04-14 21:32:47.000000-0700
+    - 2010-04-17 17:48:53.000000-0700
+    - cultural
+  - - "4"
+    - Master Planning
+    - 2010-04-14 21:32:47.000000-0700
+    - 2010-04-17 17:48:53.000000-0700
+    - master-planning
+
+--- 
+projects_tags: 
+  columns: 
+  - tag_id
+  - project_id
+  records: 
+  - - "1"
+    - "1"
+  - - "1"
+    - "2"
+  - - "1"
+    - "3"
+  - - "1"
+    - "4"
+  - - "1"
+    - "7"
+  - - "1"
+    - "8"
+  - - "1"
+    - "9"
+  - - "1"
+    - "11"
+  - - "1"
+    - "18"
+  - - "1"
+    - "25"
+  - - "1"
+    - "29"
+  - - "1"
+    - "34"
+  - - "1"
+    - "38"
+  - - "1"
+    - "48"
+  - - "1"
+    - "50"
+  - - "2"
+    - "13"
+  - - "2"
+    - "15"
+  - - "2"
+    - "23"
+  - - "2"
+    - "29"
+  - - "2"
+    - "31"
+  - - "2"
+    - "35"
+  - - "2"
+    - "38"
+  - - "2"
+    - "51"
+  - - "3"
+    - "19"
+  - - "3"
+    - "26"
+  - - "3"
+    - "27"
+  - - "3"
+    - "28"
+  - - "3"
+    - "32"
+  - - "3"
+    - "53"
+  - - "4"
+    - "17"
+  - - "4"
+    - "22"
+  - - "4"
+    - "31"
+  - - "4"
+    - "38"
 
 --- 
 images: 
@@ -5705,74 +4775,1004 @@ images:
     - 2010-04-18 15:33:44.900553-0700
 
 --- 
-projects_tags: 
+plans: 
   columns: 
-  - tag_id
+  - id
+  - name
+  - position
+  - attachment_file_name
+  - attachment_content_type
+  - attachment_file_size
+  - attachment_updated_at
   - project_id
+  - created_at
+  - updated_at
+  records: 
+  - - "10"
+    - 2nd Floor
+    - "1"
+    - Tortuga_2nd.jpg
+    - image/jpeg
+    - "56531"
+    - 2010-04-19 16:17:44
+    - "2"
+    - 2010-04-14 21:32:18.000000-0700
+    - 2010-04-19 16:17:46
+  - - "11"
+    - 1st Floor
+    - "0"
+    - Tortuga_1st.jpg
+    - image/jpeg
+    - "71765"
+    - 2010-04-19 16:17:50
+    - "2"
+    - 2010-04-14 21:32:18.000000-0700
+    - 2010-04-19 16:17:51
+  - - "12"
+    - 2nd Floor
+    - "1"
+    - 11th-2nd.jpg
+    - image/jpeg
+    - "33151"
+    - 2010-04-19 16:17:56
+    - "15"
+    - 2010-04-14 21:32:18.000000-0700
+    - 2010-04-19 16:17:56
+  - - "13"
+    - 1st Floor
+    - "0"
+    - 11th-1st.jpg
+    - image/jpeg
+    - "31571"
+    - 2010-04-19 16:18:01
+    - "15"
+    - 2010-04-14 21:32:18.000000-0700
+    - 2010-04-19 16:18:01
+  - - "14"
+    - 3rd Floor
+    - "2"
+    - 11th-3rd.jpg
+    - image/jpeg
+    - "33449"
+    - 2010-04-19 16:18:07
+    - "15"
+    - 2010-04-14 21:32:18.000000-0700
+    - 2010-04-19 16:18:07
+  - - "15"
+    - 2nd Floor
+    - "1"
+    - annie-2nd.jpg
+    - image/jpeg
+    - "19074"
+    - 2010-04-19 16:18:13
+    - "1"
+    - 2010-04-14 21:32:18.000000-0700
+    - 2010-04-19 16:18:13
+  - - "16"
+    - 1st Floor
+    - "0"
+    - annie-1st.jpg
+    - image/jpeg
+    - "33359"
+    - 2010-04-19 16:18:17
+    - "1"
+    - 2010-04-14 21:32:18.000000-0700
+    - 2010-04-19 16:18:17
+  - - "17"
+    - 2nd Floor
+    - "1"
+    - Beverly_2nd.jpg
+    - image/jpeg
+    - "36145"
+    - 2010-04-19 16:18:21
+    - "3"
+    - 2010-04-14 21:32:18.000000-0700
+    - 2010-04-19 16:18:21
+  - - "18"
+    - 1st Floor
+    - "0"
+    - Beverly_1st.jpg
+    - image/jpeg
+    - "31167"
+    - 2010-04-19 16:18:25
+    - "3"
+    - 2010-04-14 21:32:18.000000-0700
+    - 2010-04-19 16:18:25
+  - - "19"
+    - 3rd Floor
+    - "2"
+    - Beverly_3rd.jpg
+    - image/jpeg
+    - "35295"
+    - 2010-04-19 16:18:29
+    - "3"
+    - 2010-04-14 21:32:18.000000-0700
+    - 2010-04-19 16:18:29
+  - - "20"
+    - All
+    - "0"
+    - Riverview.jpg
+    - image/jpeg
+    - "33215"
+    - 2010-04-19 16:18:33
+    - "9"
+    - 2010-04-14 21:32:18.000000-0700
+    - 2010-04-19 16:18:33
+
+--- 
+videos: 
+  columns: 
+  - id
+  - name
+  - position
+  - description
+  - width
+  - height
+  - uri
+  - thumbnail_file_name
+  - thumbnail_content_type
+  - thumbnail_file_size
+  - thumbnail_updated_at
+  - project_id
+  - created_at
+  - updated_at
   records: 
   - - "1"
+    - ""
     - "1"
-  - - "1"
-    - "2"
-  - - "1"
-    - "3"
-  - - "1"
-    - "4"
-  - - "1"
-    - "7"
-  - - "1"
-    - "8"
-  - - "1"
-    - "9"
-  - - "1"
-    - "11"
-  - - "1"
-    - "18"
-  - - "1"
-    - "25"
-  - - "1"
-    - "29"
-  - - "1"
-    - "34"
-  - - "1"
-    - "38"
-  - - "1"
-    - "48"
-  - - "1"
-    - "50"
-  - - "2"
-    - "13"
-  - - "2"
-    - "15"
-  - - "2"
+    - ""
+    - "800"
+    - "450"
+    - http://www.youtube.com/v/VpvIGKv_KbU
+    - default.jpg
+    - image/jpeg
+    - "989"
+    - 2010-04-19 13:16:46.000000-0700
     - "23"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:20.070715-0700
   - - "2"
+    - ""
+    - "1"
+    - ""
+    - "800"
+    - "450"
+    - http://www.youtube.com/v/X3IQBjUtm5s
+    - default.jpg
+    - image/jpeg
+    - "937"
+    - 2010-04-19 13:16:47.000000-0700
+    - "4"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:20.136141-0700
+  - - "6"
+    - ""
+    - "2"
+    - ""
+    - "800"
+    - "450"
+    - http://www.youtube.com/v/db-hyJS7NWE
+    - default.jpg
+    - image/jpeg
+    - "738"
+    - 2010-04-19 13:16:48.000000-0700
+    - "23"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:20.200238-0700
+  - - "9"
+    - ""
+    - 
+    - ""
+    - 
+    - 
+    - ""
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-15 21:33:04.000000-0700
+  - - "13"
+    - ""
+    - "2"
+    - ""
+    - "640"
+    - "352"
+    - http://vimeo.com/7209745
+    - 30247061_200.jpg
+    - image/jpeg
+    - "959"
+    - 2010-04-19 13:16:49.000000-0700
+    - "25"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:20.296716-0700
+  - - "14"
+    - ""
+    - "1"
+    - ""
+    - "640"
+    - "432"
+    - http://vimeo.com/7152450
+    - 30084345_200.jpg
+    - image/jpeg
+    - "1218"
+    - 2010-04-19 13:16:51.000000-0700
+    - "1"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:20.365385-0700
+  - - "15"
+    - ""
+    - "2"
+    - ""
+    - "640"
+    - "432"
+    - http://vimeo.com/7152894
+    - 30064940_200.jpg
+    - image/jpeg
+    - "1232"
+    - 2010-04-19 13:16:52.000000-0700
+    - "1"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:20.406818-0700
+  - - "16"
+    - ""
+    - "3"
+    - ""
+    - "640"
+    - "432"
+    - http://vimeo.com/7170814
+    - 29954417_200.jpg
+    - image/jpeg
+    - "1127"
+    - 2010-04-19 13:16:53.000000-0700
+    - "1"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:20.447380-0700
+  - - "19"
+    - ""
+    - "1"
+    - ""
+    - 
+    - 
+    - http://vimeo.com/7689995
+    - 33806986_200.jpg
+    - image/jpeg
+    - "1054"
+    - 2010-04-19 13:16:55.000000-0700
+    - "2"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:20.493742-0700
+  - - "20"
+    - ""
+    - "2"
+    - ""
+    - 
+    - 
+    - http://vimeo.com/7690785
+    - 33810317_200.jpg
+    - image/jpeg
+    - "833"
+    - 2010-04-19 13:16:56.000000-0700
+    - "2"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:20.550113-0700
+  - - "21"
+    - ""
+    - "1"
+    - ""
+    - 
+    - 
+    - http://vimeo.com/7950262
+    - 35777488_200.jpg
+    - image/jpeg
+    - "1046"
+    - 2010-04-19 13:16:58.000000-0700
+    - "15"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:20.620913-0700
+  - - "22"
+    - ""
+    - "2"
+    - ""
+    - 
+    - 
+    - http://vimeo.com/7950083
+    - 35775833_200.jpg
+    - image/jpeg
+    - "1130"
+    - 2010-04-19 13:16:59.000000-0700
+    - "15"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:20.668590-0700
+  - - "23"
+    - ""
+    - "3"
+    - ""
+    - 
+    - 
+    - http://vimeo.com/7949338
+    - 35771802_200.jpg
+    - image/jpeg
+    - "1272"
+    - 2010-04-19 13:17:01.000000-0700
+    - "15"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:20.750917-0700
+  - - "24"
+    - ""
+    - "5"
+    - ""
+    - 
+    - 
+    - http://vimeo.com/7950035
+    - 35775472_200.jpg
+    - image/jpeg
+    - "1302"
+    - 2010-04-19 13:17:03.000000-0700
+    - "15"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:20.862269-0700
+  - - "25"
+    - ""
+    - "4"
+    - ""
+    - 
+    - 
+    - http://vimeo.com/7950195
+    - 35776929_200.jpg
+    - image/jpeg
+    - "1074"
+    - 2010-04-19 13:17:05.000000-0700
+    - "15"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:20.917644-0700
+  - - "26"
+    - ""
+    - "1"
+    - ""
+    - 
+    - 
+    - http://vimeo.com/7966275
+    - 35892311_200.jpg
+    - image/jpeg
+    - "762"
+    - 2010-04-19 13:17:06.000000-0700
     - "29"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:21.020714-0700
+  - - "27"
+    - ""
+    - "2"
+    - ""
+    - 
+    - 
+    - http://vimeo.com/7966311
+    - 35892777_200.jpg
+    - image/jpeg
+    - "1475"
+    - 2010-04-19 13:17:08.000000-0700
+    - "29"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:21.145520-0700
+  - - "28"
+    - ""
+    - "3"
+    - ""
+    - 
+    - 
+    - http://vimeo.com/7966351
+    - 35892716_200.jpg
+    - image/jpeg
+    - "1007"
+    - 2010-04-19 13:17:10.000000-0700
+    - "29"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:21.199390-0700
+  - - "29"
+    - ""
+    - "4"
+    - ""
+    - 
+    - 
+    - http://vimeo.com/7966062
+    - 35891107_200.jpg
+    - image/jpeg
+    - "1196"
+    - 2010-04-19 13:17:11.000000-0700
+    - "29"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:21.283045-0700
+  - - "30"
+    - ""
+    - "5"
+    - ""
+    - 
+    - 
+    - http://vimeo.com/7966189
+    - 35891801_200.jpg
+    - image/jpeg
+    - "1338"
+    - 2010-04-19 13:17:13.000000-0700
+    - "29"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:21.317449-0700
+  - - "31"
+    - ""
+    - "6"
+    - ""
+    - 
+    - 
+    - http://vimeo.com/7965962
+    - 35890778_200.jpg
+    - image/jpeg
+    - "1194"
+    - 2010-04-19 13:17:14.000000-0700
+    - "29"
+    - 2010-04-14 21:33:04.000000-0700
+    - 2010-04-19 14:11:21.353351-0700
+
+--- 
+projects: 
+  columns: 
+  - id
+  - name
+  - short
+  - date_completed
+  - location
+  - description
+  - priority
+  - thumbnail_id
+  - created_at
+  - updated_at
+  - permalink
+  records: 
+  - - "1"
+    - Annie Residence
+    - A two-family house built in South Austin
+    - 2002-09-10 00:00:00.000000-0700
+    - ""
+    - |
+      The house was built for two families in Austin and therefore is split into two living areas. The house consists of two pavilions connected by a glass hallway.
+      
+      The design was greatly influenced by different regions and cultures. Both the use of the roof as an outdoor living space and the shading devices are derived from Moorish architecture. The body of water and the spatial continuity between inside and outside was inspired by Asian architecture. while the structural transparency of the volumes and the minimalist aspect of the interior was derived from Japanese pavilions.
+      
+      The house is constructed of a modular steel frame. The frame is infilled with prefab thermasteel panels to minimize construction on-site waste. The structural frame is exposed, showing the construction process and articulating the house's facades. The repetitive modular method, as well as the prefabrication allowed for greater efficiency during construction.
+      
+      
+      [http://www.3d-vantage.com/bcarc3d/home.html Take a look around the house ]
+
+    - "1"
+    - "214"
+    - 2010-04-14 21:32:32.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - annie-residence
   - - "2"
-    - "31"
-  - - "2"
-    - "35"
-  - - "2"
+    - The Peninsula Residence on Lake Austin
+    - ""
+    - 2009-01-01 00:00:00.000000-0800
+    - ""
+    - The project begins with a 1980's home-builder house fronting on lake austin. The original design did not harness views to the lake and Mount Bonnell, nor did it respect the ecological sensitivity of its site.  The challenge was to develop a sensitive and inventive result out of a pre-existing condition. Through the use of glass, steel, detailing and light the home has been adaptively reinvented. Reflection, translucency, color and geometry conspire to bring natural light deep into the house. A new solarium, pool, and vegetative roof are tuned to interact with the natural context. Exterior materials and refined detailing of the roof structure give the volume clean lines and a bold presence, while abstracting the form of the original dormers and gable roof. Further connecting the home to its site, the roof begins to dissolve where a glass clad chimney and slatted wood screen stand in relief against the sky.
+    - "1"
+    - "506"
+    - 2010-04-14 21:32:32.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - the-peninsula-residence-on-lake-austin
+  - - "3"
+    - Beverly Skyline Residence
+    - A single-family remodel based on the notions of recycling, reuse, and the integration of built space and environment
+    - 2007-01-15 00:00:00.000000-0800
+    - ""
+    - |-
+      Our concept revolved around the notions of recycling a building, reusing natural and manmade resources and reclaiming the ancient ideal that buildings can and should be sacred places, especially the home.
+      
+      The project began as a modest remodel, but turned into a full master-planning for the site; including complete interior and exterior recycle, an addition to an existing 1970's home, as well as re-organization of the garden. As the original house was poorly sited, a large motivation of the design was to reconnect the house with its site by utilizing the steep topography to capture the expansive views.
+      
+      One goal was to integrate the architecture with the native garden and creek at the bottom of the property. To fully enjoy the reclaimed views, the house is wrapped by exterior decks with glass railings. The inspiration is kiyomizu temple in kyoto, japan, (founded 7th century a.d.) which sits above the landscape and provides panoramic views of the city.
+      
+      In the spirit of reclaiming value, recycled materials are employed at every possible opportunity. The front facade of the house is comprised of recycled glass blocks, which were provided by the owner as a condition of the commission. the originally monolithic nature of the house is further dematerialized through the use of slats installed as rain screens. This wall assembly seems to dissolve the facade of the house, particularly at corner conditions.
+      
+      The project also makes extensive use of harvested rainwater stored in pools and reservoirs to re-connect the house with its site. The water system lends a sense of drama to the intervention. a series of cascading ponds serve as part of the rain water collection system on the utilitarian level. On the aesthetic level it provides a peaceful transition between the landscape and the architecture. 
+      
+      The selection of plants in the garden are primarily plants native to the central texas region. This minimizes the usage of water, and follows principles of xeriscaping. The garden is planned around existing mature trees and shrubs with various ground covers and perennials. The intention was to preserve the characteristic of the site as much as possible and retain the essence of a landscape native to the edwards plateau in the hill country.
+    - "1"
     - "38"
-  - - "2"
-    - "51"
-  - - "3"
-    - "19"
-  - - "3"
-    - "26"
-  - - "3"
-    - "27"
-  - - "3"
-    - "28"
-  - - "3"
-    - "32"
-  - - "3"
-    - "53"
+    - 2010-04-14 21:32:32.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - beverly-skyline-residence
   - - "4"
-    - "17"
-  - - "4"
-    - "22"
-  - - "4"
-    - "31"
-  - - "4"
-    - "38"
+    - Skybridge Condominiums
+    - A 120-unit residential development surrounding a central park.
+    - 2009-06-15 00:00:00.000000-0700
+    - ""
+    - |-
+      The project is a $19m residential condominium complex in South Austin with roughly 120 units of varying size. The project includes a club house, workout area, basketball courts, pool & spa, outdoor ampitheater, volleyball courts, and hike/bike trail.
+      
+      The project was organized as a ribbon of townhouse-style units surrounding a central park. The ribbon is ringed by a landscaped hike/bike trail.  The design emphasizes shared green space and creates a sense of community by embracing a semi-private interior courtyard.
+      
+      The monumental skybridge which connects the perimiter ribbon contains four ADA-accessible studio units.
+      
+      Construction is currently under way, although an expected completion date has not yet been announced.
+    - "4"
+    - "371"
+    - 2010-04-14 21:32:32.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - skybridge-condominiums
+  - - "5"
+    - Bosque de la Lomas Residence
+    - ""
+    - 2004-04-22 00:00:00.000000-0700
+    - ""
+    - ""
+    - "8"
+    - "52"
+    - 2010-04-14 21:32:32.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - bosque-de-la-lomas-residence
+  - - "6"
+    - Hether Residence
+    - ""
+    - 
+    - ""
+    - |-
+      A modern house with guest residence united by a 130' long lap pool.
+      
+      Wood slats are mounted on operable hydraulic doors. Residence sited amongst mature oaks.
+    - "5"
+    - 
+    - 2010-04-14 21:32:32.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - hether-residence
+  - - "7"
+    - Lago Vista Lake House
+    - |
+      Commissioned by a highly creative family including a painter, writer and set-designer, the lago vista residence is a vacation home which doubles as an artists' retreat.
+
+    - 2004-04-04 00:00:00.000000-0800
+    - ""
+    - "Commissioned by a highly creative family including a painter, writer and set-designer, the lago vista residence is a vacation home which doubles as an artists' retreat.\r\n\
+      \r\n\
+      The house is a simple shed structure with a large cantilevering roof covering an expansive exterior patio.  Cantilevered structure is further expressed in the foundation in order to convey a sense of levitation.\r\n\
+      \r\n\
+      The entry side of the house is expressed as a wood box containing the functional aspects of the program. Having passed through the utilitarian core, the house opens on all sides toward the patio and creek beyond. "
+    - "4"
+    - "63"
+    - 2010-04-14 21:32:32.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - lago-vista-lake-house
+  - - "8"
+    - Murphy Residence
+    - ""
+    - 2006-10-13 00:00:00.000000-0700
+    - ""
+    - ""
+    - "6"
+    - "69"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - murphy-residence
+  - - "9"
+    - Riverview Gardens
+    - ""
+    - 2008-05-04 00:00:00.000000-0700
+    - ""
+    - |-
+      Three houses located on Austin's East Side a few blocks north of the river.  The houses are lifted off the ground level to create an elevated 2-story plan centered around a partially enclosed interior courtyard.
+      
+      The plan frames an axial view towards the lake and arranges spaces along this axis in order of increasing privacy.  
+      
+      One of the three houses is currently for sale - for more information search for 2113 Riverview [http://www.everyaustinhomesearch.com here]
+    - "2"
+    - "732"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - riverview-gardens
+  - - "10"
+    - Rolling Wood Residence
+    - ""
+    - 2004-02-17 00:00:00.000000-0800
+    - ""
+    - ""
+    - "9"
+    - 
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - rolling-wood-residence
+  - - "11"
+    - Volente Residence
+    - ""
+    - 2008-06-12 00:00:00.000000-0700
+    - ""
+    - ""
+    - "5"
+    - "481"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - volente-residence
+  - - "12"
+    - Granite Shoals Residence
+    - ""
+    - 2004-06-07 00:00:00.000000-0700
+    - ""
+    - ""
+    - "7"
+    - 
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - granite-shoals-residence
+  - - "13"
+    - Factory People (now American Apparel)
+    - A unique boutique combining fashion, music, art and literature inspired by Andy Warhol's factory. Designed for a creative, multi-purpose environment in the heart of Austin's SOCO District.
+    - 2003-10-13 00:00:00.000000-0700
+    - ""
+    - |-
+      A unique boutique combining fashion, music, art and literature inspired by Andy Warhol's factory. Designed for a creative, multi-purpose environment in the heart of Austin's SOCO District.
+      
+      Factory People was selected by GQ magazine in 2006 as one of the Top 100 boutiques in America.
+    - "6"
+    - "103"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - factory-people-now-american-apparel
+  - - "14"
+    - Mototek
+    - ""
+    - 2006-07-06 00:00:00.000000-0700
+    - ""
+    - ""
+    - "9"
+    - "545"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - mototek
+  - - "15"
+    - E 11th St Multi-Use Development
+    - A three story mixed use project in the revitalized 11th Street Corridor of Austin TX. The ground floor is divided between an art gallery and boutique retail outlet. The second floor is reserved for office tenants with residential spaces occupying the top floor.
+    - 2008-07-15 00:00:00.000000-0700
+    - ""
+    - |
+      1111 east 11th is a three story mixed use project in the revitalized 11th Street Corridor of Austin TX. The ground floor is divided between an art gallery and boutique retail outlet. The second floor is reserved for office tenants with residential spaces occupying the top floor.
+      
+      Formally, the shifting floor plates align with area landmarks such as the Texas State Capitol and the UT Austin Tower. The form mimics the geological exfoliation of the central Texas landscape, which can be found at the `Enchanted Rock`, the Texas version of Australia's Ayres Rock.
+      
+      The resultant space is a series of unexpected terraces and canopies drawing one outdoors. The cantilevered second floor provides a respite of shade from the intense Texas sun at the entry. The floor plates step back at the rear of the structure allowing it to mediate between the commercial scale of the front and the residential in the back.
+
+    - "4"
+    - "444"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - e-11th-st-multi-use-development
+  - - "17"
+    - Malinalco Retreat
+    - Malinalco luxury spa resort is a project located two hours outside of Mexico City, in a valley between Nevado do Toluca and Popocatepetl, two of Mexico's highest volcanic peaks.
+    - 2003-03-03 00:00:00.000000-0800
+    - ""
+    - "Malinalco luxury spa resort is a project located two hours outside of Mexico City, in a valley between Nevado do Toluca and Popocatepetl, two of Mexico's highest volcanic peaks.\r\n\
+      \r\n\
+      The amenities of the 45 room eco-retreat includes temazcal (pre-columbian sauna) spa treatment, yoga and meditation rooms. The client wished to create a place that is aware of the unique pre-Columbian culture of the land. The concept is to revive the once intimate relationship with nature established by the Aztec culture. The design was inspired by their reverence for precious natural resources, the legend of the rain god Tlaloc, and the poetic view of the mountain as a water jar with waterfalls as gifts from the gods.\r\n\
+      \r\n\
+      A rainwater collection cistern that serves both as a look out/folly, also distributes water throughout the resort to individual villas. The openings in the wall align with Aztec cosmology marking significant dates on their calendar. \r\n\
+      \r\n\
+      The landscaping of the resort is conceived as a floating Persian carpet of flowers and vegetation to be enjoyed from terraces of various elevations, not unlike the near by Terraces at Teotenango. The Malinalco Valley is a unique site for wintering Monarch butterflies from all over North America. The design for the shape of the resort was also inspired by the Sun & Moon Lagoon in the crater of Nevado de Taoluca.\r\n\
+      \r\n\
+      Floating circular villas provide panoramic view of the beautiful mountain ranges near by, guests can swim in the pool with indigenous Mallinali plants and water lilies providing privacy. The circular shape is inspired by the local temple of Jaguar, one of the only pre-Columbian temples excavated from a mountain side, and also by the circular Kiva of the American Southwest. "
+    - "4"
+    - "472"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - malinalco-retreat
+  - - "18"
+    - Self-Sustaining House Competition
+    - ""
+    - 2006-02-06 00:00:00.000000-0800
+    - ""
+    - |-
+      Horizontal silvered-mylar parabolic reflectors under the roof focusing the sun onto copper pipes to pre heat water (800 liters /day to 100 c).
+      
+      Outside parabolic reflectors finish the work to make low-pressure steam.
+      
+      Steam is expanded through a turbine to drive an electric generator and an air compressor. Electricity is stored in batteries, and compressed air in cooling tanks.
+      
+      Final expansion of steam is thru an ejector to create flash vaporization for chilled water.
+      
+      Steam is condensed and stored as hot distilled water.
+      
+      Final products:
+      * Distilled water (hot/cold) for consumption, or heating and cooling.
+      * Compressed air for driving ceiling fans, and expanded as a nontoxic refrigerant for freezer and refrigerator.
+      * Battery/rectifier of ac or dc electricity.
+    - "4"
+    - "519"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - self-sustaining-house-competition
+  - - "19"
+    - Taichung Opera House
+    - ""
+    - 2006-11-07 00:00:00.000000-0800
+    - ""
+    - |
+      The proposal for the Taichung Metropolitan Opera House takes as its beginning the urban condition of the site. The question of imminent urban density, or a density which has yet to materialize, was a driving consideration for the proposal. The strategy seeks to define a privileged precinct for the performing arts while also providing an amenity for the public. The proposal seeks to establish a threshold between the condition of the city and the experience of the Taichung Metropolitan Opera House by creating a wall of water around three sides of the project site. This wall will serve not as a boundary, but as a filter between the city and the arts. The lights and sounds of the city are not obscured, but rather softened by the screen of water in order that the life of the city can be sensed more quietly. Conversely, the life inside the performing arts precinct is transmitted through the water wall to the city beyond. As an instance, the main performing spaces are adjacent to the water wall such that activity within them is suggested to the city beyond. The water wall is created on the urban boundaries of the site and is omitted toward the park space thereby allowing dramatic views of the Taichung Metropolitan Opera House from the civic complex. In passing from the city to the Taichung Metropolitan Opera House, the visitor passes through the water wall in an act of metaphorical cleansing thereby becoming more fully receptive to the performances within. In order to preserve the sanctity of the performing precinct, the utilitarian spaces are located below ground level around the perimeter of the site. Shopping and creative workshops occupy a unique and dramatic location in the water covered step-well.
+
+    - "4"
+    - "591"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - taichung-opera-house
+  - - "20"
+    - Urban Reserve
+    - Winning entry in national design competition for one of the first sustainable housing developments in the US.
+    - 
+    - ""
+    - |-
+      The proposal for 35 Vanguard Way establishes a highly rational plan arrangement augmented with three primary experiential and functional amenities.
+      
+      The rectangular layout seeks to maximize natural cooling by limiting the width to a single room's depth and opening the house on both long facades for cross ventilation. The plan also utilizes the existing topography in order to define spaces. The program elements are arranged along a privacy gradient beginning with the most intimate spaces to the east and the increasingly public spaces progressing westward. To strengthen this strategy, the floor plate steps down with the contours in order to provide increasing ceiling heights with increasing publicness. This technique serves to limit the overall building height in an effort to be less conspicuous to its neighbors.
+      
+      The rational layout is set off first by a proposed green roof. The scheme understands this roof as both an amenity for the inhabitants as well as an energy efficient roof assembly. The green roof, furthermore, contributes to the re-circulating water system of the proposal. Rain water from the roof is directed to a catch-pond at the street side of the house. The filtered water is directed into a reflecting pool running along the southern facade which, as the grade recedes, becomes a plunge pool at the western edge of the house. Surplus water from the system will be stored for irrigation purposes. The mediating element between the house, roof garden and water system is the ramp along the southern facade. The proposal understands the ramp as a fundamentally celebratory solution to descending vertical circulation. The gradual ascent of the ramp also encourages contemplation of the garden and surroundings. The ramp also serves as a strategic shading device which, as it begins its trajectory, permits morning light into the sleeping spaces. As it approaches the roof, the ramp has gained enough elevation to provide shade for the public spaces without hindering views.
+      
+      The structure of the house is a steel frame with hollow core concrete floor and roof planks. The cores serve as ducts for the ventilation system while the prefabricated planks allow for considerable structural and constructional efficiencies. This final detail serves to underscore the proposal's key concept as the integration of amenity and utility.
+    - "6"
+    - "600"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - urban-reserve
+  - - "22"
+    - Asian American Resource Center
+    - ""
+    - 2008-06-09 00:00:00.000000-0700
+    - ""
+    - ""
+    - "5"
+    - "459"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - asian-american-resource-center
+  - - "23"
+    - Nahua Tower
+    - A proposed 34 story tower to be built in downtown Austin on Lady Bird Lake.
+    - 2008-02-11 00:00:00.000000-0800
+    - ""
+    - "The Nahua Tower was proposed to be built in cooperation with the Mexican American Cultural Center (MACC) in Austin Texas.  The tower will be built as an annex to the existing cultural center and provide an extension to the MACC\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2s existing facilities as well as residential condominiums.  The base of the tower contains event, retail, and restaurant spaces, while the upper 28 floors are primarily residential condominiums.\r\n\
+      \r\n\
+      The project takes inspiration from pre-colombian pyramidal architecture and incorporates these vernacular precedents into a modern tower using many traditional materials such as copper, onyx, and pit-house style bermed construction."
+    - "4"
+    - "289"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - nahua-tower
+  - - "25"
+    - Baja Spa & Resort
+    - The first phase of an 800 acre luxury spa resort in Baja California Sur, one hour north of Loreto, in the Bahia Concepcion, facing the Cortez Inland Sea.
+    - 2008-05-05 00:00:00.000000-0700
+    - ""
+    - |-
+      This is the first phase of an 800 acre luxury spa resort in Baja California Sur, one hour north of Loreto, in the Bahia Concepcion, facing the Cortez Inland Sea.
+      
+      The design concept was to defer to the unspoiled natural beauty of the area.  Situated on the edge of the Sonoran Desert region where 10 meter tall Suguaro cactus punctuate the seemingly endless horizons of mountain ranges and the ocean. 
+      
+      The beach front residential units are separated by 2 story ram-earth wall grow organically from the local landscape, with seashells from local beaches imprinted in the wall.  Each villa offset slightly from the next to allow uninterrupted vista into the Bahia Concepcion for miles. 
+      
+      The design is simple and orthogonal, The residences are 2 concrete volumes stacked and turned 90 degree from each other. The openings and the general orientation of the villas maximize one's view of the spectacular sunrise to the desert mountains on the peninsula across the bay, rendering the landscape from blue, purple, orange and pink depending on the time of the day, like living with a life size Turner in one's living room.
+      
+      One enter the second floor of the residence by ascending a wooden ramp which conceal and stunning landscape, only revealing the drama upon reaching the generous roofdeck area.
+      
+      The 2 courtyards on both the ocean and mountain front are shaded by stretched canvas which allow slits of sunlight washing over the ram-earth wall like a sundial, marking the passage of time.
+      
+      The residential villas are approximately 2000 s.f. each in enclosed space.
+    - "4"
+    - "389"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - baja-spa-resort
+  - - "26"
+    - "Cheongna City Tower - Korea "
+    - Competition proposal for Cheonga City
+    - 2008-02-13 00:00:00.000000-0800
+    - ""
+    - |-
+      This proposal seeks to solve the paradox of creating something international yet Korean; of designing something distinctly modern but with traditional sensibilities; of creating a delicate harmony between the urban and natural worlds; and of embracing the individual while addressing the global.
+      
+      With this in mind, the proposal strives to provide an iconic symbol for Cheongna which will serve as a regional, national and international landmark and an urban garden which will provide a unique resource for the inhabitants of Cheonga.
+    - "5"
+    - "408"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - cheongna-city-tower-korea
+  - - "27"
+    - Solidarity Museum - Poland
+    - ""
+    - 2007-04-09 00:00:00.000000-0700
+    - ""
+    - |-
+      On the 14th of August 1980, at the outset of the shipyard strike, an attempt was made to isolate the citizens of Gdansk from their fellow countrymen; phone lines were cut, mail was censored, televisions and newspapers went about business as usual. Remarkably, despite the censorship efforts, the population sensed the urgency and magnitude of the situation. They communicated without speaking, felt each other without touching, and listened without hearing and ultimately, the strikes spread throughout the country. The success of the movement can be traced, not to a violent show of force, but rather, to a quiet show of unity.
+      
+      Through light and transparency, our design seeks to register this aspect of the Solidarity movement of sensing the presence of others without direct contact. The existing Solidarity Square Monument is veiled by 21 poplar trees, each representing one the points of the Gdansk Accord.  The building form incorporates the circular geometry established by the monument without being consumed by it, acknowledging the past while looking to the future.
+      
+      A cloister surrounds a winter garden which takes the shape of a central courtyard. Symbolic of energy, life and renewal this concept can be found in nature in the form of a tree growing out the stump of one previous. The garden is meant to be a counterpoint to the monastic, tranquil settings of the exhibit space. It's our endeavor to capture both the melancholic, sad moments in addition to the moments of inspiration and exhalation. This duality, reflective of Poland at the time of the shipyard strike, is paramount to our design. The country was unified as it never had been before or since. Yet, this unity came at the expense of extreme economic crisis, lack of food, low wages and high inflation. The ESC should tell the entire story of Solidarity not simply the results of the toil.
+    - "4"
+    - "413"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - solidarity-museum-poland
+  - - "28"
+    - Urban Forest - Stockholm Library
+    - ""
+    - 2007-05-31 00:00:00.000000-0700
+    - ""
+    - The new library extension faces the challenge of needing to compliment without competing, and should, in fact, ought to heighten the iconic value of the building and urban concept around it.  Therefore, the design was molded by a desire to showcase the hidden side of the Asplund library, out of respect to the architecture and its author, and also out of an inherant need to create a strong public tie between the site and the Odenplan.  By linking the back corner of the library and following the Odenplan's defining street line, the result is a large covered plaza with tall tree-like columns (both solid and translucent), which perfectly frame the library.  It is reminiscent of Asplund's striking chapel entries at the Woodland cemetery.  The column grid, in fact, also subtly marks his original proposed locations of the library's annexes.  Finally, in effort to support the plaza and to encourage public attention, several enticing programs are located on the ground level that will encourage round-the-clock activity amongst the community.
+    - "4"
+    - "425"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - urban-forest-stockholm-library
+  - - "29"
+    - Block 19 - mixed-use
+    - |
+      Located in the Revitalization District of East 11th Street, this Vertical Mixed Use project is a unique focal point in a quickly growing neighborhood. The project includes 11 retail stores and offices, 20 residential condominiums, and roof top decks accessible by all residents. 
+
+    - 2009-06-15 00:00:00.000000-0700
+    - ""
+    - |-
+      Located in the Revitalization District of East 11th Street, this Vertical Mixed Use project will become unique focal point in a quickly growing neighborhood. The project includes 11 retail stores and offices, 20 residential condominiums, and roof top decks accessible by all residents. The unique solar screen on the south and west facades is just one of the many aspects of the design that contributes to the 3-Star Green Building Rating.
+      
+      The East 11th Street neighborhood in Austin has seen considerable change since 2001. Once a largely ignored portion of Austin, E. 11th Street is now home to many different retail shops, restaurants, offices, and cultural groups. Block 19 seeks to capture this diversity by developing a dynamic and creative environment for its residents, combining retail shops and small commercial offices with residential units on the upper floors. On the fourth floor are two green roofs; each with a wonderful view into downtown.
+      
+      The design of the building incorporates modest materials in creative and dynamic ways. The entire ground level is full height glass mounted in front of a steel structure. This gives the illusion of the entire building floating on cubes of glass. To further enhance the visual `lightness` of the building, the entrance to the site is under a long span steel truss that supports 2 stories of residential units across a 65 ft span. The upper south and west facades are shielded from the hot Texas sun with a multi-faceted steel panel screen which double as a shading device and guardrails for the residential balconies.
+      
+      Instead of relying on expensive, high maintenance green `gadgets`, Block 19 showcases the architects' incorporation of sustainability into the fundamentals of the building. In addition to the steel sunscreen, features such as insulated Low-E glazing, recycled and recyclable materials, no VOC paint, R-19 insulated walls, R-30 insulated roof, passive insect control, construction waste recycling, and low impact native landscaping all work together to make the East Village Lofts a healthy building for the residents and the community.
+    - "3"
+    - "669"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - block-19-mixed-use
+  - - "30"
+    - Bahia Concepcion
+    - ""
+    - 
+    - ""
+    - ""
+    - "7"
+    - "484"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - bahia-concepcion
+  - - "31"
+    - "Green Water Redevelopment "
+    - A proposal for downtown Austin designed in collaboration with Foster and Partners. We propose a world class, uniquely Austin, 21st century urban neighborhood, converging around two elegant spires.  Not buildings in the conventional sense of the word, but more appropriately two vertical green extensions of the beloved Lady Bird Lake park reaching into the sky.
+    - 2008-08-14 00:00:00.000000-0700
+    - ""
+    - |-
+      A proposal for downtown Austin designed in collaboration with Foster and Partners. We propose a world class, uniquely Austin, 21st century urban neighborhood, converging around two elegant spires.  Not buildings in the conventional sense of the word, but more appropriately two vertical green extensions of the beloved Lady Bird Lake park reaching into the sky.
+      
+      The two spires will taper back in deference to Shoal Creek and Town Lake.  They will appear more like two natural peaks rising in concert with the enchanting Texas Hill Country.
+      
+      Approaching River City Green along the hike and bike trail, one will observe a ribbon of native plants, Oak, Maple and Pine trees swaying on tiered balconies.  Together they form an extension of the park as they rise into the sky and change with the seasons.
+      
+      We envision a great room in the pinnacle of the highest pillar as an observation solarium, a sky garden accessible to everyone who lives in and visits our beautiful green city; imagine Downtown's own Mt. Bonnell lookout.
+      
+      We propose an elevator system that generates power as it glides between levels.  An intelligent double skin system which moderates the harsh sun, while allowing for better cross ventilation and minimal heating and cooling.  We will draw from Foster and Partners' pioneering design to inspire new paradigms.  Design such as their LEED certified Gold Hearst building in New York City which reduced the amount of steel needed by 20%.
+    - "4"
+    - "530"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - green-water-redevelopment
+  - - "32"
+    - Miami Waterworks
+    - Conversion of an existing waterworks facility into a gateway & orientation building for the new Arts district in downtown Miami. Next to the Herzog & De Meuron designed Miami Art Museum
+    - 2008-08-06 00:00:00.000000-0700
+    - ""
+    - Conversion of an existing waterworks facility into a gateway & orientation building for the new Arts district in downtown Miami. Next to the Herzog & De Meuron designed Miami Art Museum
+    - "6"
+    - "534"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - miami-waterworks
+  - - "34"
+    - G.H. Residence
+    - ""
+    - 2009-05-07 00:00:00.000000-0700
+    - ""
+    - |-
+      Gibbs Hollow Residence was conceived less as a house, but more as an extension and outgrowth of the limestone and aquifers of the Central Texas geography. The roof structure is configured so as to create a natural basin for the collection of rainwater, not unlike the vernal pools found in the outcroppings of Enchanted Rock. These basins harness additional natural flows through the use of photovoltaic and solar hot-water panels. The water, electricity and heat which are harvested on the roof tie into an extensive climate conditioning system which utilizes water source heat pumps and radiant loops to supply both the heating and cooling for the residence. The climate system is connected to geothermal ground loops as well as pools and water features thereby establishing a system of heat exchange which minimizes reliance on electricity or gas.
+      
+      The primary formal gesture of the project inserts two long native limestone walls into the site. The walls serve as the boundary demarking domesticated space with the vegetation outbound of these walls being native while the interior spaces are more lush and tropical. The program of the residence is configured along the stone walls each of which serves as the spine for the public and private wings, respectively. The offset between the main wings establish an exterior courtyard which will serve as an extended living space for much of the year. The siting of the boundary walls and building elements was informed by the presence and preservation of three mature native oaks.
+    - "1"
+    - "581"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - g-h-residence
+  - - "35"
+    - Mango Financial
+    - ""
+    - 2009-04-12 00:00:00.000000-0700
+    - ""
+    - |-
+      Mango Financial, Inc. is an innovative consumer financial services company that seeks to empower underserved customers in the U.S. to achieve their financial goals.
+      
+      [www.mangomoney.com]
+    - "2"
+    - 
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - mango-financial
+  - - "38"
+    - Re:Vision Dallas
+    - A research proposal investigating new strategies for developing urban communities developed as part of the Re:Vision Dallas competition.
+    - 
+    - ""
+    - "Bercy Chen Studio recently competed in the [http://www.urbanrevision.com/competitions/revision-dallas Re:Vision Dallas] design competition. According to the competition brief, \"Re:Vision Dallas is a chance to propel design beyond the typical, beyond the norm and to lay the foundation for a future of sustainable development we all hope is inevitable. It\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2s a chance to create a block that does no harm, to people or place. A chance to encourage and value relationships, while fostering respect for nature and our neighbors, privacy and resources, economy and consumption. It\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2s a chance to change how we live and connect, how we interact and collaborate\xC3\xA2\xE2\x82\xAC\xE2\x80\x9Dhow we live in a space throughout our life and the life cycle of the space.\"\r\n\
+      \r\n\
+      The Re:vision Dallas competition requested a self-sustaining city block in a downtown without very many of the things that normally make city centers successful. Our proposal sought to establish an icon for this part of downtown both to draw people to the site but also to serve as an architectural proposition that accounts for the ambition of the competition brief\r\n\
+      \r\n\
+      The organizers\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2 request for a realistic proposal suggested a strategy of phasing out the work. Not only may phasing be necessary fiscally, it is a way for the project to evolve over time with respect to its urban viability. Change will bring with it all the complexity of reality, and a proposal which allows for evolution in response to external stimuli should end up being more robust and whole.\r\n\
+      \r\n\
+      Our competition entry explored a range of housing types from single family to efficiency units. In a global perspective such housing typologies are not new. However, the idea of moving a suburban typology to downtown Dallas and arraying it alongside urban sleeping pods is a novel concept in Dallas, Texas.\r\n\
+      \r\n\
+      Our proposal suggested the potential of collaborating with a social service organization. We utilized this component as a way to begin thinking about new modes of housing and shared space (the shared kitchen or assembly space for example). Additionally, such an organization\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2s focus on training and life skills was a perfect combination with the larger scale urban farming component of the proposal.\r\n\
+      \r\n\
+      Our proposal sought to involve a high degree of systems integration which, when combined with the program requirement of zero waste-water runoff, suggested a development which not only harvested rainwater, but which utilized it as many ways as possible."
+    - "6"
+    - "636"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - re-vision-dallas
+  - - "48"
+    - Bluff House
+    - House overlooking Lake Austin.
+    - 2008-11-12 00:00:00.000000-0800
+    - Austin, Texas
+    - Located on a bluff overlooking Lake Austin, the project needed to place both the living spaces as well as outdoor spaces fronting on the view. In order to maintain both a connection with Lake Austin and views of the Texas Hill Country, the program was pushed close to the crest of the hill with the pool perched overlooking the lake. The design elevated the main living areas and provided exterior spaces beneath the structure. A reflective glass-tile soffit was used to bring reflected light deep into the covered exterior spaces.
+    - "5"
+    - "599"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - bluff-house
+  - - "50"
+    - Red Bluff Residence
+    - A 1400-sf residence near Town Lake in Austin TX
+    - 
+    - ""
+    - "A 1400-sf residence located in Austin, Texas near Town Lake.  The project touches on architecture as site-specific installation art and as an extension of the landscape.  As with many of our designs, influence is often drawn from vernacular precedents of various cultures.  While the essence of the project is conversant with a Pit House, the roof form has been largely influenced by the ancient art of origami\r\n\
+      \r\n\
+      The house\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2s relationship to the landscape both in terms of approach as well as building performance references the oldst housing typology in North America; the pit house.  Like a pit house, the house will undergo a 7-foot excavation gaining benefits from the earth\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2s mass to maintain thermal comfort throughout the year.  Such architectural settings create opportunities for maximum energy efficiency using a proposed Integrated Hydronic HVAC system.  \r\n\
+      \r\n\
+      The house integrates hydronic heating & cooling, geothermal heat exchange, phase-change thermal heat storage, rainwater collection and a green roof into an integrated system encompassing.  "
+    - "4"
+    - "655"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - red-bluff-residence
+  - - "51"
+    - Jade
+    - ""
+    - 2009-03-11 00:00:00.000000-0700
+    - Austin TX
+    - ""
+    - "4"
+    - "673"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - jade
+  - - "52"
+    - Mint Trail
+    - A residential renovations currently in the design phase
+    - 2009-09-25 00:00:00.000000-0700
+    - ""
+    - ""
+    - "5"
+    - 
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - mint-trail
+  - - "53"
+    - Benetton Tehran
+    - Competition entry for a tower in Tehran
+    - 2009-03-25 00:00:00.000000-0700
+    - Tehran, Iran
+    - ""
+    - "4"
+    - "696"
+    - 2010-04-14 21:32:33.000000-0700
+    - 2010-04-17 17:48:44.000000-0700
+    - benetton-tehran
