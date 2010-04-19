@@ -4,8 +4,19 @@ require 'open-uri'
 class Video < ActiveRecord::Base
   has_attached_file :thumbnail, 
     :styles => { 
-      :thumb => '55x40#',
-      :thumb_ds => { :geometry => '55x40#', :processors => [:thumbnail, :modulate], :saturation => 0 }
+      :thumb => {
+        :geometry => '55x40#', 
+        :processors => [:thumbnail, :overlay], 
+        :overlay_size => '55x40', 
+        :overlay => File.join(RAILS_ROOT,'public','images','video_overlay.png')
+      },
+      :thumb_ds => { 
+        :geometry => '55x40#', 
+        :processors => [:thumbnail, :modulate, :overlay], 
+        :saturation => 0,
+        :overlay_size => '55x40', 
+        :overlay => File.join(RAILS_ROOT,'public','images','video_overlay.png')
+      }
     }, 
     :default_style => :thumb,
     :url => "/assets/videos/:id/:style/:basename.:extension",
