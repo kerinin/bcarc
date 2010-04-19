@@ -5,6 +5,7 @@
 <p>(Order)</p>
 
 <% form_for [:admin, @project] do |f| %>
+  <%= hidden_field_tag :return_to, admin_project_images_path(@project) %>
   <table>
     <tr>
       <th>Image</th>
@@ -19,7 +20,7 @@
       <td><%= image_tag image.attachment.url(:thumb) %></td>
       <td><%=h image.name %></td>
       <td><%=h image.position %></td>
-      <td><%= f.radio_button :thumbnail_id, image.id %></td>
+      <td><%= f.radio_button :thumbnail_id, image.id, :onchange => "submit();" %></td>
       <td><%= image.sync_flickr ? 'Yes' : nil %></td>
       <td><%= link_to 'Show', project_image_path(@project,image) %></td>
       <td><%= link_to 'Edit', edit_admin_project_image_path(@project,image) %></td>
