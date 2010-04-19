@@ -4,12 +4,14 @@
 
 <table>
   <tr>
+    <th>Image</th>
     <th>Name</th>
     <th>Priority</th>
   </tr>
 
 <% @projects.ascend_by_name.each do |project| %>
   <tr>
+    <td><%= image_tag ( project.thumbnail.nil? ? project.images[0].attachment.url(:thumb) : project.thumbnail.attachment.url(:thumb) ) unless project.images.empty?  %></td>
     <td><%=h project.name %></td>
     <td><%=h project.priority %></td>
     <td><%= link_to 'Show', project %></td>
