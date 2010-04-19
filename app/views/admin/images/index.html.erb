@@ -2,32 +2,27 @@
 
 <%= render :partial => 'admin/shared/project_header' %>
 
-<p>(Order)</p>
-
 <% form_for [:admin, @project] do |f| %>
   <%= hidden_field_tag :return_to, admin_project_images_path(@project) %>
-  <table>
-    <tr>
-      <th>Image</th>
-      <th>Name</th>
-      <th>Position</th>
-      <th>Thumbnail</th>
-      <th>Sync flickr</th>
-    </tr>
+  
+  <ul id="image-list" style="display:table;">
+    <li style="display:table-row;">
+      <span style="display:table-cell;">Image</span>
+      <span style="display:table-cell;">Name</span>
+      <span style="display:table-cell;">Thumbnail</span>
+    </li>
 
   <% @images.ascend_by_position.each do |image| %>
-    <tr>
-      <td><%= image_tag image.attachment.url(:thumb) %></td>
-      <td><%=h image.name %></td>
-      <td><%=h image.position %></td>
-      <td><%= f.radio_button :thumbnail_id, image.id, :onchange => "submit();" %></td>
-      <td><%= image.sync_flickr ? 'Yes' : nil %></td>
-      <td><%= link_to 'Show', project_image_path(@project,image) %></td>
-      <td><%= link_to 'Edit', edit_admin_project_image_path(@project,image) %></td>
-      <td><%= link_to 'Delete', admin_project_image_path(@project,image), :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
+    <li id="item_<%= image.id %>" style="display:table-row", class="draggable">
+      <span style="display:table-cell;" class="dragger"><%= image_tag image.attachment.url(:thumb), :style => 'cursor:move;' %></span>
+      <span style="display:table-cell;" class="dragger"><%=h image.name %></span>
+      <span style="display:table-cell;"><%= f.radio_button :thumbnail_id, image.id, :onchange => "submit();" %></span>
+      <span style="display:table-cell;"><%= link_to 'Show', project_image_path(@project,image) %></span>
+      <span style="display:table-cell;"><%= link_to 'Edit', edit_admin_project_image_path(@project,image) %></span>
+      <span style="display:table-cell;"><%= link_to 'Delete', admin_project_image_path(@project,image), :confirm => 'Are you sure?', :method => :delete %></span>
+    </li>
   <% end %>
-  </table>
+  </ul>
 <% end %>
 
 <br />
@@ -37,3 +32,5 @@
   <%= f.file_field :attachment %>
   <%= f.submit 'Upload' %>
 <% end %>
+
+<%= sortable_element 'image-list', :url => {:action => "sort", :id => @project}, :handle => :dragger, :only => :draggable, :complete => visual_effect(:highlight, "image-list") %>
