@@ -7,14 +7,14 @@
 
   <%= image_tag @plan.attachment.url(:original) %>
   
-  <p>(Project)</p>
-  
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
   <p>
     <%= f.submit 'Update' %>
+    or
+    <%= link_to 'Delete', admin_project_plan_path(@project, @plan), :confirm => 'Are you sure?', :method => :delete %>
   </p>
 <% end %>
 

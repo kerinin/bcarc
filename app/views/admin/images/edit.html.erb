@@ -31,6 +31,8 @@
   
   <p>
     <%= f.submit 'Update' %>
+    or
+    <%= link_to 'Delete', admin_project_image_path(@project,@image), :confirm => 'Are you sure?', :method => :delete %>
   </p>
 <% end %>
 

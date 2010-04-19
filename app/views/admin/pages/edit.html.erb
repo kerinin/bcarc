@@ -17,6 +17,8 @@
   </p>
   <p>
     <%= f.submit 'Update' %>
+    or
+    <%= link_to 'Delete', admin_page_path(@page), :confirm => 'Are you sure?', :method => :delete %>
   </p>
 <% end %>
 

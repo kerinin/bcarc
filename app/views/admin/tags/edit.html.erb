@@ -9,6 +9,8 @@
   </p>
   <p>
     <%= f.submit 'Update' %>
+    or
+    <%= link_to 'Delete', admin_tag_path(@tag), :confirm => 'Are you sure?', :method => :delete %>
   </p>
 <% end %>
 

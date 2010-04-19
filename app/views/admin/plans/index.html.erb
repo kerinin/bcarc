@@ -18,7 +18,7 @@
     <td><%=h plan.position %></td>
     <td><%= link_to 'Show', project_plan_path(@project, plan) %></td>
     <td><%= link_to 'Edit', edit_admin_project_plan_path(@project, plan) %></td>
-    <td><%= link_to 'Destroy', admin_project_plan_path(@project, plan), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', admin_project_plan_path(@project, plan), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
