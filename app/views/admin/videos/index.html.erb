@@ -1,7 +1,12 @@
-<h1>Listing videos</h1>
+<h1>Listing videos of project <%=link_to @project.name, edit_admin_project_path(@project) %></h1>
+
+<%= render :partial => 'admin/shared/project_header' %>
+
+<%= link_to 'New video', new_admin_project_video_path(@project) %>
 
 <table>
   <tr>
+    <th>Thumb</th>
     <th>Name</th>
     <th>Position</th>
     <th>Description</th>
@@ -9,20 +14,21 @@
     <th>Height</th>
   </tr>
 
-<% @videos.each do |video| %>
+<% @videos.ascend_by_position.each do |video| %>
   <tr>
+    <td><%= image_tag video.thumbnail.url(:thumb) %></td>
     <td><%=h video.name %></td>
     <td><%=h video.position %></td>
     <td><%=h video.description %></td>
     <td><%=h video.width %></td>
     <td><%=h video.height %></td>
-    <td><%= link_to 'Show', video %></td>
-    <td><%= link_to 'Edit', edit_video_path(video) %></td>
-    <td><%= link_to 'Destroy', video, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', project_video_path(@project, video) %></td>
+    <td><%= link_to 'Edit', edit_admin_project_video_path(@project, video) %></td>
+    <td><%= link_to 'Destroy', edit_admin_project_video_path(@project,video), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New video', new_video_path %>
+<%= link_to 'New video', new_admin_project_video_path(@project) %>

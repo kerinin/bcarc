@@ -1,12 +1,14 @@
 <h1>Listing projects</h1>
 
+<%= link_to 'New project', new_admin_project_path %>
+
 <table>
   <tr>
     <th>Name</th>
     <th>Priority</th>
   </tr>
 
-<% @projects.each do |project| %>
+<% @projects.ascend_by_name.each do |project| %>
   <tr>
     <td><%=h project.name %></td>
     <td><%=h project.priority %></td>
@@ -22,4 +24,4 @@
 
 <br />
 
-<%= link_to 'New project', new_project_path %>
+<%= link_to 'New project', new_admin_project_path %>

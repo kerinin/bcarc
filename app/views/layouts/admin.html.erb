@@ -8,13 +8,13 @@
   <%= stylesheet_link_tag 'scaffold' %>
 </head>
 <body>
-
-  <ul>
-    <li><%= link_to "Projects", admin_projects_url %></li>
-    <li><%= link_to "Pages", admin_pages_url %></li>
-    <li><%= link_to "Tags", admin_tags_url %></li>
-  </ul>
-    
+  <h2>
+    <ul>
+      <li><%= link_to "Projects", admin_projects_url %></li>
+      <li><%= link_to "Pages", admin_pages_url %></li>
+      <li><%= link_to "Tags", admin_tags_url %></li>
+    </ul>
+  </h2>
     
   <p style="color: green"><%= flash[:notice] %></p>
 

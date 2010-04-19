@@ -1,8 +1,14 @@
-<h1>Editing plan</h1>
+<h1>Editing plan of project <%=link_to @project.name, edit_admin_project_path(@project) %></h1>
+
+<%= render :partial => 'admin/shared/project_header' %>
 
 <% form_for(@plan) do |f| %>
   <%= f.error_messages %>
 
+  <%= image_tag @plan.attachment.url(:original) %>
+  
+  <p>(Project)</p>
+  
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -17,4 +23,4 @@
 <% end %>
 
 <%= link_to 'Show', @plan %> |
-<%= link_to 'Back', plans_path %>
+<%= link_to 'Back', admin_project_plans_path(@project) %>

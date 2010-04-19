@@ -24,7 +24,7 @@ Rails::Initializer.run do |config|
   config.gem "shoulda"
   config.gem "aws-s3", :lib => "aws/s3"
   config.gem "resource_controller"
-  config.gem "searchlogic"
+  config.gem "searchlogic", :version => '2.4.10'
   config.gem "acts_as_markup"
   config.gem "right_aws"
   config.gem "acts_as_list"

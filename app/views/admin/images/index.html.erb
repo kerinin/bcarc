@@ -1,17 +1,25 @@
 <h1>Listing images of project <%=link_to @project.name, edit_admin_project_path(@project) %></h1>
 
+<%= render :partial => 'admin/shared/project_header' %>
+
+<%= link_to 'New image', new_admin_project_image_path(@project) %>
+
 <table>
   <tr>
+    <th>Thumbnail</th>
     <th>Name</th>
     <th>Position</th>
+    <th>Project Thumb</th>
     <th>Sync flickr</th>
   </tr>
 
-<% @images.each do |image| %>
+<% @images.ascend_by_position.each do |image| %>
   <tr>
+    <td><%= image_tag image.attachment.url(:thumb) %></td>
     <td><%=h image.name %></td>
     <td><%=h image.position %></td>
-    <td><%=h image.sync_flickr %></td>
+    <td><%= image == @project.thumbnail ? 'Yes' : nil %></td>
+    <td><%= image.sync_flickr ? 'Yes' : nil %></td>
     <td><%= link_to 'Show', project_image_path(@project,image) %></td>
     <td><%= link_to 'Edit', edit_admin_project_image_path(@project,image) %></td>
     <td><%= link_to 'Destroy', edit_admin_project_image_path(@project,image), :confirm => 'Are you sure?', :method => :delete %></td>

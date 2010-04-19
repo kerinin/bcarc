@@ -1,19 +1,19 @@
-<h1>New plan</h1>
+<h1>New plan for project <%=link_to @project.name, edit_admin_project_path(@project) %></h1>
 
-<% form_for(@plan) do |f| %>
+<%= render :partial => 'admin/shared/project_header' %>
+
+<% form_for([:admin, @project, @plan]) do |f| %>
   <%= f.error_messages %>
-
+  
+  <p>(upload form)</p>
+  
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :position %><br />
-    <%= f.text_field :position %>
   </p>
   <p>
     <%= f.submit 'Create' %>
   </p>
 <% end %>
 
-<%= link_to 'Back', plans_path %>
+<%= link_to 'Back', admin_project_plans_path(@project) %>

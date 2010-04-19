@@ -1,8 +1,16 @@
-<h1>Editing image</h1>
+<h1>Editing image of project <%=link_to @project.name, edit_admin_project_path(@project) %></h1>
 
-<% form_for(@image) do |f| %>
+<%= render :partial => 'admin/shared/project_header' %>
+
+<% form_for([:admin,@project,@image]) do |f| %>
   <%= f.error_messages %>
 
+  <%= image_tag @image.attachment.url(:original) %>
+  
+  <p>(Project)</p>
+  <p>(Plan)</p>
+  <p>(Use as thumbnail)</p>
+  
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -32,13 +40,9 @@
     <%= f.check_box :sync_flickr %>
   </p>
   <p>
-    <%= f.label :flickr_id %><br />
-    <%= f.text_field :flickr_id %>
-  </p>
-  <p>
     <%= f.submit 'Update' %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @image %> |
-<%= link_to 'Back', images_path %>
+<%= link_to 'Show', project_image_path(@project, @image) %> |
+<%= link_to 'Back', admin_project_images_path(@project) %>

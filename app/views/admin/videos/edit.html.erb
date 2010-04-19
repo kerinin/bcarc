@@ -1,8 +1,14 @@
-<h1>Editing video</h1>
+<h1>Editing video of project <%=link_to @project.name, edit_admin_project_path(@project) %></h1>
 
-<% form_for(@video) do |f| %>
+<%= render :partial => 'admin/shared/project_header' %>
+
+<% form_for([:admin, @project, @video]) do |f| %>
   <%= f.error_messages %>
 
+  <%= link_to image_tag( @video.thumbnail.url(:original) ), @video.uri %>
+  
+  <p>(Project)</p>
+  
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -28,5 +34,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @video %> |
-<%= link_to 'Back', videos_path %>
+<%= link_to 'Show', project_video_path(@project, @video) %> |
+<%= link_to 'Back', admin_project_videos_path(@project) %>

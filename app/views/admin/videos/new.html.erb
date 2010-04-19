@@ -1,15 +1,18 @@
-<h1>New video</h1>
+<h1>New video for project <%=link_to @project.name, edit_admin_project_path(@project) %></h1>
 
-<% form_for(@video) do |f| %>
+<%= render :partial => 'admin/shared/project_header' %>
+
+<% form_for([:admin, @project, @video]) do |f| %>
   <%= f.error_messages %>
 
   <p>
+    <%= f.label :uri %><br />
+    <%= f.text_field :uri %>
+  </p>
+  
+  <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :position %><br />
-    <%= f.text_field :position %>
   </p>
   <p>
     <%= f.label :description %><br />
@@ -28,4 +31,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Back', videos_path %>
+<%= link_to 'Back', admin_project_videos_path(@project) %>
