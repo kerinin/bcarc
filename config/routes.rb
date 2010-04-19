@@ -21,9 +21,7 @@ ActionController::Routing::Routes.draw do |map|
       project.resources :plans
     end
     
-    admin.resources :tags do |tag|
-      tag.resources :projects
-    end
+    admin.resources :tags
     
     admin.resources :pages
   end

@@ -8,4 +8,7 @@ class Admin::BaseController < ApplicationController
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
   # 
+  
+  layout 'admin'
+  
 end

@@ -1,34 +1,24 @@
-<h1>Listing images</h1>
+<h1>Listing images of project <%=link_to @project.name, edit_admin_project_path(@project) %></h1>
 
 <table>
   <tr>
     <th>Name</th>
     <th>Position</th>
-    <th>Description</th>
-    <th>Plan x</th>
-    <th>Plan y</th>
-    <th>Locator angle</th>
     <th>Sync flickr</th>
-    <th>Flickr</th>
   </tr>
 
 <% @images.each do |image| %>
   <tr>
     <td><%=h image.name %></td>
     <td><%=h image.position %></td>
-    <td><%=h image.description %></td>
-    <td><%=h image.plan_x %></td>
-    <td><%=h image.plan_y %></td>
-    <td><%=h image.locator_angle %></td>
     <td><%=h image.sync_flickr %></td>
-    <td><%=h image.flickr_id %></td>
-    <td><%= link_to 'Show', image %></td>
-    <td><%= link_to 'Edit', edit_image_path(image) %></td>
-    <td><%= link_to 'Destroy', image, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', project_image_path(@project,image) %></td>
+    <td><%= link_to 'Edit', edit_admin_project_image_path(@project,image) %></td>
+    <td><%= link_to 'Destroy', edit_admin_project_image_path(@project,image), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New image', new_image_path %>
+<%= link_to 'New image', new_admin_project_image_path(@project) %>

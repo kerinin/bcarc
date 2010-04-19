@@ -3,24 +3,19 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Short</th>
-    <th>Date completed</th>
-    <th>Location</th>
-    <th>Description</th>
     <th>Priority</th>
   </tr>
 
 <% @projects.each do |project| %>
   <tr>
     <td><%=h project.name %></td>
-    <td><%=h project.short %></td>
-    <td><%=h project.date_completed %></td>
-    <td><%=h project.location %></td>
-    <td><%=h project.description %></td>
     <td><%=h project.priority %></td>
     <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Edit', edit_admin_project_path(project) %></td>
+    <td><%= link_to 'Images', admin_project_images_path(project) %></td>
+    <td><%= link_to 'Videos', admin_project_videos_path(project) %></td>
+    <td><%= link_to 'Plans', admin_project_plans_path(project) %></td>
+    <td><%= link_to 'Destroy', admin_project_path(project), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
