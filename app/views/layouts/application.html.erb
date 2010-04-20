@@ -48,7 +48,7 @@
 		      <ul class="nav_right">
 		        <li><%= link_to t('work').downcase, projects_url %></li>
 		        <% Page.all.each do |page| %>
-		          <li><%= link_to t(page.name.parameterize('_')).downcase, page_url(page) %> </li>
+		          <li><%= link_to page.name.downcase, page_url(page) %> </li>
             <% end %>
 			      <li><%= link_to t('news').downcase, "http://blog.bcarc.com/category/news/" %></li>
 			      <li><%= link_to t('blog').downcase, "http://blog.bcarc.com" %></li>

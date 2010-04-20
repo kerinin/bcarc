@@ -7,7 +7,7 @@
   <%= javascript_include_tag 'raphael-min' %>
   <%= javascript_include_tag 'plan' %>
 
-  <title><%= @project.name %> - <%= t('images') %> (<%= @image.position %>) @ Bercy Chen Studio: Architecture + Construction</title>
+  <title><%= @project.name %> - <%= t('images') %> (<%= @image.position %>) @ Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>
   <meta name="keywords" content="${project.name}"/>
   <meta py:if="object.description" name="description" content="${object.description}"/>
   <meta py:if="not object.description" name="description" content="${project.description}"/>

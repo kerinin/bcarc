@@ -2,7 +2,7 @@
   <ul class="nav_left">
   	<li style="float:left;"> <%= t('floor_plans').downcase %> ></li>
   	<% @project.plans.each do |plan| %>
-  	  <li><%= link_to t(plan.name.parameterize('_')).downcase, project_plan_url(@project, plan), :class => (plan == @plan ? 'plan_link current_view' : 'plan_link') %></li>
+  	  <li><%= link_to plan.name.downcase, project_plan_url(@project, plan), :class => (plan == @plan ? 'plan_link current_view' : 'plan_link') %></li>
     <% end %>
   </ul>
 <% end %>
