@@ -6,7 +6,9 @@
   <%= f.error_messages %>
 
   <%= link_to image_tag( @video.thumbnail.url(:original) ), @video.uri %>
-
+  
+  <%= render :partial => 'admin/shared/languages' %>
+  
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>

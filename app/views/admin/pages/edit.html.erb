@@ -3,6 +3,8 @@
 <% form_for([:admin, @page]) do |f| %>
   <%= f.error_messages %>
 
+  <%= render :partial => 'admin/shared/languages' %>
+   
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>

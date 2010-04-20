@@ -1,0 +1,27 @@
+--- 
+es: 
+  1st_floor: "1 ª Planta"
+  2nd_floor: "2 ª Planta"
+  3rd_floor: "3 ª Planta"
+  _time: Tiempo
+  about: Sobre
+  all: Todos
+  blog: Blog
+  commercial: Comercial
+  commercial_work: "Trabajo Comercial"
+  construction: Construcción
+  copyright: "© 2008 Bercy Chen Studio LP. Todos los derechos reservados"
+  cultural: Cultural
+  cultural_work: "Trabajo Cultural"
+  floor_plans: "Planos"
+  hello: "¡Hola, mundo"
+  images: Imágenes
+  master_planning: "Master Plan"
+  master_planning_work: "Master Plan"
+  news: Noticias
+  popular: Popular
+  residential: Residencial
+  residential_work: "Trabajo Residencial"
+  subscribe: Suscribir
+  sustainability: Sostenibilidad
+  work: Trabajo

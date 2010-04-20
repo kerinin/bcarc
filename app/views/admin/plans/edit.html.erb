@@ -7,6 +7,8 @@
 
   <%= image_tag @plan.attachment.url(:original) %>
   
+  <%= render :partial => 'admin/shared/languages' %>
+  
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
