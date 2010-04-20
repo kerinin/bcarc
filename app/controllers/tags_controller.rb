@@ -3,6 +3,8 @@ class TagsController < ApplicationController
   
   actions :show
   
+  caches_action :show
+  
   show.before do
     @projects = @tag.projects.ascend_by_priority
   end

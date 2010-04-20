@@ -3,6 +3,8 @@ class ProjectsController < ApplicationController
   
   actions :show, :index
   
+  caches_page :show
+  
   index.before do
     @projects = Project.random( 6, :conditions => { :priority => 1..3 }).sort_by {rand}
   end
@@ -13,5 +15,7 @@ class ProjectsController < ApplicationController
     elsif @project.videos.count
       @next = @project.videos[0]
     end
+    
+    response.headers['Cache-Control'] = "public, max-age=6400"
   end
 end

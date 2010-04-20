@@ -5,6 +5,8 @@ class VideosController < ApplicationController
   
   actions :show
   
+  caches_page :show
+  
   show.before do
     @project = @video.project
     unless @video == @project.videos.last
@@ -18,5 +20,7 @@ class VideosController < ApplicationController
     else
       @prev = @project.videos[ @project.videos.index(@video) - 1]
     end
+    
+    response.headers['Cache-Control'] = "public, max-age=6400"
   end
 end
