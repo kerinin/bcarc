@@ -9,8 +9,4 @@ class Page < ActiveRecord::Base
   translates :name, :content
   
   default_scope :order => 'position ASC'
-    
-  #def to_param
-  #  permalink
-  #end
 end

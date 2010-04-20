@@ -15,9 +15,4 @@ class ApplicationController < ActionController::Base
   def load_tags
     @tags = Tag.all
   end
-  
-  def set_locale
-    # if params[:locale] is nil then I18n.default_locale will be used
-    I18n.locale = params[:locale]
-  end
 end

@@ -14,10 +14,6 @@ class Project < ActiveRecord::Base
   
   translates :name, :short, :description
   
-  #def to_param
-  #  permalink
-  #end
-  
   def year
     self.date_completed.strftime('%Y')
   end
