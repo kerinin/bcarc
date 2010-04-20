@@ -12,6 +12,8 @@ class Project < ActiveRecord::Base
   
   acts_as_wikitext :description
   
+  translates :name, :short, :description
+  
   #def to_param
   #  permalink
   #end

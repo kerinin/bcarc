@@ -4,6 +4,8 @@ class Tag < ActiveRecord::Base
   #has_permalink :name
   make_permalink :with => :name
   
+  translates :name
+  
   #def to_param
   #  permalink
   #end

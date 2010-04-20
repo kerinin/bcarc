@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'Work/All', :controller => :projects, :action => :index
   map.connect 'Work/:id/*other', :controller => :tags, :action => :show
   
+  # basic routes
   map.resources :projects, :as => 'Project' do |project|
     project.resources :images
     project.resources :videos
@@ -18,6 +19,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :plans, :as => 'Plan'
   
+  # admin interface
   map.namespace :admin do |admin|
     admin.resources :projects do |project|
       project.resources :images
@@ -71,4 +73,11 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+  
+  #ActionController::Routing::Translator.i18n('de')
+  #ActionController::Routing::Translator.i18n('es')
+  #ActionController::Routing::Translator.i18n('fr')
+  #ActionController::Routing::Translator.i18n('zh-CN')
+  #ActionController::Routing::Translator.i18n('zh-TW')
+  #ActionController::Routing::Translator.i18n('zh')
 end

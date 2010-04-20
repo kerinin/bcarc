@@ -15,6 +15,8 @@ class Image < ActiveRecord::Base
                       
   belongs_to :project
   
+  translates :name, :description
+  
   acts_as_wikitext :description
   
   acts_as_list :scope => :project

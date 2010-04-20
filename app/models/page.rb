@@ -6,6 +6,8 @@ class Page < ActiveRecord::Base
   
   acts_as_list
   
+  translates :name, :content
+  
   default_scope :order => 'position ASC'
     
   #def to_param

@@ -35,6 +35,8 @@ class Video < ActiveRecord::Base
   
   acts_as_list :scope => :project
   
+  translates :name, :description
+  
   def service
     return 'youtube' if self.uri.include?( 'youtube.com' )
     return 'vimeo' if self.uri.include?( 'vimeo.com' )

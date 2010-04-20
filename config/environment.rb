@@ -30,6 +30,7 @@ Rails::Initializer.run do |config|
   config.gem "acts_as_markup"
   config.gem "right_aws"
   config.gem "acts_as_list"
+  config.gem 'memcached'
   #config.gem "mysql"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
