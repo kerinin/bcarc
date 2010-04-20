@@ -1,4 +1,4 @@
-<% @projects.group_by(&:year).sort.each do |year, projects| %>
+<% @projects.date_completed_not_null.group_by(&:year).sort.reverse.each do |year, projects| %>
 	<div class="yeargroup">
 		<h3><%= year %></h3>
 		<% projects.each do |project| %>

@@ -4,6 +4,6 @@ class TagsController < ApplicationController
   actions :show
   
   show.before do
-    @projects = @tag.projects.descend_by_priority
+    @projects = @tag.projects.ascend_by_priority
   end
 end
