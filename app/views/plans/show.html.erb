@@ -1,9 +1,25 @@
-<p>
-  <b>Name:</b>
-  <%=h @plan.name %>
-</p>
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'header' %>
+  <%= stylesheet_link_tag 'project' %>
+  <%= stylesheet_link_tag 'footer' %>
+	
+	<title><%= @project.name %> @ Bercy Chen Studio: Architecture + Construction</title>
+	<meta name="keywords" content="${project.name}"/>
+	<meta name="description" content="${project.description}"/>
+<% end %>
 
-<p>
-  <b>Position:</b>
-  <%=h @plan.position %>
-</p>
+<% content_for :nav_left do %>
+  <%= render :partial => 'shared/project_show_nav' %>
+<% end %>
+
+<%= render :partial => 'shared/project_thumbnails' %>
+
+<div class="content">
+	<div class="prop">
+		<%= image_tag @plan.attachment.url(:full) %>
+	</div>
+</div>
+
+<%= render :partial => 'shared/project_footer' %>
+
+
