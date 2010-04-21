@@ -4,25 +4,17 @@ xml.sitemapindex "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
   xml.sitemap do
     xml.loc web_sitemap_url
     xml.lastmod     w3c_date(Time.now)
-    xml.changefreq  "always"
-    xml.priority    1
   end
   xml.sitemap do
     xml.loc image_sitemap_url
     xml.lastmod     w3c_date(Time.now)
-    xml.changefreq  "always"
-    xml.priority    1
   end
 #  xml.sitemap do
 #    xml.loc video_sitemap_url
 #    xml.lastmod     w3c_date(Time.now)
-#    xml.changefreq  "always"
-#    xml.priority    1
 #  end
   xml.sitemap do
     xml.loc geo_sitemap_url
     xml.lastmod     w3c_date(Time.now)
-    xml.changefreq  "always"
-    xml.priority    1
   end
 end
