@@ -3,8 +3,6 @@ class ProjectsController < ApplicationController
   
   actions :show, :index
   
-  caches_page :show
-  
   index.before do
     @projects = Project.random( 6, :conditions => { :priority => 1..3 }).sort_by {rand}
   end

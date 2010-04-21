@@ -5,8 +5,6 @@ class ImagesController < ApplicationController
   
   actions :show
   
-  caches_page :show
-  
   show.before do
     @project = @image.project
     if @image == @project.images.last

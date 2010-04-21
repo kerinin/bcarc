@@ -5,8 +5,6 @@ class VideosController < ApplicationController
   
   actions :show
   
-  caches_page :show
-  
   show.before do
     @project = @video.project
     unless @video == @project.videos.last

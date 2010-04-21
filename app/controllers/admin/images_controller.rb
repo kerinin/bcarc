@@ -5,8 +5,6 @@ class Admin::ImagesController < Admin::BaseController
   belongs_to :project
   
   actions :all
-
-  cache_sweeper :project_sweeper
       
   create.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
   update.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
