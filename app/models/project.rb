@@ -14,6 +14,10 @@ class Project < ActiveRecord::Base
   
   translates :name, :short, :description
   
+  def kml?
+    !( latitude.nil? || longitude.nil? )
+  end
+  
   def html_description
     Wikitext::Parser.new().parse( description.to_s )
   end

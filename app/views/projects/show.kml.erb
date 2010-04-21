@@ -1,0 +1,30 @@
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name><%= @project.name %></name>
+    <atom:author>
+      <atom:name>Bercy Chen Studio</atom:name>
+    </atom:author>
+    <atom:link href="http://www.domain.com/" />
+    <Placemark>
+      <name><%= "Bercy Chen Studio Project: @project.name" %></name>
+      <description>
+        <![CDATA[
+          <% if @project.address && @project.city && @project.state %>
+            <address>
+              <a href="http://www.domain.com/">Company Name</a><br />
+              Address: <%= @project.address %> <%= @project.city %>, <%= @project.state %> <%= @project.zip %><br />
+            </address>
+            <p><%= @project.html_short %></p>
+          <% elsif @project.short %>
+            <%= @project.html_short %>
+          <% else %>
+            <%= @project.html_description %>
+          <% end %>
+        ]]>
+      </description>
+      <Point>
+        <coordinates><%= @project.longitude %>,<%= @project.latitude %></coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

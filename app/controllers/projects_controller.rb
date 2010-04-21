@@ -1,3 +1,5 @@
+Mime::Type.register 'application/vnd.google-earth.kml+xml', :kml
+
 class ProjectsController < ApplicationController
   resource_controller
   
