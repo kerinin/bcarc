@@ -21,6 +21,10 @@ class Image < ActiveRecord::Base
   
   acts_as_list :scope => :project
   
+  def html_description
+    Wikitext::Parser.new().parse( description.to_s )
+  end
+  
   def upload_to_s3
     if self.attachment_file_size.nil?
       begin

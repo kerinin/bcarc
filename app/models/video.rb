@@ -37,6 +37,10 @@ class Video < ActiveRecord::Base
   
   translates :name, :description
   
+  def html_description
+    Wikitext::Parser.new().parse( description.to_s )
+  end
+  
   def service
     return 'youtube' if self.uri.include?( 'youtube.com' )
     return 'vimeo' if self.uri.include?( 'vimeo.com' )
