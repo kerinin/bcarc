@@ -45,7 +45,6 @@ module Globalize
         options = attr_names.extract_options!
 
         class_inheritable_accessor :translation_class, :translated_attribute_names
-        class_inheritable_writer :required_attributes
         self.translation_class = ActiveRecord.build_translation_class(self, options)
         self.translated_attribute_names = attr_names.map(&:to_sym)
 
@@ -103,12 +102,12 @@ module Globalize
       end
 
       def required_attributes
-        @required_attributes ||= reflect_on_all_validations.select do |validation|
-          validation.macro == :validates_presence_of && translated_attribute_names.include?(validation.name)
+        validations = reflect_on_all_validations.select do |validation|
+          validation.macro == :validates_presence_of
         end.map(&:name)
       end
 
-      def respond_to?(method, *args, &block)
+      def respond_to?(method)
         method.to_s =~ /^find_by_(\w+)$/ && translated_attribute_names.include?($1.to_sym) || super
       end
 
@@ -125,16 +124,21 @@ module Globalize
         def find_first_by_translated_attr_and_locales(name, value)
           query = "#{translated_attr_name(name)} = ? AND #{translated_attr_name('locale')} IN (?)"
           locales = Globalize.fallbacks(locale || I18n.locale).map(&:to_s)
-          find(:first, :joins => :translations, :conditions => [query, value, locales])
+          result = find(:first, :joins => :translations, :conditions => [query, value, locales])
+          result = find(:first, :conditions => [ "`#{name}` = ?", value]) if !result
+          result
         end
 
         def translated_attr_accessor(name)
           define_method "#{name}=", lambda { |value|
+            # Inform ActiveRecord::Dirty module about the change
+            send("#{name}_will_change!") if @attributes.has_key?(name.to_s)
+
             globalize.write(self.class.locale || I18n.locale, name, value)
-            self[name] = value
+            self[name] = value if (self.class.locale || I18n.locale) == I18n.default_locale
           }
           define_method name, lambda { |*args|
-            globalize.fetch(args.first || self.class.locale || I18n.locale, name)
+            globalize.fetch(args.first || self.class.locale || I18n.locale, name) || self[name]
           }
           alias_method "#{name}_before_type_cast", name
         end
@@ -162,7 +166,8 @@ module Globalize
       end
 
       def translated_locales
-        translations.map(&:locale)
+        # The original language is also a translation according to the original definitions of the plugin
+        translations.map(&:locale) << I18n.default_locale
       end
 
       def translated_attributes
@@ -186,7 +191,6 @@ module Globalize
       end
 
       protected
-
         def save_translations!
           globalize.save_translations!
         end

@@ -23,10 +23,13 @@ class ActiveRecordTest < ActiveSupport::TestCase
     post = Post.create(:subject => 'title')
     I18n.locale = :de
     post.update_attributes(:subject => 'Titel')
+    I18n.locale = :he
+    post.update_attributes(:subject => 'foo')
 
+    # Translations table should contain translations for :de and :he and not for :en
     assert_equal 2, post.translations.size
-    assert_equal %w(de en), post.translations.map(&:locale).map(&:to_s).sort
-    assert_equal %w(Titel title), post.translations.map(&:subject).sort
+    assert_equal %w(de he), post.translations.map(&:locale).map(&:to_s).sort
+    assert_equal %w(Titel foo), post.translations.map(&:subject).sort
   end
 
   test "a translated record has German translations" do
@@ -59,13 +62,15 @@ class ActiveRecordTest < ActiveSupport::TestCase
     assert_equal 'foo', value
   end
 
-  test "update_attribute succeeds with valid values" do
+  test "update_attribute succeeds with valid values for translated fields" do
+    I18n.locale = :de
     post = Post.create(:subject => 'foo', :content => 'bar')
     post.update_attribute(:subject, 'baz')
     assert_equal 'baz', Post.first.subject
   end
 
-  test "update_attributes fails with invalid values" do
+  test "update_attributes fails with invalid values for translates fields" do
+    I18n.locale = :de
     post = Post.create(:subject => 'foo', :content => 'bar')
     assert !post.update_attributes(:subject => '')
     assert_nil post.reload.attributes['subject']
@@ -377,6 +382,10 @@ class ActiveRecordTest < ActiveSupport::TestCase
 
   test "dependent destroy of translation" do
     p = Post.create(:subject => "Foo", :content => "Bar")
+    I18n.locale = :de
+    p.subject = "[de] foo"
+    p.content = "[de] bar"
+    p.save!
     assert_equal 1, PostTranslation.count
     p.destroy
     assert_equal 0, PostTranslation.count
@@ -396,6 +405,11 @@ class ActiveRecordTest < ActiveSupport::TestCase
     translated_comment.content = 'bar'
     assert translated_comment.save
     assert_equal 'bar', translated_comment.content
+
+    I18n.locale = :he
+    translated_comment.content = 'baz'
+    assert translated_comment.save
+    assert_equal 'baz', translated_comment.content
 
     I18n.locale = :en
     assert_equal 'foo', translated_comment.content
@@ -427,20 +441,6 @@ class ActiveRecordTest < ActiveSupport::TestCase
 
   test "don't override existing translation class" do
     assert PostTranslation.new.respond_to?(:existing_method)
-  end
-  
-  test "has_many and named scopes work with globalize" do
-    blog = Blog.create
-    assert_nothing_raised { blog.posts.foobar }
-  end
-
-  test "required_attribuets don't include non-translated attributes" do
-    validations = [
-      stub(:name => :name, :macro => :validates_presence_of),
-      stub(:name => :email, :macro => :validates_presence_of)
-    ]
-    User.expects(:reflect_on_all_validations => validations)
-    assert_equal [:name], User.required_attributes
   end
 end
 

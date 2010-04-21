@@ -4,7 +4,9 @@ ActiveRecord::Schema.define do
   end
 
   create_table :posts, :force => true do |t|
-    t.references :blog
+    t.string      :subject
+    t.text        :content
+    t.references  :blog
   end
 
   create_table :post_translations, :force => true do |t|
@@ -15,6 +17,7 @@ ActiveRecord::Schema.define do
   end
 
   create_table :parents, :force => true do |t|
+    t.string    :content
   end
 
   create_table :parent_translations, :force => true do |t|
@@ -42,14 +45,5 @@ ActiveRecord::Schema.define do
     t.string     :locale
     t.references :validatee
     t.string     :string
-  end
-
-  create_table :users, :force => true do |t|
-    t.string :email
-  end
-
-  create_table :users_translations, :force => true do |t|
-    t.references :user
-    t.string     :name
   end
 end
