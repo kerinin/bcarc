@@ -31,6 +31,8 @@ ActionController::Routing::Routes.draw do |map|
     
     admin.resources :pages
   end
+  
+  map.sitemap '/sitemap.xml', :controller => 'sitemap'
 
   # The priority is based upon order of creation: first created -> highest priority.
 
