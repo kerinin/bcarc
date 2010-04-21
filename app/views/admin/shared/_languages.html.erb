@@ -1,6 +1,6 @@
 <h3>
   Languages:
-  <ul>
+  <ul class="inline">
     <% I18n.available_locales.map{|l| l.to_s}.sort.each do |locale| %>
       <li><%= link_to locale, url_for(:locale => locale.to_s) %></li>
     <% end %>
