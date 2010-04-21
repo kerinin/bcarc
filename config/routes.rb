@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => :projects, :action => :index
     
   # Legacy routes
-  map.connect 'Work/All', :controller => :projects, :action => :index
+  map.connect 'Work/All', :controller => :tags, :action => :show
   map.connect 'Work/:id/*other', :controller => :tags, :action => :show
   
   # basic routes

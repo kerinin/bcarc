@@ -6,6 +6,11 @@ class TagsController < ApplicationController
   caches_action :show
   
   show.before do
-    @projects = @tag.projects.ascend_by_priority
+    if params[:id]
+      @projects = @tag.projects.ascend_by_priority
+    else
+      @projects = Project.ascend_by_priority
+      @all = true
+    end
   end
 end
