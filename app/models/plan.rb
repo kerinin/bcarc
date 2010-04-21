@@ -12,7 +12,20 @@ class Plan < ActiveRecord::Base
     :path => "projects/:id/plans/:style/:basename.:extension",
     :storage => :s3,
     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
-    :bucket => 'bcstudio-rails'
+    :bucket => 'bcstudio'
     
   translates :name
+  
+  def upload_to_s3
+    if self.attachment_file_size.nil?
+      begin
+        self.attachment = File.new(self.attachment_file_name)
+        self.save!
+      rescue
+        puts "FAIL!!!  #{self.id}"
+      else
+        puts self.id
+      end
+    end
+  end
 end

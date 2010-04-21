@@ -23,7 +23,7 @@ class Video < ActiveRecord::Base
     :path => "videos/:id/:style/:basename.:extension",
     :storage => :s3,
     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
-    :bucket => 'bcstudio-rails'
+    :bucket => 'bcstudio'
 
                       
   belongs_to :project
@@ -48,6 +48,15 @@ class Video < ActiveRecord::Base
   
   def vimeo_id
     self.uri.split('/')[-1]
+  end
+  
+  def player_loc
+    case self.service
+    when 'youtube'
+      "http://www.youtube.com/swf/l.swf?swf=http%3A//s.ytimg.com/yt/swf/cps-vfl87635.swf&video_id=#{self.youtube_id}"
+    when 'vimeo'
+      "http://vimeo.com/moogaloop.swf?clip_id=#{ @object.vimeo_id }&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1&amp;autoplay=1"
+    end
   end
   
   private
