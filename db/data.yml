@@ -29,14 +29,14 @@ images:
     - "48"
     - false
     - 
-    - /static/images/beverly/site.jpg
-    - 
-    - 
-    - 
+    - site.jpg
+    - image/jpeg
+    - "127805"
+    - 2010-04-21 19:20:16
     - 
     - "3"
     - 
-    - 
+    - 2010-04-21 19:20:16
   - - "38"
     - ""
     - "1"
@@ -46,14 +46,14 @@ images:
     - "14640"
     - false
     - 
-    - /static/images/beverly/DSC_0062.JPG
-    - 
-    - 
-    - 
+    - DSC_0062.JPG
+    - image/jpeg
+    - "118198"
+    - 2010-04-21 19:22:28
     - "19"
     - "3"
     - 
-    - 
+    - 2010-04-21 19:22:29
   - - "44"
     - ""
     - "3"
@@ -63,14 +63,14 @@ images:
     - "48"
     - false
     - 
-    - /static/images/beverly/DSC_0119.JPG
-    - 
-    - 
-    - 
+    - DSC_0119.JPG
+    - image/jpeg
+    - "102747"
+    - 2010-04-21 19:22:43
     - "18"
     - "3"
     - 
-    - 
+    - 2010-04-21 19:22:43
   - - "46"
     - ""
     - "2"
@@ -80,14 +80,14 @@ images:
     - "48"
     - false
     - 
-    - /static/images/beverly/DSC_0077.JPG
-    - 
-    - 
-    - 
+    - DSC_0077.JPG
+    - image/jpeg
+    - "140984"
+    - 2010-04-21 19:22:54
     - 
     - "3"
     - 
-    - 
+    - 2010-04-21 19:22:55
   - - "48"
     - ""
     - "4"
@@ -97,14 +97,14 @@ images:
     - "3224112"
     - false
     - 
-    - /static/images/beverly/DSC_0098.JPG
-    - 
-    - 
-    - 
+    - DSC_0098.JPG
+    - image/jpeg
+    - "84512"
+    - 2010-04-21 19:23:06
     - "18"
     - "3"
     - 
-    - 
+    - 2010-04-21 19:23:07
   - - "49"
     - ""
     - "0"
@@ -114,14 +114,14 @@ images:
     - 
     - false
     - 
-    - /static/images/bosque/start_image.jpg
-    - 
-    - 
-    - 
+    - start_image.jpg
+    - image/jpeg
+    - "92179"
+    - 2010-04-21 19:23:17
     - 
     - "5"
     - 
-    - 
+    - 2010-04-21 19:23:17
   - - "52"
     - ""
     - "2"
@@ -131,14 +131,14 @@ images:
     - 
     - false
     - 
-    - /static/images/bosque/bosque00.jpg
-    - 
-    - 
-    - 
+    - bosque00.jpg
+    - image/jpeg
+    - "188605"
+    - 2010-04-21 19:23:29
     - 
     - "5"
     - 
-    - 
+    - 2010-04-21 19:23:30
   - - "53"
     - ""
     - "1"
@@ -148,14 +148,14 @@ images:
     - 
     - false
     - 
-    - /static/images/bosque/bosque01.jpg
-    - 
-    - 
-    - 
+    - bosque01.jpg
+    - image/jpeg
+    - "122149"
+    - 2010-04-21 19:23:46
     - 
     - "5"
     - 
-    - 
+    - 2010-04-21 19:23:47
   - - "54"
     - ""
     - "1"
@@ -165,14 +165,14 @@ images:
     - 
     - false
     - 
-    - /static/images/hether/hether04b.jpg
-    - 
-    - 
-    - 
+    - hether04b.jpg
+    - image/jpeg
+    - "53507"
+    - 2010-04-21 19:23:57
     - 
     - "6"
     - 
-    - 
+    - 2010-04-21 19:23:57
   - - "55"
     - ""
     - "2"
@@ -182,14 +182,14 @@ images:
     - 
     - false
     - 
-    - /static/images/hether/hether01.jpg
-    - 
-    - 
-    - 
+    - hether01.jpg
+    - image/jpeg
+    - "46218"
+    - 2010-04-21 19:24:04
     - 
     - "6"
     - 
-    - 
+    - 2010-04-21 19:24:05
   - - "56"
     - ""
     - "3"
@@ -199,14 +199,14 @@ images:
     - 
     - false
     - 
-    - /static/images/hether/hether02.jpg
-    - 
-    - 
-    - 
+    - hether02.jpg
+    - image/jpeg
+    - "62102"
+    - 2010-04-21 19:24:09
     - 
     - "6"
     - 
-    - 
+    - 2010-04-21 19:24:10
   - - "57"
     - ""
     - "4"
@@ -216,14 +216,14 @@ images:
     - 
     - false
     - 
-    - /static/images/hether/hether03.jpg
-    - 
-    - 
-    - 
+    - hether03.jpg
+    - image/jpeg
+    - "59078"
+    - 2010-04-21 19:24:14
     - 
     - "6"
     - 
-    - 
+    - 2010-04-21 19:24:15
   - - "58"
     - ""
     - "5"
@@ -233,14 +233,14 @@ images:
     - 
     - false
     - 
-    - /static/images/hether/hether04.jpg
-    - 
-    - 
-    - 
+    - hether04.jpg
+    - image/jpeg
+    - "61213"
+    - 2010-04-21 19:24:20
     - 
     - "6"
     - 
-    - 
+    - 2010-04-21 19:24:20
   - - "59"
     - ""
     - "6"
@@ -250,14 +250,14 @@ images:
     - 
     - false
     - 
-    - /static/images/hether/hether05.jpg
-    - 
-    - 
-    - 
+    - hether05.jpg
+    - image/jpeg
+    - "54710"
+    - 2010-04-21 19:24:25
     - 
     - "6"
     - 
-    - 
+    - 2010-04-21 19:24:25
   - - "60"
     - ""
     - "7"
@@ -267,14 +267,14 @@ images:
     - 
     - false
     - 
-    - /static/images/hether/hether06.jpg
-    - 
-    - 
-    - 
+    - hether06.jpg
+    - image/jpeg
+    - "63535"
+    - 2010-04-21 19:24:30
     - 
     - "6"
     - 
-    - 
+    - 2010-04-21 19:24:30
   - - "61"
     - ""
     - "1"
@@ -284,14 +284,14 @@ images:
     - 
     - false
     - 
-    - /static/images/lagovista/lago vista site.jpg
-    - 
-    - 
-    - 
+    - lago_vista_site.jpg
+    - image/jpeg
+    - "44922"
+    - 2010-04-21 19:24:37
     - 
     - "7"
     - 
-    - 
+    - 2010-04-21 19:24:38
   - - "62"
     - ""
     - "4"
@@ -301,14 +301,14 @@ images:
     - 
     - false
     - 
-    - /static/images/lagovista/lagovista01.jpg
-    - 
-    - 
-    - 
+    - lagovista01.jpg
+    - image/jpeg
+    - "139293"
+    - 2010-04-21 19:24:43
     - 
     - "7"
     - 
-    - 
+    - 2010-04-21 19:24:44
   - - "63"
     - ""
     - "2"
@@ -318,14 +318,14 @@ images:
     - 
     - false
     - 
-    - /static/images/lagovista/lagovista02.jpg
-    - 
-    - 
-    - 
+    - lagovista02.jpg
+    - image/jpeg
+    - "120096"
+    - 2010-04-21 19:24:52
     - 
     - "7"
     - 
-    - 
+    - 2010-04-21 19:24:52
   - - "64"
     - ""
     - "3"
@@ -335,14 +335,14 @@ images:
     - 
     - false
     - 
-    - /static/images/lagovista/lagovista03.jpg
-    - 
-    - 
-    - 
+    - lagovista03.jpg
+    - image/jpeg
+    - "110802"
+    - 2010-04-21 19:25:00
     - 
     - "7"
     - 
-    - 
+    - 2010-04-21 19:25:00
   - - "65"
     - ""
     - "5"
@@ -352,14 +352,14 @@ images:
     - 
     - false
     - 
-    - /static/images/lagovista/lagovista04.jpg
-    - 
-    - 
-    - 
+    - lagovista04.jpg
+    - image/jpeg
+    - "72712"
+    - 2010-04-21 19:25:09
     - 
     - "7"
     - 
-    - 
+    - 2010-04-21 19:25:09
   - - "66"
     - ""
     - "6"
@@ -369,14 +369,14 @@ images:
     - 
     - false
     - 
-    - /static/images/lagovista/lagovista05.jpg
-    - 
-    - 
-    - 
+    - lagovista05.jpg
+    - image/jpeg
+    - "72295"
+    - 2010-04-21 19:25:15
     - 
     - "7"
     - 
-    - 
+    - 2010-04-21 19:25:15
   - - "67"
     - ""
     - "7"
@@ -386,14 +386,14 @@ images:
     - 
     - false
     - 
-    - /static/images/lagovista/lagovista06.jpg
-    - 
-    - 
-    - 
+    - lagovista06.jpg
+    - image/jpeg
+    - "53230"
+    - 2010-04-21 19:25:21
     - 
     - "7"
     - 
-    - 
+    - 2010-04-21 19:25:21
   - - "68"
     - ""
     - "1"
@@ -403,14 +403,14 @@ images:
     - 
     - false
     - 
-    - /static/images/murphy/start_image.jpg
-    - 
-    - 
-    - 
+    - start_image.jpg
+    - image/jpeg
+    - "68324"
+    - 2010-04-21 19:25:26
     - 
     - "8"
     - 
-    - 
+    - 2010-04-21 19:25:27
   - - "69"
     - ""
     - "2"
@@ -420,14 +420,14 @@ images:
     - 
     - false
     - 
-    - /static/images/murphy/overall2.jpg
-    - 
-    - 
-    - 
+    - overall2.jpg
+    - image/jpeg
+    - "128690"
+    - 2010-04-21 19:25:35
     - 
     - "8"
     - 
-    - 
+    - 2010-04-21 19:25:35
   - - "70"
     - ""
     - "4"
@@ -437,14 +437,14 @@ images:
     - 
     - false
     - 
-    - /static/images/murphy/001.jpg
-    - 
-    - 
-    - 
+    - 001.jpg
+    - image/jpeg
+    - "33836"
+    - 2010-04-21 19:25:46
     - 
     - "8"
     - 
-    - 
+    - 2010-04-21 19:25:47
   - - "71"
     - ""
     - "3"
@@ -454,14 +454,14 @@ images:
     - 
     - false
     - 
-    - /static/images/murphy/pool3.jpg
-    - 
-    - 
-    - 
+    - pool3.jpg
+    - image/jpeg
+    - "151610"
+    - 2010-04-21 19:25:51
     - 
     - "8"
     - 
-    - 
+    - 2010-04-21 19:25:52
   - - "76"
     - ""
     - "1"
@@ -471,14 +471,14 @@ images:
     - 
     - false
     - 
-    - /static/images/rollingwood/IMGP1252.jpg
-    - 
-    - 
-    - 
+    - IMGP1252.jpg
+    - image/jpeg
+    - "87308"
+    - 2010-04-21 19:26:04
     - 
     - "10"
     - 
-    - 
+    - 2010-04-21 19:26:05
   - - "77"
     - ""
     - "2"
@@ -488,14 +488,14 @@ images:
     - 
     - false
     - 
-    - /static/images/rollingwood/image.jpg
-    - 
-    - 
-    - 
+    - image.jpg
+    - image/jpeg
+    - "172625"
+    - 2010-04-21 19:26:13
     - 
     - "10"
     - 
-    - 
+    - 2010-04-21 19:26:14
   - - "78"
     - ""
     - "3"
@@ -505,14 +505,14 @@ images:
     - 
     - false
     - 
-    - /static/images/rollingwood/IMGP0261.jpg
-    - 
-    - 
-    - 
+    - IMGP0261.jpg
+    - image/jpeg
+    - "140623"
+    - 2010-04-21 19:26:26
     - 
     - "10"
     - 
-    - 
+    - 2010-04-21 19:26:27
   - - "79"
     - ""
     - "4"
@@ -522,14 +522,14 @@ images:
     - 
     - false
     - 
-    - /static/images/rollingwood/IMGP1233.jpg
-    - 
-    - 
-    - 
+    - IMGP1233.jpg
+    - image/jpeg
+    - "178189"
+    - 2010-04-21 19:26:36
     - 
     - "10"
     - 
-    - 
+    - 2010-04-21 19:26:36
   - - "80"
     - ""
     - "5"
@@ -539,14 +539,14 @@ images:
     - 
     - false
     - 
-    - /static/images/rollingwood/IMGP0256.jpg
-    - 
-    - 
-    - 
+    - IMGP0256.jpg
+    - image/jpeg
+    - "106750"
+    - 2010-04-21 19:26:48
     - 
     - "10"
     - 
-    - 
+    - 2010-04-21 19:26:49
   - - "81"
     - ""
     - "6"
@@ -556,14 +556,14 @@ images:
     - 
     - false
     - 
-    - /static/images/rollingwood/IMGP1265.jpg
-    - 
-    - 
-    - 
+    - IMGP1265.jpg
+    - image/jpeg
+    - "214680"
+    - 2010-04-21 19:26:57
     - 
     - "10"
     - 
-    - 
+    - 2010-04-21 19:26:58
   - - "82"
     - ""
     - "7"
@@ -573,14 +573,14 @@ images:
     - 
     - false
     - 
-    - /static/images/rollingwood/IMGP1276.jpg
-    - 
-    - 
-    - 
+    - IMGP1276.jpg
+    - image/jpeg
+    - "205821"
+    - 2010-04-21 19:27:12
     - 
     - "10"
     - 
-    - 
+    - 2010-04-21 19:27:13
   - - "97"
     - ""
     - "0"
@@ -590,14 +590,14 @@ images:
     - 
     - false
     - 
-    - /static/images/graniteshoal/graniteshoal01.jpg
-    - 
-    - 
-    - 
+    - graniteshoal01.jpg
+    - image/jpeg
+    - "76459"
+    - 2010-04-21 19:27:27
     - 
     - "12"
     - 
-    - 
+    - 2010-04-21 19:27:27
   - - "98"
     - ""
     - "1"
@@ -607,14 +607,14 @@ images:
     - 
     - false
     - 
-    - /static/images/graniteshoal/graniteshoal02.jpg
-    - 
-    - 
-    - 
+    - graniteshoal02.jpg
+    - image/jpeg
+    - "61972"
+    - 2010-04-21 19:27:32
     - 
     - "12"
     - 
-    - 
+    - 2010-04-21 19:27:33
   - - "99"
     - ""
     - "2"
@@ -624,14 +624,14 @@ images:
     - 
     - false
     - 
-    - /static/images/graniteshoal/graniteshoal03.jpg
-    - 
-    - 
-    - 
+    - graniteshoal03.jpg
+    - image/jpeg
+    - "87333"
+    - 2010-04-21 19:27:38
     - 
     - "12"
     - 
-    - 
+    - 2010-04-21 19:27:38
   - - "100"
     - ""
     - "1"
@@ -641,14 +641,14 @@ images:
     - 
     - false
     - 
-    - /static/images/factory/00.jpg
-    - 
-    - 
-    - 
+    - 00.jpg
+    - image/jpeg
+    - "70137"
+    - 2010-04-21 19:27:44
     - 
     - "13"
     - 
-    - 
+    - 2010-04-21 19:27:44
   - - "101"
     - ""
     - "7"
@@ -658,14 +658,14 @@ images:
     - 
     - false
     - 
-    - /static/images/factory/FAC PPL PARTY.jpg
-    - 
-    - 
-    - 
+    - FAC_PPL_PARTY.jpg
+    - image/jpeg
+    - "126297"
+    - 2010-04-21 19:27:52
     - 
     - "13"
     - 
-    - 
+    - 2010-04-21 19:27:52
   - - "102"
     - ""
     - "3"
@@ -675,14 +675,14 @@ images:
     - 
     - false
     - 
-    - /static/images/factory/fp001.jpg
-    - 
-    - 
-    - 
+    - fp001.jpg
+    - image/jpeg
+    - "91502"
+    - 2010-04-21 19:28:05
     - 
     - "13"
     - 
-    - 
+    - 2010-04-21 19:28:06
   - - "103"
     - ""
     - "4"
@@ -692,14 +692,14 @@ images:
     - 
     - false
     - 
-    - /static/images/factory/fp002.jpg
-    - 
-    - 
-    - 
+    - fp002.jpg
+    - image/jpeg
+    - "52193"
+    - 2010-04-21 19:28:12
     - 
     - "13"
     - 
-    - 
+    - 2010-04-21 19:28:12
   - - "104"
     - ""
     - "2"
@@ -709,14 +709,14 @@ images:
     - 
     - false
     - 
-    - /static/images/factory/fp003.jpg
-    - 
-    - 
-    - 
+    - fp003.jpg
+    - image/jpeg
+    - "75119"
+    - 2010-04-21 19:28:17
     - 
     - "13"
     - 
-    - 
+    - 2010-04-21 19:28:18
   - - "105"
     - ""
     - "5"
@@ -726,14 +726,14 @@ images:
     - 
     - false
     - 
-    - /static/images/factory/fp004.jpg
-    - 
-    - 
-    - 
+    - fp004.jpg
+    - image/jpeg
+    - "55418"
+    - 2010-04-21 19:28:25
     - 
     - "13"
     - 
-    - 
+    - 2010-04-21 19:28:25
   - - "106"
     - ""
     - "6"
@@ -743,14 +743,14 @@ images:
     - 
     - false
     - 
-    - /static/images/factory/fp005.jpg
-    - 
-    - 
-    - 
+    - fp005.jpg
+    - image/jpeg
+    - "80456"
+    - 2010-04-21 19:28:30
     - 
     - "13"
     - 
-    - 
+    - 2010-04-21 19:28:31
   - - "107"
     - ""
     - "8"
@@ -760,14 +760,14 @@ images:
     - 
     - false
     - 
-    - /static/images/factory/fp007.jpg
-    - 
-    - 
-    - 
+    - fp007.jpg
+    - image/jpeg
+    - "89800"
+    - 2010-04-21 19:28:37
     - 
     - "13"
     - 
-    - 
+    - 2010-04-21 19:28:38
   - - "110"
     - ""
     - "3"
@@ -777,14 +777,14 @@ images:
     - 
     - false
     - 
-    - /static/images/mototek/mototek02.jpg
-    - 
-    - 
-    - 
+    - mototek02.jpg
+    - image/jpeg
+    - "30765"
+    - 2010-04-21 19:28:45
     - 
     - "14"
     - 
-    - 
+    - 2010-04-21 19:28:46
   - - "120"
     - ""
     - 
@@ -794,14 +794,14 @@ images:
     - 
     - false
     - 
-    - /static/images/dolce/start_image.jpg
-    - 
-    - 
-    - 
+    - start_image.jpg
+    - image/jpeg
+    - "53052"
+    - 2010-04-21 19:28:50
     - 
     - "16"
     - 
-    - 
+    - 2010-04-21 19:28:50
   - - "121"
     - ""
     - "1"
@@ -811,14 +811,14 @@ images:
     - 
     - false
     - 
-    - /static/images/dolce/dolce01.jpg
-    - 
-    - 
-    - 
+    - dolce01.jpg
+    - image/jpeg
+    - "33433"
+    - 2010-04-21 19:28:57
     - 
     - "16"
     - 
-    - 
+    - 2010-04-21 19:28:58
   - - "122"
     - ""
     - "2"
@@ -828,14 +828,14 @@ images:
     - 
     - false
     - 
-    - /static/images/dolce/dolce02.jpg
-    - 
-    - 
-    - 
+    - dolce02.jpg
+    - image/jpeg
+    - "23036"
+    - 2010-04-21 19:29:02
     - 
     - "16"
     - 
-    - 
+    - 2010-04-21 19:29:03
   - - "123"
     - ""
     - "3"
@@ -845,14 +845,14 @@ images:
     - 
     - false
     - 
-    - /static/images/dolce/dolce03.jpg
-    - 
-    - 
-    - 
+    - dolce03.jpg
+    - image/jpeg
+    - "23087"
+    - 2010-04-21 19:29:07
     - 
     - "16"
     - 
-    - 
+    - 2010-04-21 19:29:08
   - - "124"
     - ""
     - "4"
@@ -862,14 +862,14 @@ images:
     - 
     - false
     - 
-    - /static/images/dolce/dolce04.jpg
-    - 
-    - 
-    - 
+    - dolce04.jpg
+    - image/jpeg
+    - "38413"
+    - 2010-04-21 19:29:12
     - 
     - "16"
     - 
-    - 
+    - 2010-04-21 19:29:12
   - - "125"
     - ""
     - "5"
@@ -879,14 +879,14 @@ images:
     - 
     - false
     - 
-    - /static/images/dolce/dolce05.jpg
-    - 
-    - 
-    - 
+    - dolce05.jpg
+    - image/jpeg
+    - "33498"
+    - 2010-04-21 19:29:16
     - 
     - "16"
     - 
-    - 
+    - 2010-04-21 19:29:17
   - - "126"
     - ""
     - "6"
@@ -896,14 +896,14 @@ images:
     - 
     - false
     - 
-    - /static/images/dolce/dolce06.jpg
-    - 
-    - 
-    - 
+    - dolce06.jpg
+    - image/jpeg
+    - "45826"
+    - 2010-04-21 19:29:21
     - 
     - "16"
     - 
-    - 
+    - 2010-04-21 19:29:21
   - - "127"
     - ""
     - "1"
@@ -913,14 +913,14 @@ images:
     - 
     - false
     - 
-    - /static/images/malinalco/start_image.jpg
-    - 
-    - 
-    - 
+    - start_image.jpg
+    - image/jpeg
+    - "91522"
+    - 2010-04-21 19:29:26
     - 
     - "17"
     - 
-    - 
+    - 2010-04-21 19:29:26
   - - "129"
     - ""
     - "2"
@@ -930,14 +930,14 @@ images:
     - 
     - false
     - 
-    - /static/images/self_sustaining/01.jpg
-    - 
-    - 
-    - 
+    - 01.jpg
+    - image/jpeg
+    - "105940"
+    - 2010-04-21 19:29:34
     - 
     - "18"
     - 
-    - 
+    - 2010-04-21 19:29:34
   - - "130"
     - ""
     - "3"
@@ -947,14 +947,14 @@ images:
     - 
     - false
     - 
-    - /static/images/self_sustaining/02.jpg
-    - 
-    - 
-    - 
+    - 02.jpg
+    - image/jpeg
+    - "76483"
+    - 2010-04-21 19:29:42
     - 
     - "18"
     - 
-    - 
+    - 2010-04-21 19:29:42
   - - "131"
     - ""
     - "4"
@@ -964,14 +964,14 @@ images:
     - 
     - false
     - 
-    - /static/images/self_sustaining/03.jpg
-    - 
-    - 
-    - 
+    - 03.jpg
+    - image/jpeg
+    - "53484"
+    - 2010-04-21 19:29:49
     - 
     - "18"
     - 
-    - 
+    - 2010-04-21 19:29:49
   - - "134"
     - ""
     - "2"
@@ -981,14 +981,14 @@ images:
     - 
     - false
     - 
-    - /static/images/operaHouse/opera01.jpg
-    - 
-    - 
-    - 
+    - opera01.jpg
+    - image/jpeg
+    - "77678"
+    - 2010-04-21 19:29:56
     - 
     - "19"
     - 
-    - 
+    - 2010-04-21 19:29:56
   - - "135"
     - ""
     - "3"
@@ -998,14 +998,14 @@ images:
     - 
     - false
     - 
-    - /static/images/operaHouse/opera02.jpg
-    - 
-    - 
-    - 
+    - opera02.jpg
+    - image/jpeg
+    - "109171"
+    - 2010-04-21 19:30:03
     - 
     - "19"
     - 
-    - 
+    - 2010-04-21 19:30:03
   - - "136"
     - ""
     - "4"
@@ -1015,14 +1015,14 @@ images:
     - 
     - false
     - 
-    - /static/images/operaHouse/opera03.jpg
-    - 
-    - 
-    - 
+    - opera03.jpg
+    - image/jpeg
+    - "130256"
+    - 2010-04-21 19:30:11
     - 
     - "19"
     - 
-    - 
+    - 2010-04-21 19:30:12
   - - "137"
     - ""
     - "8"
@@ -1032,14 +1032,14 @@ images:
     - 
     - false
     - 
-    - /static/images/operaHouse/opera04.jpg
-    - 
-    - 
-    - 
+    - opera04.jpg
+    - image/jpeg
+    - "70404"
+    - 2010-04-21 19:30:21
     - 
     - "19"
     - 
-    - 
+    - 2010-04-21 19:30:21
   - - "138"
     - ""
     - "9"
@@ -1049,14 +1049,14 @@ images:
     - 
     - false
     - 
-    - /static/images/operaHouse/opera05.jpg
-    - 
-    - 
-    - 
+    - opera05.jpg
+    - image/jpeg
+    - "103319"
+    - 2010-04-21 19:30:28
     - 
     - "19"
     - 
-    - 
+    - 2010-04-21 19:30:28
   - - "139"
     - ""
     - "7"
@@ -1066,14 +1066,14 @@ images:
     - 
     - false
     - 
-    - /static/images/operaHouse/opera06.jpg
-    - 
-    - 
-    - 
+    - opera06.jpg
+    - image/jpeg
+    - "91161"
+    - 2010-04-21 19:30:36
     - 
     - "19"
     - 
-    - 
+    - 2010-04-21 19:30:37
   - - "140"
     - ""
     - "5"
@@ -1083,14 +1083,14 @@ images:
     - 
     - false
     - 
-    - /static/images/operaHouse/opera07.jpg
-    - 
-    - 
-    - 
+    - opera07.jpg
+    - image/jpeg
+    - "53734"
+    - 2010-04-21 19:30:44
     - 
     - "19"
     - 
-    - 
+    - 2010-04-21 19:30:44
   - - "141"
     - ""
     - "6"
@@ -1100,14 +1100,14 @@ images:
     - 
     - false
     - 
-    - /static/images/operaHouse/opera08.jpg
-    - 
-    - 
-    - 
+    - opera08.jpg
+    - image/jpeg
+    - "45993"
+    - 2010-04-21 19:30:51
     - 
     - "19"
     - 
-    - 
+    - 2010-04-21 19:30:52
   - - "142"
     - ""
     - "6"
@@ -1117,14 +1117,14 @@ images:
     - 
     - false
     - 
-    - /static/images/urbanreserve/start_image.jpg
-    - 
-    - 
-    - 
+    - start_image.jpg
+    - image/jpeg
+    - "65028"
+    - 2010-04-21 19:30:57
     - 
     - "20"
     - 
-    - 
+    - 2010-04-21 19:30:57
   - - "144"
     - ""
     - "0"
@@ -1134,14 +1134,14 @@ images:
     - 
     - false
     - 
-    - /static/images/urbanreserve/ub10.jpg
-    - 
-    - 
-    - 
+    - ub10.jpg
+    - image/jpeg
+    - "63129"
+    - 2010-04-21 19:31:04
     - 
     - "20"
     - 
-    - 
+    - 2010-04-21 19:31:04
   - - "145"
     - ""
     - "2"
@@ -1151,14 +1151,14 @@ images:
     - 
     - false
     - 
-    - /static/images/urbanreserve/ub02.jpg
-    - 
-    - 
-    - 
+    - ub02.jpg
+    - image/jpeg
+    - "23332"
+    - 2010-04-21 19:31:10
     - 
     - "20"
     - 
-    - 
+    - 2010-04-21 19:31:11
   - - "146"
     - ""
     - "3"
@@ -1168,14 +1168,14 @@ images:
     - 
     - false
     - 
-    - /static/images/urbanreserve/ub11.jpg
-    - 
-    - 
-    - 
+    - ub11.jpg
+    - image/jpeg
+    - "78713"
+    - 2010-04-21 19:31:14
     - 
     - "20"
     - 
-    - 
+    - 2010-04-21 19:31:15
   - - "147"
     - ""
     - "4"
@@ -1185,14 +1185,14 @@ images:
     - 
     - false
     - 
-    - /static/images/urbanreserve/ub03.jpg
-    - 
-    - 
-    - 
+    - ub03.jpg
+    - image/jpeg
+    - "20891"
+    - 2010-04-21 19:31:22
     - 
     - "20"
     - 
-    - 
+    - 2010-04-21 19:31:22
   - - "148"
     - ""
     - "5"
@@ -1202,14 +1202,14 @@ images:
     - 
     - false
     - 
-    - /static/images/urbanreserve/ub12.jpg
-    - 
-    - 
-    - 
+    - ub12.jpg
+    - image/jpeg
+    - "79835"
+    - 2010-04-21 19:31:25
     - 
     - "20"
     - 
-    - 
+    - 2010-04-21 19:31:26
   - - "150"
     - ""
     - "7"
@@ -1219,14 +1219,14 @@ images:
     - 
     - false
     - 
-    - /static/images/urbanreserve/ub13.jpg
-    - 
-    - 
-    - 
+    - ub13.jpg
+    - image/jpeg
+    - "84957"
+    - 2010-04-21 19:31:33
     - 
     - "20"
     - 
-    - 
+    - 2010-04-21 19:31:33
   - - "154"
     - ""
     - "8"
@@ -1236,14 +1236,14 @@ images:
     - 
     - false
     - 
-    - /static/images/urbanreserve/ub08.jpg
-    - 
-    - 
-    - 
+    - ub08.jpg
+    - image/jpeg
+    - "61349"
+    - 2010-04-21 19:31:40
     - 
     - "20"
     - 
-    - 
+    - 2010-04-21 19:31:41
   - - "185"
     - READING AREA
     - "24"
@@ -1253,14 +1253,14 @@ images:
     - 
     - true
     - "3062284322"
-    - /static/images/tortuga/TR005.jpg
-    - 
-    - 
-    - 
+    - TR005.jpg
+    - image/jpeg
+    - "892991"
+    - 2010-04-21 19:31:46
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:31:47
   - - "190"
     - STAIR HALL
     - "23"
@@ -1270,14 +1270,14 @@ images:
     - 
     - true
     - "3062284284"
-    - /static/images/tortuga/TR010.jpg
-    - 
-    - 
-    - 
+    - TR010.jpg
+    - image/jpeg
+    - "704312"
+    - 2010-04-21 19:32:16
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:32:17
   - - "201"
     - ""
     - "6"
@@ -1287,14 +1287,14 @@ images:
     - "48"
     - false
     - 
-    - /static/images/beverly/BS060.jpg
-    - 
-    - 
-    - 
+    - BS060.jpg
+    - image/jpeg
+    - "505003"
+    - 2010-04-21 19:32:39
     - 
     - "3"
     - 
-    - 
+    - 2010-04-21 19:32:40
   - - "203"
     - ""
     - "8"
@@ -1304,14 +1304,14 @@ images:
     - "48"
     - false
     - 
-    - /static/images/beverly/BS932.jpg
-    - 
-    - 
-    - 
+    - BS932.jpg
+    - image/jpeg
+    - "988450"
+    - 2010-04-21 19:33:06
     - 
     - "3"
     - 
-    - 
+    - 2010-04-21 19:33:07
   - - "209"
     - ""
     - "7"
@@ -1321,14 +1321,14 @@ images:
     - "48"
     - false
     - 
-    - /static/images/beverly/BS983.jpg
-    - 
-    - 
-    - 
+    - BS983.jpg
+    - image/jpeg
+    - "712108"
+    - 2010-04-21 19:33:37
     - "18"
     - "3"
     - 
-    - 
+    - 2010-04-21 19:33:38
   - - "211"
     - ""
     - "4"
@@ -1338,14 +1338,14 @@ images:
     - "13872"
     - false
     - 
-    - /static/images/annie/A010.jpg
-    - 
-    - 
-    - 
+    - A010.jpg
+    - image/jpeg
+    - "780437"
+    - 2010-04-21 19:34:04
     - "15"
     - "1"
     - 
-    - 
+    - 2010-04-21 19:34:05
   - - "212"
     - Annie At Night
     - "5"
@@ -1355,14 +1355,14 @@ images:
     - "14640"
     - true
     - "3005172383"
-    - /static/images/annie/A001.jpg
-    - 
-    - 
-    - 
+    - A001.jpg
+    - image/jpeg
+    - "550777"
+    - 2010-04-21 19:34:37
     - "16"
     - "1"
     - 
-    - 
+    - 2010-04-21 19:34:38
   - - "214"
     - ""
     - "1"
@@ -1372,14 +1372,14 @@ images:
     - "3290928"
     - false
     - 
-    - /static/images/annie/A002.jpg
-    - 
-    - 
-    - 
+    - A002.jpg
+    - image/jpeg
+    - "632041"
+    - 2010-04-21 19:34:59
     - "16"
     - "1"
     - 
-    - 
+    - 2010-04-21 19:35:00
   - - "215"
     - ""
     - "6"
@@ -1389,14 +1389,14 @@ images:
     - "3224880"
     - false
     - 
-    - /static/images/annie/A003.jpg
-    - 
-    - 
-    - 
+    - A003.jpg
+    - image/jpeg
+    - "438410"
+    - 2010-04-21 19:35:26
     - "16"
     - "1"
     - 
-    - 
+    - 2010-04-21 19:35:27
   - - "217"
     - ""
     - "3"
@@ -1406,14 +1406,14 @@ images:
     - "14640"
     - false
     - 
-    - /static/images/annie/A005.jpg
-    - 
-    - 
-    - 
+    - A005.jpg
+    - image/jpeg
+    - "614422"
+    - 2010-04-21 19:35:53
     - "16"
     - "1"
     - 
-    - 
+    - 2010-04-21 19:35:54
   - - "218"
     - ""
     - "0"
@@ -1423,14 +1423,14 @@ images:
     - "48"
     - false
     - 
-    - /static/images/annie/A006.jpg
-    - 
-    - 
-    - 
+    - A006.jpg
+    - image/jpeg
+    - "1217331"
+    - 2010-04-21 19:36:19
     - 
     - "1"
     - 
-    - 
+    - 2010-04-21 19:36:20
   - - "220"
     - ""
     - "8"
@@ -1440,14 +1440,14 @@ images:
     - "3354672"
     - false
     - 
-    - /static/images/annie/A007.jpg
-    - 
-    - 
-    - 
+    - A007.jpg
+    - image/jpeg
+    - "1068294"
+    - 2010-04-21 19:37:07
     - "16"
     - "1"
     - 
-    - 
+    - 2010-04-21 19:37:08
   - - "221"
     - ""
     - "10"
@@ -1457,14 +1457,14 @@ images:
     - "13872"
     - false
     - 
-    - /static/images/annie/A008.jpg
-    - 
-    - 
-    - 
+    - A008.jpg
+    - image/jpeg
+    - "565303"
+    - 2010-04-21 19:37:47
     - "15"
     - "1"
     - 
-    - 
+    - 2010-04-21 19:37:48
   - - "222"
     - ""
     - "2"
@@ -1474,14 +1474,14 @@ images:
     - "13872"
     - false
     - 
-    - /static/images/annie/A009.jpg
-    - 
-    - 
-    - 
+    - A009.jpg
+    - image/jpeg
+    - "723516"
+    - 2010-04-21 19:38:11
     - "16"
     - "1"
     - 
-    - 
+    - 2010-04-21 19:38:12
   - - "230"
     - ""
     - "9"
@@ -1491,14 +1491,14 @@ images:
     - "14640"
     - false
     - 
-    - /static/images/annie/20.jpg
-    - 
-    - 
-    - 
+    - 20.jpg
+    - image/jpeg
+    - "219593"
+    - 2010-04-21 19:38:39
     - "16"
     - "1"
     - 
-    - 
+    - 2010-04-21 19:38:40
   - - "248"
     - ""
     - "7"
@@ -1508,14 +1508,14 @@ images:
     - "3290928"
     - false
     - 
-    - /static/images/annie/LU6N9719.jpg
-    - 
-    - 
-    - 
+    - LU6N9719.jpg
+    - image/jpeg
+    - "811618"
+    - 2010-04-21 19:38:55
     - "16"
     - "1"
     - 
-    - 
+    - 2010-04-21 19:38:57
   - - "259"
     - ""
     - "5"
@@ -1525,14 +1525,14 @@ images:
     - 
     - false
     - 
-    - /static/images/skybridge/siteplan.jpg
-    - 
-    - 
-    - 
+    - siteplan.jpg
+    - image/jpeg
+    - "122978"
+    - 2010-04-21 19:39:23
     - 
     - "4"
     - 
-    - 
+    - 2010-04-21 19:39:24
   - - "262"
     - ""
     - "8"
@@ -1542,14 +1542,14 @@ images:
     - 
     - false
     - 
-    - /static/images/volente/LU6N9807.jpg
-    - 
-    - 
-    - 
+    - LU6N9807.jpg
+    - image/jpeg
+    - "485320"
+    - 2010-04-21 19:39:33
     - 
     - "11"
     - 
-    - 
+    - 2010-04-21 19:39:33
   - - "275"
     - ""
     - "7"
@@ -1559,14 +1559,14 @@ images:
     - 
     - false
     - 
-    - /static/images/volente/LU6N0355.jpg
-    - 
-    - 
-    - 
+    - LU6N0355.jpg
+    - image/jpeg
+    - "506935"
+    - 2010-04-21 19:40:01
     - 
     - "11"
     - 
-    - 
+    - 2010-04-21 19:40:02
   - - "276"
     - ""
     - "4"
@@ -1576,14 +1576,14 @@ images:
     - 
     - false
     - 
-    - /static/images/volente/LU6N0357.jpg
-    - 
-    - 
-    - 
+    - LU6N0357.jpg
+    - image/jpeg
+    - "505156"
+    - 2010-04-21 19:40:20
     - 
     - "11"
     - 
-    - 
+    - 2010-04-21 19:40:21
   - - "279"
     - ""
     - "4"
@@ -1593,14 +1593,14 @@ images:
     - 
     - false
     - 
-    - /static/images/tortuga_2/LU6N0388.jpg
-    - 
-    - 
-    - 
+    - LU6N0388.jpg
+    - image/jpeg
+    - "302916"
+    - 2010-04-21 19:40:36
     - 
     - "21"
     - 
-    - 
+    - 2010-04-21 19:40:36
   - - "280"
     - ""
     - "6"
@@ -1610,14 +1610,14 @@ images:
     - 
     - false
     - 
-    - /static/images/aarc/master_plan.jpg
-    - 
-    - 
-    - 
+    - master_plan.jpg
+    - image/jpeg
+    - "176673"
+    - 2010-04-21 19:40:49
     - 
     - "22"
     - 
-    - 
+    - 2010-04-21 19:40:49
   - - "281"
     - ""
     - "5"
@@ -1627,14 +1627,14 @@ images:
     - 
     - false
     - 
-    - /static/images/aarc/presentation.jpg
-    - 
-    - 
-    - 
+    - presentation.jpg
+    - image/jpeg
+    - "137718"
+    - 2010-04-21 19:41:03
     - 
     - "22"
     - 
-    - 
+    - 2010-04-21 19:41:04
   - - "289"
     - ""
     - "3"
@@ -1644,14 +1644,14 @@ images:
     - 
     - false
     - 
-    - /static/images/nahua/final-rendering.jpg
-    - 
-    - 
-    - 
+    - final-rendering.jpg
+    - image/jpeg
+    - "98990"
+    - 2010-04-21 19:41:16
     - 
     - "23"
     - 
-    - 
+    - 2010-04-21 19:41:17
   - - "290"
     - ""
     - "2"
@@ -1661,14 +1661,14 @@ images:
     - 
     - false
     - 
-    - /static/images/nahua/start_rendering.jpg
-    - 
-    - 
-    - 
+    - start_rendering.jpg
+    - image/jpeg
+    - "88979"
+    - 2010-04-21 19:41:28
     - 
     - "23"
     - 
-    - 
+    - 2010-04-21 19:41:28
   - - "291"
     - ""
     - "4"
@@ -1678,14 +1678,14 @@ images:
     - 
     - false
     - 
-    - /static/images/nahua/siteplan.jpg
-    - 
-    - 
-    - 
+    - siteplan.jpg
+    - image/jpeg
+    - "298915"
+    - 2010-04-21 19:41:36
     - 
     - "23"
     - 
-    - 
+    - 2010-04-21 19:41:37
   - - "292"
     - ""
     - "5"
@@ -1695,14 +1695,14 @@ images:
     - "3224880"
     - false
     - 
-    - /static/images/beverly/SEATING.jpg
-    - 
-    - 
-    - 
+    - SEATING.jpg
+    - image/jpeg
+    - "1403118"
+    - 2010-04-21 19:41:51
     - "18"
     - "3"
     - 
-    - 
+    - 2010-04-21 19:41:53
   - - "293"
     - ""
     - "3"
@@ -1712,14 +1712,14 @@ images:
     - 
     - false
     - 
-    - /static/images/block19/day.jpg
-    - 
-    - 
-    - 
+    - day.jpg
+    - image/jpeg
+    - "587713"
+    - 2010-04-21 19:42:29
     - 
     - "24"
     - 
-    - 
+    - 2010-04-21 19:42:30
   - - "295"
     - ""
     - "4"
@@ -1729,14 +1729,14 @@ images:
     - 
     - false
     - 
-    - /static/images/block19/night.jpg
-    - 
-    - 
-    - 
+    - night.jpg
+    - image/jpeg
+    - "431495"
+    - 2010-04-21 19:42:50
     - 
     - "24"
     - 
-    - 
+    - 2010-04-21 19:42:51
   - - "300"
     - ""
     - "2"
@@ -1746,14 +1746,14 @@ images:
     - "48"
     - false
     - 
-    - /static/images/riverview/LU6N2057.jpg
-    - 
-    - 
-    - 
+    - LU6N2057.jpg
+    - image/jpeg
+    - "65218"
+    - 2010-04-21 19:43:06
     - 
     - "9"
     - 
-    - 
+    - 2010-04-21 19:43:07
   - - "312"
     - ""
     - "1"
@@ -1763,14 +1763,14 @@ images:
     - 
     - false
     - 
-    - /static/images/tortuga_2/LU6N1987_DxO_raw.jpg
-    - 
-    - 
-    - 
+    - LU6N1987_DxO_raw.jpg
+    - image/jpeg
+    - "112660"
+    - 2010-04-21 19:43:13
     - 
     - "21"
     - 
-    - 
+    - 2010-04-21 19:43:13
   - - "313"
     - ""
     - "3"
@@ -1780,14 +1780,14 @@ images:
     - 
     - false
     - 
-    - /static/images/tortuga_2/LU6N1996_DxO_raw.jpg
-    - 
-    - 
-    - 
+    - LU6N1996_DxO_raw.jpg
+    - image/jpeg
+    - "93960"
+    - 2010-04-21 19:43:21
     - 
     - "21"
     - 
-    - 
+    - 2010-04-21 19:43:21
   - - "314"
     - ""
     - "5"
@@ -1797,14 +1797,14 @@ images:
     - 
     - false
     - 
-    - /static/images/tortuga_2/LU6N2017_DxO_raw.jpg
-    - 
-    - 
-    - 
+    - LU6N2017_DxO_raw.jpg
+    - image/jpeg
+    - "96475"
+    - 2010-04-21 19:43:29
     - 
     - "21"
     - 
-    - 
+    - 2010-04-21 19:43:29
   - - "315"
     - ""
     - "2"
@@ -1814,14 +1814,14 @@ images:
     - 
     - false
     - 
-    - /static/images/tortuga_2/LU6N2033_DxO_raw.jpg
-    - 
-    - 
-    - 
+    - LU6N2033_DxO_raw.jpg
+    - image/jpeg
+    - "109439"
+    - 2010-04-21 19:43:38
     - 
     - "21"
     - 
-    - 
+    - 2010-04-21 19:43:39
   - - "333"
     - DAY BED
     - "27"
@@ -1831,14 +1831,14 @@ images:
     - 
     - true
     - "3061444957"
-    - /static/images/tortuga/LU6N0871_final_2.jpg
-    - 
-    - 
-    - 
+    - LU6N0871_final_2.jpg
+    - image/jpeg
+    - "116416"
+    - 2010-04-21 19:43:47
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:43:47
   - - "341"
     - LU6N6990-small.jpg
     - "9"
@@ -1848,14 +1848,14 @@ images:
     - "3290160"
     - false
     - 
-    - /static/images/riverview/LU6N6990-small.jpg
-    - 
-    - 
-    - 
+    - LU6N6990-small.jpg
+    - image/jpeg
+    - "372154"
+    - 2010-04-21 19:43:55
     - "20"
     - "9"
     - 
-    - 
+    - 2010-04-21 19:43:55
   - - "344"
     - LU6N6993-small.jpg
     - "8"
@@ -1865,14 +1865,14 @@ images:
     - "3224112"
     - false
     - 
-    - /static/images/riverview/LU6N6993-small.jpg
-    - 
-    - 
-    - 
+    - LU6N6993-small.jpg
+    - image/jpeg
+    - "127769"
+    - 2010-04-21 19:44:11
     - "20"
     - "9"
     - 
-    - 
+    - 2010-04-21 19:44:12
   - - "345"
     - LU6N7020-small.jpg
     - "13"
@@ -1882,14 +1882,14 @@ images:
     - "48"
     - false
     - 
-    - /static/images/riverview/LU6N7020-small.jpg
-    - 
-    - 
-    - 
+    - LU6N7020-small.jpg
+    - image/jpeg
+    - "121349"
+    - 2010-04-21 19:44:20
     - 
     - "9"
     - 
-    - 
+    - 2010-04-21 19:44:21
   - - "346"
     - LU6N7002-small.jpg
     - "10"
@@ -1899,14 +1899,14 @@ images:
     - "14640"
     - false
     - 
-    - /static/images/riverview/LU6N7002-small.jpg
-    - 
-    - 
-    - 
+    - LU6N7002-small.jpg
+    - image/jpeg
+    - "245527"
+    - 2010-04-21 19:44:30
     - "20"
     - "9"
     - 
-    - 
+    - 2010-04-21 19:44:30
   - - "350"
     - LU6N7026-small.jpg
     - "11"
@@ -1916,14 +1916,14 @@ images:
     - "14640"
     - false
     - 
-    - /static/images/riverview/LU6N7026-small.jpg
-    - 
-    - 
-    - 
+    - LU6N7026-small.jpg
+    - image/jpeg
+    - "242857"
+    - 2010-04-21 19:44:46
     - "20"
     - "9"
     - 
-    - 
+    - 2010-04-21 19:44:47
   - - "351"
     - LU6N6981-small.jpg
     - "7"
@@ -1933,14 +1933,14 @@ images:
     - "14640"
     - false
     - 
-    - /static/images/riverview/LU6N6981-small.jpg
-    - 
-    - 
-    - 
+    - LU6N6981-small.jpg
+    - image/jpeg
+    - "136239"
+    - 2010-04-21 19:45:02
     - "20"
     - "9"
     - 
-    - 
+    - 2010-04-21 19:45:02
   - - "369"
     - nahua tower from townlake.jpg
     - "1"
@@ -1950,14 +1950,14 @@ images:
     - 
     - false
     - 
-    - /static/images/nahua/nahua tower from townlake.jpg
-    - 
-    - 
-    - 
+    - nahua_tower_from_townlake.jpg
+    - image/jpeg
+    - "121625"
+    - 2010-04-21 19:45:12
     - 
     - "23"
     - 
-    - 
+    - 2010-04-21 19:45:12
   - - "370"
     - new_2_renderred_sm.jpg
     - "3"
@@ -1967,14 +1967,14 @@ images:
     - 
     - false
     - 
-    - /static/images/skybridge/new_2_renderred_sm.jpg
-    - 
-    - 
-    - 
+    - new_2_renderred_sm.jpg
+    - image/jpeg
+    - "344406"
+    - 2010-04-21 19:45:22
     - 
     - "4"
     - 
-    - 
+    - 2010-04-21 19:45:23
   - - "371"
     - new_1_renderred_sm.jpg
     - "2"
@@ -1984,14 +1984,14 @@ images:
     - 
     - false
     - 
-    - /static/images/skybridge/new_1_renderred_sm.jpg
-    - 
-    - 
-    - 
+    - new_1_renderred_sm.jpg
+    - image/jpeg
+    - "307329"
+    - 2010-04-21 19:45:38
     - 
     - "4"
     - 
-    - 
+    - 2010-04-21 19:45:38
   - - "372"
     - new_3_renderred_sm.jpg
     - "4"
@@ -2001,14 +2001,14 @@ images:
     - 
     - false
     - 
-    - /static/images/skybridge/new_3_renderred_sm.jpg
-    - 
-    - 
-    - 
+    - new_3_renderred_sm.jpg
+    - image/jpeg
+    - "294064"
+    - 2010-04-21 19:45:51
     - 
     - "4"
     - 
-    - 
+    - 2010-04-21 19:45:52
   - - "373"
     - new_4_renderred_sm.jpg
     - "1"
@@ -2018,14 +2018,14 @@ images:
     - 
     - false
     - 
-    - /static/images/skybridge/new_4_renderred_sm.jpg
-    - 
-    - 
-    - 
+    - new_4_renderred_sm.jpg
+    - image/jpeg
+    - "292302"
+    - 2010-04-21 19:46:06
     - 
     - "4"
     - 
-    - 
+    - 2010-04-21 19:46:06
   - - "386"
     - Riverview_5.jpg
     - "14"
@@ -2035,14 +2035,14 @@ images:
     - "14640"
     - false
     - 
-    - /static/images/riverview/Riverview_5.jpg
-    - 
-    - 
-    - 
+    - Riverview_5.jpg
+    - image/jpeg
+    - "206670"
+    - 2010-04-21 19:46:19
     - "20"
     - "9"
     - 
-    - 
+    - 2010-04-21 19:46:19
   - - "387"
     - Riverview_7.jpg
     - "5"
@@ -2052,14 +2052,14 @@ images:
     - "3224112"
     - false
     - 
-    - /static/images/riverview/Riverview_7.jpg
-    - 
-    - 
-    - 
+    - Riverview_7.jpg
+    - image/jpeg
+    - "206024"
+    - 2010-04-21 19:46:30
     - "20"
     - "9"
     - 
-    - 
+    - 2010-04-21 19:46:31
   - - "389"
     - model_rev_6.jpg
     - "7"
@@ -2069,14 +2069,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Baja/model_rev_6.jpg
-    - 
-    - 
-    - 
+    - model_rev_6.jpg
+    - image/jpeg
+    - "179717"
+    - 2010-04-21 19:46:42
     - 
     - "25"
     - 
-    - 
+    - 2010-04-21 19:46:42
   - - "391"
     - model_rev_7.jpg
     - "5"
@@ -2086,14 +2086,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Baja/model_rev_7.jpg
-    - 
-    - 
-    - 
+    - model_rev_7.jpg
+    - image/jpeg
+    - "149914"
+    - 2010-04-21 19:46:54
     - 
     - "25"
     - 
-    - 
+    - 2010-04-21 19:46:54
   - - "392"
     - model_rev_8.jpg
     - "6"
@@ -2103,14 +2103,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Baja/model_rev_8.jpg
-    - 
-    - 
-    - 
+    - model_rev_8.jpg
+    - image/jpeg
+    - "138495"
+    - 2010-04-21 19:47:05
     - 
     - "25"
     - 
-    - 
+    - 2010-04-21 19:47:06
   - - "393"
     - start_image.jpg
     - "1"
@@ -2120,14 +2120,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Baja/start_image.jpg
-    - 
-    - 
-    - 
+    - start_image.jpg
+    - image/jpeg
+    - "65972"
+    - 2010-04-21 19:47:15
     - 
     - "25"
     - 
-    - 
+    - 2010-04-21 19:47:15
   - - "394"
     - LIVING_1.jpg
     - "3"
@@ -2137,14 +2137,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Baja/LIVING_1.jpg
-    - 
-    - 
-    - 
+    - LIVING_1.jpg
+    - image/jpeg
+    - "189315"
+    - 2010-04-21 19:47:23
     - 
     - "25"
     - 
-    - 
+    - 2010-04-21 19:47:24
   - - "400"
     - ""
     - "2"
@@ -2154,14 +2154,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Cheongna_Cit/lights2.jpg
-    - 
-    - 
-    - 
+    - lights2.jpg
+    - image/jpeg
+    - "51514"
+    - 2010-04-21 19:47:38
     - 
     - "26"
     - 
-    - 
+    - 2010-04-21 19:47:38
   - - "401"
     - ""
     - "3"
@@ -2171,14 +2171,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Cheongna_Cit/lights1.jpg
-    - 
-    - 
-    - 
+    - lights1.jpg
+    - image/jpeg
+    - "38514"
+    - 2010-04-21 19:47:43
     - 
     - "26"
     - 
-    - 
+    - 2010-04-21 19:47:44
   - - "402"
     - ""
     - "4"
@@ -2188,14 +2188,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Cheongna_Cit/Long-Section-02.jpg
-    - 
-    - 
-    - 
+    - Long-Section-02.jpg
+    - image/jpeg
+    - "24626"
+    - 2010-04-21 19:47:49
     - 
     - "26"
     - 
-    - 
+    - 2010-04-21 19:47:50
   - - "403"
     - ""
     - "5"
@@ -2205,14 +2205,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Cheongna_Cit/sequence_0341.jpg
-    - 
-    - 
-    - 
+    - sequence_0341.jpg
+    - image/jpeg
+    - "88558"
+    - 2010-04-21 19:47:54
     - 
     - "26"
     - 
-    - 
+    - 2010-04-21 19:47:55
   - - "404"
     - ""
     - "6"
@@ -2222,14 +2222,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Cheongna_Cit/sequence_0258_rendered_flat.jpg
-    - 
-    - 
-    - 
+    - sequence_0258_rendered_flat.jpg
+    - image/jpeg
+    - "54755"
+    - 2010-04-21 19:48:03
     - 
     - "26"
     - 
-    - 
+    - 2010-04-21 19:48:04
   - - "405"
     - ""
     - "7"
@@ -2239,14 +2239,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Cheongna_Cit/sequence_0618.jpg
-    - 
-    - 
-    - 
+    - sequence_0618.jpg
+    - image/jpeg
+    - "78882"
+    - 2010-04-21 19:48:09
     - 
     - "26"
     - 
-    - 
+    - 2010-04-21 19:48:10
   - - "406"
     - ""
     - "8"
@@ -2256,14 +2256,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Cheongna_Cit/sequence_0545.jpg
-    - 
-    - 
-    - 
+    - sequence_0545.jpg
+    - image/jpeg
+    - "94506"
+    - 2010-04-21 19:48:16
     - 
     - "26"
     - 
-    - 
+    - 2010-04-21 19:48:16
   - - "407"
     - ""
     - "9"
@@ -2273,14 +2273,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Cheongna_Cit/sequence_0992_rendered_Flat.jpg
-    - 
-    - 
-    - 
+    - sequence_0992_rendered_Flat.jpg
+    - image/jpeg
+    - "68501"
+    - 2010-04-21 19:48:23
     - 
     - "26"
     - 
-    - 
+    - 2010-04-21 19:48:24
   - - "408"
     - ""
     - "10"
@@ -2290,14 +2290,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Cheongna_Cit/sequence_0863.jpg
-    - 
-    - 
-    - 
+    - sequence_0863.jpg
+    - image/jpeg
+    - "77408"
+    - 2010-04-21 19:48:30
     - 
     - "26"
     - 
-    - 
+    - 2010-04-21 19:48:31
   - - "409"
     - ""
     - "11"
@@ -2307,14 +2307,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Cheongna_Cit/sequence_1172-copy.jpg
-    - 
-    - 
-    - 
+    - sequence_1172-copy.jpg
+    - image/jpeg
+    - "68857"
+    - 2010-04-21 19:48:38
     - 
     - "26"
     - 
-    - 
+    - 2010-04-21 19:48:38
   - - "410"
     - ""
     - "12"
@@ -2324,14 +2324,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Cheongna_Cit/sequence_0902.jpg
-    - 
-    - 
-    - 
+    - sequence_0902.jpg
+    - image/jpeg
+    - "62782"
+    - 2010-04-21 19:48:43
     - 
     - "26"
     - 
-    - 
+    - 2010-04-21 19:48:44
   - - "412"
     - ""
     - "1"
@@ -2341,14 +2341,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Cheongna_Cit/vertical_first.jpg
-    - 
-    - 
-    - 
+    - vertical_first.jpg
+    - image/jpeg
+    - "8070"
+    - 2010-04-21 19:48:49
     - 
     - "26"
     - 
-    - 
+    - 2010-04-21 19:48:49
   - - "413"
     - ""
     - "4"
@@ -2358,14 +2358,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Polish_Solid/PANEL6.jpg
-    - 
-    - 
-    - 
+    - PANEL6.jpg
+    - image/jpeg
+    - "58782"
+    - 2010-04-21 19:48:52
     - 
     - "27"
     - 
-    - 
+    - 2010-04-21 19:48:52
   - - "414"
     - ""
     - "1"
@@ -2375,14 +2375,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Polish_Solid/poland_first.jpg
-    - 
-    - 
-    - 
+    - poland_first.jpg
+    - image/jpeg
+    - "16021"
+    - 2010-04-21 19:48:57
     - 
     - "27"
     - 
-    - 
+    - 2010-04-21 19:48:57
   - - "415"
     - ""
     - "2"
@@ -2392,14 +2392,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Polish_Solid/PANEL3.jpg
-    - 
-    - 
-    - 
+    - PANEL3.jpg
+    - image/jpeg
+    - "72871"
+    - 2010-04-21 19:49:01
     - 
     - "27"
     - 
-    - 
+    - 2010-04-21 19:49:01
   - - "416"
     - ""
     - "8"
@@ -2409,14 +2409,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Polish_Solid/HiRez07.jpg
-    - 
-    - 
-    - 
+    - HiRez07.jpg
+    - image/jpeg
+    - "38680"
+    - 2010-04-21 19:49:07
     - 
     - "27"
     - 
-    - 
+    - 2010-04-21 19:49:07
   - - "417"
     - ""
     - "5"
@@ -2426,14 +2426,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Polish_Solid/PANEL5_edit.jpg
-    - 
-    - 
-    - 
+    - PANEL5_edit.jpg
+    - image/jpeg
+    - "40001"
+    - 2010-04-21 19:49:12
     - 
     - "27"
     - 
-    - 
+    - 2010-04-21 19:49:12
   - - "418"
     - ""
     - "7"
@@ -2443,14 +2443,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Polish_Solid/PANEL2SITEPLAN.jpg
-    - 
-    - 
-    - 
+    - PANEL2SITEPLAN.jpg
+    - image/jpeg
+    - "75045"
+    - 2010-04-21 19:49:17
     - 
     - "27"
     - 
-    - 
+    - 2010-04-21 19:49:17
   - - "419"
     - ""
     - "3"
@@ -2460,14 +2460,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Polish_Solid/PANEL4.jpg
-    - 
-    - 
-    - 
+    - PANEL4.jpg
+    - image/jpeg
+    - "52356"
+    - 2010-04-21 19:49:24
     - 
     - "27"
     - 
-    - 
+    - 2010-04-21 19:49:24
   - - "420"
     - ""
     - "6"
@@ -2477,14 +2477,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Polish_Solid/PANEL7.jpg
-    - 
-    - 
-    - 
+    - PANEL7.jpg
+    - image/jpeg
+    - "62320"
+    - 2010-04-21 19:49:29
     - 
     - "27"
     - 
-    - 
+    - 2010-04-21 19:49:29
   - - "421"
     - ""
     - "5"
@@ -2494,14 +2494,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Urban_Forest/aerial.jpg
-    - 
-    - 
-    - 
+    - aerial.jpg
+    - image/jpeg
+    - "146965"
+    - 2010-04-21 19:49:35
     - 
     - "28"
     - 
-    - 
+    - 2010-04-21 19:49:35
   - - "422"
     - ""
     - "1"
@@ -2511,14 +2511,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Urban_Forest/insidefirst.jpg
-    - 
-    - 
-    - 
+    - insidefirst.jpg
+    - image/jpeg
+    - "68901"
+    - 2010-04-21 19:49:45
     - 
     - "28"
     - 
-    - 
+    - 2010-04-21 19:49:45
   - - "423"
     - ""
     - "2"
@@ -2528,14 +2528,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Urban_Forest/stockholm1.jpg
-    - 
-    - 
-    - 
+    - stockholm1.jpg
+    - image/jpeg
+    - "113427"
+    - 2010-04-21 19:49:53
     - 
     - "28"
     - 
-    - 
+    - 2010-04-21 19:49:53
   - - "424"
     - ""
     - "6"
@@ -2545,14 +2545,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Urban_Forest/floorplan.jpg
-    - 
-    - 
-    - 
+    - floorplan.jpg
+    - image/jpeg
+    - "59677"
+    - 2010-04-21 19:50:03
     - 
     - "28"
     - 
-    - 
+    - 2010-04-21 19:50:04
   - - "425"
     - ""
     - "4"
@@ -2562,14 +2562,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Urban_Forest/stockholm2.jpg
-    - 
-    - 
-    - 
+    - stockholm2.jpg
+    - image/jpeg
+    - "75525"
+    - 2010-04-21 19:50:09
     - 
     - "28"
     - 
-    - 
+    - 2010-04-21 19:50:10
   - - "426"
     - ""
     - "3"
@@ -2579,14 +2579,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Urban_Forest/stockholm3.jpg
-    - 
-    - 
-    - 
+    - stockholm3.jpg
+    - image/jpeg
+    - "90599"
+    - 2010-04-21 19:50:16
     - 
     - "28"
     - 
-    - 
+    - 2010-04-21 19:50:17
   - - "427"
     - ""
     - "7"
@@ -2596,14 +2596,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Urban_Forest/topview.jpg
-    - 
-    - 
-    - 
+    - topview.jpg
+    - image/jpeg
+    - "103220"
+    - 2010-04-21 19:50:23
     - 
     - "28"
     - 
-    - 
+    - 2010-04-21 19:50:24
   - - "441"
     - ""
     - "6"
@@ -2613,14 +2613,14 @@ images:
     - "3290928"
     - false
     - 
-    - /static/images/east11/dan-026.jpg
-    - 
-    - 
-    - 
+    - dan-026.jpg
+    - image/jpeg
+    - "268791"
+    - 2010-04-21 19:50:32
     - "13"
     - "15"
     - 
-    - 
+    - 2010-04-21 19:50:33
   - - "444"
     - ""
     - "7"
@@ -2630,14 +2630,14 @@ images:
     - "48"
     - false
     - 
-    - /static/images/east11/LU6N8523.jpg
-    - 
-    - 
-    - 
+    - LU6N8523.jpg
+    - image/jpeg
+    - "69395"
+    - 2010-04-21 19:50:47
     - 
     - "15"
     - 
-    - 
+    - 2010-04-21 19:50:48
   - - "446"
     - ""
     - "5"
@@ -2647,14 +2647,14 @@ images:
     - "14640"
     - false
     - 
-    - /static/images/east11/LU6N8530.jpg
-    - 
-    - 
-    - 
+    - LU6N8530.jpg
+    - image/jpeg
+    - "81847"
+    - 2010-04-21 19:50:53
     - "13"
     - "15"
     - 
-    - 
+    - 2010-04-21 19:50:54
   - - "449"
     - capital.jpg
     - "8"
@@ -2664,14 +2664,14 @@ images:
     - "3225648"
     - false
     - 
-    - /static/images/east11/capital.jpg
-    - 
-    - 
-    - 
+    - capital.jpg
+    - image/jpeg
+    - "75435"
+    - 2010-04-21 19:51:00
     - "14"
     - "15"
     - 
-    - 
+    - 2010-04-21 19:51:01
   - - "451"
     - residence1.jpg
     - "12"
@@ -2681,14 +2681,14 @@ images:
     - "48"
     - false
     - 
-    - /static/images/east11/residence1.jpg
-    - 
-    - 
-    - 
+    - residence1.jpg
+    - image/jpeg
+    - "85160"
+    - 2010-04-21 19:51:06
     - "12"
     - "15"
     - 
-    - 
+    - 2010-04-21 19:51:07
   - - "453"
     - baja-view14.jpg
     - "8"
@@ -2698,14 +2698,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Baja/baja-view14.jpg
-    - 
-    - 
-    - 
+    - baja-view14.jpg
+    - image/jpeg
+    - "52074"
+    - 2010-04-21 19:51:14
     - 
     - "25"
     - 
-    - 
+    - 2010-04-21 19:51:14
   - - "454"
     - view1.jpg
     - "9"
@@ -2715,14 +2715,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Baja/view1.jpg
-    - 
-    - 
-    - 
+    - view1.jpg
+    - image/jpeg
+    - "39887"
+    - 2010-04-21 19:51:19
     - 
     - "25"
     - 
-    - 
+    - 2010-04-21 19:51:19
   - - "455"
     - view2.jpg
     - "4"
@@ -2732,14 +2732,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Baja/view2.jpg
-    - 
-    - 
-    - 
+    - view2.jpg
+    - image/jpeg
+    - "52127"
+    - 2010-04-21 19:51:24
     - 
     - "25"
     - 
-    - 
+    - 2010-04-21 19:51:24
   - - "456"
     - OVERVIEW_1.jpg
     - "2"
@@ -2749,14 +2749,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Baja/OVERVIEW_1.jpg
-    - 
-    - 
-    - 
+    - OVERVIEW_1.jpg
+    - image/jpeg
+    - "66575"
+    - 2010-04-21 19:51:29
     - 
     - "25"
     - 
-    - 
+    - 2010-04-21 19:51:30
   - - "457"
     - view13b.jpg
     - "10"
@@ -2766,14 +2766,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Baja/view13b.jpg
-    - 
-    - 
-    - 
+    - view13b.jpg
+    - image/jpeg
+    - "35271"
+    - 2010-04-21 19:51:36
     - 
     - "25"
     - 
-    - 
+    - 2010-04-21 19:51:36
   - - "458"
     - view15.jpg
     - "11"
@@ -2783,14 +2783,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Baja/view15.jpg
-    - 
-    - 
-    - 
+    - view15.jpg
+    - image/jpeg
+    - "34715"
+    - 2010-04-21 19:51:41
     - 
     - "25"
     - 
-    - 
+    - 2010-04-21 19:51:41
   - - "459"
     - siteplan-final.jpg
     - "2"
@@ -2800,14 +2800,14 @@ images:
     - 
     - false
     - 
-    - /static/images/aarc/siteplan-final.jpg
-    - 
-    - 
-    - 
+    - siteplan-final.jpg
+    - image/jpeg
+    - "214215"
+    - 2010-04-21 19:51:45
     - 
     - "22"
     - 
-    - 
+    - 2010-04-21 19:51:46
   - - "460"
     - title.jpg
     - "1"
@@ -2817,14 +2817,14 @@ images:
     - 
     - false
     - 
-    - /static/images/aarc/title.jpg
-    - 
-    - 
-    - 
+    - title.jpg
+    - image/jpeg
+    - "88422"
+    - 2010-04-21 19:52:00
     - 
     - "22"
     - 
-    - 
+    - 2010-04-21 19:52:01
   - - "461"
     - site.jpg
     - "3"
@@ -2834,14 +2834,14 @@ images:
     - 
     - false
     - 
-    - /static/images/aarc/site.jpg
-    - 
-    - 
-    - 
+    - site.jpg
+    - image/jpeg
+    - "136369"
+    - 2010-04-21 19:52:08
     - 
     - "22"
     - 
-    - 
+    - 2010-04-21 19:52:08
   - - "462"
     - listening.jpg
     - "4"
@@ -2851,14 +2851,14 @@ images:
     - 
     - false
     - 
-    - /static/images/aarc/listening.jpg
-    - 
-    - 
-    - 
+    - listening.jpg
+    - image/jpeg
+    - "121840"
+    - 2010-04-21 19:52:17
     - 
     - "22"
     - 
-    - 
+    - 2010-04-21 19:52:18
   - - "463"
     - process_flow.jpg
     - "7"
@@ -2868,14 +2868,14 @@ images:
     - 
     - false
     - 
-    - /static/images/aarc/process_flow.jpg
-    - 
-    - 
-    - 
+    - process_flow.jpg
+    - image/jpeg
+    - "69145"
+    - 2010-04-21 19:52:28
     - 
     - "22"
     - 
-    - 
+    - 2010-04-21 19:52:28
   - - "467"
     - ""
     - "5"
@@ -2885,14 +2885,14 @@ images:
     - 
     - false
     - 
-    - /static/images/malinalco/plan.jpg
-    - 
-    - 
-    - 
+    - plan.jpg
+    - image/jpeg
+    - "158012"
+    - 2010-04-21 19:52:35
     - 
     - "17"
     - 
-    - 
+    - 2010-04-21 19:52:35
   - - "469"
     - ""
     - "7"
@@ -2902,14 +2902,14 @@ images:
     - 
     - false
     - 
-    - /static/images/malinalco/path.jpg
-    - 
-    - 
-    - 
+    - path.jpg
+    - image/jpeg
+    - "225677"
+    - 2010-04-21 19:52:46
     - 
     - "17"
     - 
-    - 
+    - 2010-04-21 19:52:46
   - - "472"
     - ""
     - "3"
@@ -2919,14 +2919,14 @@ images:
     - 
     - false
     - 
-    - /static/images/malinalco/mal_002.jpg
-    - 
-    - 
-    - 
+    - mal_002.jpg
+    - image/jpeg
+    - "123392"
+    - 2010-04-21 19:53:01
     - 
     - "17"
     - 
-    - 
+    - 2010-04-21 19:53:02
   - - "473"
     - ""
     - "6"
@@ -2936,14 +2936,14 @@ images:
     - 
     - false
     - 
-    - /static/images/malinalco/mal_003_terraces.jpg
-    - 
-    - 
-    - 
+    - mal_003_terraces.jpg
+    - image/jpeg
+    - "60498"
+    - 2010-04-21 19:53:12
     - 
     - "17"
     - 
-    - 
+    - 2010-04-21 19:53:12
   - - "474"
     - ""
     - "4"
@@ -2953,14 +2953,14 @@ images:
     - 
     - false
     - 
-    - /static/images/malinalco/mal_003.jpg
-    - 
-    - 
-    - 
+    - mal_003.jpg
+    - image/jpeg
+    - "94960"
+    - 2010-04-21 19:53:19
     - 
     - "17"
     - 
-    - 
+    - 2010-04-21 19:53:20
   - - "480"
     - ""
     - "2"
@@ -2970,14 +2970,14 @@ images:
     - 
     - false
     - 
-    - /static/images/malinalco/mal_1_800.jpg
-    - 
-    - 
-    - 
+    - mal_1_800.jpg
+    - image/jpeg
+    - "158665"
+    - 2010-04-21 19:53:28
     - 
     - "17"
     - 
-    - 
+    - 2010-04-21 19:53:28
   - - "481"
     - volente_overall_800.jpg
     - "6"
@@ -2987,14 +2987,14 @@ images:
     - 
     - false
     - 
-    - /static/images/volente/volente_overall_800.jpg
-    - 
-    - 
-    - 
+    - volente_overall_800.jpg
+    - image/jpeg
+    - "232231"
+    - 2010-04-21 19:53:38
     - 
     - "11"
     - 
-    - 
+    - 2010-04-21 19:53:39
   - - "482"
     - bahia-concepcion6.jpg
     - "0"
@@ -3004,14 +3004,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Bahia_Concep/bahia-concepcion6.jpg
-    - 
-    - 
-    - 
+    - bahia-concepcion6.jpg
+    - image/jpeg
+    - "204000"
+    - 2010-04-21 19:53:54
     - 
     - "30"
     - 
-    - 
+    - 2010-04-21 19:53:54
   - - "483"
     - bahia-concepcion2.jpg
     - "1"
@@ -3021,14 +3021,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Bahia_Concep/bahia-concepcion2.jpg
-    - 
-    - 
-    - 
+    - bahia-concepcion2.jpg
+    - image/jpeg
+    - "212661"
+    - 2010-04-21 19:54:06
     - 
     - "30"
     - 
-    - 
+    - 2010-04-21 19:54:07
   - - "484"
     - DSC00197.jpg
     - "2"
@@ -3038,14 +3038,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Bahia_Concep/DSC00197.jpg
-    - 
-    - 
-    - 
+    - DSC00197.jpg
+    - image/jpeg
+    - "179290"
+    - 2010-04-21 19:54:23
     - 
     - "30"
     - 
-    - 
+    - 2010-04-21 19:54:24
   - - "485"
     - bahia-concepcion7.jpg
     - "3"
@@ -3055,14 +3055,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Bahia_Concep/bahia-concepcion7.jpg
-    - 
-    - 
-    - 
+    - bahia-concepcion7.jpg
+    - image/jpeg
+    - "166728"
+    - 2010-04-21 19:54:34
     - 
     - "30"
     - 
-    - 
+    - 2010-04-21 19:54:34
   - - "486"
     - DSC00203.jpg
     - "4"
@@ -3072,14 +3072,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Bahia_Concep/DSC00203.jpg
-    - 
-    - 
-    - 
+    - DSC00203.jpg
+    - image/jpeg
+    - "158935"
+    - 2010-04-21 19:54:43
     - 
     - "30"
     - 
-    - 
+    - 2010-04-21 19:54:44
   - - "490"
     - LIVING TO KITCHEN
     - "11"
@@ -3089,14 +3089,14 @@ images:
     - 
     - true
     - "3062282722"
-    - /static/images/tortuga/IMG_6426.jpg
-    - 
-    - 
-    - 
+    - IMG_6426.jpg
+    - image/jpeg
+    - "168606"
+    - 2010-04-21 19:54:53
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:54:53
   - - "491"
     - KITCHEN TOWARD FAMILY ROOM
     - "18"
@@ -3106,14 +3106,14 @@ images:
     - 
     - true
     - "3062283600"
-    - /static/images/tortuga/IMG_6276.jpg
-    - 
-    - 
-    - 
+    - IMG_6276.jpg
+    - image/jpeg
+    - "131114"
+    - 2010-04-21 19:55:05
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:55:05
   - - "492"
     - KITCHEN TOWARD LIVING
     - "21"
@@ -3123,14 +3123,14 @@ images:
     - 
     - true
     - "3061444187"
-    - /static/images/tortuga/IMG_6291.jpg
-    - 
-    - 
-    - 
+    - IMG_6291.jpg
+    - image/jpeg
+    - "151339"
+    - 2010-04-21 19:55:16
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:55:17
   - - "493"
     - KITCHEN ISLAND
     - "22"
@@ -3140,14 +3140,14 @@ images:
     - 
     - true
     - "3061444369"
-    - /static/images/tortuga/IMG_6319.jpg
-    - 
-    - 
-    - 
+    - IMG_6319.jpg
+    - image/jpeg
+    - "128923"
+    - 2010-04-21 19:55:26
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:55:27
   - - "494"
     - LIVING TO ENTRY AND DINING
     - "12"
@@ -3157,14 +3157,14 @@ images:
     - 
     - true
     - "3061443137"
-    - /static/images/tortuga/IMG_6402.jpg
-    - 
-    - 
-    - 
+    - IMG_6402.jpg
+    - image/jpeg
+    - "153290"
+    - 2010-04-21 19:55:39
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:55:39
   - - "496"
     - ENTRY
     - "13"
@@ -3174,14 +3174,14 @@ images:
     - 
     - true
     - "3061443273"
-    - /static/images/tortuga/IMG_6496.jpg
-    - 
-    - 
-    - 
+    - IMG_6496.jpg
+    - image/jpeg
+    - "149341"
+    - 2010-04-21 19:55:53
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:55:54
   - - "497"
     - THREE GLASS CORNERS
     - "4"
@@ -3191,14 +3191,14 @@ images:
     - 
     - true
     - "3061442389"
-    - /static/images/tortuga/IMG_6512.jpg
-    - 
-    - 
-    - 
+    - IMG_6512.jpg
+    - image/jpeg
+    - "200700"
+    - 2010-04-21 19:56:05
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:56:05
   - - "498"
     - DINING
     - "16"
@@ -3208,14 +3208,14 @@ images:
     - 
     - true
     - "3061443601"
-    - /static/images/tortuga/IMG_6482.jpg
-    - 
-    - 
-    - 
+    - IMG_6482.jpg
+    - image/jpeg
+    - "79047"
+    - 2010-04-21 19:56:21
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:56:22
   - - "499"
     - SOLARIUM CLOSED
     - "8"
@@ -3225,14 +3225,14 @@ images:
     - 
     - true
     - "3061442619"
-    - /static/images/tortuga/IMG_6577.jpg
-    - 
-    - 
-    - 
+    - IMG_6577.jpg
+    - image/jpeg
+    - "236115"
+    - 2010-04-21 19:56:29
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:56:30
   - - "500"
     - SOLARIUM OPEN
     - "7"
@@ -3242,14 +3242,14 @@ images:
     - 
     - true
     - "3061442515"
-    - /static/images/tortuga/IMG_6597.jpg
-    - 
-    - 
-    - 
+    - IMG_6597.jpg
+    - image/jpeg
+    - "215984"
+    - 2010-04-21 19:56:44
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:56:45
   - - "501"
     - HER MASTER BATH
     - "9"
@@ -3259,14 +3259,14 @@ images:
     - 
     - true
     - "3061442739"
-    - /static/images/tortuga/IMG_6627.jpg
-    - 
-    - 
-    - 
+    - IMG_6627.jpg
+    - image/jpeg
+    - "154739"
+    - 2010-04-21 19:56:59
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:56:59
   - - "502"
     - MASTER SHOWER
     - "10"
@@ -3276,14 +3276,14 @@ images:
     - 
     - true
     - "3061442855"
-    - /static/images/tortuga/IMG_6636.jpg
-    - 
-    - 
-    - 
+    - IMG_6636.jpg
+    - image/jpeg
+    - "107700"
+    - 2010-04-21 19:57:10
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:57:11
   - - "504"
     - LIBRARY
     - "25"
@@ -3293,14 +3293,14 @@ images:
     - 
     - true
     - "3062284464"
-    - /static/images/tortuga/IMG_6696.jpg
-    - 
-    - 
-    - 
+    - IMG_6696.jpg
+    - image/jpeg
+    - "127671"
+    - 2010-04-21 19:57:19
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:57:20
   - - "505"
     - LIBRARY
     - "26"
@@ -3310,14 +3310,14 @@ images:
     - 
     - true
     - "3062284768"
-    - /static/images/tortuga/IMG_6710.jpg
-    - 
-    - 
-    - 
+    - IMG_6710.jpg
+    - image/jpeg
+    - "122745"
+    - 2010-04-21 19:57:30
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:57:31
   - - "506"
     - REAR OF HOUSE DUSK
     - "1"
@@ -3327,14 +3327,14 @@ images:
     - 
     - true
     - "3062281834"
-    - /static/images/tortuga/IMG_6824.jpg
-    - 
-    - 
-    - 
+    - IMG_6824.jpg
+    - image/jpeg
+    - "184940"
+    - 2010-04-21 19:57:41
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:57:42
   - - "507"
     - CANTILEVERED ROOF
     - "2"
@@ -3344,14 +3344,14 @@ images:
     - 
     - true
     - "3062281990"
-    - /static/images/tortuga/IMG_6800.jpg
-    - 
-    - 
-    - 
+    - IMG_6800.jpg
+    - image/jpeg
+    - "147264"
+    - 2010-04-21 19:58:13
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:58:13
   - - "509"
     - ENTRY DAY
     - "14"
@@ -3361,14 +3361,14 @@ images:
     - 
     - true
     - "3062283104"
-    - /static/images/tortuga/Tortuga_44.jpg
-    - 
-    - 
-    - 
+    - Tortuga_44.jpg
+    - image/jpeg
+    - "141724"
+    - 2010-04-21 19:58:29
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:58:30
   - - "510"
     - KITCHEN
     - "20"
@@ -3378,14 +3378,14 @@ images:
     - 
     - true
     - "3062283822"
-    - /static/images/tortuga/LU6N8885_DXO.jpg
-    - 
-    - 
-    - 
+    - LU6N8885_DXO.jpg
+    - image/jpeg
+    - "62510"
+    - 2010-04-21 19:58:42
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:58:42
   - - "511"
     - ENTRY NIGHT
     - "15"
@@ -3395,14 +3395,14 @@ images:
     - 
     - true
     - "3062283242"
-    - /static/images/tortuga/LU6N9126_DXO.jpg
-    - 
-    - 
-    - 
+    - LU6N9126_DXO.jpg
+    - image/jpeg
+    - "203591"
+    - 2010-04-21 19:58:48
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:58:49
   - - "512"
     - LIVING TO REFLECTING POND
     - "17"
@@ -3412,14 +3412,14 @@ images:
     - 
     - true
     - "3062283474"
-    - /static/images/tortuga/Tortuga_15.jpg
-    - 
-    - 
-    - 
+    - Tortuga_15.jpg
+    - image/jpeg
+    - "102770"
+    - 2010-04-21 19:59:00
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:59:00
   - - "514"
     - DAY BED
     - "28"
@@ -3429,14 +3429,14 @@ images:
     - 
     - true
     - "3061445073"
-    - /static/images/tortuga/LU6N0862_final_2.jpg
-    - 
-    - 
-    - 
+    - LU6N0862_final_2.jpg
+    - image/jpeg
+    - "38701"
+    - 2010-04-21 19:59:10
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:59:11
   - - "515"
     - REFLECTING POND TOWARD KITCHEN
     - "3"
@@ -3446,14 +3446,14 @@ images:
     - 
     - true
     - "3062282082"
-    - /static/images/tortuga/Tortuga_66.jpg
-    - 
-    - 
-    - 
+    - Tortuga_66.jpg
+    - image/jpeg
+    - "58234"
+    - 2010-04-21 19:59:16
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:59:16
   - - "516"
     - GARDEN TOWARD ENTRY
     - "30"
@@ -3463,14 +3463,14 @@ images:
     - 
     - true
     - "3061445257"
-    - /static/images/tortuga/LU6N8932_DXO.jpg
-    - 
-    - 
-    - 
+    - LU6N8932_DXO.jpg
+    - image/jpeg
+    - "227519"
+    - 2010-04-21 19:59:23
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:59:24
   - - "517"
     - ROOF GARDEN
     - "29"
@@ -3480,14 +3480,14 @@ images:
     - 
     - true
     - "3062285088"
-    - /static/images/tortuga/Tortuga_37.jpg
-    - 
-    - 
-    - 
+    - Tortuga_37.jpg
+    - image/jpeg
+    - "98344"
+    - 2010-04-21 19:59:36
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:59:37
   - - "518"
     - KITCHEN
     - "19"
@@ -3497,14 +3497,14 @@ images:
     - 
     - true
     - "3062283702"
-    - /static/images/tortuga/IMG_6286.jpg
-    - 
-    - 
-    - 
+    - IMG_6286.jpg
+    - image/jpeg
+    - "47147"
+    - 2010-04-21 19:59:47
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 19:59:47
   - - "519"
     - 003.jpg
     - "1"
@@ -3514,14 +3514,14 @@ images:
     - 
     - false
     - 
-    - /static/images/self_sustaining/003.jpg
-    - 
-    - 
-    - 
+    - 003.jpg
+    - image/jpeg
+    - "207450"
+    - 2010-04-21 19:59:53
     - 
     - "18"
     - 
-    - 
+    - 2010-04-21 19:59:54
   - - "521"
     - b19-rendering2.jpg
     - "1"
@@ -3531,14 +3531,14 @@ images:
     - 
     - false
     - 
-    - /static/images/block19/b19-rendering2.jpg
-    - 
-    - 
-    - 
+    - b19-rendering2.jpg
+    - image/jpeg
+    - "644230"
+    - 2010-04-21 20:00:06
     - 
     - "24"
     - 
-    - 
+    - 2010-04-21 20:00:07
   - - "522"
     - urban monet.jpg
     - "2"
@@ -3548,14 +3548,14 @@ images:
     - 
     - false
     - 
-    - /static/images/block19/urban monet.jpg
-    - 
-    - 
-    - 
+    - urban_monet.jpg
+    - image/jpeg
+    - "207952"
+    - 2010-04-21 20:00:28
     - 
     - "24"
     - 
-    - 
+    - 2010-04-21 20:00:29
   - - "523"
     - b19-rendering2.jpg
     - "7"
@@ -3565,14 +3565,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Block_19_wor/b19-rendering2.jpg
-    - 
-    - 
-    - 
+    - b19-rendering2.jpg
+    - image/jpeg
+    - "644230"
+    - 2010-04-21 20:00:43
     - 
     - "29"
     - 
-    - 
+    - 2010-04-21 20:00:44
   - - "526"
     - 1111 lookout views.jpg
     - "4"
@@ -3582,14 +3582,14 @@ images:
     - "48"
     - false
     - 
-    - /static/images/east11/1111 lookout views.jpg
-    - 
-    - 
-    - 
+    - 1111_lookout_views.jpg
+    - image/jpeg
+    - "860563"
+    - 2010-04-21 20:01:09
     - 
     - "15"
     - 
-    - 
+    - 2010-04-21 20:01:12
   - - "527"
     - 1111 obama store on CNN.jpg
     - "16"
@@ -3599,14 +3599,14 @@ images:
     - "48"
     - false
     - 
-    - /static/images/east11/1111 obama store on CNN.jpg
-    - 
-    - 
-    - 
+    - 1111_obama_store_on_CNN.jpg
+    - image/jpeg
+    - "349733"
+    - 2010-04-21 20:01:38
     - 
     - "15"
     - 
-    - 
+    - 2010-04-21 20:01:39
   - - "528"
     - gwtp-siteplan-040828.jpg
     - "1"
@@ -3616,14 +3616,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Green_Water_/gwtp-siteplan-040828.jpg
-    - 
-    - 
-    - 
+    - gwtp-siteplan-040828.jpg
+    - image/jpeg
+    - "281558"
+    - 2010-04-21 20:01:53
     - 
     - "31"
     - 
-    - 
+    - 2010-04-21 20:01:54
   - - "529"
     - gwtp-axo.jpg
     - "2"
@@ -3633,14 +3633,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Green_Water_/gwtp-axo.jpg
-    - 
-    - 
-    - 
+    - gwtp-axo.jpg
+    - image/jpeg
+    - "545607"
+    - 2010-04-21 20:02:14
     - 
     - "31"
     - 
-    - 
+    - 2010-04-21 20:02:22
   - - "530"
     - 2009 austin skyline-gwtp.jpg
     - "3"
@@ -3650,14 +3650,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Green_Water_/2009 austin skyline-gwtp.jpg
-    - 
-    - 
-    - 
+    - 2009_austin_skyline-gwtp.jpg
+    - image/jpeg
+    - "198398"
+    - 2010-04-21 20:02:40
     - 
     - "31"
     - 
-    - 
+    - 2010-04-21 20:02:41
   - - "531"
     - Site Section.jpg
     - "4"
@@ -3667,14 +3667,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Green_Water_/Site Section.jpg
-    - 
-    - 
-    - 
+    - Site_Section.jpg
+    - image/jpeg
+    - "501624"
+    - 2010-04-21 20:02:55
     - 
     - "31"
     - 
-    - 
+    - 2010-04-21 20:02:58
   - - "532"
     - Boards2.jpg
     - "3"
@@ -3684,14 +3684,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Miami_Waterw/Boards2.jpg
-    - 
-    - 
-    - 
+    - Boards2.jpg
+    - image/jpeg
+    - "1182262"
+    - 2010-04-21 20:03:19
     - 
     - "32"
     - 
-    - 
+    - 2010-04-21 20:03:27
   - - "533"
     - Boards.jpg
     - "2"
@@ -3701,14 +3701,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Miami_Waterw/Boards.jpg
-    - 
-    - 
-    - 
+    - Boards.jpg
+    - image/jpeg
+    - "1495660"
+    - 2010-04-21 20:04:01
     - 
     - "32"
     - 
-    - 
+    - 2010-04-21 20:04:09
   - - "534"
     - miami dt4.jpg
     - "1"
@@ -3718,14 +3718,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Miami_Waterw/miami dt4.jpg
-    - 
-    - 
-    - 
+    - miami_dt4.jpg
+    - image/jpeg
+    - "439703"
+    - 2010-04-21 20:04:47
     - 
     - "32"
     - 
-    - 
+    - 2010-04-21 20:04:48
   - - "536"
     - cobbs ENTRY COURTYARD2.jpg
     - "1"
@@ -3735,14 +3735,14 @@ images:
     - 
     - false
     - 
-    - /static/images/G.H._Residen/cobbs ENTRY COURTYARD2.jpg
-    - 
-    - 
-    - 
+    - cobbs_ENTRY_COURTYARD2.jpg
+    - image/jpeg
+    - "261745"
+    - 2010-04-21 20:05:52
     - 
     - "34"
     - 
-    - 
+    - 2010-04-21 20:05:52
   - - "543"
     - vernal pool:cobbs.jpg
     - "0"
@@ -3752,14 +3752,14 @@ images:
     - 
     - false
     - 
-    - /static/images/G.H._Residen/vernal pool:cobbs.jpg
-    - 
-    - 
-    - 
+    - vernal_pool_cobbs.jpg
+    - image/jpeg
+    - "131583"
+    - 2010-04-21 20:06:08
     - 
     - "34"
     - 
-    - 
+    - 2010-04-21 20:06:08
   - - "545"
     - MOTOTEK2.jpg
     - "2"
@@ -3769,14 +3769,14 @@ images:
     - 
     - false
     - 
-    - /static/images/mototek/MOTOTEK2.jpg
-    - 
-    - 
-    - 
+    - MOTOTEK2.jpg
+    - image/jpeg
+    - "626153"
+    - 2010-04-21 20:06:21
     - 
     - "14"
     - 
-    - 
+    - 2010-04-21 20:06:24
   - - "558"
     - riverviewLU6N0976.jpg
     - "3"
@@ -3786,14 +3786,14 @@ images:
     - "48"
     - false
     - 
-    - /static/images/riverview/riverviewLU6N0976.jpg
-    - 
-    - 
-    - 
+    - riverviewLU6N0976.jpg
+    - image/jpeg
+    - "563986"
+    - 2010-04-21 20:06:42
     - 
     - "9"
     - 
-    - 
+    - 2010-04-21 20:06:44
   - - "559"
     - block19s.jpg
     - "8"
@@ -3803,14 +3803,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Block_19_wor/block19.jpg
-    - 
-    - 
-    - 
+    - block19.jpg
+    - image/jpeg
+    - "2028424"
+    - 2010-04-21 20:07:02
     - 
     - "29"
     - 
-    - 
+    - 2010-04-21 20:07:09
   - - "560"
     - LU6N1354_DXO.jpg
     - "0"
@@ -3820,14 +3820,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Mango/LU6N1354_DXO.jpg
-    - 
-    - 
-    - 
+    - LU6N1354_DXO.jpg
+    - image/jpeg
+    - "55928"
+    - 2010-04-21 20:08:01
     - 
     - "35"
     - 
-    - 
+    - 2010-04-21 20:08:02
   - - "561"
     - LU6N1361_DXO.jpg
     - "3"
@@ -3837,14 +3837,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Mango/LU6N1361_DXO.jpg
-    - 
-    - 
-    - 
+    - LU6N1361_DXO.jpg
+    - image/jpeg
+    - "90672"
+    - 2010-04-21 20:08:08
     - 
     - "35"
     - 
-    - 
+    - 2010-04-21 20:08:09
   - - "562"
     - LU6N1335_DXO.jpg
     - "11"
@@ -3854,14 +3854,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Mango/LU6N1335_DXO.jpg
-    - 
-    - 
-    - 
+    - LU6N1335_DXO.jpg
+    - image/jpeg
+    - "128051"
+    - 2010-04-21 20:08:16
     - 
     - "35"
     - 
-    - 
+    - 2010-04-21 20:08:17
   - - "564"
     - LU6N1308_DXO.jpg
     - "4"
@@ -3871,14 +3871,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Mango/LU6N1308_DXO.jpg
-    - 
-    - 
-    - 
+    - LU6N1308_DXO.jpg
+    - image/jpeg
+    - "63745"
+    - 2010-04-21 20:08:23
     - 
     - "35"
     - 
-    - 
+    - 2010-04-21 20:08:24
   - - "565"
     - LU6N1351_DXO.jpg
     - "7"
@@ -3888,14 +3888,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Mango/LU6N1351_DXO.jpg
-    - 
-    - 
-    - 
+    - LU6N1351_DXO.jpg
+    - image/jpeg
+    - "71942"
+    - 2010-04-21 20:08:30
     - 
     - "35"
     - 
-    - 
+    - 2010-04-21 20:08:31
   - - "581"
     - from backyard3 copy.jpg
     - "3"
@@ -3905,14 +3905,14 @@ images:
     - 
     - false
     - 
-    - /static/images/G.H._Residen/from backyard3 copy.jpg
-    - 
-    - 
-    - 
+    - from_backyard3_copy.jpg
+    - image/jpeg
+    - "545778"
+    - 2010-04-21 20:08:37
     - 
     - "34"
     - 
-    - 
+    - 2010-04-21 20:08:38
   - - "582"
     - inside-master-door-open2.jpg
     - "6"
@@ -3922,14 +3922,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - inside-master-door-open2.jpg
+    - image/jpeg
+    - "93854"
+    - 2010-04-21 20:29:06
     - 
     - "34"
     - 
-    - 
+    - 2010-04-21 20:29:07
   - - "583"
     - master3.jpg
     - "9"
@@ -3939,14 +3939,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - master3.jpg
+    - image/jpeg
+    - "152329"
+    - 2010-04-21 20:29:14
     - 
     - "34"
     - 
-    - 
+    - 2010-04-21 20:29:15
   - - "584"
     - living-to-master5.jpg
     - "4"
@@ -3956,14 +3956,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - living-to-master5.jpg
+    - image/jpeg
+    - "115187"
+    - 2010-04-21 20:29:25
     - 
     - "34"
     - 
-    - 
+    - 2010-04-21 20:29:26
   - - "587"
     - MOTOTEK-WEB.jpg
     - "1"
@@ -3973,14 +3973,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - MOTOTEK-WEB.jpg
+    - image/jpeg
+    - "133892"
+    - 2010-04-21 20:29:35
     - 
     - "14"
     - 
-    - 
+    - 2010-04-21 20:29:35
   - - "591"
     - 0-COVER.jpg
     - "1"
@@ -3990,14 +3990,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - 0-COVER.jpg
+    - image/jpeg
+    - "290050"
+    - 2010-04-21 20:29:44
     - 
     - "19"
     - 
-    - 
+    - 2010-04-21 20:29:45
   - - "594"
     - west-to-east-pool.jpg
     - "4"
@@ -4007,14 +4007,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - west-to-east-pool.jpg
+    - image/jpeg
+    - "135090"
+    - 2010-04-21 20:29:57
     - 
     - "48"
     - 
-    - 
+    - 2010-04-21 20:29:58
   - - "595"
     - REAR_rendered-1.jpg
     - "1"
@@ -4024,14 +4024,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Bluff_House/REAR_rendered-1.jpg
-    - 
-    - 
-    - 
+    - REAR_rendered-1.jpg
+    - image/jpeg
+    - "219361"
+    - 2010-04-21 20:08:57
     - 
     - "48"
     - 
-    - 
+    - 2010-04-21 20:08:59
   - - "597"
     - from-inside2.jpg
     - "5"
@@ -4041,14 +4041,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - from-inside2.jpg
+    - image/jpeg
+    - "108308"
+    - 2010-04-21 20:30:07
     - 
     - "48"
     - 
-    - 
+    - 2010-04-21 20:30:08
   - - "598"
     - inside-pool3.jpg
     - "2"
@@ -4058,14 +4058,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - inside-pool3.jpg
+    - image/jpeg
+    - "129363"
+    - 2010-04-21 20:30:15
     - 
     - "48"
     - 
-    - 
+    - 2010-04-21 20:30:15
   - - "599"
     - pool-east-west-more-left.jpg
     - "3"
@@ -4075,14 +4075,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - pool-east-west-more-left.jpg
+    - image/jpeg
+    - "127790"
+    - 2010-04-21 20:30:24
     - 
     - "48"
     - 
-    - 
+    - 2010-04-21 20:30:24
   - - "600"
     - Picture1.jpg
     - "1"
@@ -4092,14 +4092,14 @@ images:
     - 
     - false
     - 
-    - /static/images/urbanreserve/Picture1.jpg
-    - 
-    - 
-    - 
+    - Picture1.jpg
+    - image/jpeg
+    - "69769"
+    - 2010-04-21 20:09:11
     - 
     - "20"
     - 
-    - 
+    - 2010-04-21 20:09:12
   - - "609"
     - LU6N9209.jpg
     - "11"
@@ -4109,14 +4109,14 @@ images:
     - "48"
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N9209.jpg
+    - image/jpeg
+    - "188968"
+    - 2010-04-21 20:30:32
     - 
     - "3"
     - 
-    - 
+    - 2010-04-21 20:30:33
   - - "610"
     - LU6N9204.jpg
     - "10"
@@ -4126,14 +4126,14 @@ images:
     - "48"
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N9204.jpg
+    - image/jpeg
+    - "201944"
+    - 2010-04-21 20:30:44
     - 
     - "3"
     - 
-    - 
+    - 2010-04-21 20:30:45
   - - "611"
     - LU6N9177.jpg
     - "9"
@@ -4143,14 +4143,14 @@ images:
     - "3224880"
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N9177.jpg
+    - image/jpeg
+    - "146203"
+    - 2010-04-21 20:30:57
     - "17"
     - "3"
     - 
-    - 
+    - 2010-04-21 20:30:58
   - - "612"
     - LU6N9158_DxO_raw.jpg
     - "12"
@@ -4160,14 +4160,14 @@ images:
     - "48"
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N9158_DxO_raw.jpg
+    - image/jpeg
+    - "127334"
+    - 2010-04-21 20:31:09
     - "17"
     - "3"
     - 
-    - 
+    - 2010-04-21 20:31:09
   - - "613"
     - LU6N9156_DxO_raw.jpg
     - "13"
@@ -4177,14 +4177,14 @@ images:
     - "3355440"
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N9156_DxO_raw.jpg
+    - image/jpeg
+    - "124854"
+    - 2010-04-21 20:31:19
     - "17"
     - "3"
     - 
-    - 
+    - 2010-04-21 20:31:19
   - - "617"
     - LU6N1515_final.jpg
     - "15"
@@ -4194,14 +4194,14 @@ images:
     - "3290928"
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1515_final.jpg
+    - image/jpeg
+    - "138783"
+    - 2010-04-21 20:31:29
     - "20"
     - "9"
     - 
-    - 
+    - 2010-04-21 20:31:29
   - - "618"
     - LU6N1508_final.jpg
     - "12"
@@ -4211,14 +4211,14 @@ images:
     - "3290928"
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1508_final.jpg
+    - image/jpeg
+    - "170246"
+    - 2010-04-21 20:31:40
     - "20"
     - "9"
     - 
-    - 
+    - 2010-04-21 20:31:40
   - - "619"
     - LU6N1496_final.jpg
     - "1"
@@ -4228,14 +4228,14 @@ images:
     - "48"
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1496_final.jpg
+    - image/jpeg
+    - "201791"
+    - 2010-04-21 20:31:51
     - 
     - "9"
     - 
-    - 
+    - 2010-04-21 20:31:52
   - - "620"
     - LU6N1472_final.jpg
     - "6"
@@ -4245,14 +4245,14 @@ images:
     - "48"
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1472_final.jpg
+    - image/jpeg
+    - "200690"
+    - 2010-04-21 20:32:14
     - 
     - "9"
     - 
-    - 
+    - 2010-04-21 20:32:15
   - - "621"
     - LU6N1480_final.jpg
     - "4"
@@ -4262,14 +4262,14 @@ images:
     - "48"
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1480_final.jpg
+    - image/jpeg
+    - "212950"
+    - 2010-04-21 20:32:31
     - 
     - "9"
     - 
-    - 
+    - 2010-04-21 20:32:31
   - - "622"
     - LU6N1519_final.jpg
     - "16"
@@ -4279,14 +4279,14 @@ images:
     - "3290928"
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1519_final.jpg
+    - image/jpeg
+    - "168108"
+    - 2010-04-21 20:32:53
     - "20"
     - "9"
     - 
-    - 
+    - 2010-04-21 20:32:54
   - - "623"
     - LU6N1524_final.jpg
     - "17"
@@ -4296,14 +4296,14 @@ images:
     - "14640"
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1524_final.jpg
+    - image/jpeg
+    - "193889"
+    - 2010-04-21 20:33:07
     - "20"
     - "9"
     - 
-    - 
+    - 2010-04-21 20:33:08
   - - "627"
     - Dallas-Research.031.jpg
     - "2"
@@ -4313,14 +4313,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - Dallas-Research.031.jpg
+    - image/jpeg
+    - "51353"
+    - 2010-04-21 20:33:39
     - 
     - "38"
     - 
-    - 
+    - 2010-04-21 20:33:39
   - - "628"
     - Dallas_Eco5a.jpg
     - "6"
@@ -4330,14 +4330,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - Dallas_Eco5a.jpg
+    - image/jpeg
+    - "61852"
+    - 2010-04-21 20:33:45
     - 
     - "38"
     - 
-    - 
+    - 2010-04-21 20:33:45
   - - "629"
     - render1-D.jpg
     - "10"
@@ -4347,14 +4347,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - render1-D.jpg
+    - image/jpeg
+    - "104035"
+    - 2010-04-21 20:33:50
     - 
     - "38"
     - 
-    - 
+    - 2010-04-21 20:33:51
   - - "630"
     - prrogram-3.jpg
     - "5"
@@ -4364,14 +4364,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - prrogram-3.jpg
+    - image/jpeg
+    - "47091"
+    - 2010-04-21 20:33:58
     - 
     - "38"
     - 
-    - 
+    - 2010-04-21 20:33:59
   - - "631"
     - Floorplans.jpg
     - "7"
@@ -4381,14 +4381,14 @@ images:
     - 
     - false
     - 
-    - /static/images/Re:Vision_Da/Floorplans.jpg
-    - 
-    - 
-    - 
+    - Floorplans.jpg
+    - image/jpeg
+    - "90087"
+    - 2010-04-21 20:09:16
     - 
     - "38"
     - 
-    - 
+    - 2010-04-21 20:09:17
   - - "633"
     - MASSING2b.jpg
     - "3"
@@ -4398,14 +4398,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - MASSING2b.jpg
+    - image/jpeg
+    - "40984"
+    - 2010-04-21 20:34:04
     - 
     - "38"
     - 
-    - 
+    - 2010-04-21 20:34:05
   - - "634"
     - render4-D.jpg
     - "13"
@@ -4415,14 +4415,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - render4-D.jpg
+    - image/jpeg
+    - "76266"
+    - 2010-04-21 20:34:09
     - 
     - "38"
     - 
-    - 
+    - 2010-04-21 20:34:09
   - - "635"
     - render3-plaza-D.jpg
     - "14"
@@ -4432,14 +4432,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - render3-plaza-D.jpg
+    - image/jpeg
+    - "87547"
+    - 2010-04-21 20:34:15
     - 
     - "38"
     - 
-    - 
+    - 2010-04-21 20:34:16
   - - "636"
     - render2-D.jpg
     - "15"
@@ -4449,14 +4449,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - render2-D.jpg
+    - image/jpeg
+    - "77599"
+    - 2010-04-21 20:34:23
     - 
     - "38"
     - 
-    - 
+    - 2010-04-21 20:34:23
   - - "637"
     - render6-D.jpg
     - "9"
@@ -4466,14 +4466,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - render6-D.jpg
+    - image/jpeg
+    - "103059"
+    - 2010-04-21 20:34:31
     - 
     - "38"
     - 
-    - 
+    - 2010-04-21 20:34:32
   - - "638"
     - render5-courtyard-D.jpg
     - "16"
@@ -4483,14 +4483,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - render5-courtyard-D.jpg
+    - image/jpeg
+    - "88739"
+    - 2010-04-21 20:34:40
     - 
     - "38"
     - 
-    - 
+    - 2010-04-21 20:34:40
   - - "639"
     - render7-D.jpg
     - "11"
@@ -4500,14 +4500,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - render7-D.jpg
+    - image/jpeg
+    - "108084"
+    - 2010-04-21 20:34:48
     - 
     - "38"
     - 
-    - 
+    - 2010-04-21 20:34:48
   - - "640"
     - tran-section2.jpg
     - "8"
@@ -4517,14 +4517,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - tran-section2.jpg
+    - image/jpeg
+    - "34349"
+    - 2010-04-21 20:34:57
     - 
     - "38"
     - 
-    - 
+    - 2010-04-21 20:34:58
   - - "641"
     - SITE-COMBO.jpg
     - "4"
@@ -4534,14 +4534,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - SITE-COMBO.jpg
+    - image/jpeg
+    - "83573"
+    - 2010-04-21 20:35:02
     - 
     - "38"
     - 
-    - 
+    - 2010-04-21 20:35:03
   - - "642"
     - systams-diagram-axon.jpg
     - "12"
@@ -4551,14 +4551,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - systams-diagram-axon.jpg
+    - image/jpeg
+    - "134018"
+    - 2010-04-21 20:35:10
     - 
     - "38"
     - 
-    - 
+    - 2010-04-21 20:35:11
   - - "643"
     - aerial-image-1_vertical.jpg
     - "1"
@@ -4568,14 +4568,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - aerial-image-1_vertical.jpg
+    - image/jpeg
+    - "81343"
+    - 2010-04-21 20:41:22
     - 
     - "38"
     - 
-    - 
+    - 2010-04-21 20:41:25
   - - "644"
     - LU6N1578_DXO_final.jpg
     - "5"
@@ -4585,14 +4585,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1578_DXO_final.jpg
+    - image/jpeg
+    - "82797"
+    - 2010-04-21 20:35:21
     - 
     - "29"
     - 
-    - 
+    - 2010-04-21 20:35:21
   - - "646"
     - LU6N1602_DXO_final.jpg
     - "1"
@@ -4602,14 +4602,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1602_DXO_final.jpg
+    - image/jpeg
+    - "76539"
+    - 2010-04-21 20:35:31
     - 
     - "29"
     - 
-    - 
+    - 2010-04-21 20:35:31
   - - "647"
     - LU6N1566_DXO_final.jpg
     - "3"
@@ -4619,14 +4619,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1566_DXO_final.jpg
+    - image/jpeg
+    - "74373"
+    - 2010-04-21 20:35:38
     - 
     - "29"
     - 
-    - 
+    - 2010-04-21 20:35:38
   - - "648"
     - LU6N1590_DXO_final.jpg
     - "0"
@@ -4636,14 +4636,14 @@ images:
     - "48"
     - false
     - 
-    - /static/images/east11/LU6N1590_DXO_final.jpg
-    - 
-    - 
-    - 
+    - LU6N1590_DXO_final.jpg
+    - image/jpeg
+    - "149129"
+    - 2010-04-21 20:09:23
     - 
     - "15"
     - 
-    - 
+    - 2010-04-21 20:09:24
   - - "649"
     - LU6N1594_DXO_final.jpg
     - "3"
@@ -4653,14 +4653,14 @@ images:
     - "13104"
     - false
     - 
-    - /static/images/east11/LU6N1594_DXO_final.jpg
-    - 
-    - 
-    - 
+    - LU6N1594_DXO_final.jpg
+    - image/jpeg
+    - "161180"
+    - 2010-04-21 20:09:37
     - "13"
     - "15"
     - 
-    - 
+    - 2010-04-21 20:09:39
   - - "654"
     - FRONT_062309_web.jpg
     - "0"
@@ -4670,14 +4670,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - FRONT_062309_web.jpg
+    - image/jpeg
+    - "38118"
+    - 2010-04-21 20:35:45
     - 
     - "50"
     - 
-    - 
+    - 2010-04-21 20:35:46
   - - "655"
     - red-bluff-rendering-2.jpg
     - "2"
@@ -4687,14 +4687,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - red-bluff-rendering-2.jpg
+    - image/jpeg
+    - "69923"
+    - 2010-04-21 20:35:51
     - 
     - "50"
     - 
-    - 
+    - 2010-04-21 20:35:51
   - - "656"
     - landscape-rendring-FALL.jpg
     - "3"
@@ -4704,14 +4704,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - landscape-rendring-FALL.jpg
+    - image/jpeg
+    - "107947"
+    - 2010-04-21 20:35:58
     - 
     - "50"
     - 
-    - 
+    - 2010-04-21 20:35:58
   - - "657"
     - FRONT_062309.jpg
     - "1"
@@ -4721,14 +4721,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - FRONT_062309.jpg
+    - image/jpeg
+    - "153043"
+    - 2010-04-21 20:36:06
     - 
     - "50"
     - 
-    - 
+    - 2010-04-21 20:36:07
   - - "658"
     - landscape-rendring-SPRING.jpg
     - "4"
@@ -4738,14 +4738,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - landscape-rendring-SPRING.jpg
+    - image/jpeg
+    - "107602"
+    - 2010-04-21 20:36:18
     - 
     - "50"
     - 
-    - 
+    - 2010-04-21 20:36:19
   - - "659"
     - landscape-rendring-SUMMER-2.jpg
     - "5"
@@ -4755,14 +4755,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - landscape-rendring-SUMMER-2.jpg
+    - image/jpeg
+    - "122631"
+    - 2010-04-21 20:36:28
     - 
     - "50"
     - 
-    - 
+    - 2010-04-21 20:36:29
   - - "660"
     - landscape-rendring-winter.jpg
     - "6"
@@ -4772,14 +4772,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - landscape-rendring-winter.jpg
+    - image/jpeg
+    - "101224"
+    - 2010-04-21 20:36:38
     - 
     - "50"
     - 
-    - 
+    - 2010-04-21 20:36:38
   - - "668"
     - LU6N1818_DXO.jpg
     - "4"
@@ -4789,14 +4789,14 @@ images:
     - 
     - false
     - 
-    - /images/Block_19_wor/LU6N1818_DXO.jpg
-    - 
-    - 
-    - 
+    - LU6N1818_DXO.jpg
+    - image/jpeg
+    - "174648"
+    - 2010-04-21 20:09:48
     - 
     - "29"
     - 
-    - 
+    - 2010-04-21 20:09:49
   - - "669"
     - LU6N1833_DXO.jpg
     - "6"
@@ -4806,14 +4806,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1833_DXO.jpg
+    - image/jpeg
+    - "72318"
+    - 2010-04-21 20:36:46
     - 
     - "29"
     - 
-    - 
+    - 2010-04-21 20:36:47
   - - "670"
     - LU6N1836_DXO.jpg
     - "0"
@@ -4823,14 +4823,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1836_DXO.jpg
+    - image/jpeg
+    - "90284"
+    - 2010-04-21 20:36:53
     - 
     - "29"
     - 
-    - 
+    - 2010-04-21 20:36:53
   - - "671"
     - LU6N1824_DXO.jpg
     - "2"
@@ -4840,14 +4840,14 @@ images:
     - 
     - false
     - 
-    - /images/Block_19_wor/LU6N1824_DXO.jpg
-    - 
-    - 
-    - 
+    - LU6N1824_DXO.jpg
+    - image/jpeg
+    - "117153"
+    - 2010-04-21 20:10:00
     - 
     - "29"
     - 
-    - 
+    - 2010-04-21 20:10:01
   - - "672"
     - Jade_final2.jpg
     - "2"
@@ -4857,14 +4857,14 @@ images:
     - 
     - false
     - 
-    - /images/Jade/Jade_final2.jpg
-    - 
-    - 
-    - 
+    - Jade_final2.jpg
+    - image/jpeg
+    - "478046"
+    - 2010-04-21 20:10:09
     - 
     - "51"
     - 
-    - 
+    - 2010-04-21 20:10:10
   - - "673"
     - Jade_final1.jpg
     - "3"
@@ -4874,14 +4874,14 @@ images:
     - 
     - false
     - 
-    - /images/Jade/Jade_final1.jpg
-    - 
-    - 
-    - 
+    - Jade_final1.jpg
+    - image/jpeg
+    - "576237"
+    - 2010-04-21 20:10:37
     - 
     - "51"
     - 
-    - 
+    - 2010-04-21 20:10:37
   - - "675"
     - View1d.jpg
     - "3"
@@ -4891,14 +4891,14 @@ images:
     - 
     - false
     - 
-    - /images/Mint_Trail/View1d.jpg
-    - 
-    - 
-    - 
+    - View1d.jpg
+    - image/jpeg
+    - "104507"
+    - 2010-04-21 20:11:05
     - 
     - "52"
     - 
-    - 
+    - 2010-04-21 20:11:06
   - - "676"
     - IMG_1201.jpg
     - "1"
@@ -4908,14 +4908,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - IMG_1201.jpg
+    - image/jpeg
+    - "112051"
+    - 2010-04-21 20:37:03
     - 
     - "52"
     - 
-    - 
+    - 2010-04-21 20:37:03
   - - "677"
     - View3b_2.jpg
     - "2"
@@ -4925,14 +4925,14 @@ images:
     - 
     - false
     - 
-    - /images/Mint_Trail/View3b_2.jpg
-    - 
-    - 
-    - 
+    - View3b_2.jpg
+    - image/jpeg
+    - "130130"
+    - 2010-04-21 20:11:12
     - 
     - "52"
     - 
-    - 
+    - 2010-04-21 20:11:13
   - - "678"
     - View2.jpg
     - "5"
@@ -4942,14 +4942,14 @@ images:
     - 
     - false
     - 
-    - /images/Mint_Trail/View2.jpg
-    - 
-    - 
-    - 
+    - View2.jpg
+    - image/jpeg
+    - "107676"
+    - 2010-04-21 20:11:26
     - 
     - "52"
     - 
-    - 
+    - 2010-04-21 20:11:26
   - - "679"
     - View4.jpg
     - "4"
@@ -4959,14 +4959,14 @@ images:
     - 
     - false
     - 
-    - /images/Mint_Trail/View4.jpg
-    - 
-    - 
-    - 
+    - View4.jpg
+    - image/jpeg
+    - "153138"
+    - 2010-04-21 20:11:33
     - 
     - "52"
     - 
-    - 
+    - 2010-04-21 20:11:34
   - - "685"
     - LU6N1941.jpg
     - "1"
@@ -4976,14 +4976,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1941.jpg
+    - image/jpeg
+    - "1235100"
+    - 2010-04-21 20:37:14
     - 
     - "11"
     - 
-    - 
+    - 2010-04-21 20:37:15
   - - "686"
     - LU6N1897.jpg
     - "2"
@@ -4993,14 +4993,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1897.jpg
+    - image/jpeg
+    - "1019457"
+    - 2010-04-21 20:37:52
     - 
     - "11"
     - 
-    - 
+    - 2010-04-21 20:37:53
   - - "687"
     - LU6N1905.jpg
     - "5"
@@ -5010,14 +5010,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1905.jpg
+    - image/jpeg
+    - "872688"
+    - 2010-04-21 20:38:25
     - 
     - "11"
     - 
-    - 
+    - 2010-04-21 20:38:26
   - - "688"
     - LU6N1932.jpg
     - "3"
@@ -5027,14 +5027,14 @@ images:
     - 
     - false
     - 
-    - /images/volente/LU6N1932.jpg
-    - 
-    - 
-    - 
+    - LU6N1932.jpg
+    - image/jpeg
+    - "1125041"
+    - 2010-04-21 20:11:43
     - 
     - "11"
     - 
-    - 
+    - 2010-04-21 20:11:45
   - - "689"
     - LU6N1898.jpg
     - "10"
@@ -5044,14 +5044,14 @@ images:
     - 
     - false
     - 
-    - /images/volente/LU6N1898.jpg
-    - 
-    - 
-    - 
+    - LU6N1898.jpg
+    - image/jpeg
+    - "926716"
+    - 2010-04-21 20:12:37
     - 
     - "11"
     - 
-    - 
+    - 2010-04-21 20:12:38
   - - "690"
     - LU6N1965.jpg
     - "11"
@@ -5061,14 +5061,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1965.jpg
+    - image/jpeg
+    - "96884"
+    - 2010-04-21 20:39:00
     - 
     - "11"
     - 
-    - 
+    - 2010-04-21 20:39:01
   - - "691"
     - LU6N1976.jpg
     - "9"
@@ -5078,14 +5078,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N1976.jpg
+    - image/jpeg
+    - "134269"
+    - 2010-04-21 20:39:08
     - 
     - "11"
     - 
-    - 
+    - 2010-04-21 20:39:09
   - - "692"
     - calligraphy_frosting2.jpg
     - "1"
@@ -5095,14 +5095,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - calligraphy_frosting2.jpg
+    - image/jpeg
+    - "1442022"
+    - 2010-04-21 20:39:19
     - 
     - "51"
     - 
-    - 
+    - 2010-04-21 20:39:21
   - - "693"
     - 41e.jpg
     - "5"
@@ -5112,14 +5112,14 @@ images:
     - 
     - false
     - 
-    - /images/Benetton_Teh/41e.jpg
-    - 
-    - 
-    - 
+    - 41e.jpg
+    - image/jpeg
+    - "788152"
+    - 2010-04-21 20:13:12
     - 
     - "53"
     - 
-    - 
+    - 2010-04-21 20:13:13
   - - "694"
     - 40d.jpg
     - "1"
@@ -5129,14 +5129,14 @@ images:
     - 
     - false
     - 
-    - /images/Benetton_Teh/40d.jpg
-    - 
-    - 
-    - 
+    - 40d.jpg
+    - image/jpeg
+    - "1159441"
+    - 2010-04-21 20:13:49
     - 
     - "53"
     - 
-    - 
+    - 2010-04-21 20:13:51
   - - "695"
     - Tehran-Layout1.jpg
     - "2"
@@ -5146,14 +5146,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - Tehran-Layout1.jpg
+    - image/jpeg
+    - "103777"
+    - 2010-04-21 20:40:09
     - 
     - "53"
     - 
-    - 
+    - 2010-04-21 20:40:10
   - - "696"
     - quasi nite2.jpg
     - "3"
@@ -5163,14 +5163,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - quasi_nite2.jpg
+    - image/jpeg
+    - "33114"
+    - 2010-04-21 20:40:17
     - 
     - "53"
     - 
-    - 
+    - 2010-04-21 20:40:17
   - - "697"
     - Tehran-Layout2.jpg
     - "4"
@@ -5180,14 +5180,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - Tehran-Layout2.jpg
+    - image/jpeg
+    - "70789"
+    - 2010-04-21 20:40:21
     - 
     - "53"
     - 
-    - 
+    - 2010-04-21 20:40:22
   - - "703"
     - IMG_0490.JPG
     - "10"
@@ -5197,14 +5197,14 @@ images:
     - "3225648"
     - false
     - 
-    - /images/east11/IMG_0490.JPG
-    - 
-    - 
-    - 
+    - IMG_0490.JPG
+    - image/jpeg
+    - "636720"
+    - 2010-04-21 20:14:22
     - "13"
     - "15"
     - 
-    - 
+    - 2010-04-21 20:14:24
   - - "704"
     - IMG_0498.JPG
     - "2"
@@ -5214,14 +5214,14 @@ images:
     - "13104"
     - false
     - 
-    - /images/east11/IMG_0498.JPG
-    - 
-    - 
-    - 
+    - IMG_0498.JPG
+    - image/jpeg
+    - "833192"
+    - 2010-04-21 20:14:45
     - "13"
     - "15"
     - 
-    - 
+    - 2010-04-21 20:14:46
   - - "705"
     - IMG_0495.JPG
     - "13"
@@ -5231,14 +5231,14 @@ images:
     - "3290160"
     - false
     - 
-    - /images/east11/IMG_0495.JPG
-    - 
-    - 
-    - 
+    - IMG_0495.JPG
+    - image/jpeg
+    - "969124"
+    - 2010-04-21 20:15:13
     - "13"
     - "15"
     - 
-    - 
+    - 2010-04-21 20:15:15
   - - "708"
     - LU6N1407.JPG
     - "11"
@@ -5248,14 +5248,14 @@ images:
     - "48"
     - false
     - 
-    - /images/east11/LU6N1407.JPG
-    - 
-    - 
-    - 
+    - LU6N1407.JPG
+    - image/jpeg
+    - "588783"
+    - 2010-04-21 20:15:44
     - 
     - "15"
     - 
-    - 
+    - 2010-04-21 20:15:45
   - - "709"
     - LU6N1403.JPG
     - "9"
@@ -5265,14 +5265,14 @@ images:
     - "3225648"
     - false
     - 
-    - /images/east11/LU6N1403.JPG
-    - 
-    - 
-    - 
+    - LU6N1403.JPG
+    - image/jpeg
+    - "691839"
+    - 2010-04-21 20:16:05
     - "13"
     - "15"
     - 
-    - 
+    - 2010-04-21 20:16:06
   - - "710"
     - LU6N1397.JPG
     - "15"
@@ -5282,14 +5282,14 @@ images:
     - "48"
     - false
     - 
-    - /images/east11/LU6N1397.JPG
-    - 
-    - 
-    - 
+    - LU6N1397.JPG
+    - image/jpeg
+    - "669902"
+    - 2010-04-21 20:16:28
     - 
     - "15"
     - 
-    - 
+    - 2010-04-21 20:16:29
   - - "713"
     - ElevenEleven.jpg
     - "1"
@@ -5299,14 +5299,14 @@ images:
     - "48"
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - ElevenEleven.jpg
+    - image/jpeg
+    - "136731"
+    - 2010-04-21 20:40:27
     - 
     - "15"
     - 
-    - 
+    - 2010-04-21 20:40:27
   - - "716"
     - N1391.JPG
     - "14"
@@ -5316,14 +5316,14 @@ images:
     - "48"
     - false
     - 
-    - /images/east11/N1391.JPG
-    - 
-    - 
-    - 
+    - N1391.JPG
+    - image/jpeg
+    - "215867"
+    - 2010-04-21 20:16:58
     - 
     - "15"
     - 
-    - 
+    - 2010-04-21 20:16:58
   - - "717"
     - REAR OF HOUSE
     - "5"
@@ -5333,14 +5333,14 @@ images:
     - 
     - false
     - 
-    - /images/tortuga/Tortuga_17.jpg
-    - 
-    - 
-    - 
+    - Tortuga_17.jpg
+    - image/jpeg
+    - "1294059"
+    - 2010-04-21 20:17:16
     - 
     - "2"
     - 
-    - 
+    - 2010-04-21 20:17:19
   - - "718"
     - 20.jpg
     - "11"
@@ -5350,14 +5350,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - 20.jpg
+    - image/jpeg
+    - "45665"
+    - 2010-04-21 20:40:38
     - 
     - "34"
     - 
-    - 
+    - 2010-04-21 20:40:39
   - - "719"
     - IMG_1450.jpg
     - "10"
@@ -5367,14 +5367,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - IMG_1450.jpg
+    - image/jpeg
+    - "87571"
+    - 2010-04-21 20:40:44
     - 
     - "34"
     - 
-    - 
+    - 2010-04-21 20:40:45
   - - "720"
     - 23.jpg
     - "8"
@@ -5384,14 +5384,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - 23.jpg
+    - image/jpeg
+    - "115558"
+    - 2010-04-21 20:40:52
     - 
     - "34"
     - 
-    - 
+    - 2010-04-21 20:40:53
   - - "721"
     - IMG_1442.jpg
     - "5"
@@ -5401,14 +5401,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - IMG_1442.jpg
+    - image/jpeg
+    - "72528"
+    - 2010-04-21 20:41:08
     - 
     - "34"
     - 
-    - 
+    - 2010-04-21 20:41:09
   - - "722"
     - IMG_1447.jpg
     - "7"
@@ -5418,14 +5418,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - IMG_1447.jpg
+    - image/jpeg
+    - "98689"
+    - 2010-04-21 20:41:17
     - 
     - "34"
     - 
-    - 
+    - 2010-04-21 20:41:18
   - - "723"
     - IMG_1433.jpg
     - "2"
@@ -5435,14 +5435,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - IMG_1433.jpg
+    - image/jpeg
+    - "74874"
+    - 2010-04-21 20:41:27
     - 
     - "34"
     - 
-    - 
+    - 2010-04-21 20:41:28
   - - "724"
     - IMG_1452.jpg
     - "12"
@@ -5452,14 +5452,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - IMG_1452.jpg
+    - image/jpeg
+    - "93973"
+    - 2010-04-21 20:41:36
     - 
     - "34"
     - 
-    - 
+    - 2010-04-21 20:41:37
   - - "725"
     - IMG_1469.jpg
     - "14"
@@ -5469,14 +5469,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - IMG_1469.jpg
+    - image/jpeg
+    - "58012"
+    - 2010-04-21 20:41:44
     - 
     - "34"
     - 
-    - 
+    - 2010-04-21 20:41:45
   - - "726"
     - IMG_1458.jpg
     - "13"
@@ -5486,14 +5486,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - IMG_1458.jpg
+    - image/jpeg
+    - "77551"
+    - 2010-04-21 20:41:51
     - 
     - "34"
     - 
-    - 
+    - 2010-04-21 20:41:51
   - - "727"
     - LU6N2287.jpg
     - "9"
@@ -5503,14 +5503,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N2287.jpg
+    - image/jpeg
+    - "125218"
+    - 2010-04-21 20:41:59
     - 
     - "29"
     - 
-    - 
+    - 2010-04-21 20:41:59
   - - "729"
     - Harvest & Precedent.jpg
     - "15"
@@ -5520,14 +5520,14 @@ images:
     - 
     - false
     - 
-    - /images/G.H._Residen/Harvest & Precedent.jpg
-    - 
-    - 
-    - 
+    - Harvest_Precedent.jpg
+    - image/jpeg
+    - "405033"
+    - 2010-04-21 20:17:56
     - 
     - "34"
     - 
-    - 
+    - 2010-04-21 20:17:58
   - - "731"
     - axon.jpg
     - "7"
@@ -5537,14 +5537,14 @@ images:
     - 
     - false
     - 
-    - /images/Red_Bluff_Re/axon.jpg
-    - 
-    - 
-    - 
+    - axon.jpg
+    - image/jpeg
+    - "1888022"
+    - 2010-04-21 20:18:12
     - 
     - "50"
     - 
-    - 
+    - 2010-04-21 20:18:26
   - - "732"
     - Riverview mainSM.jpg
     - "0"
@@ -5554,14 +5554,14 @@ images:
     - "48"
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - Riverview_mainSM.jpg
+    - image/jpeg
+    - "125817"
+    - 2010-04-21 20:42:09
     - 
     - "9"
     - 
-    - 
+    - 2010-04-21 20:42:10
   - - "733"
     - LU6N2393_final.jpg
     - "8"
@@ -5571,14 +5571,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N2393_final.jpg
+    - image/jpeg
+    - "106588"
+    - 2010-04-21 20:42:19
     - 
     - "35"
     - 
-    - 
+    - 2010-04-21 20:42:19
   - - "735"
     - LU6N2406_final.jpg
     - "5"
@@ -5588,14 +5588,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N2406_final.jpg
+    - image/jpeg
+    - "121745"
+    - 2010-04-21 20:42:26
     - 
     - "35"
     - 
-    - 
+    - 2010-04-21 20:42:27
   - - "736"
     - LU6N2493.jpg
     - "6"
@@ -5605,14 +5605,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N2493.jpg
+    - image/jpeg
+    - "109291"
+    - 2010-04-21 20:42:34
     - 
     - "35"
     - 
-    - 
+    - 2010-04-21 20:42:35
   - - "738"
     - LU6N2469.jpg
     - "1"
@@ -5622,14 +5622,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N2469.jpg
+    - image/jpeg
+    - "172363"
+    - 2010-04-21 20:42:42
     - 
     - "35"
     - 
-    - 
+    - 2010-04-21 20:42:42
   - - "739"
     - LU6N2491.jpg
     - "2"
@@ -5639,14 +5639,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N2491.jpg
+    - image/jpeg
+    - "126285"
+    - 2010-04-21 20:42:53
     - 
     - "35"
     - 
-    - 
+    - 2010-04-21 20:42:54
   - - "740"
     - LU6N2481.jpg
     - "10"
@@ -5656,14 +5656,14 @@ images:
     - 
     - false
     - 
-    - ""
-    - 
-    - 
-    - 
+    - LU6N2481.jpg
+    - image/jpeg
+    - "148228"
+    - 2010-04-21 20:43:01
     - 
     - "35"
     - 
-    - 
+    - 2010-04-21 20:43:02
   - - "741"
     - LU6N2496.jpg
     - "9"
@@ -5673,14 +5673,14 @@ images:
     - 
     - false
     - 
-    - /images/Mango/LU6N2496.jpg
-    - 
-    - 
-    - 
+    - LU6N2496.jpg
+    - image/jpeg
+    - "222403"
+    - 2010-04-21 20:19:18
     - 
     - "35"
     - 
-    - 
+    - 2010-04-21 20:19:19
 
 --- 
 pages: 
@@ -5732,8 +5732,8 @@ pages:
       
 
     - 
-    - 
-    - 
+    - 2010-04-21 19:24:04
+    - construction
   - - "2"
     - About
     - 
@@ -5939,8 +5939,8 @@ pages:
       \r\n\
       </div>"
     - 
-    - 
-    - 
+    - 2010-04-21 19:24:04
+    - about
   - - "3"
     - Sustainability
     - 
@@ -5961,8 +5961,8 @@ pages:
       Bercy Chen Studio and Avant Guardist Specialty Fabrication have developed a proprietary planted-roof system. Whereas conventional greenroof manufacturers do not supply the water-barrier membrane, the most critical and costly component, the BCS system contains all components from water-barrier through protection and drainage layers to soil and vegetation. The system can accommodate a series of plant species, but is geared toward native flowers and grasses. The benefits of using native plant species include compatibility with native fauna as well as minimal watering requirements. The BCS planted-roof system is currently being installed at half the cost of other systems. Design and install of several system is underway and completion is due within the coming year.
 
     - 
-    - 
-    - 
+    - 2010-04-21 19:24:04
+    - sustainability
 
 --- 
 plans: 
@@ -6122,8 +6122,8 @@ projects:
     - "1"
     - "214"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - annie-residence
   - - "2"
     - The Peninsula Residence on Lake Austin
     - ""
@@ -6133,8 +6133,8 @@ projects:
     - "1"
     - "506"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - the-peninsula-residence-on-lake-austin
   - - "3"
     - Beverly Skyline Residence
     - A single-family remodel based on the notions of recycling, reuse, and the integration of built space and environment
@@ -6155,8 +6155,8 @@ projects:
     - "1"
     - "38"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - beverly-skyline-residence
   - - "4"
     - Skybridge Condominiums
     - A 120-unit residential development surrounding a central park.
@@ -6173,8 +6173,8 @@ projects:
     - "4"
     - "371"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - skybridge-condominiums
   - - "5"
     - Bosque de la Lomas Residence
     - ""
@@ -6184,8 +6184,8 @@ projects:
     - "8"
     - "52"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - bosque-de-la-lomas-residence
   - - "6"
     - Hether Residence
     - ""
@@ -6198,8 +6198,8 @@ projects:
     - "5"
     - 
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - hether-residence
   - - "7"
     - Lago Vista Lake House
     - |
@@ -6215,8 +6215,8 @@ projects:
     - "4"
     - "63"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - lago-vista-lake-house
   - - "8"
     - Murphy Residence
     - ""
@@ -6226,8 +6226,8 @@ projects:
     - "6"
     - "69"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - murphy-residence
   - - "9"
     - Riverview Gardens
     - ""
@@ -6242,8 +6242,8 @@ projects:
     - "2"
     - "732"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - riverview-gardens
   - - "10"
     - Rolling Wood Residence
     - ""
@@ -6253,8 +6253,8 @@ projects:
     - "9"
     - 
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - rolling-wood-residence
   - - "11"
     - Volente Residence
     - ""
@@ -6264,8 +6264,8 @@ projects:
     - "5"
     - "481"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - volente-residence
   - - "12"
     - Granite Shoals Residence
     - ""
@@ -6275,8 +6275,8 @@ projects:
     - "7"
     - 
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - granite-shoals-residence
   - - "13"
     - Factory People (now American Apparel)
     - A unique boutique combining fashion, music, art and literature inspired by Andy Warhol's factory. Designed for a creative, multi-purpose environment in the heart of Austin's SOCO District.
@@ -6289,8 +6289,8 @@ projects:
     - "6"
     - "103"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - factory-people-now-american-apparel
   - - "14"
     - Mototek
     - ""
@@ -6300,8 +6300,8 @@ projects:
     - "9"
     - "545"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - mototek
   - - "15"
     - E 11th St Multi-Use Development
     - A three story mixed use project in the revitalized 11th Street Corridor of Austin TX. The ground floor is divided between an art gallery and boutique retail outlet. The second floor is reserved for office tenants with residential spaces occupying the top floor.
@@ -6317,8 +6317,8 @@ projects:
     - "4"
     - "444"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - e-11th-st-multi-use-development
   - - "17"
     - Malinalco Retreat
     - Malinalco luxury spa resort is a project located two hours outside of Mexico City, in a valley between Nevado do Toluca and Popocatepetl, two of Mexico's highest volcanic peaks.
@@ -6336,8 +6336,8 @@ projects:
     - "4"
     - "472"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - malinalco-retreat
   - - "18"
     - Self-Sustaining House Competition
     - ""
@@ -6361,8 +6361,8 @@ projects:
     - "4"
     - "519"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - self-sustaining-house-competition
   - - "19"
     - Taichung Opera House
     - ""
@@ -6375,8 +6375,8 @@ projects:
     - "4"
     - "591"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - taichung-opera-house
   - - "20"
     - Urban Reserve
     - Winning entry in national design competition for one of the first sustainable housing developments in the US.
@@ -6393,8 +6393,8 @@ projects:
     - "6"
     - "600"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - urban-reserve
   - - "22"
     - Asian American Resource Center
     - ""
@@ -6404,8 +6404,8 @@ projects:
     - "5"
     - "459"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - asian-american-resource-center
   - - "23"
     - Nahua Tower
     - A proposed 34 story tower to be built in downtown Austin on Lady Bird Lake.
@@ -6417,8 +6417,8 @@ projects:
     - "4"
     - "289"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - nahua-tower
   - - "25"
     - Baja Spa & Resort
     - The first phase of an 800 acre luxury spa resort in Baja California Sur, one hour north of Loreto, in the Bahia Concepcion, facing the Cortez Inland Sea.
@@ -6441,8 +6441,8 @@ projects:
     - "4"
     - "389"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - baja-spa-resort
   - - "26"
     - "Cheongna City Tower - Korea "
     - Competition proposal for Cheonga City
@@ -6455,8 +6455,8 @@ projects:
     - "5"
     - "408"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - cheongna-city-tower-korea
   - - "27"
     - Solidarity Museum - Poland
     - ""
@@ -6471,8 +6471,8 @@ projects:
     - "4"
     - "413"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - solidarity-museum-poland
   - - "28"
     - Urban Forest - Stockholm Library
     - ""
@@ -6482,8 +6482,8 @@ projects:
     - "4"
     - "425"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - urban-forest-stockholm-library
   - - "29"
     - Block 19 - mixed-use
     - |
@@ -6502,8 +6502,8 @@ projects:
     - "3"
     - "669"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - block-19-mixed-use
   - - "30"
     - Bahia Concepcion
     - ""
@@ -6513,8 +6513,8 @@ projects:
     - "7"
     - "484"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - bahia-concepcion
   - - "31"
     - "Green Water Redevelopment "
     - A proposal for downtown Austin designed in collaboration with Foster and Partners. We propose a world class, uniquely Austin, 21st century urban neighborhood, converging around two elegant spires.  Not buildings in the conventional sense of the word, but more appropriately two vertical green extensions of the beloved Lady Bird Lake park reaching into the sky.
@@ -6533,8 +6533,8 @@ projects:
     - "4"
     - "530"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - green-water-redevelopment
   - - "32"
     - Miami Waterworks
     - Conversion of an existing waterworks facility into a gateway & orientation building for the new Arts district in downtown Miami. Next to the Herzog & De Meuron designed Miami Art Museum
@@ -6544,8 +6544,8 @@ projects:
     - "6"
     - "534"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - miami-waterworks
   - - "34"
     - G.H. Residence
     - ""
@@ -6558,8 +6558,8 @@ projects:
     - "1"
     - "581"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - g-h-residence
   - - "35"
     - Mango Financial
     - ""
@@ -6572,8 +6572,8 @@ projects:
     - "2"
     - 
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - mango-financial
   - - "38"
     - Re:Vision Dallas
     - A research proposal investigating new strategies for developing urban communities developed as part of the Re:Vision Dallas competition.
@@ -6593,8 +6593,8 @@ projects:
     - "6"
     - "636"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - re-vision-dallas
   - - "48"
     - Bluff House
     - House overlooking Lake Austin.
@@ -6604,8 +6604,8 @@ projects:
     - "5"
     - "599"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - bluff-house
   - - "50"
     - Red Bluff Residence
     - A 1400-sf residence near Town Lake in Austin TX
@@ -6619,8 +6619,8 @@ projects:
     - "4"
     - "655"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - red-bluff-residence
   - - "51"
     - Jade
     - ""
@@ -6630,8 +6630,8 @@ projects:
     - "4"
     - "673"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - jade
   - - "52"
     - Mint Trail
     - A residential renovations currently in the design phase
@@ -6641,8 +6641,8 @@ projects:
     - "5"
     - 
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - mint-trail
   - - "53"
     - Benetton Tehran
     - Competition entry for a tower in Tehran
@@ -6652,8 +6652,8 @@ projects:
     - "4"
     - "696"
     - 
-    - 
-    - 
+    - 2010-04-21 19:23:50
+    - benetton-tehran
 
 --- 
 projects_tags: 
@@ -6740,23 +6740,23 @@ tags:
   - - "1"
     - Residential
     - 
-    - 
-    - 
+    - 2010-04-21 19:24:31
+    - residential
   - - "2"
     - Commercial
     - 
-    - 
-    - 
+    - 2010-04-21 19:24:31
+    - commercial
   - - "3"
     - Cultural
     - 
-    - 
-    - 
+    - 2010-04-21 19:24:31
+    - cultural
   - - "4"
     - Master Planning
     - 
-    - 
-    - 
+    - 2010-04-21 19:24:31
+    - master-planning
 
 --- 
 videos: 

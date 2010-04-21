@@ -48,6 +48,8 @@ xml.urlset "xmlns" => "http://www.google.com/schemas/sitemap/0.84" do
           
           xml.image :image do
             xml.image :loc, image.attachment.url(:full)
+            xml.image :title, (image.name || "Image of #{project.name}")
+            xml.image :geo_location, project.location unless.project.location.nil?
           end
         end
       end
