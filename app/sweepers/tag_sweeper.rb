@@ -8,7 +8,7 @@ class TagSweeper < ActionController::Caching::Sweeper
   end
 
   def after_update(object)
-    expire_action(:controller => :tags, :action => :show, :id => record.to_param)
+    expire_action(:controller => :tags, :action => :show, :id => object.to_param)
   end
 
   def after_destroy(object)

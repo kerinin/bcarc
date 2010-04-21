@@ -8,7 +8,7 @@ class PageSweeper < ActionController::Caching::Sweeper
   end
 
   def after_update(object)
-    expire_page(:controller => :pages, :action => :show, :id => record.to_param)
+    expire_page(:controller => :pages, :action => :show, :id => object.to_param)
   end
 
   def after_destroy(object)

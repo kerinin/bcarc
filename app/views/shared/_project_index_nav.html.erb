@@ -1,5 +1,5 @@
 <ul class="nav_left">
-  <li<%= ' class=currentNav' if @tag.nil? %>> <%= link_to t('all').downcase, projects_url %> </li>
+  <!-- <li<%= ' class=currentNav' if @tag.nil? %>> <%= link_to t('all').downcase, projects_url %> </li> -->
   <% @tags.each do |tag| %>
     <li<%=' class=currentNav' if @tag == tag %>> <%= link_to tag.name.downcase, tag_url(tag) %> </li>
   <% end %>
