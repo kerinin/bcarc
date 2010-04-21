@@ -1,7 +1,7 @@
 class Project < ActiveRecord::Base  
-  has_many :images, :order => 'position'
-  has_many :videos, :order => 'position'
-  has_many :plans, :order => 'position'
+  has_many :images, :order => 'position', :dependent => :destroy
+  has_many :videos, :order => 'position', :dependent => :destroy
+  has_many :plans, :order => 'position', :dependent => :destroy
   
   belongs_to :thumbnail, :class_name => 'Image'
   
