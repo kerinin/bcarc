@@ -2,28 +2,28 @@
   <% unless @prev.nil? %>
   	<div id="prev_button">
   	  <% if @prev.class.name == 'Image' and @prev == @project.images.first %>
-  	    <%= link_to image_tag('arrow_l_start.gif'), project_url(@project) %>
+  	    <%= link_to image_tag('arrow_l_start.gif'), project_path(@project) %>
   	  <% elsif @prev.class.name == 'Image' %>
-  	    <%= link_to image_tag('arrow_l_start.gif'), project_image_url(@project, @prev) %>
+  	    <%= link_to image_tag('arrow_l_start.gif'), project_image_path(@project, @prev) %>
   	  <% elsif @prev.class.name == 'Video' %>
-  	    <%= link_to image_tag('arrow_l_start.gif'), project_video_url(@project, @prev) %>
+  	    <%= link_to image_tag('arrow_l_start.gif'), project_video_path(@project, @prev) %>
   	  <% end %>
   	</div>
   <% end %>
 
   <% @project.images.each do |image| %>
-    <%= link_to project_image(image), project_image_url(@project, image), {:class => (image == @object ? 'current_image' : nil)} %>
+    <%= link_to project_image(image), project_image_path(@project, image), {:class => (image == @object ? 'current_image' : nil)} %>
   <% end %>
   <% @project.videos.each do |video| %>
-    <%= link_to project_video(video), project_video_url(@project, video), {:class => (video == @object ? 'current_image' : nil)} %>
+    <%= link_to project_video(video), project_video_path(@project, video), {:class => (video == @object ? 'current_image' : nil)} %>
   <% end %>
 
   <% unless @next.nil? %>
   	<div id="next_button">
   	  <% if @next.class.name == 'Image' %>
-  	    <%= link_to image_tag('arrow_r_start.gif'), project_image_url(@project, @next) %>
+  	    <%= link_to image_tag('arrow_r_start.gif'), project_image_path(@project, @next) %>
   	  <% elsif @next.class.name == 'Video' %>
-  	    <%= link_to image_tag('arrow_r_start.gif'), project_video_url(@project, @next) %>
+  	    <%= link_to image_tag('arrow_r_start.gif'), project_video_path(@project, @next) %>
       <% end %>
   	</div>
   <% end %>
