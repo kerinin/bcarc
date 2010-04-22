@@ -12,6 +12,8 @@ module ApplicationHelper
       'Deutsch'
     when :zh, :zh_TW, :zh_CN
       "'中文"
+    else
+      ''
     end
   end
 end
