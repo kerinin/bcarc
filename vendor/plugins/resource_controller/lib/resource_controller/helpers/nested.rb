@@ -55,7 +55,7 @@ module ResourceController
         #
         def parent_object
           if parent? && !parent_singleton? 
-            return parent_model.find_by_param(parent_param) || parent_model.find_by_param(parent_param.gsub(/_/,'-').parameterize)
+            return parent_model.find_by_param(parent_param) || parent_model.find_by_param!(parent_param.gsub(/_/,'-').parameterize)
           else
             return nil
           end

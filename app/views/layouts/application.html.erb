@@ -47,7 +47,11 @@
     <div class="container">
       <div class="header" >
 	      <div class="link_home">
-	        <%= link_to image_tag('logo_01.jpg', :alt => 'Bercy Chen Studio', :size => '435x42', :fadeover => image_path('logo_01_over.jpg') ), '/' %>
+	        <% link_to '/' do %>
+	          <%= image_tag('logo_01.jpg', :alt => 'Bercy Chen Studio', :size => '435x42', :fadeover => image_path('logo_01_over.jpg') ) %>
+            <br />
+            <%#= image_tag('logo_02.gif', :alt => 'design + construction', :size => '245x14') %>
+          <% end %>
 	      </div>
 	      <div class="section_links">
 	      

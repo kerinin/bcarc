@@ -36,7 +36,7 @@ module ResourceController
           show do
             wants.html
 
-            failure.wants.html { render :text => "Member object not found." }
+            failure.wants.html { render :file => "#{RAILS_ROOT}/public/404.html", :status => 404 }
           end
 
           create do

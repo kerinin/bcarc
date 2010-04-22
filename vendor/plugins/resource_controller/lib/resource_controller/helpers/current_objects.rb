@@ -39,8 +39,8 @@ module ResourceController
         #   end
         #
         def object
-          @object ||= end_of_association_chain.find_by_param(param) unless param.nil?
-          @object ||= end_of_association_chain.find_by_param(param.gsub(/_/,'-').parameterize) unless param.nil?
+          @object ||= end_of_association_chain.find_by_param!(param) unless param.nil?
+          @object ||= end_of_association_chain.find_by_param!(param.gsub(/_/,'-').parameterize) unless param.nil?
           @object
         end
     
