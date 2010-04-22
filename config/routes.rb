@@ -21,6 +21,8 @@ ActionController::Routing::Routes.draw do |map|
   
   # admin interface
   map.namespace :admin do |admin|
+    admin.root :controller => :projects, :action => :index
+    
     admin.resources :projects do |project|
       project.resources :images
       project.resources :videos
