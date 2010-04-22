@@ -16,7 +16,7 @@
     <%= f.text_area :short %>
   </p>
   <p>
-    <%= f.collection_select :tag_ids, Tag.all, :id, :name, { :selected => @project.tag_ids }, { :multiple => true, :name => 'project[tag_ids][]', :size => Tag.all.count } %>
+    <%= f.collection_select :tag_ids, Tag.all, :id, :name, { :selected => @project.tag_ids }, { :multiple => true, :name => 'project[tag_ids][]', :size => Tag.count } %>
   </p>
   <p>
     <%= f.label :date_completed %><br />
