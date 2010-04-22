@@ -1,0 +1,20 @@
+xml.instruct!
+ 
+xml.urlset "xmlns" => "http://www.google.com/schemas/sitemap/0.84", "xmlns:geo" => "http://www.google.com/geo/schemas/sitemap/1.0" do 
+  Project.all.each do |project|
+    #I18n.available_locales.each do |locale|   
+      if project.kml?
+        xml.url do
+          xml.loc         project_url(project, :format => 'kml') 
+          xml.lastmod     w3c_date( project.updated_at )
+          xml.changefreq  'monthly'
+          xml.priority    0.7
+        
+          xml.geo :geo do
+            xml.geo :format, 'kml'
+          end
+        end
+      end
+    #end
+  end
+end

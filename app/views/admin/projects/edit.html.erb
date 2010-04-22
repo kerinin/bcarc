@@ -23,8 +23,15 @@
     <%= f.datetime_select :date_completed %>
   </p>
   <p>
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %><br />
+    <%= f.label :city %><br />
+    <%= f.text_field :city %><br />
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :latitude %><%= f.text_field :latitude %> <%= f.label :longitude %><%= f.text_field :longitude %>
   </p>
   <p>
     <%= f.label :description %><br />

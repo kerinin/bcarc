@@ -14,6 +14,18 @@ class Project < ActiveRecord::Base
   
   translates :name, :short, :description
   
+  def kml?
+    !( latitude.nil? || longitude.nil? )
+  end
+  
+  def html_description
+    Wikitext::Parser.new().parse( description.to_s )
+  end
+  
+  def html_short
+    Wikitext::Parser.new().parse( short.to_s )
+  end
+  
   def year
     self.date_completed.strftime('%Y')
   end

@@ -1,45 +1,20 @@
 xml.instruct!
  
-xml.urlset "xmlns" => "http://www.google.com/schemas/sitemap/0.84" do
-  xml.url do
-    xml.loc         "http://bcarc.com/"
+xml.sitemapindex "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
+  xml.sitemap do
+    xml.loc web_sitemap_url
     xml.lastmod     w3c_date(Time.now)
-    xml.changefreq  "always"
   end
- 
-  1.upto(@widgets) do |page|
-    xml.url do
-      xml.loc         url_for(:only_path => false, :controller => 'widgets', :action => 'list', :page => page)
-      xml.lastmod     w3c_date(Time.now)
-      xml.changefreq  "daily"
-      xml.priority    0.9
-    end
+  xml.sitemap do
+    xml.loc image_sitemap_url
+    xml.lastmod     w3c_date(Time.now)
   end
- 
-  @lists.each do |list|
-    xml.url do
-      xml.loc         url_for(:only_path => false, :controller => 'lists', :action => 'view', :id => list)
-      xml.lastmod     w3c_date(list.updated_at)
-      xml.changefreq  "weekly"
-      xml.priority    0.8
-    end
-  end
- 
-  @users.each do |user|
-    xml.url do
-      xml.loc         url_for(:only_path => false, :controller => 'profiles', :action => 'show', :username => user.login)
-      xml.lastmod     w3c_date(user.updated_at)
-      xml.changefreq  "weekly"
-      xml.priority    0.7
-    end
-  end
- 
-  @posts.each do |post|
-    xml.url do
-      xml.loc         url_for(:only_path => false, :controller => 'posts', :action => 'show', :id => post)
-      xml.lastmod     w3c_date(post.created_at)
-      xml.changefreq  "weekly"
-      xml.priority    0.6
-    end
+#  xml.sitemap do
+#    xml.loc video_sitemap_url
+#    xml.lastmod     w3c_date(Time.now)
+#  end
+  xml.sitemap do
+    xml.loc geo_sitemap_url
+    xml.lastmod     w3c_date(Time.now)
   end
 end

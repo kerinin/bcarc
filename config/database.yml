@@ -8,8 +8,8 @@ development:
 
 #development:
 #  adapter: mysql
- # database: bcstudio_rails_dev
- # username: root
+#  database: bcstudio_rails_dev
+#  username: root
 #  password: 
 #  host: localhost
     
