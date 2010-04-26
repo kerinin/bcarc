@@ -38,7 +38,7 @@
   <body bgcolor="#666666" text="#FFFFFF" link="#FF0000" vlink="#FF0000" alink="#FF0000">
     <% unless request.compatible_language_from( [I18n.locale] ) %>
       <% locale = request.compatible_language_from( I18n.available_locales ) %>
-      <% unless locale == '' %>
+      <% if locale %>
       	<div id='language_switcher'>
       	  <%= link_to lang( locale ).downcase, url_for(:locale => locale.to_s) %>
       	</div>     
