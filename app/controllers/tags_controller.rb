@@ -10,5 +10,7 @@ class TagsController < ApplicationController
       @projects = Project.ascend_by_priority
       @all = true
     end
+    
+    response.headers['Cache-Control'] = "public, max-age=6400"
   end
 end
