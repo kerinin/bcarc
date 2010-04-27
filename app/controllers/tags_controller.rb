@@ -3,8 +3,6 @@ class TagsController < ApplicationController
   
   actions :show
   
-  caches_action :show
-  
   show.before do
     if params[:id]
       @projects = @tag.projects.ascend_by_priority
