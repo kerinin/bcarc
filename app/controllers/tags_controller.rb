@@ -5,7 +5,7 @@ class TagsController < ApplicationController
   
   show.before do
     if params[:id]
-      @projects = @tag.projects.ascend_by_priority
+      @projects = @tag.projects
     else
       @projects = Project.ascend_by_priority
       @all = true
