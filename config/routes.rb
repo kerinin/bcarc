@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => :projects, :action => :index
-    
+  
   # Legacy routes
   map.connect 'Work/All', :controller => :tags, :action => :show
   map.connect 'Work/:id/*other', :controller => :tags, :action => :show
@@ -33,6 +33,21 @@ ActionController::Routing::Routes.draw do |map|
     
     admin.resources :pages
   end
+  
+  # 404 routes
+  map.resources :projects, :as => 'project' do |project|
+    project.resources :images
+    project.resources :videos
+    project.resources :plans, :as => 'maps'
+  end
+  
+  map.resources :projects do |project|
+    project.resources :images
+    project.resources :videos
+    project.resources :plans, :as => 'maps'
+  end
+
+  # Sitemaps
   
   map.web_sitemap '/sitemap/web.xml', :controller => :sitemap, :action => :web
   map.image_sitemap '/sitemap/image.xml', :controller => :sitemap, :action => :image
@@ -79,8 +94,8 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  #map.connect ':controller/:action/:id'
+  #map.connect ':controller/:action/:id.:format'
 end
 
 ActionController::Routing::Translator.i18n
