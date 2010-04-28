@@ -3,14 +3,14 @@ class TagsController < ApplicationController
   
   actions :show
   
-  caches_action :show
-  
   show.before do
     if params[:id]
-      @projects = @tag.projects.ascend_by_priority
+      @projects = @tag.projects
     else
       @projects = Project.ascend_by_priority
       @all = true
     end
+    
+    response.headers['Cache-Control'] = "public, max-age=6400"
   end
 end

@@ -36,11 +36,13 @@
   </head>
   
   <body bgcolor="#666666" text="#FFFFFF" link="#FF0000" vlink="#FF0000" alink="#FF0000">
-    <% unless I18n.locale == '' || request.compatible_language_from( [I18n.locale] ) %>
-    	<div id='language_switcher'>
-    	  <% locale = request.compatible_language_from( I18n.available_locales ) %>
-    	  <%= link_to lang( locale ).downcase, url_for(:locale => locale.to_s) %>
-    	</div>      
+    <% unless request.compatible_language_from( [I18n.locale] ) %>
+      <% locale = request.compatible_language_from( I18n.available_locales ) %>
+      <% if locale %>
+      	<div id='language_switcher'>
+      	  <%= link_to lang( locale ).downcase, url_for(:locale => locale.to_s) %>
+      	</div>     
+      <% end %> 
     <% end %>
 
   	
