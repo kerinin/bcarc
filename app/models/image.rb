@@ -7,11 +7,12 @@ class Image < ActiveRecord::Base
       :full => '800x800>'
     }, 
     :default_style => :index,
-    :url => "/assets/projects/:id/:style/:basename.:extension",
+    :url => ":s3_alias_url",
     :path => "projects/:id/:style/:basename.:extension",
     :storage => :s3,
     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
-    :bucket => 'bcstudio'
+    :s3_host_alias => "assets.bcarc.com",
+    :bucket => 'assets.bcarc.com'
                       
   belongs_to :project
   
