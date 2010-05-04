@@ -10,6 +10,17 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
     
+  def legacy
+    if params[:glob].include?( 'image' ) || params[:glob].include?( 'images' ) || params[:glob].include?( 'Image' ) || params[:glob].include?( 'Images' )
+      image = Image.find_by_attachment_file_name( params[:glob][-1] )
+      unless image.nil?
+        redirect_to project_image_url(image.project, image) and return false
+      end
+    end
+    
+    render :status => 404
+  end
+  
   private
   
   def load_tags

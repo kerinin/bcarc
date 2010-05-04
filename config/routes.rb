@@ -34,6 +34,16 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :pages
   end
   
+
+  # Sitemaps
+  
+  map.web_sitemap '/sitemap/web.xml', :controller => :sitemap, :action => :web
+  map.image_sitemap '/sitemap/image.xml', :controller => :sitemap, :action => :image
+  map.video_sitemap '/sitemap/video.xml', :controller => :sitemap, :action => :video
+  map.geo_sitemap '/sitemap/geo.xml', :controller => :sitemap, :action => :geo
+  map.sitemap '/sitemap.xml', :controller => 'sitemap'
+
+
   # 404 (legacy) routes
   map.connect 'project/:id', :controller => :projects
   map.connect 'projects/:id', :controller => :projects
@@ -51,15 +61,8 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'projects/:project_id/plans/:id', :controller => :plans
   map.connect 'Projects/:project_id/Plans/:id', :controller => :plans
   
-
-  # Sitemaps
+  map.connect '*glob', :controller => :application, :action => :legacy
   
-  map.web_sitemap '/sitemap/web.xml', :controller => :sitemap, :action => :web
-  map.image_sitemap '/sitemap/image.xml', :controller => :sitemap, :action => :image
-  map.video_sitemap '/sitemap/video.xml', :controller => :sitemap, :action => :video
-  map.geo_sitemap '/sitemap/geo.xml', :controller => :sitemap, :action => :geo
-  map.sitemap '/sitemap.xml', :controller => 'sitemap'
-
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
