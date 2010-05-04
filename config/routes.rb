@@ -34,18 +34,23 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :pages
   end
   
-  # 404 routes
-  map.resources :projects, :as => 'project' do |project|
-    project.resources :images
-    project.resources :videos
-    project.resources :plans, :as => 'maps'
-  end
+  # 404 (legacy) routes
+  map.connect 'project/:id', :controller => :projects
+  map.connect 'projects/:id', :controller => :projects
+  map.connect 'Projects/:id', :controller => :projects
   
-  map.resources :projects do |project|
-    project.resources :images
-    project.resources :videos
-    project.resources :plans, :as => 'maps'
-  end
+  map.connect 'project/:project_id/images/:id', :controller => :images
+  map.connect 'projects/:project_id/images/:id', :controller => :images
+  map.connect 'Projects/:project_id/Images/:id', :controller => :images
+  
+  map.connect 'project/:project_id/videos/:id', :controller => :videos
+  map.connect 'projects/:project_id/videos/:id', :controller => :videos
+  map.connect 'Projects/:project_id/Videos/:id', :controller => :videos
+  
+  map.connect 'project/:project_id/plans/:id', :controller => :plans
+  map.connect 'projects/:project_id/plans/:id', :controller => :plans
+  map.connect 'Projects/:project_id/Plans/:id', :controller => :plans
+  
 
   # Sitemaps
   
