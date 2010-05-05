@@ -24,9 +24,9 @@ ActionController::Routing::Routes.draw do |map|
     admin.root :controller => :projects, :action => :index
     
     admin.resources :projects do |project|
-      project.resources :images
-      project.resources :videos
-      project.resources :plans
+      project.resources :images, :member => {:sort => :post}
+      project.resources :videos, :member => {:sort => :post}
+      project.resources :plans, :member => {:sort => :post}
     end
     
     admin.resources :tags
