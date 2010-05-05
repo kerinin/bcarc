@@ -39,8 +39,15 @@ module ResourceController
         #   end
         #
         def object
-          @object ||= end_of_association_chain.find_by_param!(param) unless param.nil?
-          @object ||= end_of_association_chain.find_by_param!(param.gsub(/_/,'-').parameterize) unless param.nil?
+          # Find by Param
+          @object ||= end_of_association_chain.find_by_param(param) unless param.nil?
+          
+          # Coerce to permalink format and find
+          @object ||= end_of_association_chain.find_by_param(param.gsub(/_/,'-').parameterize.to_s) unless param.nil?
+          
+          # Find by ID
+          @object ||= end_of_association_chain.find(param) unless param.nil?
+          
           @object
         end
     
