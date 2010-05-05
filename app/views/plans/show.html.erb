@@ -4,8 +4,9 @@
   <%= stylesheet_link_tag 'footer' %>
 	
 	<title><%= @project.name %> @ Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>
-	<meta name="keywords" content="${project.name}"/>
-	<meta name="description" content="${project.description}"/>
+	
+	<meta name="keywords" content="floor plan <%= @project.name %>"/>
+	<meta name="description" content="<%= @plan.name %> Plan"/>  
 <% end %>
 
 <% content_for :nav_left do %>

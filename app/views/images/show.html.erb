@@ -8,9 +8,11 @@
   <%= javascript_include_tag 'plan' %>
 
   <title><%= @project.name %> - <%= t('images') %> (<%= @image.position %>) @ Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>
-  <meta name="keywords" content="${project.name}"/>
-  <meta py:if="object.description" name="description" content="${object.description}"/>
-  <meta py:if="not object.description" name="description" content="${project.description}"/>
+
+	<meta name="keywords" content="images <%= @project.tags.map(&:name).join(' ') %> <%= @project.name %>"/>
+  <% unless @image.description.empty? %>
+	  <meta name="description" content="<%= @image.description %>"/>  
+	<% end %>
 <% end %>
 
 <% content_for :nav_left do %>

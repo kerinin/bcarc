@@ -7,8 +7,8 @@
   <%= javascript_include_tag 'plan' %>
 	
 	<title><%= @project.name %> @ Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>
-	<meta name="keywords" content="${project.name}"/>
-	<meta name="description" content="${project.description}"/>
+	<meta name="keywords" content="<%= @project.tags.map(&:name).join(' ') %> <%= @project.keywords || @project.name %>"/>
+	<meta name="description" content="<%= @project.short %>"/>
 <% end %>
 
 <% content_for :nav_left do %>

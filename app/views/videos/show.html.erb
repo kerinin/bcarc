@@ -4,10 +4,12 @@
   <%= stylesheet_link_tag 'project_images' %>
   <%= stylesheet_link_tag 'footer' %>
   
-	<title>${project.name} - Videos  (${object.sequencePosition}) @ Bercy Chen Studio: Architecture + Construction</title>
-	<meta name="keywords" content="${project.name}"/>
-	<meta py:if="object.description" name="description" content="${object.description}"/>
-	<meta py:if="not object.description" name="description" content="${project.description}"/>
+	<title><%= @project.name %> - Videos  (<%= @video.position%>) @ Bercy Chen Studio: Architecture + Construction</title>
+
+	<meta name="keywords" content="video <%= @project.tags.map(&:name).join(' ') %> <%= @project.name %>"/>
+  <% unless @video.description.empty? %>
+	  <meta name="description" content="<%= @video.description %>"/>  
+	<% end %>
 <% end %>
 
 <% content_for :nav_left do %>

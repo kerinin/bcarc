@@ -9,7 +9,11 @@
   
   <p>
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :size => 100 %>
+  </p>
+  <p>
+    <%= f.label :keywords %> (for search engines, space-separated)<br />
+    <%= f.text_field :keywords, :size => 100 %>
   </p>
   <p>
     <%= f.label :short %><br />
