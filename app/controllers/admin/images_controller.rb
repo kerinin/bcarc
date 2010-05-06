@@ -17,5 +17,7 @@ class Admin::ImagesController < Admin::BaseController
 
       i.save
     end
+    
+    render :nothing => true
   end
 end
