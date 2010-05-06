@@ -24,14 +24,14 @@ ActionController::Routing::Routes.draw do |map|
     admin.root :controller => :projects, :action => :index
     
     admin.resources :projects do |project|
-      project.resources :images, :member => {:sort => :post}
-      project.resources :videos, :member => {:sort => :post}
-      project.resources :plans, :member => {:sort => :post}
+      project.resources :images, :collection => {:sort => :post}
+      project.resources :videos, :collection => {:sort => :post}
+      project.resources :plans, :collection => {:sort => :post}
     end
     
     admin.resources :tags
     
-    admin.resources :pages
+    admin.resources :pages, :collection => {:sort => :post}
   end
   
 
