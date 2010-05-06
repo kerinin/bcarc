@@ -31,14 +31,13 @@ class Video < ActiveRecord::Base
   #before_validation_on_create :fetch_thumbnail
   before_validation :fetch_thumbnail
   
-  acts_as_wikitext :description
-  
   acts_as_list :scope => :project
   
   translates :name, :description
   
   def html_description
-    Wikitext::Parser.new().parse( description.to_s )
+    #Wikitext::Parser.new().parse( description.to_s )
+    RedCloth.new( description ).to_html
   end
   
   def service

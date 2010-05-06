@@ -10,8 +10,6 @@ class Project < ActiveRecord::Base
   #has_permalink :name
   make_permalink :with => :name
   
-  acts_as_wikitext :description
-  
   translates :name, :short, :description
   
   def kml?
@@ -19,11 +17,13 @@ class Project < ActiveRecord::Base
   end
   
   def html_description
-    Wikitext::Parser.new().parse( description.to_s )
+    #Wikitext::Parser.new().parse( description.to_s )
+    RedCloth.new( description ).to_html
   end
   
   def html_short
-    Wikitext::Parser.new().parse( short.to_s )
+    #Wikitext::Parser.new().parse( short.to_s )
+    RedCloth.new( short ).to_html
   end
   
   def year

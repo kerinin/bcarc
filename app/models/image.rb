@@ -18,12 +18,11 @@ class Image < ActiveRecord::Base
   
   translates :name, :description
   
-  acts_as_wikitext :description
-  
   acts_as_list :scope => :project
   
   def html_description
-    Wikitext::Parser.new().parse( description.to_s )
+    #Wikitext::Parser.new().parse( description.to_s )
+    RedCloth.new( description ).to_html
   end
   
   def upload_to_s3
