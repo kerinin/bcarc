@@ -25,5 +25,12 @@ class ImageTest < ActiveSupport::TestCase
         v.save!     
       end
     end
+    
+    should "set deleted_at when Image#destroy called" do
+      @image.destroy
+      
+      assert @image.deleted_at.present?
+      assert Image.exists? @image
+    end
   end
 end

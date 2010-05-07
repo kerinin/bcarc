@@ -31,7 +31,6 @@ Factory.define :project do |p|
   p.short "Project Short Description"
   p.description "Project Description"
   p.date_completed 1.year.ago
-  p.location "Project Location"
   p.priority 3
 end
 

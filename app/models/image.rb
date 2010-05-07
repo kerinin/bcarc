@@ -41,4 +41,9 @@ class Image < ActiveRecord::Base
       end
     end
   end
+  
+  def destroy
+    self.deleted_at = Time.now
+    self.save!
+  end
 end
