@@ -3,5 +3,5 @@ class Tag < ActiveRecord::Base
   
   make_permalink :with => :name
   
-  translates :name
+  #translates :name
 end

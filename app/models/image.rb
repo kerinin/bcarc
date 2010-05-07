@@ -18,11 +18,9 @@ class Image < ActiveRecord::Base
   
   validates_attachment_presence :attachment
   
-  translates :name, :description
+  #translates :name, :description
   
   acts_as_list :scope => :project
-  
-  named_scope :active, :conditions => {:deleted_at => nil}
   
   def html_description
     #Wikitext::Parser.new().parse( description.to_s )

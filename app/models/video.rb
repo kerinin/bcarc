@@ -36,7 +36,7 @@ class Video < ActiveRecord::Base
   
   acts_as_list :scope => :project
   
-  translates :name, :description
+  #translates :name, :description
   
   def html_description
     #Wikitext::Parser.new().parse( description.to_s )
