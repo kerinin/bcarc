@@ -25,7 +25,7 @@ class Video < ActiveRecord::Base
     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
     :s3_host_alias => "assets.bcarc.com",
     :bucket => 'bcstudio'
-                      
+                 
   belongs_to :project
   
   #before_validation_on_create :fetch_thumbnail

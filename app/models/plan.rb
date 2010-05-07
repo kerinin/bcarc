@@ -6,13 +6,14 @@ class Plan < ActiveRecord::Base
   acts_as_list :scope => :project
   
   has_attached_file :attachment, 
-    :styles => { :thumb => '55x40#', :full => '800x800>'}, 
+    :styles => { :thumb => '55x40#', :full => '800x800>'},
     :default_style => :index,
-    :url => "/assets/projects/:id/plans/:style/:basename.:extension",
+    :url => ":s3_alias_url",
     :path => "projects/:id/plans/:style/:basename.:extension",
     :storage => :s3,
     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
-    :bucket => 'bcstudio'
+    :s3_host_alias => "assets.bcarc.com",
+    :bucket => 'assets.bcarc.com'
     
   validates_attachment_presence :attachment
   
