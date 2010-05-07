@@ -18,11 +18,15 @@ class Project < ActiveRecord::Base
   
   def html_description
     #Wikitext::Parser.new().parse( description.to_s )
+    return nil if description.empty?
+    
     RedCloth.new( description ).to_html
   end
   
   def html_short
     #Wikitext::Parser.new().parse( short.to_s )
+    return nil if short.empty?
+    
     RedCloth.new( short ).to_html
   end
   
