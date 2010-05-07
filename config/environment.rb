@@ -26,7 +26,7 @@ Rails::Initializer.run do |config|
   config.gem "factory_girl"
   config.gem "shoulda"
   config.gem "aws-s3", :lib => "aws/s3"
-  config.gem "searchlogic", :version => '2.4.10'
+  #config.gem "searchlogic", :version => '2.4.10'
   config.gem "right_aws"
   config.gem "acts_as_list"
   config.gem "RedCloth"
