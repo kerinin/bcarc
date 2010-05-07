@@ -12,6 +12,7 @@ Factory.define :image do |i|
   i.description "Image Description"
   i.sync_flickr false
   i.project {|p| p.association(:project)}
+  i.attachment File.new("#{RAILS_ROOT}/public/images/logo_01.jpg")
 end
 
 Factory.define :page do |p|
@@ -22,6 +23,7 @@ end
 Factory.define :plan do |p|
   p.name "Plan Name"
   p.project {|p| p.association(:project)}
+  p.attachment File.new("#{RAILS_ROOT}/public/images/logo_01.jpg")
 end
 
 Factory.define :project do |p|

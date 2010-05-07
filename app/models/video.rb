@@ -31,6 +31,9 @@ class Video < ActiveRecord::Base
   #before_validation_on_create :fetch_thumbnail
   before_validation :fetch_thumbnail
   
+  validates_attachment_presence :thumbnail
+  validates_presence_of :uri
+  
   acts_as_list :scope => :project
   
   translates :name, :description
@@ -43,6 +46,7 @@ class Video < ActiveRecord::Base
   end
   
   def service
+    return false if self.uri.blank?
     return 'youtube' if self.uri.include?( 'youtube.com' )
     return 'vimeo' if self.uri.include?( 'vimeo.com' )
   end
@@ -74,6 +78,8 @@ class Video < ActiveRecord::Base
       xml = open(URI.parse("http://vimeo.com/api/v2/video/#{self.vimeo_id}.xml") )
       doc = REXML::Document.new(xml.read)
       image_url = doc.elements['//thumbnail_medium'].text
+    else 
+      return false
     end
     
     # Overlay...

@@ -14,6 +14,8 @@ class Plan < ActiveRecord::Base
     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
     :bucket => 'bcstudio'
     
+  validates_attachment_presence :attachment
+  
   translates :name
   
   def upload_to_s3

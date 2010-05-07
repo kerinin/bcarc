@@ -26,5 +26,18 @@ class VideoTest < ActiveSupport::TestCase
     
     should_eventually "retrieve, modify, and attach the video's thumbnail" do
     end
+    
+    should "raise error if uri missing" do
+      assert_raise ActiveRecord::RecordInvalid do
+        v = Video.new
+        v.save!     
+      end
+    end
+    
+    should "raise error if video thumbnail not found" do
+      assert_raise OpenURI::HTTPError do
+        Factory :video, :uri => 'http://vimeo.com/fail'
+      end
+    end
   end
 end

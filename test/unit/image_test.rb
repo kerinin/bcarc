@@ -18,5 +18,12 @@ class ImageTest < ActiveSupport::TestCase
     
     should_eventually "format thumbnails" do
     end
+    
+    should "raise error if image missing" do
+      assert_raise ActiveRecord::RecordInvalid do
+        v = Image.new
+        v.save!     
+      end
+    end
   end
 end

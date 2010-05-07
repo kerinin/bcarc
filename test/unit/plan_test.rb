@@ -18,5 +18,12 @@ class PlanTest < ActiveSupport::TestCase
     
     should_eventually "format thumbnails" do
     end
+    
+    should "raise error if image missing" do
+      assert_raise ActiveRecord::RecordInvalid do
+        v = Plan.new
+        v.save!     
+      end
+    end
   end
 end

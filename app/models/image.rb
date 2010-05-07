@@ -16,6 +16,8 @@ class Image < ActiveRecord::Base
                       
   belongs_to :project
   
+  validates_attachment_presence :attachment
+  
   translates :name, :description
   
   acts_as_list :scope => :project
