@@ -16,6 +16,6 @@ class ProjectsController < ApplicationController
       @next = @project.videos[0]
     end
     
-    response.headers['Cache-Control'] = "public, max-age=6400"
+    #response.headers['Cache-Control'] = "public, max-age=6400"
   end
 end

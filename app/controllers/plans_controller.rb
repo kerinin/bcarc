@@ -5,5 +5,5 @@ class PlansController < ApplicationController
   
   actions :show
   
-  show.before { response.headers['Cache-Control'] = "public, max-age=6400" }
+  #show.before { response.headers['Cache-Control'] = "public, max-age=6400" }
 end

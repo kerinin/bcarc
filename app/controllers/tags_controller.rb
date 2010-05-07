@@ -11,6 +11,6 @@ class TagsController < ApplicationController
       @all = true
     end
     
-    response.headers['Cache-Control'] = "public, max-age=6400"
+    #response.headers['Cache-Control'] = "public, max-age=6400"
   end
 end
