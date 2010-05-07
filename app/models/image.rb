@@ -22,6 +22,8 @@ class Image < ActiveRecord::Base
   
   acts_as_list :scope => :project
   
+  named_scope :active, :conditions => {:deleted_at => nil}
+  
   def html_description
     #Wikitext::Parser.new().parse( description.to_s )
     return nil if description.empty?

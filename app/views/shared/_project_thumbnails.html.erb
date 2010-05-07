@@ -11,7 +11,7 @@
   	</div>
   <% end %>
 
-  <% @project.images.deleted_at_null[1..-1].each do |image| %>
+  <% @project.images.active[1..-1].each do |image| %>
     <%= link_to project_image(image), project_image_path(@project, image), {:class => (image == @object ? 'current_image' : nil)} %>
   <% end %>
   <% @project.videos.each do |video| %>
