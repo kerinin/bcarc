@@ -8,7 +8,7 @@ module Paperclip
       dst = Tempfile.new([@basename, @format].compact.join("."))
       dst.binmode
         
-      Paperclip.run('convert',"#{File.expand_path(@file.path)} -auto-orient #{File.expand_path(dst.path)}")
+      Paperclip.run('convert',"\"#{File.expand_path(@file.path)}[0]\"\n-auto-orient\n\"#{File.expand_path(dst.path)}\"\n")
       
       return dst
     end
