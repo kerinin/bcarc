@@ -1,0 +1,31 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'header' %>
+  <%= stylesheet_link_tag 'project' %>
+  <%= stylesheet_link_tag 'footer' %>
+  
+  <%= javascript_include_tag 'raphael-min' %>
+  <%= javascript_include_tag 'plan' %>
+	
+	<%= GMap.header %>
+  <%= @map.to_html %>
+  
+	<title><%= @project.name %> Map @ Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>
+	<meta name="keywords" content="<%= @project.tags.map(&:name).join(' ') %> <%= @project.keywords || @project.name %>"/>
+	<meta name="description" content="<%= @project.short %>"/>
+<% end %>
+
+<% content_for :nav_left do %>
+  <%= render :partial => 'shared/project_show_nav' %>
+<% end %>
+
+<%= render :partial => 'shared/project_thumbnails' %>
+
+<div class="content">
+	<div class="prop">
+	  <%= @map.div(:width => 800, :height => 600) %>
+	
+	  <%= render :partial => 'plans' %>
+	</div>
+</div>
+
+<%= render :partial => 'shared/project_footer' %>

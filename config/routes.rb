@@ -7,7 +7,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'Work/:id/*other', :controller => :tags, :action => :show
   
   # basic routes
-  map.resources :projects, :as => 'Project' do |project|
+  map.resources :projects, :as => 'Project', :member => {:map => :get} do |project|
     project.resources :images
     project.resources :videos
     project.resources :plans, :as => 'maps'

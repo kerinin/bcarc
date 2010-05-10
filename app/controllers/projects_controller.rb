@@ -18,4 +18,17 @@ class ProjectsController < ApplicationController
     
     #response.headers['Cache-Control'] = "public, max-age=6400"
   end
+  
+  def map
+    load_object     # From resource_controller
+    
+    redirect_to project_path(@project) and return unless @project.latitude && @project.longitude
+    
+    @map = GMap.new("map_div")
+    @map.control_init(:large_map => true)
+    @map.center_zoom_init([@project.latitude,@project.longitude],4)
+    @map.overlay_init(GMarker.new([@project.latitude,@project.longitude],:title => @project.name, :info_window => @project.short))
+    
+    render :action => :map
+  end
 end
