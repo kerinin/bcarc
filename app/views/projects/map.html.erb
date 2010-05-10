@@ -22,9 +22,11 @@
 
 <div class="content">
 	<div class="prop">
-	  <%= @map.div(:width => 800, :height => 600) %>
-	
-	  <%= render :partial => 'plans' %>
+	  <div class="image_container">
+  	  <%= @map.div(:width => 800, :height => 600) %>
+  	</div>
+  	
+  	<%= render :partial => 'plans' %>
 	</div>
 </div>
 

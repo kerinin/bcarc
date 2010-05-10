@@ -26,8 +26,8 @@ class ProjectsController < ApplicationController
     
     @map = GMap.new("map_div")
     @map.control_init(:large_map => true)
-    @map.center_zoom_init([@project.latitude,@project.longitude],4)
-    @map.overlay_init(GMarker.new([@project.latitude,@project.longitude],:title => @project.name, :info_window => @project.short))
+    @map.center_zoom_init([@project.latitude,@project.longitude],10)
+    @map.overlay_init(GMarker.new([@project.latitude,@project.longitude],:title => @project.name))
     
     render :action => :map
   end
