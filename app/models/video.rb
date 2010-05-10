@@ -40,7 +40,7 @@ class Video < ActiveRecord::Base
   
   def html_description
     #Wikitext::Parser.new().parse( description.to_s )
-    return nil if description.empty?
+    return nil unless description
     
     RedCloth.new( description ).to_html
   end

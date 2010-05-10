@@ -9,7 +9,7 @@ class Page < ActiveRecord::Base
   
   def html_content
     #Wikitext::Parser.new().parse( content.to_s )
-    return nil if content.empty?
+    return nil unless content
     
     RedCloth.new( content ).to_html
   end
