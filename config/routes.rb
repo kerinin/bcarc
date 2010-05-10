@@ -45,21 +45,21 @@ ActionController::Routing::Routes.draw do |map|
 
 
   # 404 (legacy) routes
-  map.connect 'project/:id', :controller => :projects
-  map.connect 'projects/:id', :controller => :projects
-  map.connect 'Projects/:id', :controller => :projects
+  map.connect 'project/:id', :controller => :projects, :action => :show
+  map.connect 'projects/:id', :controller => :projects, :action => :show
+  map.connect 'Projects/:id', :controller => :projects, :action => :show
   
-  map.connect 'project/:project_id/images/:id', :controller => :images
-  map.connect 'projects/:project_id/images/:id', :controller => :images
-  map.connect 'Projects/:project_id/Images/:id', :controller => :images
+  map.connect 'project/:project_id/images/:id', :controller => :images, :action => :show
+  map.connect 'projects/:project_id/images/:id', :controller => :images, :action => :show
+  map.connect 'Projects/:project_id/Images/:id', :controller => :images, :action => :show
   
-  map.connect 'project/:project_id/videos/:id', :controller => :videos
-  map.connect 'projects/:project_id/videos/:id', :controller => :videos
-  map.connect 'Projects/:project_id/Videos/:id', :controller => :videos
+  map.connect 'project/:project_id/videos/:id', :controller => :videos, :action => :show
+  map.connect 'projects/:project_id/videos/:id', :controller => :videos, :action => :show
+  map.connect 'Projects/:project_id/Videos/:id', :controller => :videos, :action => :show
   
-  map.connect 'project/:project_id/plans/:id', :controller => :plans
-  map.connect 'projects/:project_id/plans/:id', :controller => :plans
-  map.connect 'Projects/:project_id/Plans/:id', :controller => :plans
+  map.connect 'project/:project_id/plans/:id', :controller => :plans, :action => :show
+  map.connect 'projects/:project_id/plans/:id', :controller => :plans, :action => :show
+  map.connect 'Projects/:project_id/Plans/:id', :controller => :plans, :action => :show
   
   map.connect '*glob', :controller => :application, :action => :legacy
   
