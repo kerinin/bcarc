@@ -10,7 +10,7 @@
   <title><%= @project.name %> - <%= t('images') %> (<%= @image.position %>) @ Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>
 
 	<meta name="keywords" content="images <%= @project.tags.map(&:name).join(' ') %> <%= @project.name %>"/>
-  <% unless @image.description.blank? %>
+  <% if @image.description %>
 	  <meta name="description" content="<%= @image.description %>"/>  
 	<% end %>
 <% end %>
