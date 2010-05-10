@@ -2,10 +2,11 @@ class Image < ActiveRecord::Base
   has_attached_file :attachment, 
     :styles => { 
       :thumb => '55x40#', 
-      :thumb_ds => { :geometry => '55x40#', :processors => [:thumbnail, :modulate], :saturation => 0 },
+      :thumb_ds => { :geometry => '55x40#', :processors => [:auto_orient, :thumbnail, :modulate], :saturation => 0 },
       :index => '390x180#', 
       :full => '800x800>'
     }, 
+    :processors => [:auto_orient, :thumbnail],
     :default_style => :index,
     :url => ":s3_alias_url",
     :path => "projects/:id/:style/:basename.:extension",
@@ -27,19 +28,6 @@ class Image < ActiveRecord::Base
     return nil unless description
     
     RedCloth.new( description ).to_html
-  end
-  
-  def upload_to_s3
-    if self.attachment_file_size.nil?
-      begin
-        self.attachment = File.new(self.attachment_file_name)
-        self.save!
-      rescue
-        puts "FAIL!!!  #{self.id}"
-      else
-        puts self.id
-      end
-    end
   end
   
   def destroy
