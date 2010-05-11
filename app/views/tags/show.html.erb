@@ -15,10 +15,12 @@
   <%= render :partial => 'shared/project_index_nav' %>
 <% end %>
   
-<div class="content">
-  <% if params[:by] == 'chronology' %>
-    <%= render :partial => 'by_chronology' %>
-  <% else %>
-    <%= render :partial => 'by_popularity' %>
-  <% end %>
-</div>
+<% cache "show_tag_#{@tag.id}_by_#{params[:by]}" do %>
+  <div class="content">
+    <% if params[:by] == 'chronology' %>
+      <%= render :partial => 'by_chronology' %>
+    <% else %>
+      <%= render :partial => 'by_popularity' %>
+    <% end %>
+  </div>
+<% end %>
