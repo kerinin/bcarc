@@ -1,7 +1,7 @@
 <% content_for :head do %>
-  <%= stylesheet_link_tag 'header' %>
-  <%= stylesheet_link_tag 'project' %>
-  <%= stylesheet_link_tag 'footer' %>
+  <%= stylesheet_link_tag 'header', :cache => true %>
+  <%= stylesheet_link_tag 'project', :cache => true %>
+  <%= stylesheet_link_tag 'footer', :cache => true %>
 	
 	<title><%= @project.name %> @ Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>
 	
