@@ -1,4 +1,6 @@
 class VideosController < ApplicationController
+  after_filter :expire_thumbnails, :only => [:create, :update, :destroy]
+  
   resource_controller
   
   belongs_to :project
@@ -20,5 +22,11 @@ class VideosController < ApplicationController
     end
     
     #response.headers['Cache-Control'] = "public, max-age=6400"
+  end
+  
+  private
+  
+  def expire_thumbnails
+    expire_fragment "thumbnails_for_#{@project.id}"
   end
 end
