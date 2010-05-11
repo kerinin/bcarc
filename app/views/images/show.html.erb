@@ -1,11 +1,7 @@
 <% content_for :head do %>
-  <%= stylesheet_link_tag 'header', :cache => true %>
-  <%= stylesheet_link_tag 'project', :cache => true %>
-  <%= stylesheet_link_tag 'project_images', :cache => true %>
-  <%= stylesheet_link_tag 'footer', :cache => true %>
+  <%= stylesheet_link_tag 'header', 'project', 'project_images', 'footer', :cache => 'images_show' %>
   
-  <%= javascript_include_tag 'raphael-min', :cache => true %>
-  <%= javascript_include_tag 'plan', :cache => true %>
+  <%= javascript_include_tag 'raphael-min', 'plan', :cache => 'images_show' %>
 
   <title><%= @project.name %> - <%= t('images') %> (<%= @image.position %>) @ Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>
 

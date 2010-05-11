@@ -1,10 +1,7 @@
 <% content_for :head do %>
-  <%= stylesheet_link_tag 'work', :cache => true %>
-  <%= stylesheet_link_tag 'header', :cache => true %>
-  <%= stylesheet_link_tag 'project', :cache => true %>
-  <%= stylesheet_link_tag 'footer', :cache => true %>
+  <%= stylesheet_link_tag 'work', 'header', 'project', 'footer', :cache => 'projects_index' %>
 	
-	<%= javascript_include_tag 'work', :cache => true %>
+	<%= javascript_include_tag 'work' %>
 	 
 	<title>Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>
 	<meta name="keywords" content="Bercy Chen Studio Architecture Architect Austin Design Build Construction Green Building Contemporary Modern Lakehouse Sustainability design-build Greenroof Green Roof House Home"/>

@@ -1,8 +1,5 @@
 <% content_for :head do %>
-  <%= stylesheet_link_tag 'header', :cache => true %>
-  <%= stylesheet_link_tag 'project', :cache => true %>
-  <%= stylesheet_link_tag 'project_images', :cache => true %>
-  <%= stylesheet_link_tag 'footer', :cache => true %>
+  <%= stylesheet_link_tag 'header', 'project', 'project_images', 'footer', :cache => 'videos_show' %>
   
 	<title><%= @project.name %> - Videos  (<%= @video.position%>) @ Bercy Chen Studio: Architecture + Construction</title>
 

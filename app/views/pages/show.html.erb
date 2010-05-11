@@ -1,7 +1,5 @@
 <% content_for :head do %>
-  <%= stylesheet_link_tag 'header', :cache => true %>
-  <%= stylesheet_link_tag 'page', :cache => true %>
-  <%= stylesheet_link_tag 'footer', :cache => true %>
+  <%= stylesheet_link_tag 'header', 'page', 'footer', :cache => 'pages_show' %>
   
 	<title><%= @page.name %> @ Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>
 	<meta name="keywords" content="<%= @page.name %>"/>
