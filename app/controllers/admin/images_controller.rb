@@ -37,9 +37,9 @@ class Admin::ImagesController < Admin::BaseController
   
   def expire_tags
     @project.tags.each do |t|
-      expire_fragment "show_tag_#{t.id}_by_"
-      expire_fragment "show_tag_#{t.id}_by_chronology"
-      expire_fragment "show_tag_#{t.id}_by_popularity"
+      expire_fragment "show_tag_#{params[:id] || :all}_by_"
+      expire_fragment "show_tag_#{params[:id] || :all}_by_chronology"
+      expire_fragment "show_tag_#{params[:id] || :all}_by_popularity"
     end
   end
 end
