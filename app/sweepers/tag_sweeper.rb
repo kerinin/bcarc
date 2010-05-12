@@ -1,6 +1,6 @@
 class TagSweeper < ActionController::Caching::Sweeper
   # This sweeper is going to keep an eye on the Project model
-  observe Tag
+  observe Tag, Project, Image
 
   def after_create(object)
     increment_counter

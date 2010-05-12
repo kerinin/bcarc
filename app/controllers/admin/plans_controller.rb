@@ -4,6 +4,8 @@ class Admin::PlansController < Admin::BaseController
   belongs_to :project
   
   actions :all
+
+  cache_sweeper :project_sweeper
   
   create.wants.html { redirect_to edit_admin_project_plan_path(@project,@plan) }
   update.wants.html { redirect_to edit_admin_project_plan_path(@project,@plan) }

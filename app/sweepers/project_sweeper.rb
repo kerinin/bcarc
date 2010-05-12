@@ -3,22 +3,22 @@ class ProjectSweeper < ActionController::Caching::Sweeper
   observe Project, Image, Video, Plan
 
   def after_create(object)
-    increment_counter_for
+    increment_counter_for object
   end
 
   def after_update(object)
-    increment_counter_for
+    increment_counter_for object
   end
 
   def after_destroy(object)
-    increment_counter_for
+    increment_counter_for object
   end
 
   private
   
   def increment_counter_for(object)
-    key = case object.class
-    when Project
+    key = case object.class.name
+    when 'Project'
       "project_#{object.to_param}"
     else
       "project_#{object.project.to_param}"
