@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   
   actions :show, :index
   
-  caches_action :show, :index
+  caches_action :show, :cache_path => Proc.new { |c| c.params.unshift( read_fragment("project_#{params[:id]}") ).delete_if { |k,v| k.starts_with?('utm_') } }
   cache_sweeper :project_sweeper
   
   index.before do
