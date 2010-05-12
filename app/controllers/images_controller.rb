@@ -21,6 +21,6 @@ class ImagesController < ApplicationController
       @prev = @project.images[ @project.images.index(@image) - 1]
     end
     
-    #response.headers['Cache-Control'] = "public, max-age=6400"
+    response.headers['Cache-Control'] = "public, max-age=600"
   end
 end

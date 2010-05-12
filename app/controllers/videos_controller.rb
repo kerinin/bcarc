@@ -23,12 +23,6 @@ class VideosController < ApplicationController
       @prev = @project.videos[ @project.videos.index(@video) - 1]
     end
     
-    #response.headers['Cache-Control'] = "public, max-age=6400"
-  end
-  
-  private
-  
-  def expire_thumbnails
-    expire_fragment "thumbnails_for_#{@project.id}"
+    response.headers['Cache-Control'] = "public, max-age=600"
   end
 end
