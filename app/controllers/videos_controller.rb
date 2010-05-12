@@ -7,6 +7,9 @@ class VideosController < ApplicationController
   
   actions :show
   
+  caches_action :show
+  cache_sweeper :project_sweeper
+  
   show.before do
     @project = @video.project
     unless @video == @project.videos.last

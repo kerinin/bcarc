@@ -1,18 +1,16 @@
 class PageSweeper < ActionController::Caching::Sweeper
-  # This sweeper is going to keep an eye on the Project model
   observe Page
 
   def after_create(object)
-    expire_page
-    expire_action(:controller => :tags, :action => :show)
+    # Nuke the cache - pages show up in the header of everything
+    ActionController::Base.cache_store.clear
   end
 
   def after_update(object)
-    expire_page(:controller => :pages, :action => :show, :id => object.to_param)
+    ActionController::Base.cache_store.clear
   end
 
   def after_destroy(object)
-    expire_page
-    expire_action(:controller => :tags, :action => :show)
+    ActionController::Base.cache_store.clear
   end
 end

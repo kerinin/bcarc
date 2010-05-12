@@ -5,6 +5,8 @@ class ImagesController < ApplicationController
   
   actions :show
   
+  caches_action :show
+  cache_sweeper :project_sweeper
   
   show.before do
     @project = @image.project

@@ -5,6 +5,9 @@ class ProjectsController < ApplicationController
   
   actions :show, :index
   
+  caches_action :show, :index
+  cache_sweeper :project_sweeper
+  
   index.before do
     @projects = Project.random( 6, :conditions => { :priority => 1..3 }).sort_by {rand}
   end

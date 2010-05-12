@@ -17,25 +17,23 @@
 
 <%= render :partial => 'shared/project_thumbnails' %>
 
-<% cache do %>
-  <div class="content">
-  	<div class="media">
-  		<center>
-  			<div class="image_container">
-    		  <% if @next and @next.class.name == 'Image' %>
-    		    <%= link_to image_tag( @image.attachment.url(:full) ), project_image_path(@project,@next)  %>
-    		  <% else %>
-    		    <%= image_tag( @image.attachment.url(:full) ) %>
-    		  <% end %>
-  			</div>
-		
-  			<%= render :partial => 'projects/plans'%>
-  		</center>
-  	</div>
-  	<div class="media_text bold_link">
-  	  <%= @image.html_description %>
-  	</div>
-  </div>
+<div class="content">
+	<div class="media">
+		<center>
+			<div class="image_container">
+  		  <% if @next and @next.class.name == 'Image' %>
+  		    <%= link_to image_tag( @image.attachment.url(:full) ), project_image_path(@project,@next)  %>
+  		  <% else %>
+  		    <%= image_tag( @image.attachment.url(:full) ) %>
+  		  <% end %>
+			</div>
+	
+			<%= render :partial => 'projects/plans'%>
+		</center>
+	</div>
+	<div class="media_text bold_link">
+	  <%= @image.html_description %>
+	</div>
+</div>
 
-  <%= render :partial => 'shared/project_footer' %>
-<% end %>
+<%= render :partial => 'shared/project_footer' %>

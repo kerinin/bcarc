@@ -1,18 +1,22 @@
 class TagSweeper < ActionController::Caching::Sweeper
   # This sweeper is going to keep an eye on the Project model
-  observe Page
+  observe Tag
 
   def after_create(object)
-    expire_page
-    expire_action(:controller => :tags, :action => :show)
+    increment_counter
   end
 
   def after_update(object)
-    expire_action(:controller => :tags, :action => :show, :id => object.to_param)
+    increment_counter
   end
 
   def after_destroy(object)
-    expire_page
-    expire_action(:controller => :tags, :action => :show)
+    increment_counter
+  end
+
+  private
+  
+  def increment_counter
+    write_fragment :tags_version, ( read_fragment(:tags_version).to_i + 1 )
   end
 end
