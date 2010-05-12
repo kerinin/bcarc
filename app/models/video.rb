@@ -24,7 +24,8 @@ class Video < ActiveRecord::Base
     :storage => :s3,
     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
     :s3_host_alias => "assets.bcarc.com",
-    :bucket => 'bcstudio'
+    :bucket => 'bcstudio',
+    :s3_headers => {'Cache-Control' => 'max-age=31557600'}
                  
   belongs_to :project
   
