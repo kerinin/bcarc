@@ -32,6 +32,7 @@ Factory.define :project do |p|
   p.description "Project Description"
   p.date_completed 1.year.ago
   p.priority 3
+  p.show_map false
 end
 
 Factory.define :tag do |t|

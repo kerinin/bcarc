@@ -7,6 +7,8 @@ class Project < ActiveRecord::Base
   
   has_and_belongs_to_many :tags
   
+  before_validation :geocode_address, :if => Proc.new {|p| p.show_map && ( p.city_changed? || p.address_changed? ) }, :unless => Proc.new {|p| p.city.empty? }
+  
   #has_permalink :name
   make_permalink :with => :name
   
@@ -32,5 +34,14 @@ class Project < ActiveRecord::Base
   
   def year
     self.date_completed.strftime('%Y')
+  end
+  
+  def geocode_address
+    results = Geocoding::get [address, city, state].join(' ')
+    
+    if results.status == Geocoding::GEO_SUCCESS
+      self.latitude, self.longitude = results[0].latlon
+      self.map_accuracy = results[0].accuracy
+    end
   end
 end

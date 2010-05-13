@@ -15,15 +15,14 @@ class ProjectTest < ActiveSupport::TestCase
         :description => 'Project Description',
         :short => 'Short Description',
         :date_completed => @completed,
-        :location => '100 5th Street',
+        :address => '100 5th Street',
+        :city => 'San Francisco',
+        :state => 'CA',
         :priority => 5,
         :thumbnail => Factory(:image)
         
       @plan1 = Factory :plan, :project => @project
       @plan2 = Factory :plan, :project => @project
-      
-      @image1 = Factory :image, :project => @project
-      @image2 = Factory :image, :project => @project
       
       @video1 = Factory :video, :project => @project
       @video2 = Factory :video, :project => @project
@@ -46,7 +45,9 @@ class ProjectTest < ActiveSupport::TestCase
       assert_equal @project.description, 'Project Description'
       assert_equal @project.short, 'Short Description'
       assert_equal @project.date_completed, @completed
-      assert_equal @project.location, '100 5th Street'
+      assert_equal @project.address, '100 5th Street'
+      assert_equal @project.city, 'San Francisco'
+      assert_equal @project.state, 'CA'
       assert_equal @project.priority, 5
     end
     
@@ -58,6 +59,9 @@ class ProjectTest < ActiveSupport::TestCase
     end
     
     should "have associated images" do
+      @image1 = Factory :image, :project => @project
+      @image2 = Factory :image, :project => @project
+      
       assert @project.images.include? @image1
       assert @project.images.include? @image2
       assert_equal @image1.project, @project
@@ -74,6 +78,28 @@ class ProjectTest < ActiveSupport::TestCase
     should "have associated tags" do
       assert @project.tags.include? @tag
       assert @tag.projects.include? @project
+    end
+    
+    should "not geocode if map=false" do
+      @project.address = '1111 East 11th Street'
+      @project.city = 'Austin'
+      @project.state = 'TX'
+      @project.save!
+      
+      assert @project.latitude.blank?
+      assert @project.longitude.blank?
+    end
+          
+    should "pull geocoded lat/lon on address save if map=true" do
+      @project.show_map = true
+      @project.address = '1111 East 11th Street'
+      @project.city = 'Austin'
+      @project.state = 'TX'
+      @project.save!
+      
+      assert @project.latitude == 30.268807
+      assert @project.longitude == -97.728902
+      assert @project.map_accuracy == 8
     end
   end
 end
