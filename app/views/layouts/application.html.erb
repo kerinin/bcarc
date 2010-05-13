@@ -5,24 +5,44 @@
       <meta http-equiv="X-UA-Compatible" content="chrome=1">
       <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
       
-      <%= stylesheet_link_tag 'css-bcstudio', :cache => 'application' %>
+      <%= stylesheet_link_tag 'css-bcstudio' %>
       
-      <%= javascript_include_tag 'jquery.min', 'scriptaculous/prototype', 'scriptaculous/effects', 'crossfade', 'mouseover_script', 'nav_script.js', :cache => 'application' %>
+      <%= javascript_include_tag 'jquery.min' %>
+      <%= javascript_include_tag 'prototype' %>
+      <%= javascript_include_tag 'scriptaculous/effects' %>
+      <%= javascript_include_tag 'raphael-min' %>
+      
+      <%= javascript_include_tag 'mouseover_script', 'plan', 'work', :cache => 'cache/application' %>
+      
+      <script type="text/javascript">
+        // init mouseover_script
+        jQuery(document).ready( function() {
+        	jQuery("img[fadeover]").each(function() {
+        		initCrossFade(this,this.getAttribute('fadeover') ) 
+        	} );
 
-	
-    	<script type="text/javascript">
+        	jQuery("img[swapover]").each(function() {
+        		preload = new Image();
+        		preload.src = this.getAttribute('swapover');
+
+        		jQuery(this).hover(swapOver,swapOut);	
+        	} );
+        } );
+      </script>
+      
+      <script type="text/javascript"> 
       	jQuery(document).ready(function() {
         	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
         	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-        	</script>
-        	<script type="text/javascript">
+        } );
+        jQuery(document).ready(function() {
         	try {
         	var pageTracker = _gat._getTracker("UA-8533404-1");
         	pageTracker._trackPageview();
-        	} catch(err) {}	  
-      	})
-    	</script>    
-      
+        	} catch(err) {}          
+        } );
+    	</script>
+    	
       <%= yield :head %>
   </head>
   

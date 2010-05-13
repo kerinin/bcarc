@@ -1,7 +1,10 @@
 <% content_for :head do %>
   <%= stylesheet_link_tag 'header', 'project', 'footer', :cache => 'projects_show' %>
   
-  <%= javascript_include_tag 'raphael-min', 'plan', :cache => 'projects_show' %>
+  <script type="text/javascript">
+    // init plan js
+    jQuery(document).ready(init_plans);
+	</script>
 	
 	<title><%= @project.name %> @ Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>
 	<meta name="keywords" content="<%= @project.tags.map(&:name).join(' ') %> <%= @project.keywords || @project.name %>"/>
