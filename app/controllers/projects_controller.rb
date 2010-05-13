@@ -24,12 +24,12 @@ class ProjectsController < ApplicationController
   def map
     load_object     # From resource_controller
     
-    redirect_to project_path(@project) and return unless @project.latitude && @project.longitude
+    redirect_to project_path( @project ) and return unless @project.show_map && @project.latitude && @project.longitude
     
-    @map = GMap.new("map_div")
-    @map.control_init(:large_map => true)
-    @map.center_zoom_init([@project.latitude,@project.longitude],10)
-    @map.overlay_init(GMarker.new([@project.latitude,@project.longitude],:title => @project.name))
+    @map = GMap.new( "map_div" )
+    @map.control_init( :large_map => true )
+    @map.center_zoom_init( [@project.latitude,@project.longitude], @project.map_accuracy + 3 )
+    @map.overlay_init( GMarker.new( [@project.latitude,@project.longitude], :title => @project.name ) )
     
     render :action => :map
   end
