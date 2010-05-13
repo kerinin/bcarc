@@ -3,5 +3,7 @@ class PagesController < ApplicationController
   
   actions :show
   
-  #show.before { response.headers['Cache-Control'] = "public, max-age=6400" }
+  caches_action :show
+  
+  show.before { response.headers['Cache-Control'] = "public, max-age=600" }
 end

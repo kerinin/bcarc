@@ -2,30 +2,28 @@ class ProjectSweeper < ActionController::Caching::Sweeper
   # This sweeper is going to keep an eye on the Project model
   observe Project, Image, Video, Plan
 
-  # If our sweeper detects that a Product was created call this
-  def after_create(project)
-    expire_cache_for(project)
+  def after_create(object)
+    increment_counter_for object
   end
 
-  # If our sweeper detects that a Product was updated call this
-  def after_update(project)
-    expire_cache_for(project)
+  def after_update(object)
+    increment_counter_for object
   end
 
-  # If our sweeper detects that a Product was deleted call this
-  def after_destroy(project)
-    expire_cache_for(project)
+  def after_destroy(object)
+    increment_counter_for object
   end
 
   private
-  def expire_cache_for(record)
-    expire_page(:controller => :projects, :action => :show, :id => record.to_param )
-    expire_page(:controller => :images, :action => :show, :project_id => record.to_param )
-    expire_page(:controller => :videos, :action => :show, :project_id => record.to_param )
-    expire_page(:controller => :plans, :action => :show, :project_id => record.to_param )
   
-    if record.is_a?(Project)
-      expire_action(:controller => :tags, :actions => :show)
+  def increment_counter_for(object)
+    key = case object.class.name
+    when 'Project'
+      "project_#{object.to_param}"
+    else
+      "project_#{object.project.to_param}"
     end
+    
+    write_fragment key, ( read_fragment(key).to_i + 1 )
   end
 end

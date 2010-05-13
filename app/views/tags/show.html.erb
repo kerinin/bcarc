@@ -1,10 +1,13 @@
 <% content_for :head do %>
-  <%= stylesheet_link_tag 'work' %>
-  <%= stylesheet_link_tag 'header' %>
-  <%= stylesheet_link_tag 'project' %>
-  <%= stylesheet_link_tag 'footer' %>
-  
-  <%= javascript_include_tag 'work' %>
+	<script type="text/javascript">
+	  // init work text
+	  jQuery(document).ready(
+    	function(){
+    		jQuery(".work_text").hide();
+    		jQuery("div.work_container").hover(showWorkText,hideWorkText);
+    	}
+    );
+  </script>
 	 
 	<title><%= (@tag.nil? ? 'All' : @tag.name)+' '+t('work') %> @ Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>
 	<meta name="keywords" content="Bercy Chen Studio Architecture Architect Austin Design Build Construction Green Building Contemporary Modern Lakehouse Sustainability design-build Greenroof Green Roof House Home"/>

@@ -1,9 +1,9 @@
 <% content_for :head do %>
-  <%= stylesheet_link_tag 'header' %>
-  <%= stylesheet_link_tag 'project' %>
-  <%= stylesheet_link_tag 'project_images' %>
-  <%= stylesheet_link_tag 'footer' %>
-  
+  <script type="text/javascript">
+    // init plan js
+    jQuery(document).ready(init_plans);
+	</script>
+	
 	<title><%= @project.name %> - Videos  (<%= @video.position%>) @ Bercy Chen Studio: Architecture + Construction</title>
 
 	<meta name="keywords" content="video <%= @project.tags.map(&:name).join(' ') %> <%= @project.name %>"/>

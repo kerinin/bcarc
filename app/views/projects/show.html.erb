@@ -1,10 +1,8 @@
 <% content_for :head do %>
-  <%= stylesheet_link_tag 'header' %>
-  <%= stylesheet_link_tag 'project' %>
-  <%= stylesheet_link_tag 'footer' %>
-  
-  <%= javascript_include_tag 'raphael-min' %>
-  <%= javascript_include_tag 'plan' %>
+  <script type="text/javascript">
+    // init plan js
+    jQuery(document).ready(init_plans);
+	</script>
 	
 	<title><%= @project.name %> @ Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>
 	<meta name="keywords" content="<%= @project.tags.map(&:name).join(' ') %> <%= @project.keywords || @project.name %>"/>
@@ -31,7 +29,7 @@
 				<div class="<%= @project.images ? 'description_with_image' : 'description_without_image' %>"><%= @project.html_description %></div>
 			</div>
 		</div>
-	
+
 	  <%= render :partial => 'plans' %>
 	</div>
 </div>

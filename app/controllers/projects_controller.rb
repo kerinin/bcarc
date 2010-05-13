@@ -5,6 +5,8 @@ class ProjectsController < ApplicationController
   
   actions :show, :index
   
+  caches_action :show, :cache_path => Proc.new { |c| c.params.merge( {:version => c.read_fragment("project_#{c.params[:project_id]}")} ).delete_if { |k,v| k.starts_with?('utm_') } }
+  
   index.before do
     @projects = Project.random( 6, :conditions => { :priority => 1..3 }).sort_by {rand}
   end
@@ -16,7 +18,7 @@ class ProjectsController < ApplicationController
       @next = @project.videos[0]
     end
     
-    #response.headers['Cache-Control'] = "public, max-age=6400"
+    response.headers['Cache-Control'] = "public, max-age=600"
   end
   
   def map

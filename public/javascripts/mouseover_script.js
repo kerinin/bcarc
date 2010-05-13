@@ -57,20 +57,3 @@ function initCrossFade(start,over_uri){
 	
 }
 
-function testf(e){
-	alert(e);
-}
-
-jQuery(window).bind('load', function init() {
-	jQuery("img[fadeover]").each(function() {
-		initCrossFade(this,this.getAttribute('fadeover') ) 
-	} );
-	
-	jQuery("img[swapover]").each(function() {
-		preload = new Image();
-		preload.src = this.getAttribute('swapover');
-		
-		jQuery(this).hover(swapOver,swapOut);	
-	} );
-} );
-

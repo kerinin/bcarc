@@ -13,7 +13,8 @@ class Plan < ActiveRecord::Base
     :storage => :s3,
     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
     :s3_host_alias => "assets.bcarc.com",
-    :bucket => 'assets.bcarc.com'
+    :bucket => 'assets.bcarc.com',
+    :s3_headers => {'Cache-Control' => 'max-age=31557600'}
     
   validates_attachment_presence :attachment
   
