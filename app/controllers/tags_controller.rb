@@ -13,6 +13,18 @@ class TagsController < ApplicationController
       @all = true
     end
     
+    if params[:by] == 'location'
+      if @projects.show_map_equals(true).count > 0
+        @projects = @projects.show_map_equals(true)
+      
+        @map = GMap.new( "map_div" )
+        @map.control_init( :large_map => true )
+        @map.center_zoom_init( [30.267153,-97.7430608], 10 )
+      else
+        params[:by] = nil
+      end
+    end
+    
     response.headers['Cache-Control'] = "public, max-age=600"
   end
 end

@@ -1,0 +1,12 @@
+<% content_for :head do %>
+  <% @projects.each do |project| %> 
+    <% @map.overlay_init( GMarker.new( [project.latitude,project.longitude], :title => project.name, :info_window => "#{image_tag project.thumbnail.attachment.url(:index)}<br/><h2>#{project.name}</h2>" ) ) %>
+  <% end %>
+  
+  <%= GMap.header %>
+  <%= @map.to_html %>
+<% end %>
+
+<%= @map.div(:width => 800, :height => 600) %>
+
+

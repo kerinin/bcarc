@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => :projects, :action => :index
   
   # Legacy routes
-  map.connect 'Work/All', :controller => :tags, :action => :show
+  #map.all_projects 'Work/All', :controller => :tags, :action => :show
   map.connect 'Work/:id/*other', :controller => :tags, :action => :show
   
   # basic routes
@@ -33,7 +33,6 @@ ActionController::Routing::Routes.draw do |map|
     
     admin.resources :pages, :collection => {:sort => :post}
   end
-  
 
   # Sitemaps
   

@@ -19,9 +19,12 @@
 <% end %>
   
 <div class="content">
-  <% if params[:by] == 'chronology' %>
+  <% case params[:by]
+      when 'chronology' %>
     <%= render :partial => 'by_chronology' %>
-  <% else %>
+  <%  when 'location' %>
+    <%= render :partial => 'by_location' %>
+  <%  else %>
     <%= render :partial => 'by_popularity' %>
   <% end %>
 </div>

@@ -1,12 +1,15 @@
 <ul class="nav_left">
-  <li<%= ' class=currentNav' if @all  %>> <%= link_to t('all').downcase, '/Work/All' %> </li>
+  <li<%= ' class=currentNav' if @all  %>> <%= link_to t('all').downcase, tags_path(:by => params[:by]) %> </li>
   <% @tags.each do |tag| %>
-    <li<%=' class=currentNav' if @tag == tag %>> <%= link_to tag.name.downcase, tag_path(tag) %> </li>
+    <li<%=' class=currentNav' if @tag == tag %>> <%= link_to tag.name.downcase, tag_path(tag, :by => params[:by]) %> </li>
   <% end %>
-  <% unless @tag.nil? %>
+  <% unless @controller.class == ProjectsController %>
 	  <li class="li_spacer"><div>|</div></li>
-	  <li<%= ' class=currentNav' unless params[:by] == 'chronology' %>> <%= link_to t('popular').downcase, url_for( :overwrite_params => { :by => 'popularity' } ) %> </li>
+	  <li<%= ' class=currentNav' unless params[:by] == 'chronology' || params[:by] == 'location' %>> <%= link_to t('popular').downcase, url_for( :overwrite_params => { :by => 'popularity' } ) %> </li>
 	  <li<%= ' class=currentNav' if params[:by] == 'chronology' %>> <%= link_to t('_time').downcase, url_for( :overwrite_params => { :by => 'chronology' } ) %> </li>
+	  <% if @projects.show_map_equals(true).count > 0 %>
+	    <li<%= ' class=currentNav' if params[:by] == 'location' %>> <%= link_to t('location').downcase, url_for( :overwrite_params => { :by => 'location' } ) %> </li>
+	  <% end %>
   <% end %>
 </ul>
 
