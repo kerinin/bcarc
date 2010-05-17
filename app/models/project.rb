@@ -1,5 +1,8 @@
 class Project < ActiveRecord::Base  
-  has_many :images, :order => 'position', :dependent => :destroy
+  has_many :images, 
+    :order => 'position', 
+    :dependent => :destroy,
+    :after_add => [ :set_default_thumbnail, Proc.new {|p,i| p.thumbnail.blank?} ]
   has_many :videos, :order => 'position', :dependent => :destroy
   has_many :plans, :order => 'position', :dependent => :destroy
   
@@ -46,5 +49,11 @@ class Project < ActiveRecord::Base
       self.latitude, self.longitude = results[0].latlon
       self.map_accuracy = results[0].accuracy
     end
+  end
+  
+  private
+  
+  def set_default_thumbnail(image)
+    self.thumbnail ||= image
   end
 end

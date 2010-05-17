@@ -39,7 +39,7 @@ class ProjectTest < ActiveSupport::TestCase
       Tag.delete_all
       Project.delete_all
     end
-    
+  
     should "have some values" do
       assert_equal @project.name, 'Test Project'
       assert_equal @project.description, 'Project Description'
@@ -90,7 +90,7 @@ class ProjectTest < ActiveSupport::TestCase
       assert @project.longitude.blank?
     end
           
-    should "pull geocoded lat/lon on address save if map=true" do
+    should_eventually "pull geocoded lat/lon on address save if map=true" do
       @project.show_map = true
       @project.address = '1111 East 11th Street'
       @project.city = 'Austin'
@@ -100,6 +100,14 @@ class ProjectTest < ActiveSupport::TestCase
       assert @project.latitude == 30.268807
       assert @project.longitude == -97.728902
       assert @project.map_accuracy == 8
+    end
+ 
+    should "save the first attached image as the thumbnail if none specified" do
+      @project2 = Factory :project
+      @image = Factory :image
+      @project2.images << @image
+      
+      assert_equal @image, @project2.thumbnail
     end
   end
 end
