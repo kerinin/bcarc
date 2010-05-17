@@ -421,6 +421,11 @@ div.work_container img, div.work_container a {
 	display:inline;
 }
 
+#map_div h2 {
+	color: black;
+	padding: 0;
+}
+
 .description {
 	text-align: right;
 	width: 380px;
