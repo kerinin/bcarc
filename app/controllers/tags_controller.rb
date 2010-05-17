@@ -19,7 +19,7 @@ class TagsController < ApplicationController
       
         @map = GMap.new( "map_div" )
         @map.control_init( :large_map => true )
-        @map.center_zoom_init( [30.267153,-97.7430608], 10 )
+        #@map.center_zoom_init( [30.267153,-97.7430608], 10 )
       else
         params[:by] = nil
       end

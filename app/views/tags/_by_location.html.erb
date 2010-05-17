@@ -1,9 +1,16 @@
 <% content_for :head do %>
-  <% @projects.each do |project| %> 
-    <% @map.overlay_init( GMarker.new( [project.latitude,project.longitude], :title => project.name, :info_window => "#{image_tag project.thumbnail.attachment.url(:index)}<br/><h2>#{project.name}</h2>" ) ) %>
-  <% end %>
+  <%
+  markers = @projects.map do |project|
+    GMarker.new( [project.latitude,project.longitude], :title => project.name, :info_window => "#{image_tag project.thumbnail.attachment.url(:index)}<br/><h2>#{project.name}</h2>" )
+  end
+
+  group = GMarkerGroup.new(true, markers)
+  @map.overlay_global_init( group, 'markerGroup' )
+  @map.record_init group.center_and_zoom_on_markers
+  %>
   
   <%= GMap.header %>
+  <%= javascript_include_tag("markerGroup") %>
   <%= @map.to_html %>
 <% end %>
 
