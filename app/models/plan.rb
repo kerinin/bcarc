@@ -17,6 +17,7 @@ class Plan < ActiveRecord::Base
     :s3_headers => {'Cache-Control' => 'max-age=31557600'}
     
   validates_attachment_presence :attachment
+  validates_presence_of :name, :project_id
   
   #translates :name
   

@@ -20,6 +20,9 @@ class Image < ActiveRecord::Base
   belongs_to :project
   
   validates_attachment_presence :attachment
+  validates_presence_of :plan_x, :plan_y, :locator_angle, :unless => Proc.new {|i| i.plan_x.blank? && i.plan_y.blank? && i.locator_angle.blank? }
+  validates_presence_of :flickr_id, :if => Proc.new {|i| i.sync_flickr}
+  validates_presence_of :project_id
   
   #translates :name, :description
   

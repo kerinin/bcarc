@@ -3,5 +3,7 @@ class Tag < ActiveRecord::Base
   
   make_permalink :with => :name
   
+  validates_presence_of :name
+  
   #translates :name
 end

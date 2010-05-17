@@ -9,6 +9,9 @@ class Project < ActiveRecord::Base
   
   before_validation :geocode_address, :if => Proc.new {|p| p.show_map && ( p.city_changed? || p.address_changed? ) }, :unless => Proc.new {|p| p.city.empty? }
   
+  validates_presence_of :name
+  validates_presence_of :city, :if => Proc.new {|p| p.show_map}, :message => "City (at minimum) required to show map"
+  
   #has_permalink :name
   make_permalink :with => :name
   

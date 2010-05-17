@@ -2,15 +2,14 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => :projects, :action => :index
   
-  # Legacy routes
-  #map.all_projects 'Work/All', :controller => :tags, :action => :show
-  map.connect 'Work/:id/*other', :controller => :tags, :action => :show
+  # All projects
+  map.connect 'Work', :controller => :tags, :action => :show, :all => true
   
   # basic routes
   map.resources :projects, :as => 'Project', :member => {:map => :get} do |project|
     project.resources :images
     project.resources :videos
-    project.resources :plans, :as => 'maps'
+    project.resources :plans
   end
   
   map.resources :tags, :as => 'Work'
@@ -59,6 +58,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'project/:project_id/plans/:id', :controller => :plans, :action => :show
   map.connect 'projects/:project_id/plans/:id', :controller => :plans, :action => :show
   map.connect 'Projects/:project_id/Plans/:id', :controller => :plans, :action => :show
+  map.connect 'Project/:project_id/maps/:id', :controller => :plans, :action => :show
   
   map.connect '*glob', :controller => :application, :action => :legacy
   

@@ -33,7 +33,7 @@ class Video < ActiveRecord::Base
   before_validation :fetch_thumbnail
   
   validates_attachment_presence :thumbnail
-  validates_presence_of :uri
+  validates_presence_of :uri, :project_id
   
   acts_as_list :scope => :project
   

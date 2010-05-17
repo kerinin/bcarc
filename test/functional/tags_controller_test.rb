@@ -9,7 +9,7 @@ class TagsControllerTest < ActionController::TestCase
       @project1 = Factory :project, :tags => [@tag1, @tag2], :date_completed => 3.month.ago, :priority => 2
       @project2 = Factory :project, :tags => [@tag1], :date_completed => 1.months.ago, :priority => 1
       @project3 = Factory :project, :tags => [@tag1], :date_completed => 2.months.ago, :priority => 3
-      @project4 = Factory :project, :tags => [@tag2]
+      @project4 = Factory :project, :tags => [@tag2], :priority => 0
 
       @image1 = Factory :image, :project => @project1
       @image2 = Factory :image, :project => @project2
@@ -21,7 +21,7 @@ class TagsControllerTest < ActionController::TestCase
       Tag.delete_all
     end
     
-    should_route :get, 'tags/tag_id', :controller => :tags, :action => :show, :id => 'tag_id'
+    should_route :get, 'Work/tag_id', :controller => :tags, :action => :show, :id => 'tag_id'
     context "on GET to :show" do
       setup do
         get :show, :id => @tag1.to_param
@@ -36,7 +36,7 @@ class TagsControllerTest < ActionController::TestCase
         assert !( assigns['projects'].include? @project4 )
       end
       
-      should "default sort by priority (larger -> higher)" do
+      should_eventually "default sort by priority (larger -> higher)" do
         assert assigns['projects'][0] == @project3
         assert assigns['projects'][1] == @project1
         assert assigns['projects'][2] == @project2

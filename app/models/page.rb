@@ -7,6 +7,8 @@ class Page < ActiveRecord::Base
   
   default_scope :order => 'position ASC'
   
+  validates_presence_of :name
+  
   def html_content
     #Wikitext::Parser.new().parse( content.to_s )
     return nil unless content
