@@ -23,7 +23,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.root :controller => :projects, :action => :index
     
     admin.resources :projects do |project|
-      project.resources :images, :collection => {:sort => :post}
+      project.resources :images, :collection => {:sort => :post}, :member => {:pull_flickr => :get}
       project.resources :videos, :collection => {:sort => :post}
       project.resources :plans, :collection => {:sort => :post}
     end

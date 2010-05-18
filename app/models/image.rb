@@ -1,4 +1,6 @@
 class Image < ActiveRecord::Base
+  include ActionView::Helpers::UrlHelper
+  
   attr_accessor :flickr
   
   has_attached_file :attachment, 
@@ -40,23 +42,5 @@ class Image < ActiveRecord::Base
   def destroy
     self.deleted_at = Time.now
     self.save!
-  end
-  
-  def push_data_to_flickr
-    return false if self.flickr_id.blank?
-    
-    flickr.photos.setMeta( self.flickr_id, self.name, self.description )
-  end
-  
-  def pull_data_from_flickr
-    return false if self.flickr_id.blank?
-    
-    flickr_photo = flickr.photos.getInfo( self.flickr_id )
-    self.name = flickr_photo.title
-    self.description = flickr_photo.description unless flickr_photo.description.include? self.project.description[0..20]
-  end
-  
-  def flickr
-    @flickr ||= Flickr.new(FLICKR_CONFIG[:flickr_cache_file], FLICKR_CONFIG[:flickr_key], FLICKR_CONFIG[:flickr_shared_secret])
   end
 end

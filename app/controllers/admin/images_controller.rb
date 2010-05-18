@@ -10,6 +10,10 @@ class Admin::ImagesController < Admin::BaseController
   actions :all
 
   cache_sweeper :project_sweeper, :tag_sweeper
+  
+  update.before do
+    push_data_to_flickr_from @image if @image.sync_flickr == true
+  end
       
   create.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
   update.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
@@ -24,6 +28,14 @@ class Admin::ImagesController < Admin::BaseController
     end
     
     render :nothing => true
+  end
+  
+  def pull_flickr
+    load_object         # From R_C
+    
+    pull_data_from_flickr_to @image
+    
+    redirect_to admin_project_image_path(@image.project, @image)    
   end
   
   private 
@@ -43,5 +55,25 @@ class Admin::ImagesController < Admin::BaseController
       expire_fragment "show_tag_#{params[:id] || :all}_by_chronology"
       expire_fragment "show_tag_#{params[:id] || :all}_by_popularity"
     end
+  end
+  
+  def flickr
+    @flickr ||= Flickr.new(FLICKR_CONFIG[:flickr_cache_file], FLICKR_CONFIG[:flickr_key], FLICKR_CONFIG[:flickr_shared_secret])
+  end
+  
+  def push_data_to_flickr_from(image)
+    return false if image.flickr_id.blank?
+    
+    flickr.photos.setMeta( image.flickr_id, image.name, render_to_string( :partial => 'flickr_description', :locals => {:image => image}) )
+  end
+  
+  def pull_data_from_flickr_to(image)
+    return false if image.flickr_id.blank?
+    
+    flickr_photo = flickr.photos.getInfo( image.flickr_id )
+    image.name = flickr_photo.title
+    image.description = flickr_photo.description unless flickr_photo.description.include? image.project.description[0..20]
+    
+    flash[:notice] = "Data pulled from Flickr!"
   end
 end
