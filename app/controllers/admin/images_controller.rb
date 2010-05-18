@@ -35,7 +35,7 @@ class Admin::ImagesController < Admin::BaseController
     
     pull_data_from_flickr_to @image
     
-    redirect_to admin_project_image_path(@image.project, @image)    
+    redirect_to edit_admin_project_image_path(@image.project, @image)    
   end
   
   private 
