@@ -55,4 +55,12 @@ Rails::Initializer.run do |config|
   
   # Memcached
   require 'memcached'
+  
+  MY_CONFIG = {
+    :flickr_cache_file => "#{RAILS_ROOT}/config/flickr.cache",
+    :flickr_key => "9a17455e2e2bd03c3581c2a994dba905",
+    :flickr_shared_secret => "b3ae752704d1444c",
+    :flickr_id => "28517232@N06",
+    :rflickr_lib => true
+  }
 end
