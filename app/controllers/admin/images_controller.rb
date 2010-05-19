@@ -34,6 +34,7 @@ class Admin::ImagesController < Admin::BaseController
     load_object         # From R_C
     
     pull_data_from_flickr_to @image
+    @image.save!
     
     redirect_to edit_admin_project_image_path(@image.project, @image)    
   end
@@ -64,7 +65,7 @@ class Admin::ImagesController < Admin::BaseController
   def push_data_to_flickr_from(image)
     return false if image.flickr_id.blank?
     
-    flickr.photos.setMeta( image.flickr_id, image.name, render_to_string( :partial => 'flickr_description', :locals => {:image => image}) )
+    flickr.photos.setMeta( image.flickr_id, image.name, render_to_string( :partial => 'flickr_description', :locals => {:image => image}).gsub(/\r/, '') )
   end
   
   def pull_data_from_flickr_to(image)
