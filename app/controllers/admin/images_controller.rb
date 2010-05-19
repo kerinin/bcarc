@@ -11,8 +11,8 @@ class Admin::ImagesController < Admin::BaseController
 
   cache_sweeper :project_sweeper, :tag_sweeper
   
-  update.before do
-    push_data_to_flickr_from @image if @image.sync_flickr == true
+  update.after do
+    push_data_to_flickr_from @image if (@image.sync_flickr == true || params[:sync_flicr] == true)
   end
       
   create.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
