@@ -19,6 +19,7 @@ class Admin::ImagesControllerTest < ActionController::TestCase
     end
     
     teardown do
+      @flickr.photosets.delete(@project.flickr_id) if @project.flickr_id
       Project.delete_all
       Image.delete_all
       Video.delete_all
@@ -62,6 +63,15 @@ class Admin::ImagesControllerTest < ActionController::TestCase
         @flickr_info = @flickr.photos.getInfo(4601892842) 
         assert_equal "Image Name", @flickr_info.title
         assert @flickr_info.description.include? "Image Description"
+      end
+      
+      should "create project's flickr set if it doesn't exist" do
+        assert !(assigns['image'].project.flickr_id.blank?)
+        assert @flickr.photosets.getList( FLICKR_CONFIG[:flickr_id] ).map(&:title).include? assigns['image'].project.name
+      end
+      
+      should "add image to project's flickr set if not already member" do
+        assert @flickr.photosets.getPhotos( assigns['image'].project.flickr_id ).map(&:id).include? assigns['image'].flickr_id
       end
     end
   

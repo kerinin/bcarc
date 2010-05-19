@@ -8,8 +8,8 @@
   <%= render :partial => 'admin/shared/languages' %>
   
   <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name, :size => 100 %>
+    <%= f.label :name %> <%= f.text_field :name, :size => 100 %>
+    <%= f.label :flickr_id, "'Set' ID on Flickr" %> <%= f.text_field :flickr_id %>
   </p>
   <p>
     <%= f.label :keywords %> (for search engines, space-separated)<br />
