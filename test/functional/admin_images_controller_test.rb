@@ -63,6 +63,15 @@ class Admin::ImagesControllerTest < ActionController::TestCase
         assert_equal "Image Name", @flickr_info.title
         assert @flickr_info.description.include? "Image Description"
       end
+      
+      should_eventually "create project's flickr set if it doesn't exist" do
+        assert !(assigns['image'].project.flickr_id.blank?)
+        assert flickr.photosets.getList( FLICKR_CONFIG[:flickr_id] ).map(&:title).include? assigns['image'].project.name
+      end
+      
+      should_eventually "add image to project's flickr set if not already member" do
+        assert flickr.photosets.getPhotos( assigns['image'].project.flickr_id ).map(&:id).include? assigns['image'].flickr_id
+      end
     end
   
     context "on POST to :update with :flickr_sync = false" do
