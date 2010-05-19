@@ -43,6 +43,10 @@ ActionController::Routing::Routes.draw do |map|
 
 
   # 404 (legacy) routes
+  map.connect 'project', :controller => :projects, :action => :index
+  map.connect 'projects', :controller => :projects, :action => :index
+  map.connect 'Projects', :controller => :projects, :action => :index
+  
   map.connect 'project/:id', :controller => :projects, :action => :show
   map.connect 'projects/:id', :controller => :projects, :action => :show
   map.connect 'Projects/:id', :controller => :projects, :action => :show
