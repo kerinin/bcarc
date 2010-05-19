@@ -8,7 +8,8 @@ class Image < ActiveRecord::Base
       :thumb => '55x40#', 
       :thumb_ds => { :geometry => '55x40#', :processors => [:thumbnail, :modulate], :saturation => 0 }, #[:auto_orient, :thumbnail, :modulate], :saturation => 0 },
       :index => '390x180#', 
-      :full => '800x800>'#,
+      :full => '800x800>',
+      :project_description => '400x800>'#,
       #:original => {:processors => [:auto_orient]}
     }, 
     #:processors => [:auto_orient, :thumbnail],
