@@ -62,10 +62,30 @@ class Admin::ImagesController < Admin::BaseController
     @flickr ||= Flickr.new(FLICKR_CONFIG[:flickr_cache_file], FLICKR_CONFIG[:flickr_key], FLICKR_CONFIG[:flickr_shared_secret])
   end
   
+  def set_flickr_meta(image)
+    flickr.photos.setMeta( image.flickr_id, image.name, render_to_string( :partial => 'flickr_description', :locals => {:image => image}).gsub(/\r/, '') )
+  end
+  
+  def add_to_project_set(image)
+    flickr.photosets.addPhoto( image.project.flickr_id, image.flickr_id ) unless flickr.photosets.getPhotos(image.project.flickr_id).map(&:id).include? image.flickr_id
+  end
+  
+  def create_project_set(image)
+    set = flickr.photosets.create( image.project.name, image.flickr_id, image.project.description )
+    image.project.flickr_id = set.id
+    image.project.save!
+  end   
+    
   def push_data_to_flickr_from(image)
     return false if image.flickr_id.blank?
     
-    flickr.photos.setMeta( image.flickr_id, image.name, render_to_string( :partial => 'flickr_description', :locals => {:image => image}).gsub(/\r/, '') )
+    set_flickr_meta image
+    
+    if image.project.flickr_id
+      add_to_project_set image
+    else
+      create_project_set image
+    end
   end
   
   def pull_data_from_flickr_to(image)
