@@ -1,6 +1,6 @@
 class AddProjectsFlickrId < ActiveRecord::Migration
   def self.up
-    add_column :projects, :flickr_id, :integer
+    add_column :projects, :flickr_id, :string
   end
 
   def self.down
