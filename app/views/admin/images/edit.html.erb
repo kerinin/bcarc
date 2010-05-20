@@ -2,6 +2,14 @@
 
 <%= render :partial => 'admin/shared/project_header' %>
 
+<% unless @image.first? %>
+  <%= link_to "Previous Image", edit_admin_project_image_path(@project, @image.higher_item) %>
+<% end %>
+
+<% unless @image.last? %>
+  <%= link_to "Next Image", edit_admin_project_image_path(@project, @image.lower_item) %>
+<% end %>
+
 <% form_for([:admin, @project, @image]) do |f| %>
   <%= f.error_messages %>
   
