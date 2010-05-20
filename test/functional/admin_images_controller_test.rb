@@ -17,7 +17,7 @@ class Admin::ImagesControllerTest < ActionController::TestCase
       @flickr = Flickr.new(FLICKR_CONFIG[:flickr_cache_file], FLICKR_CONFIG[:flickr_key], FLICKR_CONFIG[:flickr_shared_secret])
       @flickr_cache = {:title => @flickr.photos.getInfo(4601892842).title, :description => @flickr.photos.getInfo(4601892842).description }
     end
-    
+
     teardown do
       @flickr.photosets.delete(@project.flickr_id) if @project.flickr_id
       Project.delete_all
@@ -99,6 +99,22 @@ class Admin::ImagesControllerTest < ActionController::TestCase
         @flickr_info = @flickr.photos.getInfo(4601892842) 
         assert_not_equal "Image Name", @flickr_info.title
         assert !( @flickr_info.description.include?("Image Description") )
+      end
+    end
+
+    context "on POST to :update with :flickr_sync = true, nil description" do
+      setup do
+        @image1.sync_flickr = true
+        @image1.description = nil
+        @image1.save!
+        
+        post :update, :project_id => @project.to_param, :id => @image1.to_param
+      end
+      
+      should "update title but not description" do
+        @flickr_info = @flickr.photos.getInfo(4601892842) 
+        assert_equal "Image Name", @flickr_info.title
+        assert !( @flickr_info.description.nil? )        
       end
     end
   end

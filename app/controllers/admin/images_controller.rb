@@ -67,7 +67,11 @@ class Admin::ImagesController < Admin::BaseController
   end
   
   def set_flickr_meta(image)
-    flickr.photos.setMeta( image.flickr_id, image.name, render_to_string( :partial => 'flickr_description', :locals => {:image => image}).gsub(/\r/, '') )
+    if image.name.blank? || image.description.blank?
+      current = flickr.photos.getInfo(image.flickr_id)
+    end
+    
+    flickr.photos.setMeta( image.flickr_id, (image.name || current.title), ( render_to_string( :partial => 'flickr_description', :locals => {:image => image}).gsub(/\r/, '') || current.description ) )
   end
   
   def add_to_project_set(image)
