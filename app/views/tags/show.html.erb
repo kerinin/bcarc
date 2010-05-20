@@ -7,6 +7,9 @@
     		jQuery("div.work_container").hover(showWorkText,hideWorkText);
     	}
     );
+    
+    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Tags', 'View', '<%= @tag.name %>']); } );
+    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Tags', 'Viewstyle', "<%= params[:by] || 'popularity' %>"]); } );
   </script>
 	 
 	<title><%= (@tag.nil? ? 'All' : @tag.name)+' '+t('work') %> @ Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>

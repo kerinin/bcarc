@@ -14,24 +14,20 @@
       
       <%= javascript_include_tag 'mouseover_script', 'plan', 'work', 'google_tracking' %>
       
-      <script type="text/javascript">
-        // init mouseover_script
-        jQuery(document).ready( function() {
-        	jQuery("img[fadeover]").each(function() {
-        		initCrossFade(this,this.getAttribute('fadeover') ) 
-        	} );
+    	<script type="text/javascript">
 
-        	jQuery("img[swapover]").each(function() {
-        		preload = new Image();
-        		preload.src = this.getAttribute('swapover');
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8533404-1']);
+        _gaq.push(['_trackPageview']);
 
-        		jQuery(this).hover(swapOver,swapOut);	
-        	} );
-        	
-        	gaSSDSLoad("UA-8533404-1");
-        } );
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
       </script>
-    	
+      
       <%= yield :head %>
   </head>
   
