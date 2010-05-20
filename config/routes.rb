@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   
   # All projects
   map.connect 'Work', :controller => :tags, :action => :show, :all => true
+  map.connect 'Work/All', :controller => :tags, :action => :show, :all => true
   
   # basic routes
   map.resources :projects, :as => 'Project', :member => {:map => :get} do |project|
