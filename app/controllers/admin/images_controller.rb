@@ -33,8 +33,12 @@ class Admin::ImagesController < Admin::BaseController
   def pull_flickr
     load_object         # From R_C
     
-    pull_data_from_flickr_to @image
-    @image.save!
+    begin
+      pull_data_from_flickr_to @image
+      @image.save!
+    rescue XMLRPC::FaultException
+      flash[:error] = "Error pulling from Flickr! (#{$!})"
+    end
     
     redirect_to edit_admin_project_image_path(@image.project, @image)    
   end
@@ -71,7 +75,7 @@ class Admin::ImagesController < Admin::BaseController
   end
   
   def create_project_set(image)
-    set = flickr.photosets.create( image.project.name, image.flickr_id, image.project.description )
+    set = flickr.photosets.create( image.project.name, image.flickr_id, image.project.description.gsub(/\r/, '') )
     image.project.flickr_id = set.id
     image.project.save!
   end   
@@ -93,7 +97,7 @@ class Admin::ImagesController < Admin::BaseController
     
     flickr_photo = flickr.photos.getInfo( image.flickr_id )
     image.name = flickr_photo.title
-    image.description = flickr_photo.description unless flickr_photo.description.include? image.project.description[0..20]
+    image.description = flickr_photo.description unless flickr_photo.description.nil? || flickr_photo.description.include?( image.project.description[0..20] )
     
     flash[:notice] = "Data pulled from Flickr!"
   end

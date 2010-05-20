@@ -51,6 +51,18 @@ class Admin::ImagesControllerTest < ActionController::TestCase
       end      
     end
     
+    context "on GET to :pull_flickr with incorrect flickr_id" do
+      setup do
+        @image1.flickr_id = 999
+        @image1.save!
+        
+        get :pull_flickr, :project_id => @project.to_param, :id => @image1.to_param
+      end
+      should_respond_with :redirect
+      should_redirect_to('edit image') { edit_admin_project_image_url(@project, @image) }
+      should_set_the_flash_to 'Error pulling from Flickr! (Not Found)'
+    end
+    
     context "on POST to :update with :flickr_sync = true" do
       setup do
         @image1.sync_flickr = true
