@@ -22,6 +22,12 @@
     
   <p style="color: green"><%= flash[:notice] %></p>
 
+  <div id='language_switcher'>
+    <% I18n.available_locales.each do |locale| %>
+	    <%= link_to lang( locale ).downcase, url_for(:locale => locale.to_s) %>
+	  <% end %>
+	</div>
+	
 <%= yield %>
 
 </body>

@@ -1,10 +1,12 @@
+require 'yaml'
+
 class Image < ActiveRecord::Base
   include ActionView::Helpers::UrlHelper
   
   attr_accessor :flickr
   
-  has_attached_file :attachment, 
-    :styles => { 
+  paperclip_params = YAML::load(File.open("#{RAILS_ROOT}/config/paperclip.yml"))[RAILS_ENV.to_sym]
+  params = { :styles => { 
       :thumb => '55x40#', 
       :thumb_ds => { :geometry => '55x40#', :processors => [:thumbnail, :modulate], :saturation => 0 }, #[:auto_orient, :thumbnail, :modulate], :saturation => 0 },
       :index => '390x180#', 
@@ -14,13 +16,10 @@ class Image < ActiveRecord::Base
     }, 
     #:processors => [:auto_orient, :thumbnail],
     :default_style => :index,
-    :url => ":s3_alias_url",
-    :path => "projects/:id/:style/:basename.:extension",
-    :storage => :s3,
-    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
-    :s3_host_alias => "assets.bcarc.com",
-    :bucket => 'assets.bcarc.com',
-    :s3_headers => {'Cache-Control' => 'max-age=31557600'}
+    :path => "projects/:id/:style/:basename.:extension"
+    }
+    
+  has_attached_file :attachment, ( paperclip_params ? params.merge(paperclip_params) : params )
                       
   belongs_to :project
   

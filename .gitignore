@@ -3,4 +3,6 @@ db/schema.rb
 log/*
 tmp/*
 routes.txt
-
+projects/*
+videos/*
+plans/*

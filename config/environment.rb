@@ -62,4 +62,6 @@ Rails::Initializer.run do |config|
     :flickr_shared_secret => "b3ae752704d1444c",
     :flickr_id => "28517232@N06"
   }
+  
+  
 end

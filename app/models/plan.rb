@@ -5,17 +5,14 @@ class Plan < ActiveRecord::Base
   
   acts_as_list :scope => :project
   
-  has_attached_file :attachment, 
-    :styles => { :thumb => '55x40#', :full => '800x800>'},
+  paperclip_params = YAML::load(File.open("#{RAILS_ROOT}/config/paperclip.yml"))[RAILS_ENV.to_sym]
+  params = { :styles => { :thumb => '55x40#', :full => '800x800>'},
     :default_style => :index,
-    :url => ":s3_alias_url",
     :path => "projects/:id/plans/:style/:basename.:extension",
-    :storage => :s3,
-    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
-    :s3_host_alias => "assets.bcarc.com",
-    :bucket => 'assets.bcarc.com',
-    :s3_headers => {'Cache-Control' => 'max-age=31557600'}
+    }
     
+  has_attached_file :attachment, ( paperclip_params ? params.merge(paperclip_params) : params )
+  
   validates_attachment_presence :attachment
   validates_presence_of :name, :project_id
   

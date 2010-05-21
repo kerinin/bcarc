@@ -2,8 +2,9 @@ require 'rexml/document'
 require 'open-uri'
 
 class Video < ActiveRecord::Base
-  has_attached_file :thumbnail, 
-    :styles => { 
+  
+  paperclip_params = YAML::load(File.open("#{RAILS_ROOT}/config/paperclip.yml"))[RAILS_ENV.to_sym]
+  params = { :styles => { 
       :thumb => {
         :geometry => '55x40#', 
         :processors => [:thumbnail, :overlay], 
@@ -17,16 +18,13 @@ class Video < ActiveRecord::Base
         :overlay_size => '55x40', 
         :overlay => File.join(RAILS_ROOT,'public','images','video_overlay.png')
       }
-    }, 
+    },
     :default_style => :thumb,
-    :url => ":s3_alias_url",
-    :path => "videos/:id/:style/:basename.:extension",
-    :storage => :s3,
-    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
-    :s3_host_alias => "assets.bcarc.com",
-    :bucket => 'bcstudio',
-    :s3_headers => {'Cache-Control' => 'max-age=31557600'}
+    :path => "videos/:id/:style/:basename.:extension"
+    }
                  
+  has_attached_file :thumbnail, ( paperclip_params ? params.merge(paperclip_params) : params )
+    
   belongs_to :project
   
   #before_validation_on_create :fetch_thumbnail

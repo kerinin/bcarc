@@ -18,7 +18,7 @@ class Project < ActiveRecord::Base
   #has_permalink :name
   make_permalink :with => :name
   
-  #translates :name, :short, :description
+  translates :name, :short, :description
   
   def kml?
     !( latitude.nil? || longitude.nil? )
