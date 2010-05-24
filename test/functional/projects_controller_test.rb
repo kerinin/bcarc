@@ -38,5 +38,15 @@ class ProjectsControllerTest < ActionController::TestCase
       should_respond_with :success
       should_assign_to :tags
     end
+    
+    context "on GET to :index with locale" do
+      setup do
+        get :index, :locale => :zh
+      end
+      
+      should "set the locale to ZH" do
+        assert_equal :zh, I18n.locale
+      end
+    end
   end
 end

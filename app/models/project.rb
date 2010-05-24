@@ -20,6 +20,11 @@ class Project < ActiveRecord::Base
   
   translates :name, :short, :description
   
+  named_scope :by_priority, :order => 'priority'
+  named_scope :by_date, :order => 'completed_at'
+  named_scope :by_name, :order => 'name'
+  named_scope :to_map, :conditions => { :show_map => true }
+  
   def kml?
     !( latitude.nil? || longitude.nil? )
   end

@@ -109,5 +109,27 @@ class ProjectTest < ActiveSupport::TestCase
       
       assert_equal @image, @project2.thumbnail
     end
+    
+    should "i18n description" do
+      I18n.locale = :en
+      @project.description = 'English'
+      I18n.locale = :fr
+      @project.description = 'French'
+      
+      assert @project.description = 'French'
+      I18n.locale = :en
+      assert @project.description = 'English'
+    end
+    
+    should "i18n name" do
+      I18n.locale = :en
+      @project.name = 'English'
+      I18n.locale = :fr
+      @project.name = 'French'
+      
+      assert @project.name = 'French'
+      I18n.locale = :en
+      assert @project.name = 'English'
+    end
   end
 end

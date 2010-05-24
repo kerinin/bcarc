@@ -7,7 +7,7 @@
 	  <li class="li_spacer"><div>|</div></li>
 	  <li<%= ' class=currentNav' unless params[:by] == 'chronology' || params[:by] == 'location' %>> <%= link_to t('popular').downcase, url_for( :overwrite_params => { :by => 'popularity' } ) %> </li>
 	  <li<%= ' class=currentNav' if params[:by] == 'chronology' %>> <%= link_to t('_time').downcase, url_for( :overwrite_params => { :by => 'chronology' } ) %> </li>
-	  <% if @projects.show_map_equals(true).count > 0 %>
+	  <% if @projects.to_map.count > 0 %>
 	    <li<%= ' class=currentNav' if params[:by] == 'location' %>> <%= link_to t('location').downcase, url_for( :overwrite_params => { :by => 'location' } ) %> </li>
 	  <% end %>
   <% end %>

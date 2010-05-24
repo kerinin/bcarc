@@ -17,7 +17,10 @@
   </p>
   <p>
     <%= f.label :short %><br />
-    <%= f.text_area :short %>
+    <%= f.text_area :short %><br />
+    <% unless I18n.locale == :en %>
+      English Version: "<%= @project.short(:en) %>"
+    <% end %>
   </p>
   <p>
     <%= f.collection_select :tag_ids, Tag.all, :id, :name, { :selected => @project.tag_ids }, { :multiple => true, :name => 'project[tag_ids][]', :size => Tag.count } %>

@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   before_filter :load_tags
-  #before_filter :set_locale_from_url
+  before_filter :set_locale_from_url
   
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password

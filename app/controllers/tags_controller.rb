@@ -7,15 +7,15 @@ class TagsController < ApplicationController
   
   show.before do
     unless params[:all]
-      @projects = @tag.projects.ascend_by_priority
+      @projects = @tag.projects.by_priority
     else
-      @projects = Project.ascend_by_priority
+      @projects = Project.by_priority
       @all = true
     end
     
     if params[:by] == 'location'
-      if @projects.show_map_equals(true).count > 0
-        @projects = @projects.show_map_equals(true)
+      if @projects.to_map.count > 0
+        @projects = @projects.to_map
       
         @map = GMap.new( "map_div" )
         @map.control_init( :large_map => true )
