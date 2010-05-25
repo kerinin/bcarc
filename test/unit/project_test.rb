@@ -131,5 +131,14 @@ class ProjectTest < ActiveSupport::TestCase
       I18n.locale = :en
       assert @project.name = 'English'
     end
+    
+    should "not update permalink if name chaned for other locale" do
+      perm = @project.permalink
+      I18n.locale = :fr
+      @project.name = "Another Name in French"
+      @project.save!
+      
+      assert_equal perm, @project.permalink
+    end
   end
 end

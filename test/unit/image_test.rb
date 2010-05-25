@@ -10,7 +10,7 @@ class ImageTest < ActiveSupport::TestCase
       Image.delete_all
     end
 
-    should_eventually "have some values" do
+    should "have some values" do
       assert_equal "Image Name", @image.name
       assert_equal "Image Description", @image.description
       assert_equal false, @image.sync_flickr

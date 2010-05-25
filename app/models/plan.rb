@@ -16,7 +16,7 @@ class Plan < ActiveRecord::Base
   validates_attachment_presence :attachment
   validates_presence_of :name, :project_id
   
-  #translates :name
+  translates :name
   
   def upload_to_s3
     if self.attachment_file_size.nil?

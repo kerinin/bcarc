@@ -61,4 +61,9 @@ class Project < ActiveRecord::Base
   def set_default_thumbnail(image)
     self.thumbnail ||= image
   end
+  
+  def save_permalink
+    return unless I18n.locale == :en
+    super
+  end
 end

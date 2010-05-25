@@ -5,5 +5,12 @@ class Tag < ActiveRecord::Base
   
   validates_presence_of :name
   
-  #translates :name
+  translates :name
+  
+  private
+  
+  def save_permalink
+    return unless I18n.locale == :en
+    super
+  end
 end

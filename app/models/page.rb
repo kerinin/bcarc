@@ -3,7 +3,7 @@ class Page < ActiveRecord::Base
   
   acts_as_list
   
-  #translates :name, :content
+  translates :name, :content
   
   default_scope :order => 'position ASC'
   
@@ -14,5 +14,12 @@ class Page < ActiveRecord::Base
     return nil unless content
     
     RedCloth.new( content ).to_html
+  end
+  
+  private
+  
+  def save_permalink
+    return unless I18n.locale == :en
+    super
   end
 end

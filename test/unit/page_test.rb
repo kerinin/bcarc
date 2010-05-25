@@ -15,5 +15,37 @@ class PageTest < ActiveSupport::TestCase
       assert_equal @page.content, 'Test Content'
       # i18n
     end
+    
+    should "i18n name" do
+      I18n.locale = :en
+      @page.name = 'English'
+      I18n.locale = :fr
+      @page.name = 'French'
+      
+      assert @page.name = 'French'
+      I18n.locale = :en
+      assert @page.name = 'English'
+    end
+
+
+    should "i18n content" do
+      I18n.locale = :en
+      @page.content = 'English'
+      I18n.locale = :fr
+      @page.content = 'French'
+      
+      assert @page.content = 'French'
+      I18n.locale = :en
+      assert @page.content = 'English'
+    end
+            
+    should "not update permalink if name chaned for other locale" do
+      perm = @page.permalink
+      I18n.locale = :fr
+      @page.name = "Another Name in French"
+      @page.save!
+      
+      assert_equal perm, @page.permalink
+    end
   end
 end
