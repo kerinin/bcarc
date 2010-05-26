@@ -21,7 +21,7 @@ class TagsControllerTest < ActionController::TestCase
       Tag.delete_all
     end
     
-    should_route :get, 'Work/tag_id', :controller => :tags, :action => :show, :id => 'tag_id'
+    should_route :get, 'Work/tag_id', :controller => :tags, :action => :show, :id => 'tag_id', :locale => :en
     context "on GET to :show" do
       setup do
         get :show, :id => @tag1.to_param

@@ -74,3 +74,6 @@ class Test::Unit::TestCase # or class ActiveSupport::TestCase in Rails 2.3.x
     end
   end
 end
+
+# Include default lang on your test requests (test requests doesn't support default_url_options):
+require 'translate_routes_test_helper'

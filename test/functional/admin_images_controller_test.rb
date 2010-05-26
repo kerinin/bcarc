@@ -19,14 +19,14 @@ class Admin::ImagesControllerTest < ActionController::TestCase
     end
 
     teardown do
-      @flickr.photosets.delete(@project.flickr_id) if @project.flickr_id
+      Project.all(:conditions => 'flickr_id IS NOT NULL').each {|p| @flickr.photosets.delete(p.flickr_id) }
       Project.delete_all
       Image.delete_all
       Video.delete_all
       @flickr.photos.setMeta(4601892842, @flickr_cache[:title], @flickr_cache[:description])
     end
         
-    should_route :get, 'admin/projects/project_id/images/image_id/pull_flickr', :controller => 'admin/images', :action => :pull_flickr, :project_id => 'project_id', :id => 'image_id'
+    should_route :get, '/admin/projects/:project_id/Images/:id/pull_flickr', :controller => 'admin/images', :action => :pull_flickr, :project_id => ':project_id', :id => ':id', :locale => :en
     context "on GET to :pull_flickr" do
       setup do
         get :pull_flickr, :project_id => @project.to_param, :id => @image1.to_param

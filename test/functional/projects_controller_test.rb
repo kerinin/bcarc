@@ -18,10 +18,10 @@ class ProjectsControllerTest < ActionController::TestCase
       Video.delete_all
     end
     
-    should_route :get, '', :controller => :projects, :action => :index
+    should_route :get, '', :controller => :projects, :action => :index, :locale => :en
     #should_route :get, 'projects', :controller => :projects, :action => :index
     
-    should_route :get, 'Project/project_id', :controller => :projects, :action => :show, :id => 'project_id'
+    should_route :get, 'Project/project_id', :controller => :projects, :action => :show, :id => 'project_id', :locale => :en
 
     context "on GET to :show" do
       setup do
@@ -41,7 +41,7 @@ class ProjectsControllerTest < ActionController::TestCase
     
     context "on GET to :index with locale" do
       setup do
-        get :index, :locale => :zh
+        get :index, :locale => 'zh'
       end
       
       should "set the locale to ZH" do
