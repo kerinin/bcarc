@@ -10,7 +10,7 @@
       <th>Name</th>
     </li>
 
-  <% @videos.ascend_by_position.each do |video| %>
+  <% @videos.by_position.each do |video| %>
     <li id="item_<%= video.id %>" style="display:table-row", class="draggable">
       <span style="display:table-cell;" class="dragger"><%= image_tag video.thumbnail.url(:thumb) %></span>
       <span style="display:table-cell;" class="dragger"><%=h video.name %></span>

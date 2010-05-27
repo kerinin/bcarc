@@ -37,6 +37,8 @@ class Video < ActiveRecord::Base
   
   #translates :name, :description
   
+  named_scope :by_position, :order => 'position'
+  
   def html_description
     #Wikitext::Parser.new().parse( description.to_s )
     return nil unless description

@@ -18,6 +18,8 @@ class Plan < ActiveRecord::Base
   
   translates :name
   
+  named_scope :by_position, :order => 'position'
+  
   def upload_to_s3
     if self.attachment_file_size.nil?
       begin

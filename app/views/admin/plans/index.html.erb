@@ -9,7 +9,7 @@
       <span style="display:table-cell;">Name</span>
     </li>
 
-  <% @plans.ascend_by_position.each do |plan| %>
+  <% @plans.by_position.each do |plan| %>
     <li id="item_<%= plan.id %>" style="display:table-row", class="draggable">
       <span style="display:table-cell;" class="dragger"><%= image_tag plan.attachment.url(:thumb) %></span>
       <span style="display:table-cell;" class="dragger"><%=h plan.name %></span>
