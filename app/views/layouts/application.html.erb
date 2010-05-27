@@ -32,20 +32,17 @@
   </head>
   
   <body bgcolor="#666666" text="#FFFFFF" link="#FF0000" vlink="#FF0000" alink="#FF0000">
-    <% unless request.compatible_language_from( [I18n.locale] ) %>
-      <% locale = request.compatible_language_from( I18n.available_locales ) %>
-      <% if locale %>
-      	<div id='language_switcher'>
-      	  <%= link_to lang( locale ).downcase, url_for(:locale => locale.to_s) %>
-      	</div>     
-      <% end %> 
+    <% locales = request.user_preferred_languages.map(&:to_sym) & I18n.available_locales.map(&:to_sym) %>
+    <% unless locales.empty? || locales == [:en] %>
+    	<div id='language_switcher'>
+        <% locales.each do |locale| %>
+    	    <%= link_to lang( locale ).downcase, url_for(:locale => locale ) %>
+    	  <% end %>
+    	  <% unless locales.include? :en %>
+    	    <%= link_to lang( :en ).downcase, url_for(:locale => locale ) %>
+    	  <% end %>
+    	</div>     
     <% end %>
-    <div id='language_switcher'>
-      <% I18n.available_locales.each do |locale| %>
-  	    <%= link_to lang( locale ).downcase, url_for(:locale => locale.to_s) %>
-  	  <% end %>
-  	</div>
-
   	
     <div class="container">
       <div class="header" >

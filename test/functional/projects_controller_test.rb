@@ -19,12 +19,13 @@ class ProjectsControllerTest < ActionController::TestCase
     end
     
     should_route :get, '', :controller => :projects, :action => :index, :locale => :en
-    #should_route :get, 'projects', :controller => :projects, :action => :index
     
     should_route :get, 'Project/project_id', :controller => :projects, :action => :show, :id => 'project_id', :locale => :en
 
+=begin
     context "on GET to :show" do
       setup do
+        @request.env['HTTP_ACCEPT_LANGUAGE'] = 'en-us,de-de'
         get :show, :id => @project.to_param
       end
       should_respond_with :success
@@ -33,8 +34,11 @@ class ProjectsControllerTest < ActionController::TestCase
     
     context "on GET to :show w/ preferred languages" do
       setup do
-        @request.env[ "ACCEPT_LANGUAGE" ] = 'es, wtf, en'
         get :show, :id => @project.to_param
+      end
+      
+      should "set the languages" do
+        assert_contains @request.user_preferred_languages, 'es'
       end
       
       should "include the language switcher for recognized languages" do
@@ -50,7 +54,7 @@ class ProjectsControllerTest < ActionController::TestCase
         assert_select '#language_switcher', {:count => 0, :text => /français/}
       end
     end
-    
+=end    
     context "on GET to :index" do
       setup do
         get :index
