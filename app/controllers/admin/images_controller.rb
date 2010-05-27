@@ -10,10 +10,6 @@ class Admin::ImagesController < Admin::BaseController
   actions :all
 
   cache_sweeper :project_sweeper, :tag_sweeper
-  
-  update.after do
-    push_data_to_flickr_from @image if (@image.sync_flickr == true || params[:sync_flicr] == true)
-  end
       
   create.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
   update.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
@@ -34,12 +30,13 @@ class Admin::ImagesController < Admin::BaseController
     load_object         # From R_C
     
     begin
-      pull_data_from_flickr_to @image
+      @image.pull_data_from_flickr
       @image.save!
     rescue XMLRPC::FaultException
       flash[:error] = "Error pulling from Flickr! (#{$!})"
     end
     
+    flash[:notice] = "Data pulled from Flickr!"
     redirect_to edit_admin_project_image_path(@image.project, @image)    
   end
   
@@ -60,49 +57,5 @@ class Admin::ImagesController < Admin::BaseController
       expire_fragment "show_tag_#{params[:id] || :all}_by_chronology"
       expire_fragment "show_tag_#{params[:id] || :all}_by_popularity"
     end
-  end
-  
-  def flickr
-    @flickr ||= Flickr.new(FLICKR_CONFIG[:flickr_cache_file], FLICKR_CONFIG[:flickr_key], FLICKR_CONFIG[:flickr_shared_secret])
-  end
-  
-  def set_flickr_meta(image)
-    if image.name.blank? || image.description.blank?
-      current = flickr.photos.getInfo(image.flickr_id)
-    end
-    
-    flickr.photos.setMeta( image.flickr_id, (image.name || current.title), ( render_to_string( :partial => 'flickr_description', :locals => {:image => image}).gsub(/\r/, '') || current.description ) )
-  end
-  
-  def add_to_project_set(image)
-    flickr.photosets.addPhoto( image.project.flickr_id, image.flickr_id ) unless flickr.photosets.getPhotos(image.project.flickr_id).map(&:id).include? image.flickr_id
-  end
-  
-  def create_project_set(image)
-    set = flickr.photosets.create( image.project.name, image.flickr_id, image.project.description.gsub(/\r/, '') )
-    image.project.flickr_id = set.id
-    image.project.save!
-  end   
-    
-  def push_data_to_flickr_from(image)
-    return false if image.flickr_id.blank?
-    
-    set_flickr_meta image
-    
-    if image.project.flickr_id
-      add_to_project_set image
-    else
-      create_project_set image
-    end
-  end
-  
-  def pull_data_from_flickr_to(image)
-    return false if image.flickr_id.blank?
-    
-    flickr_photo = flickr.photos.getInfo( image.flickr_id )
-    image.name = flickr_photo.title
-    image.description = flickr_photo.description unless flickr_photo.description.nil? || flickr_photo.description.include?( image.project.description[0..20] )
-    
-    flash[:notice] = "Data pulled from Flickr!"
   end
 end
