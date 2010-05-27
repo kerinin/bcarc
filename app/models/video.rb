@@ -27,18 +27,17 @@ class Video < ActiveRecord::Base
     
   belongs_to :project
   
-  #before_validation_on_create :fetch_thumbnail
-  before_validation :fetch_thumbnail
+  before_validation_on_create :fetch_thumbnail
   
-  validates_attachment_presence :thumbnail
+  validates_attachment_presence :thumbnail, :unless => Proc.new {RAILS_ENV == 'test'}
   validates_presence_of :uri, :project_id
   
   acts_as_list :scope => :project
   
-  #translates :name, :description
+  translates :name, :description
   
   named_scope :by_position, :order => 'position'
-  
+
   def html_description
     #Wikitext::Parser.new().parse( description.to_s )
     return nil unless description
@@ -80,7 +79,7 @@ class Video < ActiveRecord::Base
       doc = REXML::Document.new(xml.read)
       image_url = doc.elements['//thumbnail_medium'].text
     else 
-      return false
+      return
     end
     
     # Overlay...

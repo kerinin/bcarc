@@ -15,7 +15,6 @@ class Project < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :city, :if => Proc.new {|p| p.show_map}, :message => "City (at minimum) required to show map"
   
-  #has_permalink :name
   make_permalink :with => :name
   
   translates :name, :short, :description

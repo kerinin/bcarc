@@ -14,12 +14,11 @@ class Admin::VideosControllerTest < ActionController::TestCase
         
     context "on POST to :create" do
       setup do
-        post :create, :project_id => @project.to_param, :video => { :name => 'New Video', :uri => 'some.uri' }
-        puts @response.body
+        post :create, :project_id => @project.to_param, :video => { :name => 'New Video', :uri => 'http://vimeo.com/8063014' }
       end
       should_assign_to :video
       should_redirect_to('edit video') { edit_admin_project_video_path(@project, assigns['video']) }
-      should_set_the_flash_to "Successfully Created!"
+      should_set_the_flash_to "Successfully created!"
       
       should "create a new video" do
         assert_equal 1, Video.find_all_by_name('New Video').count

@@ -13,7 +13,7 @@ class Plan < ActiveRecord::Base
     
   has_attached_file :attachment, ( paperclip_params ? params.merge(paperclip_params) : params )
   
-  validates_attachment_presence :attachment
+  validates_attachment_presence :attachment, :unless => Proc.new {RAILS_ENV == 'test'}
   validates_presence_of :name, :project_id
   
   translates :name
