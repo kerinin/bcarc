@@ -31,12 +31,35 @@ class ProjectsControllerTest < ActionController::TestCase
       should_assign_to :tags
     end
     
+    context "on GET to :show w/ preferred languages" do
+      setup do
+        @request.env[ "ACCEPT_LANGUAGE" ] = 'es, wtf, en'
+        get :show, :id => @project.to_param
+      end
+      
+      should "include the language switcher for recognized languages" do
+        assert_select '#language_switcher', :text => /español/
+        assert_select '#language_switcher', :text => /english/
+      end
+      
+      should "highlight the current language" do
+        assert_select '#language_switcher .current', :text => /english/
+      end
+      
+      should "not include translated languages not in the preferred languages" do
+        assert_select '#language_switcher', {:count => 0, :text => /français/}
+      end
+    end
+    
     context "on GET to :index" do
       setup do
         get :index
       end
       should_respond_with :success
       should_assign_to :tags
+    end
+    
+    context "on GET to :index with preferred locales" do
     end
     
     context "on GET to :index with locale" do
