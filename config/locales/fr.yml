@@ -4,27 +4,27 @@ fr:
   2nd_floor: "2e étage"
   3rd_floor: "3e étage"
   _time: Temps
-  about: Sur
+  about: l'Agence
   all: Tous
   blog: Blog
   commercial: Commercial
-  commercial_work: "Travail Commercial"
+  commercial_work: "Projets Commerciaux"
   construction: Construction
   copyright: "© 2008 LP Studio Bercy Chen. Tous droits réservés"
   cultural: Culturel
-  cultural_work: "Travail Culturel"
+  cultural_work: "Equipements Culturels"
   floor_plans: "Plans"
   hello: "Bonjour tout le monde"
   images: Images
-  master_planning: "Master Planning"
-  master_planning_work: "Master Planning"
-  news: Nouvelles
+  master_planning: "Urbanisme"
+  master_planning_work: "Urbanisme"
+  news: Actualites
   popular: Populaire
-  residential: Résidentiel
-  residential_work: "Travail Résidentiel"
+  residential: Logements
+  residential_work: "Projets Residentiels"
   subscribe: "S&#39;abonner"
   sustainability: Durabilité
-  work: Travail
+  work: Projets
 
   date:
     order: [ :year, :month, :day ]
