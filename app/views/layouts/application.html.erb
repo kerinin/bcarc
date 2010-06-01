@@ -36,10 +36,10 @@
     <% unless locales.empty? || locales == [:en] %>
     	<div id='language_switcher'>
         <% locales.each do |locale| %>
-    	    <%= link_to lang( locale ).downcase, url_for(:locale => locale ) %>
+    	    <%= link_to lang( locale ).downcase, url_for(:locale => locale.to_s ), {:class => (locale == I18n.locale ? 'current' : nil )} %>
     	  <% end %>
     	  <% unless locales.include? :en %>
-    	    <%= link_to lang( :en ).downcase, url_for(:locale => locale ) %>
+    	    <%= link_to lang( :en ).downcase, url_for(:locale => locale.to_s ), {:class => (locale == I18n.locale ? 'current' : nil )} %>
     	  <% end %>
     	</div>     
     <% end %>
