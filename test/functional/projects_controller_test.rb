@@ -10,6 +10,9 @@ class ProjectsControllerTest < ActionController::TestCase
       
       @video1 = Factory :video, :project => @project
       @video2 = Factory :video, :project => @project
+      
+      @plan1 = Factory :plan, :project => @project
+      @plan2 = Factory :plan, :project => @project
     end
     
     teardown do
