@@ -5,7 +5,7 @@ class Tag < ActiveRecord::Base
   
   validates_presence_of :name
   
-  translates :name
+  #translates :name
   
   private
   

@@ -34,7 +34,7 @@ class Video < ActiveRecord::Base
   
   acts_as_list :scope => :project
   
-  translates :name, :description
+  #translates :name, :description
   
   named_scope :by_position, :order => 'position'
 
