@@ -6,6 +6,33 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 
 class ProjectTest < ActiveSupport::TestCase
+  context "Projects" do
+    setup do
+      @active = Factory :project
+      @no_photos = Factory :project
+      @no_tags = Factory :project
+      
+      @image1 = Factory :image, :project => @active
+      @image2 = Factory :image, :project => @no_tags
+      
+      @tag1 = Factory :tag, :projects => [@active, @no_photos]
+    end
+    
+    teardown do
+      Project.delete_all
+      Image.delete_all
+      Tag.delete_all
+    end
+    
+    should "not return projects w/o images in named scope 'active'" do
+      assert_does_not_contain Project.active.all, @no_photos
+    end
+    
+    should "not return projects w/o tags in named scope 'active'" do
+      assert_does_not_contain Project.active.all, @no_tags
+    end
+  end
+  
   context "A project" do
     setup do
       @completed = 1.year.ago
