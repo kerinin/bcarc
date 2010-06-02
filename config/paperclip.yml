@@ -1,7 +1,9 @@
 development:
   :url: :s3_alias_url
   :storage: :s3
-  :s3_credentials: "#{RAILS_ROOT}/config/s3.yml"
+  :s3_credentials: 
+    :access_key_id: 1E413FFGW21C6GDEYJ02
+    :secret_access_key: fEk+mcsyVu/bxoB6mznwu1xriGKfDfYIRYnG2tNH
   :s3_host_alias: "assets.bcarc.com"
   :bucket: 'assets.bcarc.com'
   :s3_headers:
@@ -10,7 +12,9 @@ development:
 production:
   :url: :s3_alias_url
   :storage: :s3
-  :s3_credentials: "#{RAILS_ROOT}/config/s3.yml"
+  :s3_credentials: 
+    :access_key_id: 1E413FFGW21C6GDEYJ02
+    :secret_access_key: fEk+mcsyVu/bxoB6mznwu1xriGKfDfYIRYnG2tNH
   :s3_host_alias: "assets.bcarc.com"
   :bucket: 'assets.bcarc.com'
   :s3_headers:
