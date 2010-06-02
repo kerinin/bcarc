@@ -35,6 +35,12 @@
         });
       </script>
       
+      <script type ="text/javascript">
+        jQuery(document).ready(function(){
+          jQuery('[swapOver]').hover(swapOver,swapOut);
+        })
+      </script>
+      
       <%= yield :head %>
   </head>
   
