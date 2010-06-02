@@ -5,12 +5,13 @@
       <meta http-equiv="X-UA-Compatible" content="chrome=1">
       <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
       
-      <%= stylesheet_link_tag 'css-bcstudio', 'header', 'work', 'project', 'project_images', 'page', 'footer' %>      
+      <%= stylesheet_link_tag 'css-bcstudio', 'header', 'work', 'project', 'project_images', 'page', 'footer', 'tipTip' %>      
       
       <%= javascript_include_tag 'jquery.min' %>
       <%= javascript_include_tag 'prototype' %>
       <%= javascript_include_tag 'scriptaculous/effects' %>
       <%= javascript_include_tag 'raphael-min' %>
+      <%= javascript_include_tag 'jquery.tipTip.minified'%>
       
       <%= javascript_include_tag 'mouseover_script', 'plan', 'work', 'google_tracking' %>
       
@@ -26,6 +27,12 @@
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
 
+      </script>
+      
+      <script type="text/javascript">
+        jQuery(function(){
+          jQuery(".tip").tipTip( {delay: 100});
+        });
       </script>
       
       <%= yield :head %>
@@ -78,6 +85,15 @@
 		      <p><strong>Los Angeles</strong> | 1545 Wilcox Avenue Suite 107 : Los Angeles California 90028 : United States of America | +1 512 481 0092</p>
 		      <p><strong>Asia Pacific</strong> | 7F-1, 333 Chung Hsiao E. Rd. Sec. 4 : Taipei Taiwan : Republic of China | +886 2 2775 5320</p>
 		      <p><a href="mailto:info@bcarc.com">info@bcarc.com</a> | <%= t('copyright') %> | <%= link_to t('subscribe'), "http://eepurl.com/cs8F" %> <%= t('to_our_newsletter').downcase %></p>
+          <div class="badges">
+            <%= link_to image_tag( 'badges/architizer.png' ), 'http://www.architizer.com/en_us/firms/view/bercy-chen-studio-lp/8249/', :title => t('bercy_chen_on_', :network => 'Architizer'), :class => 'tip' %>
+            <%= link_to image_tag( 'badges/behance.png'), 'http://www.behance.net/bcstudio', :title => t('bercy_chen_on_', :network => 'Behance'), :class => 'tip' %>
+            <%= link_to image_tag( 'badges/facebook.png'), 'http://www.facebook.com/pages/Austin/Bercy-Chen-Studio/350315618648', :title => t('bercy_chen_on_', :network => 'Facebook'), :class => 'tip' %>
+            <%= link_to image_tag( 'badges/flickr.png'), 'http://www.flickr.com/photos/bercychenstudio/', :title => t('bercy_chen_on_', :network => 'Flickr'), :class => 'tip' %>
+            <%= link_to image_tag( 'badges/twitter.png'), 'http://twitter.com/BercyChenStudio', :title => t('bercy_chen_on_', :network => 'Twitter'), :class => 'tip' %>
+            <%= link_to image_tag( 'badges/vimeo.png'), 'http://vimeo.com/bcarc', :title => t('bercy_chen_on_', :network => 'Vimeo'), :class => 'tip' %>
+          </div>
+          <p>&nbsp;</p>
 	      </div>
       </div>
   	</div>

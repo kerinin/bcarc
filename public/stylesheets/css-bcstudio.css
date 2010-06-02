@@ -173,3 +173,18 @@ h2 {
 	top: 20px;
 	
 }
+
+.badges {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	height: 24px;
+}
+
+.badges img {
+	display: block;
+}
+
+.badges a {
+	float: left;
+	margin: 4px;
+}
