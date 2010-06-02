@@ -11,11 +11,13 @@
   	</div>
   <% end %>
   
-  <% @project.images.active.all[1..-1].each do |image| %>
-    <%= link_to project_image(image), project_image_path(@project, image), {:class => (image == @object ? 'current_image' : nil)} %>
-  <% end %>
-  <% @project.videos.each do |video| %>
-    <%= link_to project_video(video), project_video_path(@project, video), {:class => (video == @object ? 'current_image' : nil)} %>
+  <% unless @project.images.active.count == 0 %>
+    <% @project.images.active.all[1..-1].each do |image| %>
+      <%= link_to project_image(image), project_image_path(@project, image), {:class => (image == @object ? 'current_image' : nil)} %>
+    <% end %>
+    <% @project.videos.each do |video| %>
+      <%= link_to project_video(video), project_video_path(@project, video), {:class => (video == @object ? 'current_image' : nil)} %>
+    <% end %>
   <% end %>
   
   <% unless @next.nil? %>

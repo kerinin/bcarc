@@ -3,7 +3,7 @@ require 'open-uri'
 
 class Video < ActiveRecord::Base
   
-  paperclip_params = YAML::load(File.open("#{RAILS_ROOT}/config/paperclip.yml"))[RAILS_ENV.to_sym]
+  paperclip_params = YAML::load(File.open("#{RAILS_ROOT}/config/paperclip.yml"))[RAILS_ENV.to_s]
   params = { :styles => { 
       :thumb => {
         :geometry => '55x40#', 
@@ -27,7 +27,7 @@ class Video < ActiveRecord::Base
     
   belongs_to :project
   
-  before_validation_on_create :fetch_thumbnail
+  before_validation_on_create :fetch_thumbnail, :unless => Proc.new {RAILS_ENV == 'test'}
   
   validates_attachment_presence :thumbnail, :unless => Proc.new {RAILS_ENV == 'test'}
   validates_presence_of :uri, :project_id

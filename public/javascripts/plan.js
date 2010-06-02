@@ -27,7 +27,7 @@ function init_plans(){
 		jQuery(this).hover(
 			function(e){ 
 				//show plan
-				plan = jQuery('#plan_'+jQuery(e.target).attr('href').split('maps/')[1])
+				plan = jQuery('#plan_'+jQuery(e.target).attr('href').split('plans/')[1])
 				
 				if( planCurrentView[0] != plan[0] ){
 					currentImage.css('opacity',0);
@@ -36,7 +36,7 @@ function init_plans(){
 				
 			}, function(e){ 
 				//hide plan
-				plan = jQuery('#plan_'+jQuery(e.target).attr('href').split('maps/')[1])
+				plan = jQuery('#plan_'+jQuery(e.target).attr('href').split('plans/')[1])
 				
 				if( planCurrentView[0] != plan[0] ){
 					plan.hide();

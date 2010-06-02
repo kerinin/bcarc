@@ -5,7 +5,7 @@ class Plan < ActiveRecord::Base
   
   acts_as_list :scope => :project
   
-  paperclip_params = YAML::load(File.open("#{RAILS_ROOT}/config/paperclip.yml"))[RAILS_ENV.to_sym]
+  paperclip_params = YAML::load(File.open("#{RAILS_ROOT}/config/paperclip.yml"))[RAILS_ENV.to_s]
   params = { :styles => { :thumb => '55x40#', :full => '800x800>'},
     :default_style => :index,
     :path => "projects/:id/plans/:style/:basename.:extension",

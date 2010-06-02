@@ -25,13 +25,16 @@ class ProjectsControllerTest < ActionController::TestCase
     
     should_route :get, 'Project/project_id', :controller => :projects, :action => :show, :id => 'project_id', :locale => :en
 
-
     context "on GET to :show" do
       setup do
         get :show, :id => @project.to_param
       end
       should_respond_with :success
       should_assign_to :tags
+      
+      should "not show link to map view when no lat/lon" do
+        assert_select 'a', {:count =>0, :text => 'map'}
+      end
     end
   
     context "on GET to :show w/ preferred languages" do
@@ -79,5 +82,39 @@ class ProjectsControllerTest < ActionController::TestCase
         assert_equal :zh, I18n.locale
       end
     end
+  end
+  
+  context "Given project w/ location, show_map -> false" do
+    setup do
+      @project = Factory :project, :thumbnail => Factory(:image), :latitude => 90, :longitude => 90, :show_map => false, :city => 'Austin'
+    end
+    
+    context "on GET to :show" do
+      setup do
+        get :show, :id => @project.to_param
+      end
+      should_respond_with :success
+      
+      should "not show link to map" do
+        assert_select 'a', {:count =>0, :text => 'map'}
+      end
+    end   
+  end
+  
+  context "Given project w/ location, show_map -> true" do
+    setup do
+      @project = Factory :project, :thumbnail => Factory(:image), :show_map => true, :city => 'Austin'
+    end
+    
+    context "on GET to :show" do
+      setup do
+        get :show, :id => @project.to_param
+      end
+      should_respond_with :success
+      
+      should "show link to map" do
+        assert_select 'a', {:count =>1, :text => 'map'}
+      end
+    end   
   end
 end

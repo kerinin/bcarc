@@ -23,12 +23,6 @@ class Project < ActiveRecord::Base
   named_scope :by_date, :order => 'completed_at'
   named_scope :by_name, :order => 'name'
   named_scope :to_map, :conditions => { :show_map => true }
-  named_scope :with_images, :include => :images, :conditions => "images.id IS NOT NULL"
-  named_scope :with_tags, :include => :tags, :conditions => "tags.id IS NOT NULL"
-  
-  def self.active
-    self.with_images.with_tags
-  end
   
   def kml?
     !( latitude.nil? || longitude.nil? )
