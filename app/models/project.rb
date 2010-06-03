@@ -17,7 +17,7 @@ class Project < ActiveRecord::Base
   
   make_permalink :with => :name
   
-  translates :name, :short, :description
+  translates :short, :description
   
   named_scope :by_priority, :order => 'priority'
   named_scope :by_date, :order => 'completed_at'

@@ -6,6 +6,8 @@ class PagesControllerTest < ActionController::TestCase
     setup do
       @page1 = Factory :page
       @page2 = Factory :page
+      
+      @tag = Factory :tag
     end
     
     teardown do

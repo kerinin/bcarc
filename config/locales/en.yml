@@ -31,7 +31,7 @@ en:
   to_our_newsletter: To our Newsletter
   map: Map
   location: Location
-  bercy_chen_on_: Bercy Chen on {{network}}
+  bercy_chen_on_: Bercy Chen on %{network}
 
   date:
     order: [ :year, :month, :day ]
