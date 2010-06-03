@@ -7,3 +7,4 @@ right_aws
 acts_as_list
 RedCloth
 memcached
+i18n --version 0.4.0
