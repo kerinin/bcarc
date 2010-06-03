@@ -52,7 +52,7 @@
     	    <%= link_to lang( locale ).downcase, url_for(:locale => locale.to_s ), {:class => (locale == I18n.locale ? 'current' : nil )} %>
     	  <% end %>
     	  <% unless locales.include? :en %>
-    	    <%= link_to lang( :en ).downcase, url_for(:locale => locale.to_s ), {:class => (locale == I18n.locale ? 'current' : nil )} %>
+    	    <%= link_to lang( :en ).downcase, url_for(:locale => 'en' ), {:class => ('en' == I18n.locale ? 'current' : nil )} %>
     	  <% end %>
     	</div>     
     <% end %>
