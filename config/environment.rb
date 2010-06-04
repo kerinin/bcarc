@@ -65,6 +65,6 @@ Rails::Initializer.run do |config|
   }
 end
 
-#require "i18n/backend/fallbacks"
+require "i18n/backend/fallbacks"
 #I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)       # These lines are listed on Stackoverflow but don't seem required
 #I18n.default_locale = "en"
