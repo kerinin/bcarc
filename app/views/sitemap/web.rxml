@@ -1,64 +1,68 @@
 xml.instruct!
  
 xml.urlset "xmlns" => "http://www.google.com/schemas/sitemap/0.84" do
-  xml.url do
-    xml.loc         "http://bcarc.com/"
-    xml.lastmod     w3c_date(Time.now)
-    xml.changefreq  "always"
-    xml.priority    1
-  end
+  I18n.available_locales.each do |locale|
+    I18n.locale = locale
+    
+    xml.url do
+      xml.loc         root_url()
+      xml.lastmod     w3c_date(Time.now)
+      xml.changefreq  "always"
+      xml.priority    1
+    end
 
-  Tag.all.each do |tag|
-    #I18n.available_locales.each do |locale|
-      xml.url do
-        xml.loc         tag_url(tag) #url_for(:only_path => false, :locale => locale.to_s, :controller => :tags, :action => :show, :id => tag.to_param )
-        xml.lastmod     w3c_date( Time.now )
-        xml.priority    0.9
-      end
-    #end
-  end
+    Tag.all.each do |tag|
+      #I18n.available_locales.each do |locale|
+        xml.url do
+          xml.loc         tag_url(tag) #url_for(:only_path => false, :locale => locale.to_s, :controller => :tags, :action => :show, :id => tag.to_param )
+          xml.lastmod     w3c_date( Time.now )
+          xml.priority    0.9
+        end
+      #end
+    end
       
-  Page.all.each do |page|
-    #I18n.available_locales.each do |locale|
-      xml.url do
-        xml.loc           page_url(page) #url_for(:only_path => false, :locale => locale.to_s, :controller => :plans, :action => :show, :id => page.to_param )
-        xml.lastmod       w3c_date( page.updated_at )
-        xml.priority      0.9
-      end
-    #end
-  end
+    Page.all.each do |page|
+      #I18n.available_locales.each do |locale|
+        xml.url do
+          xml.loc           page_url(page) #url_for(:only_path => false, :locale => locale.to_s, :controller => :plans, :action => :show, :id => page.to_param )
+          xml.lastmod       w3c_date( page.updated_at )
+          xml.priority      0.9
+        end
+      #end
+    end
    
-  Project.all.each do |project|
-    #I18n.available_locales.each do |locale|
-      xml.url do
-        xml.loc         project_url(project) #url_for(:only_path => false, :locale => locale.to_s, :controller => :projects, :action => :show, :id => project.to_param )
-        xml.lastmod     w3c_date( project.updated_at )
-        xml.priority    0.8
-      end
-      
-      project.images.each do |image|
+    Project.all.each do |project|
+      #I18n.available_locales.each do |locale|
         xml.url do
-          xml.loc         project_image_url(project,image) #url_for(:only_path => false, :locale => locale.to_s, :controller => :images, :action => :show, :project_id => project.to_param, :id => image.to_param)
-          xml.lastmod     w3c_date( image.updated_at )
-          xml.priority    0.7
+          xml.loc         project_url(project) #url_for(:only_path => false, :locale => locale.to_s, :controller => :projects, :action => :show, :id => project.to_param )
+          xml.lastmod     w3c_date( project.updated_at )
+          xml.priority    0.8
         end
-      end
       
-      project.videos.each do |video|
-        xml.url do
-          xml.loc         project_video_url(project,video) #url_for(:only_path => false, :locale => locale.to_s, :controller => :videos, :action => :show, :project_id => project.to_param, :id => video.to_param )
-          xml.lastmod     w3c_date( video.updated_at )
-          xml.priority    0.7
+        project.images.each do |image|
+          xml.url do
+            xml.loc         project_image_url(project,image) #url_for(:only_path => false, :locale => locale.to_s, :controller => :images, :action => :show, :project_id => project.to_param, :id => image.to_param)
+            xml.lastmod     w3c_date( image.updated_at )
+            xml.priority    0.7
+          end
         end
-      end
       
-      project.plans.each do |plan|
-        xml.url do
-          xml.loc         project_plan_url(project,plan) #url_for(:only_path => false, :locale => locale.to_s, :controller => :plans, :action => :show, :project_id => project.to_param, :id => plan.to_param )
-          xml.lastmod     w3c_date( plan.updated_at )
-          xml.priority    0.4
+        project.videos.each do |video|
+          xml.url do
+            xml.loc         project_video_url(project,video) #url_for(:only_path => false, :locale => locale.to_s, :controller => :videos, :action => :show, :project_id => project.to_param, :id => video.to_param )
+            xml.lastmod     w3c_date( video.updated_at )
+            xml.priority    0.7
+          end
         end
-      end
-    #end
+      
+        project.plans.each do |plan|
+          xml.url do
+            xml.loc         project_plan_url(project,plan) #url_for(:only_path => false, :locale => locale.to_s, :controller => :plans, :action => :show, :project_id => project.to_param, :id => plan.to_param )
+            xml.lastmod     w3c_date( plan.updated_at )
+            xml.priority    0.4
+          end
+        end
+      #end
+    end
   end
 end
