@@ -17,7 +17,7 @@ class Admin::ImagesController < Admin::BaseController
 
   def sort
     @project = Project.find_by_param(params[:id])
-    @project.images.each do |i|
+    @project.images.active.each do |i|
       i.position = params["image-list"].index(i.id.to_s)+1
 
       i.save
