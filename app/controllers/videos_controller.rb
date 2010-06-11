@@ -16,8 +16,8 @@ class VideosController < ApplicationController
     end
     
     if @video == @project.videos.first
-      if @project.images.count
-        @prev = @project.images.last
+      if @project.images.active.count
+        @prev = @project.images.active.last
       end
     else
       @prev = @project.videos[ @project.videos.index(@video) - 1]

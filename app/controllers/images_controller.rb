@@ -9,16 +9,16 @@ class ImagesController < ApplicationController
   
   show.before do
     @project = @image.project
-    if @image == @project.images.last
+    if @image == @project.images.active.last
       if @project.videos.count
         @next = @project.videos.first
       end
     else
-      @next = @project.images[ @project.images.index(@image) + 1]
+      @next = @project.images.active[ @project.images.active.index(@image) + 1]
     end
     
-    unless @image == @project.images.first
-      @prev = @project.images[ @project.images.index(@image) - 1]
+    unless @image == @project.images.active.first
+      @prev = @project.images.active[ @project.images.active.index(@image) - 1]
     end
     
     response.headers['Cache-Control'] = "public, max-age=600"

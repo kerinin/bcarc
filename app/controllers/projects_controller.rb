@@ -12,8 +12,8 @@ class ProjectsController < ApplicationController
   end
   
   show.before do
-    if @project.images.count > 1
-      @next = @project.images[1]
+    if @project.images.active.count > 1
+      @next = @project.images.active[1]
     elsif @project.videos.count
       @next = @project.videos[0]
     end
