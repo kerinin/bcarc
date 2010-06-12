@@ -14,10 +14,10 @@ class ImagesController < ApplicationController
         @next = @project.videos.first
       end
     else
-      @next = @project.images.active[ @project.images.active.index(@image) + 1]
+      @next = @image.active? ? @project.images.active[ @project.images.active.index(@image) + 1] : @project.images.active[1]
     end
     
-    unless @image == @project.images.active.first
+    unless @image == @project.images.active.first || !@image.active?
       @prev = @project.images.active[ @project.images.active.index(@image) - 1]
     end
     

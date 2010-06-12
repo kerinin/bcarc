@@ -4,6 +4,8 @@ class ImageTest < ActiveSupport::TestCase
   context "An image" do
     setup do
       @image = Factory :image
+      @deleted_image = Factory :image
+      @deleted_image.destroy
     end
 
     teardown do
@@ -34,6 +36,11 @@ class ImageTest < ActiveSupport::TestCase
       
       assert @image.deleted_at.present?
       assert Image.exists? @image
+    end
+    
+    should "respond to active?" do
+      assert @image.active?
+      assert !@deleted_image.active?
     end
   end
 end
