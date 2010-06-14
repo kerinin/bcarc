@@ -36,6 +36,10 @@ class Image < ActiveRecord::Base
   
   after_save :push_data_to_flickr, :if => Proc.new {|i| i.sync_flickr }, :unless => Proc.new {|i| i.flickr_id.blank?}
   
+  def active?
+    self.deleted_at.blank?
+  end
+  
   def html_description
     #Wikitext::Parser.new().parse( description.to_s )
     return nil unless description
