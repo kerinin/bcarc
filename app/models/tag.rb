@@ -5,6 +5,8 @@ class Tag < ActiveRecord::Base
   
   validates_presence_of :name
   
+  named_scope :by_name, :order => 'name'
+  
   #translates :name
   
   private

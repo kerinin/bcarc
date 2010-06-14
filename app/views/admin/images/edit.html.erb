@@ -2,11 +2,11 @@
 
 <%= render :partial => 'admin/shared/project_header' %>
 
-<% unless @image.first? %>
+<% unless @image.higher_item.nil? %>
   <%= link_to "Previous Image", edit_admin_project_image_path(@project, @image.higher_item) %>
 <% end %>
 
-<% unless @image.last? %>
+<% unless @image.lower_item.nil? %>
   <%= link_to "Next Image", edit_admin_project_image_path(@project, @image.lower_item) %>
 <% end %>
 

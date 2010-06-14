@@ -7,7 +7,7 @@
     <th>Name</th>
   </tr>
 
-<% @tags.ascend_by_name.each do |tag| %>
+<% @tags.by_name.each do |tag| %>
   <tr>
     <td><%=h tag.name %></td>
     <td><%= link_to 'Show', tag %></td>
