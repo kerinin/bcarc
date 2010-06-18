@@ -9,7 +9,7 @@ class TagsController < ApplicationController
     unless params[:all]
       @projects = @tag.projects.by_priority
     else
-      @projects = Project.by_priority
+      @projects = Project.active.by_priority
       @all = true
     end
     

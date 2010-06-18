@@ -5,7 +5,8 @@ class ProjectsControllerTest < ActionController::TestCase
     setup do
       @tag = Factory :tag
       
-      @project = Factory :project, :thumbnail => Factory(:image), :tags => [@tag], :priority => 1
+      @project = Factory :project, :thumbnail => Factory(:image), :priority => 1
+      @project.tags << @tag
       @inactive_project = Factory :project, :priority => 1
       
       @image1 = Factory :image, :project => @project
