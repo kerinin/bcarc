@@ -55,13 +55,13 @@ class Project < ActiveRecord::Base
       self.map_accuracy = results[0].accuracy
     end
   end
-  
-  private
-  
+
   def set_has_tags(*args)
     self.has_tags = self.tags.count > 0
     self.save!
   end
+    
+  private
   
   def set_default_thumbnail(image)
     self.thumbnail ||= image
