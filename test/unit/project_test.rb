@@ -42,12 +42,21 @@ class ProjectTest < ActiveSupport::TestCase
       Project.delete_all
     end
   
+    should "set has_tags on" do
+      assert_equal true, @project.has_tags
+      assert_equal true, @project.has_tags?
+    end
+    
     should "be active if it has a tag" do
       assert_contains Project.active, @project
     end
     
     should "not be active it it doesn't have a tag" do
       assert_does_not_contain Project.active, @inactive_project
+    end
+    
+    should "successfully chain scopes" do
+      assert_contains Project.active.random( 6, :conditions => { :priority => 1..3 }), @project
     end
     
     should "have some values" do

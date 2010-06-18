@@ -8,7 +8,7 @@ class Project < ActiveRecord::Base
   
   belongs_to :thumbnail, :class_name => 'Image'
   
-  has_and_belongs_to_many :tags
+  has_and_belongs_to_many :tags, :after_add => :set_has_tags, :after_remove => :set_has_tags
   
   before_validation :geocode_address, :if => Proc.new {|p| p.show_map && ( p.city_changed? || p.address_changed? ) }, :unless => Proc.new {|p| p.city.empty? }
   
@@ -60,6 +60,10 @@ class Project < ActiveRecord::Base
   end
   
   private
+  
+  def set_has_tags(*args)
+    self.has_tags = self.tags.count > 0
+  end
   
   def set_default_thumbnail(image)
     self.thumbnail ||= image

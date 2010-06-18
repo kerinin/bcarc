@@ -3,7 +3,10 @@ require File.dirname(__FILE__) + '/../test_helper'
 class ProjectsControllerTest < ActionController::TestCase
   context "Given data" do
     setup do
-      @project = Factory :project, :thumbnail => Factory(:image)
+      @tag = Factory :tag
+      
+      @project = Factory :project, :thumbnail => Factory(:image), :tags => [@tag], :priority => 1
+      @inactive_project = Factory :project, :priority => 1
       
       @image1 = Factory :image, :project => @project
       @image2 = Factory :image, :project => @project
@@ -71,6 +74,14 @@ class ProjectsControllerTest < ActionController::TestCase
       end
       should_respond_with :success
       should_assign_to :tags
+      
+      should "include active projects" do
+        assert_contains assigns['projects'], @project
+      end
+      
+      should "not include inactive projects" do
+        assert_does_not_contain assigns['projects'], @inactive_project
+      end
     end
     
     context "on GET to :index with locale" do
