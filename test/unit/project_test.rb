@@ -18,10 +18,11 @@ class ProjectTest < ActiveSupport::TestCase
         :address => '100 5th Street',
         :city => 'San Francisco',
         :state => 'CA',
-        :priority => 5,
+        :priority => 2,
         :thumbnail => Factory(:image)
         
-      @inactive_project = Factory :project
+      @inactive_project = Factory :project, :priority => 2
+      @crappy_project = Factory :project, :priority => 8
         
       @plan1 = Factory :plan, :project => @project
       @plan2 = Factory :plan, :project => @project
@@ -42,9 +43,11 @@ class ProjectTest < ActiveSupport::TestCase
       Project.delete_all
     end
   
-    should "set has_tags on" do
+    should "set has_tags" do
       assert_equal true, @project.has_tags
       assert_equal true, @project.has_tags?
+      
+      assert_equal false, @inactive_project.has_tags?
     end
     
     should "be active if it has a tag" do
@@ -56,7 +59,7 @@ class ProjectTest < ActiveSupport::TestCase
     end
     
     should "successfully chain scopes" do
-      assert_contains Project.active.random( 6, :conditions => { :priority => 1..3 }), @project
+      assert_contains Project.active.random( 6, :conditions => { :priority => 1..3 } ), @project
     end
     
     should "have some values" do
@@ -67,7 +70,7 @@ class ProjectTest < ActiveSupport::TestCase
       assert_equal @project.address, '100 5th Street'
       assert_equal @project.city, 'San Francisco'
       assert_equal @project.state, 'CA'
-      assert_equal @project.priority, 5
+      assert_equal @project.priority, 2
     end
     
     should "have associated plans" do

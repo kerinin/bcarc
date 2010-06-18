@@ -19,10 +19,7 @@ class Project < ActiveRecord::Base
   
   translates :short, :description
   
-  named_scope :active,
-    :joins => :tags,
-    :select => "projects.*, COUNT(tags.id) AS t_count",
-    :group => "projects.id", :having => "t_count > 0"
+  named_scope :active, :conditions => { :has_tags => true }
   named_scope :by_priority, :order => 'priority'
   named_scope :by_date, :order => 'completed_at'
   named_scope :by_name, :order => 'name'
@@ -63,6 +60,7 @@ class Project < ActiveRecord::Base
   
   def set_has_tags(*args)
     self.has_tags = self.tags.count > 0
+    self.save!
   end
   
   def set_default_thumbnail(image)
