@@ -19,6 +19,10 @@ class Project < ActiveRecord::Base
   
   translates :short, :description
   
+  named_scope :active,
+    :joins => :tags,
+    :select => "projects.*, COUNT(tags.id) AS t_count",
+    :group => "projects.id", :having => "t_count > 0"
   named_scope :by_priority, :order => 'priority'
   named_scope :by_date, :order => 'completed_at'
   named_scope :by_name, :order => 'name'

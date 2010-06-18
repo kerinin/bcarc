@@ -21,6 +21,8 @@ class ProjectTest < ActiveSupport::TestCase
         :priority => 5,
         :thumbnail => Factory(:image)
         
+      @inactive_project = Factory :project
+        
       @plan1 = Factory :plan, :project => @project
       @plan2 = Factory :plan, :project => @project
       
@@ -40,6 +42,14 @@ class ProjectTest < ActiveSupport::TestCase
       Project.delete_all
     end
   
+    should "be active if it has a tag" do
+      assert_contains Project.active, @project
+    end
+    
+    should "not be active it it doesn't have a tag" do
+      assert_does_not_contain Project.active, @inactive_project
+    end
+    
     should "have some values" do
       assert_equal @project.name, 'Test Project'
       assert_equal @project.description, 'Project Description'
