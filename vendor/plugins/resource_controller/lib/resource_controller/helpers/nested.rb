@@ -55,7 +55,7 @@ module ResourceController
         #
         def parent_object
           if parent? && !parent_singleton? 
-            return parent_model.find_by_param(parent_param) || parent_model.find_by_param(parent_param.gsub(/_/,'-').parameterize.to_s) || parent_model.find(parent_param)
+            return parent_model.find_by_param(parent_param) || parent_model.find_by_param(parent_param.gsub(/_/,'-').parameterize.to_s) || parent_model.find(:first, :conditions => ["legacy_permalinks like ?", "%#{param}%"]) || parent_model.find(parent_param)
           else
             return nil
           end

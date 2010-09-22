@@ -27,5 +27,45 @@ class VideosControllerTest < ActionController::TestCase
       should_respond_with :success
       should_assign_to :tags
     end
+    
+    context "on GET to :show from project with legacy URLs" do
+      setup do
+        previous_param = @project.to_param
+        
+        @project.name = 'New Name 1'
+        @project.save!
+        second_param = @project.to_param
+        
+        @project.name = 'New Name 2'
+        @project.save!
+        
+        get :show, :project_id => previous_param, :id => @video1.to_param
+      end
+      should_respond_with :success
+      
+      should "find the project from original" do
+        assert assigns['project'] == @project
+      end
+    end
+    
+    context "on GET to :show from project with another legacy URL" do
+      setup do
+        previous_param = @project.to_param
+        
+        @project.name = 'New Name 1'
+        @project.save!
+        second_param = @project.to_param
+        
+        @project.name = 'New Name 2'
+        @project.save!
+        
+        get :show, :project_id => second_param, :id => @video1.to_param
+      end
+      should_respond_with :success
+      
+      should "find the project from second" do
+        assert assigns['project'] == @project
+      end
+    end
   end
 end
