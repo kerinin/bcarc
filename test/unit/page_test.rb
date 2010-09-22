@@ -14,6 +14,15 @@ class PageTest < ActiveSupport::TestCase
       assert_equal @page.name, 'Test Page'
       assert_equal @page.content, 'Test Content'
     end
+    
+    should "update legacy_permalinks on save" do
+      old_param = @page.to_param
+      
+      @page.name = 'New Name'
+      @page.save
+      
+      assert_equal "#{old_param}", @page.legacy_permalinks
+    end
   end
   
   context "An i18n'd page" do
