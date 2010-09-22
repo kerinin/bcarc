@@ -43,6 +43,15 @@ class ProjectTest < ActiveSupport::TestCase
       Project.delete_all
     end
   
+    should "update legacy_permalinks on save" do
+      old_param = @project.to_param
+      
+      @project.name = 'New Name'
+      @project.save
+      
+      assert_equal "#{old_param}", @project.legacy_permalinks
+    end
+    
     should "set has_tags" do
       assert_equal true, @project.has_tags
       assert_equal true, @project.has_tags?

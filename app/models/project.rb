@@ -11,6 +11,7 @@ class Project < ActiveRecord::Base
   has_and_belongs_to_many :tags, :after_add => :set_has_tags, :after_remove => :set_has_tags
   
   before_validation :geocode_address, :if => Proc.new {|p| p.show_map && ( p.city_changed? || p.address_changed? ) }, :unless => Proc.new {|p| p.city.empty? }
+  before_save :handle_legacy_permalink
   
   validates_presence_of :name
   validates_presence_of :city, :if => Proc.new {|p| p.show_map}, :message => "City (at minimum) required to show map"
@@ -70,5 +71,11 @@ class Project < ActiveRecord::Base
   def save_permalink
     return unless I18n.locale == :en
     super
+  end
+  
+  def handle_legacy_permalink 
+    if self.name_changed?
+      self.legacy_permalinks = [self.legacy_permalinks, self.to_param].join(' ').strip
+    end
   end
 end

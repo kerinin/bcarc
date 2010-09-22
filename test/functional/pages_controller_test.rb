@@ -24,18 +24,42 @@ class PagesControllerTest < ActionController::TestCase
       should_assign_to :tags
     end
     
-    context "on GET to :show with legacy URL" do
+    context "on GET to :show with legacy URLs" do
       setup do
         previous_param = @page1.to_param
         
-        @page1.name = 'New Name'
+        @page1.name = 'New Name 1'
+        @page1.save!
+        second_param = @page1.to_param
+        
+        @page1.name = 'New Name 2'
         @page1.save!
         
         get :show, :id => previous_param
       end
       should_respond_with :success
       
-      should "find the page" do
+      should "find the page from original" do
+        assert assigns['page'] == @page1
+      end
+    end
+    
+    context "on GET to :show with another legacy URL" do
+      setup do
+        previous_param = @page1.to_param
+        
+        @page1.name = 'New Name 1'
+        @page1.save!
+        second_param = @page1.to_param
+        
+        @page1.name = 'New Name 2'
+        @page1.save!
+        
+        get :show, :id => second_param
+      end
+      should_respond_with :success
+      
+      should "find the page from second" do
         assert assigns['page'] == @page1
       end
     end

@@ -46,7 +46,7 @@ module ResourceController
           @object ||= end_of_association_chain.find_by_param(param.gsub(/_/,'-').parameterize.to_s) unless param.nil?
           
           # Find by legacy permalink
-          @object ||= end_of_association_chain.find(:first, :conditions => ["legacy_permalinks like ?", param]) unless param.nil?
+          @object ||= end_of_association_chain.find(:first, :conditions => ["legacy_permalinks like ?", "%#{param}%"]) unless param.nil?
           
           # Find by ID
           @object ||= end_of_association_chain.find(param) unless param.nil?

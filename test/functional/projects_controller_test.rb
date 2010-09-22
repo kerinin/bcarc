@@ -40,6 +40,46 @@ class ProjectsControllerTest < ActionController::TestCase
         assert_select 'a', {:count =>0, :text => 'map'}
       end
     end
+
+    context "on GET to :show with legacy URLs" do
+      setup do
+        previous_param = @project.to_param
+        
+        @project.name = 'New Name 1'
+        @project.save!
+        second_param = @project.to_param
+        
+        @project.name = 'New Name 2'
+        @project.save!
+        
+        get :show, :id => previous_param
+      end
+      should_respond_with :success
+      
+      should "find the project from original" do
+        assert assigns['project'] == @project
+      end
+    end
+    
+    context "on GET to :show with another legacy URL" do
+      setup do
+        previous_param = @project.to_param
+        
+        @project.name = 'New Name 1'
+        @project.save!
+        second_param = @project.to_param
+        
+        @project.name = 'New Name 2'
+        @project.save!
+        
+        get :show, :id => second_param
+      end
+      should_respond_with :success
+      
+      should "find the project from second" do
+        assert assigns['project'] == @project
+      end
+    end
   
     context "on GET to :show w/ preferred languages" do
       setup do
