@@ -14,6 +14,15 @@ class TagTest < ActiveSupport::TestCase
       assert_equal @tag.name, 'Test Tag'
     end
     
+    should "update legacy_permalinks on save" do
+      old_param = @tag.to_param
+      
+      @tag.name = 'New Name'
+      @tag.save
+      
+      assert_equal "#{old_param}", @tag.legacy_permalinks
+    end
+    
     should "i18n name" do
       I18n.locale = :en
       @tag.name = 'English'

@@ -47,7 +47,47 @@ class TagsControllerTest < ActionController::TestCase
         assert assigns['projects'][2] == @project2
       end
     end
-    
+
+    context "on GET to :show with legacy URLs" do
+     setup do
+       previous_param = @tag1.to_param
+ 
+       @tag1.name = 'New Name 1'
+       @tag1.save!
+       second_param = @tag1.to_param
+ 
+       @tag1.name = 'New Name 2'
+       @tag1.save!
+ 
+       get :show, :id => previous_param
+     end
+     should_respond_with :success
+
+     should "find the tag from original" do
+       assert assigns['tag'] == @tag1
+     end
+    end
+
+    context "on GET to :show with another legacy URL" do
+     setup do
+       previous_param = @tag1.to_param
+ 
+       @tag1.name = 'New Name 1'
+       @tag1.save!
+       second_param = @tag1.to_param
+ 
+       @tag1.name = 'New Name 2'
+       @tag1.save!
+ 
+       get :show, :id => second_param
+     end
+     should_respond_with :success
+
+     should "find the tag from second" do
+       assert assigns['tag'] == @tag1
+     end
+    end
+
     context "on GET to :show all" do
       setup do
         get :show, :all => true
