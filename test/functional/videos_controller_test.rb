@@ -3,7 +3,9 @@ require File.dirname(__FILE__) + '/../test_helper'
 class VideosControllerTest < ActionController::TestCase
   context "Given data" do
     setup do
-      @project = Factory :project, :thumbnail => Factory(:image)
+      @firstProject = Factory :project, :thumbnail => Factory(:image)
+      @project = Factory :project, :thumbnail => Factory(:image), :name => 'Original Name'
+      @lastProject = Factory :project, :thumbnail => Factory(:image)
       
       @image1 = Factory :image, :project => @project
       @image2 = Factory :image, :project => @project
