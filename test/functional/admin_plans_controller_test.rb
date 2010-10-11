@@ -12,6 +12,13 @@ class Admin::PlansControllerTest < ActionController::TestCase
       Plan.delete_all
     end
         
+    context "on GET to :new from project" do
+      setup do
+        get :new, :project_id => @project.to_param
+      end
+      should_respond_with :success
+    end
+    
     context "on POST to :create" do
       setup do
         post :create, :project_id => @project.id, :plan => { :name => 'New Plan' }

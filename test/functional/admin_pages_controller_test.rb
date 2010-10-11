@@ -10,6 +10,13 @@ class Admin::PagesControllerTest < ActionController::TestCase
       Page.delete_all
     end
         
+    context "on GET to :new" do
+      setup do
+        get :new
+      end
+      should_respond_with :success
+    end
+    
     context "on POST to :create" do
       setup do
         post :create, :page => {:name => 'New Page', :content => 'New Content' }

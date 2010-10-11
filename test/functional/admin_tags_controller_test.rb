@@ -10,6 +10,13 @@ class Admin::TagsControllerTest < ActionController::TestCase
       Tag.delete_all
     end
         
+    context "on GET to :new" do
+      setup do
+        get :new
+      end
+      should_respond_with :success
+    end
+    
     context "on POST to :create" do
       setup do
         post :create, :tag => {:name => 'New Tag' }
