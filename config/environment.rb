@@ -29,7 +29,8 @@ Rails::Initializer.run do |config|
   #config.gem "searchlogic", :version => '2.4.10'
   config.gem "right_aws"
   config.gem "acts_as_list"
-  config.gem "RedCloth"
+  #config.gem "RedCloth"
+  config.gem 'RedCloth', :lib => 'redcloth'
   #config.gem "mysql"
   config.gem "memcached"
   #config.gem "i18n", :version => '0.4.0'
