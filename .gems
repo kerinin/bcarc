@@ -7,6 +7,6 @@ acts_as_markup
 right_aws
 aws-s3
 acts_as_list
-RedCloth
+RedCloth --version 4.2.6
 memcached
 i18n --version 0.4.0
