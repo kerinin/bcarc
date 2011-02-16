@@ -39,4 +39,15 @@
 text-align: justify;
 }
 
+.right_align {
+  text-align: right;
+  padding-right: 2em;
+}
 
+div.content table {
+  text-align: left;
+}
+
+table tr td:last-child {
+    width: 250px;
+}
