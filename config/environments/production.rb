@@ -28,4 +28,4 @@ config.action_view.cache_template_loading            = true
 # config.threadsafe!
 
 # Memcached
-# config.cache_store = :mem_cache_store, Memcached::Rails.new
+config.cache_store = :mem_cache_store, Memcached::Rails.new

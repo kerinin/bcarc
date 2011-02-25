@@ -32,7 +32,8 @@ Rails::Initializer.run do |config|
   config.gem 'RedCloth', :lib => 'redcloth'
   #config.gem "RedCloth", :version => '4.2.6'
   #config.gem "mysql"
-  config.gem "memcached"
+  #config.gem "memcached"
+  config.gem "memcached-northscale", :lib => 'memcached'
   #config.gem "i18n", :version => '0.4.0'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
