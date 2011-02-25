@@ -1,7 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :webcam_images
+
   
   map.root :controller => :projects, :action => :index
-  
+
   # All projects
   map.connect 'Work', :controller => :tags, :action => :show, :all => true
   map.connect 'Work/All', :controller => :tags, :action => :show, :all => true

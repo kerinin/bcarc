@@ -48,6 +48,18 @@
     <%= f.text_field :priority %>
   </p>
   <p>
+    <%= f.label :has_webcam %><br />
+    <%= f.check_box :has_webcam %>
+  </p>
+  <p>
+    <%= f.label :webcam_current_url %><br />
+    <%= f.text_field :webcam_current_url %>
+  </p>
+  <p>
+    <%= f.label :webcam_ftp_dir %><br />
+    <%= f.text_field :webcam_ftp_dir %>
+  </p>
+  <p>
     <%= f.submit 'Update' %>
     or
     <%= link_to 'Delete', admin_project_path(@project), :confirm => 'Are you sure?', :method => :delete %>

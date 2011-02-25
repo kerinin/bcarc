@@ -5,6 +5,7 @@ class Project < ActiveRecord::Base
     :after_add => [ :set_default_thumbnail, Proc.new {|p,i| p.thumbnail.blank?} ]
   has_many :videos, :order => 'position', :dependent => :destroy
   has_many :plans, :order => 'position', :dependent => :destroy
+  has_many :webcam_images, :order => 'date', :dependent => :destroy
   
   belongs_to :thumbnail, :class_name => 'Image'
   

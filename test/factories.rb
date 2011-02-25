@@ -15,6 +15,12 @@ Factory.define :image do |i|
   i.attachment File.new("#{RAILS_ROOT}/public/images/logo_01.jpg")
 end
 
+Factory.define :webcam_image do |i|
+  i.date DateTime.now
+  i.project {|p| p.association(:project)}
+  i.attachment File.new("#{RAILS_ROOT}/public/images/logo_01.jpg")
+end
+
 Factory.define :page do |p|
   p.name "Page Name"
   p.content "Page Content"
