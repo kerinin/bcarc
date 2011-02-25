@@ -10,5 +10,5 @@ gem "right_aws"
 gem "aws-s3"
 gem "acts_as_list"
 gem "RedCloth"
-gem "memcached"
+gem "memcached-northscale"
 gem "i18n", '0.4.0'
