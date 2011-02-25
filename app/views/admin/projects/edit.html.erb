@@ -60,6 +60,10 @@
     <%= f.text_field :webcam_ftp_dir %>
   </p>
   <p>
+    <%= f.label :webcam_file_prefix %><br />
+    <%= f.text_field :webcam_file_prefix %>
+  </p>
+  <p>
     <%= f.submit 'Update' %>
     or
     <%= link_to 'Delete', admin_project_path(@project), :confirm => 'Are you sure?', :method => :delete %>
