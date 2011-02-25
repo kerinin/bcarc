@@ -42,9 +42,7 @@ class ProjectsController < ApplicationController
     load_object
 
     @next = @project
-    
-    response.headers['Cache-Control'] = "public, max-age=600"
-        
+
     render :action => :webcam
   end
 end
