@@ -14,7 +14,7 @@ class WebcamImage < ActiveRecord::Base
     }, 
     #:processors => [:auto_orient, :thumbnail],
     :default_style => :index,
-    :path => "projects/:id/webcam_images/:style/:basename.:extension"
+    :path => "projects/:project_id/webcam_images/:style/:basename.:extension"
     }
     
   has_attached_file :attachment, ( paperclip_params ? params.merge(paperclip_params) : params )
@@ -43,12 +43,12 @@ class WebcamImage < ActiveRecord::Base
     require 'net/ftp'
     ftp = Net::FTP.new('ftp.bcarc.com')
     ftp.login(user = "ftpuser", passwd = "rSW0WstxFTJvNNHP")
-    ftp.chdir(self.webcam_ftp_dir)
+    ftp.chdir(self.project.webcam_ftp_dir)
     
-    tempfile = Tempfile.new
-    ftp.getbinaryfile(self.source_url, tempfile)
-    
-    self.attachment = tempfile
-    tempfile.close
+    tempfile = Tempfile.new(self.source_url)
+    ftp.getbinaryfile(self.source_url, tempfile.path)
+
+    self.attachment = tempfile.path
+    self.attachment_file_name = self.source_url
   end
 end

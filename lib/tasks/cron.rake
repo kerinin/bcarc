@@ -9,9 +9,10 @@ task :cron => :environment do
   
   r = /(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})(\d+).jpg/
   
-  Project.where(:has_webcam => true).each do |project|
+  #Project.where(:has_webcam => true).each do |project|
+  Project.all(:conditions => { :has_webcam => true }).each do |project|
     ftp.chdir(project.webcam_ftp_dir)
-    files = ftp.list().keep_if {|v| v =~ r || !WebcamImage.where(:source_url => v).exists? }
+    files = ftp.nlst().select {|v| v=~ r && !WebcamImage.exists?(:source_url => v)}
     files.each do |url|
       begin
         image = WebcamImage.new(:project => project, :source_url => url)
