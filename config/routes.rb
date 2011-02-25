@@ -9,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'Work/All', :controller => :tags, :action => :show, :all => true
   
   # basic routes
-  map.resources :projects, :as => 'Project', :member => {:map => :get} do |project|
+  map.resources :projects, :as => 'Project', :member => {:map => :get, :webcam => :get} do |project|
     project.resources :images
     project.resources :videos
     project.resources :plans

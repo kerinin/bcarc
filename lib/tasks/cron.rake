@@ -12,7 +12,7 @@ task :cron => :environment do
   #Project.where(:has_webcam => true).each do |project|
   Project.all(:conditions => { :has_webcam => true }).each do |project|
     ftp.chdir(project.webcam_ftp_dir)
-    files = ftp.nlst().select {|v| v=~ r && !WebcamImage.exists?(:source_url => v)}
+    files = ftp.nlst().select {|v| v.include?(project.webcam_file_prefix) && v=~ r && !WebcamImage.exists?(:source_url => v)}
     files.each do |url|
       begin
         image = WebcamImage.new(:project => project, :source_url => url)

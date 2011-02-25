@@ -3,6 +3,7 @@ class AddWebcamToProjects < ActiveRecord::Migration
     add_column :projects, :has_webcam, :boolean, :default => false
     add_column :projects, :webcam_current_url, :string
     add_column :projects, :webcam_ftp_dir, :string
+    add_column :projects, :webcam_file_prefix, :string
 
     
     create_table :webcam_images do |i|

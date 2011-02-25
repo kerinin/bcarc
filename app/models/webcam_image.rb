@@ -6,14 +6,9 @@ class WebcamImage < ActiveRecord::Base
   paperclip_params = YAML::load(File.open("#{RAILS_ROOT}/config/paperclip.yml"))[RAILS_ENV.to_s]
   params = { :styles => { 
       :thumb => '55x40#', 
-      :thumb_ds => { :geometry => '55x40#', :processors => [:thumbnail, :modulate], :saturation => 0 }, #[:auto_orient, :thumbnail, :modulate], :saturation => 0 },
-      :index => '390x180#', 
-      :full => '800x800>',
-      :project_description => '400x800>'#,
-      #:original => {:processors => [:auto_orient]}
+      :full => '800x800>'
     }, 
-    #:processors => [:auto_orient, :thumbnail],
-    :default_style => :index,
+    :default_style => :full,
     :path => "projects/:project_id/webcam_images/:style/:basename.:extension"
     }
     
@@ -48,7 +43,7 @@ class WebcamImage < ActiveRecord::Base
     tempfile = Tempfile.new(self.source_url)
     ftp.getbinaryfile(self.source_url, tempfile.path)
 
-    self.attachment = tempfile.path
-    self.attachment_file_name = self.source_url
+    self.attachment = tempfile
+    #self.attachment_file_name = self.source_url
   end
 end

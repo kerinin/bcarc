@@ -33,4 +33,10 @@ class ProjectsController < ApplicationController
     
     render :action => :map
   end
+  
+  def webcam
+    load_object
+    
+    render :action => :webcam
+  end
 end
