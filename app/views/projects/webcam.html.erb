@@ -1,1 +1,30 @@
-webcam!
+<% content_for :head do %>  
+  <script type="text/javascript">
+    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Projects', 'View', '<%= @project.name %>']); } );
+	</script>
+	
+  <title><%= @project.name %> Webcam @ Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>
+
+	<meta name="keywords" content="images <%= @project.tags.map(&:name).join(' ') %> <%= @project.name %>"/>
+  <% if @project.description %>
+	  <meta name="description" content="<%= @project.description %>"/>  
+	<% end %>
+<% end %>
+
+<% content_for :nav_left do %>
+  <%= render :partial => 'shared/project_show_nav' %>
+<% end %>
+
+<%= render :partial => 'shared/project_thumbnails' %>
+
+<div class="content">
+	<div class="media">
+		<center>
+			<div class="image_container">
+			  <%= image_tag (@project.webcam_current_url)%>
+			</div>
+		</center>
+	</div>
+</div>
+
+<%= render :partial => 'shared/project_footer' %>

@@ -18,6 +18,10 @@ class ProjectsController < ApplicationController
       @next = @project.videos[0]
     end
     
+    if @project.has_webcam && !@project.webcam_images.empty?
+      @prev = @project.webcam_images.first
+    end
+    
     response.headers['Cache-Control'] = "public, max-age=600"
   end
   
@@ -36,7 +40,11 @@ class ProjectsController < ApplicationController
   
   def webcam
     load_object
+
+    @next = @project
     
+    response.headers['Cache-Control'] = "public, max-age=600"
+        
     render :action => :webcam
   end
 end

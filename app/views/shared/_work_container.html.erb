@@ -2,9 +2,16 @@
 <% unless thumbnail.nil? %>
   <div class="work_container" >
     <%= image_tag thumbnail.attachment.url(:index), :size => '390x180', :alt => project.name, :class => 'work_thumb' %>
-    <% link_to project_path(project), :class => 'work_text' do %>
-      <h2><%= project.name %></h2>
-      <%= project.short %>
+    <% if project.has_webcam %>
+      <% link_to webcam_project_path(project), :class => 'work_text' do %>
+        <h2><%= project.name %></h2>
+        <%= project.short %>
+      <% end %>
+    <% else %>
+      <% link_to project_path(project), :class => 'work_text' do %>
+        <h2><%= project.name %></h2>
+        <%= project.short %>
+      <% end %>
     <% end %>
   </div>
 <% end %>
