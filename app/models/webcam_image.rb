@@ -37,6 +37,7 @@ class WebcamImage < ActiveRecord::Base
   def do_download_remote_image
     require 'net/ftp'
     ftp = Net::FTP.new('ftp.bcarc.com')
+    ftp.passive = true
     ftp.login(user = "ftpuser", passwd = "rSW0WstxFTJvNNHP")
     ftp.chdir(self.project.webcam_ftp_dir)
     

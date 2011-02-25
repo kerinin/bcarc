@@ -5,6 +5,7 @@ task :cron => :environment do
   # Download webcam image URL's
   require 'net/ftp'
   ftp = Net::FTP.new('ftp.bcarc.com')
+  ftp.passive = true
   ftp.login(user = "ftpuser", passwd = "rSW0WstxFTJvNNHP")
   
   r = /(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})(\d+).jpg/
