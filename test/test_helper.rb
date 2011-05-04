@@ -1,11 +1,11 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
-require 'rubygems'
-require 'test_help'
-require 'will_paginate'
-require 'active_record'
-require 'test/unit'
-require 'logger'
+#require 'rubygems'
+require 'rails/test_help'
+#require 'will_paginate'
+#require 'active_record'
+#require 'test/unit'
+#require 'logger'
 
 class ActiveSupport::TestCase
   # Transactional fixtures accelerate your tests by wrapping each test method
@@ -45,7 +45,7 @@ end
 ActiveRecord::Base.logger = Logger.new(STDERR)
 ActiveRecord::Base.logger.level = Logger::WARN
 
-#require "#{File.dirname(__FILE__)}/factories"
+require "#{File.dirname(__FILE__)}/factories"
 
 I18n.locale = "en-US"
 
@@ -76,4 +76,4 @@ class Test::Unit::TestCase # or class ActiveSupport::TestCase in Rails 2.3.x
 end
 
 # Include default lang on your test requests (test requests doesn't support default_url_options):
-require 'translate_routes_test_helper'
+#require 'translate_routes_test_helper'
