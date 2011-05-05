@@ -3,20 +3,20 @@ require 'open-uri'
 
 class Video < ActiveRecord::Base
   
-  paperclip_params = YAML::load(File.open("#{RAILS_ROOT}/config/paperclip.yml"))[RAILS_ENV.to_s]
+  paperclip_params = YAML::load(File.open("#{Rails.root}/config/paperclip.yml"))[Rails.env.to_s]
   params = { :styles => { 
       :thumb => {
         :geometry => '55x40#', 
         :processors => [:thumbnail, :overlay], 
         :overlay_size => '55x40', 
-        :overlay => File.join(RAILS_ROOT,'public','images','video_overlay.png')
+        :overlay => File.join(Rails.root,'public','images','video_overlay.png')
       },
       :thumb_ds => { 
         :geometry => '55x40#', 
         :processors => [:thumbnail, :modulate, :overlay], 
         :saturation => 0,
         :overlay_size => '55x40', 
-        :overlay => File.join(RAILS_ROOT,'public','images','video_overlay.png')
+        :overlay => File.join(Rails.root,'public','images','video_overlay.png')
       }
     },
     :default_style => :thumb,
@@ -27,16 +27,17 @@ class Video < ActiveRecord::Base
     
   belongs_to :project
   
-  before_validation_on_create :fetch_thumbnail, :unless => Proc.new {RAILS_ENV == 'test'}
+  before_validation :fetch_thumbnail, :unless => Proc.new {Rails.env == 'test'}, :on => :create
   
-  validates_attachment_presence :thumbnail, :unless => Proc.new {RAILS_ENV == 'test'}
+  validates_attachment_presence :thumbnail, :unless => Proc.new {Rails.env == 'test'}
   validates_presence_of :uri, :project_id
   
   acts_as_list :scope => :project
   
   #translates :name, :description
   
-  named_scope :by_position, :order => 'position'
+  scope :by_position, lambda { order(:position) }
+  #named_scope :by_position, :order => 'position'
 
   def html_description
     #Wikitext::Parser.new().parse( description.to_s )

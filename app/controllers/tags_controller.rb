@@ -1,11 +1,13 @@
 class TagsController < ApplicationController
-  resource_controller
+  #resource_controller
   
-  actions :show, :index
+  #actions :show, :index
   
   caches_action :show, :cache_path => Proc.new { |c| c.params.merge( {:version => c.read_fragment(:tags_version)} ).delete_if { |k,v| k.starts_with?('utm_') } }
   
-  show.before do
+  def show
+    @tag = Tag.find(params[:id])
+    
     unless params[:all]
       @projects = @tag.projects.by_priority
     else
@@ -25,5 +27,9 @@ class TagsController < ApplicationController
     end
     
     response.headers['Cache-Control'] = "public, max-age=600"
+    
+    respond_to do |format|
+      format.html # index.html.erb
+    end
   end
 end

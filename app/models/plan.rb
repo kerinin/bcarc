@@ -5,7 +5,7 @@ class Plan < ActiveRecord::Base
   
   acts_as_list :scope => :project
   
-  paperclip_params = YAML::load(File.open("#{RAILS_ROOT}/config/paperclip.yml"))[RAILS_ENV.to_s]
+  paperclip_params = YAML::load(File.open("#{Rails.root}/config/paperclip.yml"))[Rails.root.to_s]
   params = { :styles => { :thumb => '55x40#', :full => '800x800>'},
     :default_style => :index,
     :path => "projects/:id/plans/:style/:basename.:extension",
@@ -13,12 +13,13 @@ class Plan < ActiveRecord::Base
     
   has_attached_file :attachment, ( paperclip_params ? params.merge(paperclip_params) : params )
   
-  validates_attachment_presence :attachment, :unless => Proc.new {RAILS_ENV == 'test'}
+  validates_attachment_presence :attachment, :unless => Proc.new {Rails.env == 'test'}
   validates_presence_of :name, :project_id
   
   #translates :name
   
-  named_scope :by_position, :order => 'position'
+  scope :by_position, lambda { order(:position) }
+  #named_scope :by_position, :order => 'position'
   
   def upload_to_s3
     if self.attachment_file_size.nil?

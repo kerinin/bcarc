@@ -1,16 +1,18 @@
 class VideosController < ApplicationController
   after_filter :expire_thumbnails, :only => [:create, :update, :destroy]
   
-  resource_controller
+  #resource_controller
   
-  belongs_to :project
+  #belongs_to :project
   
-  actions :show
+  #actions :show
   
   caches_action :show, :cache_path => Proc.new { |c| c.params.merge( {:version => c.read_fragment("project_#{c.params[:project_id]}")} ).delete_if { |k,v| k.starts_with?('utm_') } }
   
-  show.before do
+  def show
+    @video = Video.find(params[:id])
     @project = @video.project
+    
     unless @video == @project.videos.last
       @next = @project.videos[ @project.videos.index(@video) + 1]
     end
@@ -24,5 +26,9 @@ class VideosController < ApplicationController
     end
     
     response.headers['Cache-Control'] = "public, max-age=600"
+    
+    respond_to do |format|
+      format.html # index.html.erb
+    end
   end
 end

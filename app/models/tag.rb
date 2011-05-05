@@ -7,7 +7,8 @@ class Tag < ActiveRecord::Base
   
   validates_presence_of :name
   
-  named_scope :by_name, :order => 'name'
+  scope :by_name, lambda { order(:name) }
+  #named_scope :by_name, :order => 'name'
   
   #translates :name
   

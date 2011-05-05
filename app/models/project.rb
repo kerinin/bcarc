@@ -21,11 +21,16 @@ class Project < ActiveRecord::Base
   
   translates :short, :description
   
-  named_scope :active, :conditions => { :has_tags => true }
-  named_scope :by_priority, :order => 'priority'
-  named_scope :by_date, :order => 'completed_at'
-  named_scope :by_name, :order => 'name'
-  named_scope :to_map, :conditions => { :show_map => true }
+  scope :active, lambda { where(:has_tags => true) }
+  #named_scope :active, :conditions => { :has_tags => true }
+  scope :by_priority, lambda { order(:priority) }
+  #named_scope :by_priority, :order => 'priority'
+  scope :by_date, lambda { order(:completed_at) }
+  #named_scope :by_date, :order => 'completed_at'
+  scope :by_name, lambda { order(:name) }
+  #named_scope :by_name, :order => 'name'
+  scope :to_map, lambda { where(:show_map => true) }
+  #named_scope :to_map, :conditions => { :show_map => true }
   
   def kml?
     !( latitude.nil? || longitude.nil? )

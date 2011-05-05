@@ -10,7 +10,8 @@ class Page < ActiveRecord::Base
   
   validates_presence_of :name
   
-  named_scope :by_position, :order => 'position'
+  scope :by_position, lambda { order(:position) }
+  #named_scope :by_position, :order => 'position'
   
   def html_content
     #Wikitext::Parser.new().parse( content.to_s )

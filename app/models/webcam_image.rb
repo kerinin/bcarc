@@ -3,7 +3,7 @@ require 'yaml'
 class WebcamImage < ActiveRecord::Base
   include ActionView::Helpers::UrlHelper
   
-  paperclip_params = YAML::load(File.open("#{RAILS_ROOT}/config/paperclip.yml"))[RAILS_ENV.to_s]
+  paperclip_params = YAML::load(File.open("#{Rails.root}/config/paperclip.yml"))[Rails.env.to_s]
   params = { :styles => { 
       :thumb => '55x40#', 
       :thumb_ds => { :geometry => '55x40#', :processors => [:thumbnail, :modulate], :saturation => 0 }, #[:auto_orient, :thumbnail, :modulate], :saturation => 0 },
@@ -19,7 +19,7 @@ class WebcamImage < ActiveRecord::Base
   
   before_validation :download_remote_image, :date_from_url
   
-  validates_attachment_presence :attachment, :unless => Proc.new {RAILS_ENV == 'test'}
+  validates_attachment_presence :attachment, :unless => Proc.new {Rails.env == 'test'}
   validates_presence_of :project
   
   def date_from_url

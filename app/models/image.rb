@@ -5,7 +5,7 @@ class Image < ActiveRecord::Base
   
   attr_accessor :flickr
   
-  paperclip_params = YAML::load(File.open("#{RAILS_ROOT}/config/paperclip.yml"))[RAILS_ENV.to_s]
+  paperclip_params = YAML::load(File.open("#{Rails.root}/config/paperclip.yml"))[Rails.env.to_s]
   params = { :styles => { 
       :thumb => '55x40#', 
       :thumb_ds => { :geometry => '55x40#', :processors => [:thumbnail, :modulate], :saturation => 0 }, #[:auto_orient, :thumbnail, :modulate], :saturation => 0 },
@@ -32,7 +32,8 @@ class Image < ActiveRecord::Base
   
   acts_as_list :scope => :project
   
-  named_scope :active, :conditions => { :deleted_at => nil }
+  scope :active, lambda { where( {:deleted_at => nil} ) }
+  #named_scope :active, :conditions => { :deleted_at => nil }
   
   after_save :push_data_to_flickr, :if => Proc.new {|i| i.sync_flickr }, :unless => Proc.new {|i| i.flickr_id.blank?}
   

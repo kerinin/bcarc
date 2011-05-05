@@ -2,7 +2,6 @@ $:.unshift(File.dirname(__FILE__) + '/../lib')
 
 require File.expand_path(File.dirname(__FILE__) + "/../../../../config/environment")
 
-
 require 'ym4r_gm'
 require 'test/unit'
 
@@ -55,8 +54,6 @@ class TestGoogleMaps< Test::Unit::TestCase
   end
 
   def test_google_maps_geocoding
-    
-
     placemarks = Geocoding.get("Rue Clovis Paris")
     assert_equal(Geocoding::GEO_SUCCESS,placemarks.status)
     assert_equal(1,placemarks.length)
@@ -70,10 +67,17 @@ class TestGoogleMaps< Test::Unit::TestCase
     assert_equal(Geocoding::GEO_SUCCESS,placemarks.status)
     assert(placemarks.length > 1)
     assert(placemarks[0].latitude != placemarks[1].latitude )
-    
-
   end
-
   
+  def test_gmap_polyline_encoder
+    points = [
+      [37.76, -122.20],
+      [37.77, -122.22],
+      [37.78, -122.19]
+    ]
+    
+    encoded_points = GMapPolylineEncoder.new.encode(points)
+    assert_equal("__neF~dzhVo}@~{Bo}@ozD", encoded_points[:points])
+  end
 end
 

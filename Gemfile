@@ -18,4 +18,6 @@ gem "RedCloth"
 gem "memcached-northscale"
 gem 'translate_routes'
 gem 'globalize3'
+gem 'http_accept_language'
+gem 'paperclip'
 

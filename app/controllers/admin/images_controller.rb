@@ -3,17 +3,17 @@ class Admin::ImagesController < Admin::BaseController
   after_filter :expire_thumbnails, :only => [:create, :update, :destroy]
   after_filter :expire_tags, :only => [:create, :update, :destroy]
   
-  resource_controller
+  #resource_controller
   
-  belongs_to :project
+  #belongs_to :project
   
-  actions :all
+  #actions :all
 
   cache_sweeper :project_sweeper, :tag_sweeper
       
-  create.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
-  update.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
-  destroy.wants.html { redirect_to admin_project_images_path(@project) }
+  #create.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
+  #update.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
+  #destroy.wants.html { redirect_to admin_project_images_path(@project) }
 
   def sort
     @project = Project.find_by_param(params[:id])
