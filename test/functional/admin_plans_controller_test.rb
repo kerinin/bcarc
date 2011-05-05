@@ -16,16 +16,16 @@ class Admin::PlansControllerTest < ActionController::TestCase
       setup do
         get :new, :project_id => @project.to_param
       end
-      should_respond_with :success
+      should respond_with( :success)
     end
     
     context "on POST to :create" do
       setup do
         post :create, :project_id => @project.id, :plan => { :name => 'New Plan' }
       end
-      should_assign_to :plan
-      should_redirect_to('edit plan') { edit_admin_project_plan_path(@project, assigns['plan']) }
-      should_set_the_flash_to "Successfully created!"
+      should assign_to( :plan)
+      should redirect_to('edit plan') { edit_admin_project_plan_path(@project, assigns['plan']) }
+      should set_the_flash_to( "Successfully created!")
       
       should "create a new plan" do
         assert_equal 1, Plan.find_all_by_name('New Plan').count
@@ -36,8 +36,8 @@ class Admin::PlansControllerTest < ActionController::TestCase
       setup do
         put :update, :project_id => @project.id, :id => @plan.id, :plan => { :name => 'Changed Name' }
       end
-      should_assign_to :plan
-      should_redirect_to('edit plan') {edit_admin_project_plan_path(@project, assigns['plan'])}
+      should assign_to( :plan)
+      should redirect_to('edit plan') {edit_admin_project_plan_path(@project, assigns['plan'])}
       
       should "update the plan" do
         assert_equal 'Changed Name', assigns['plan'].name
@@ -48,7 +48,7 @@ class Admin::PlansControllerTest < ActionController::TestCase
       setup do
         get :destroy, :project_id => @project.id, :id => @plan.id
       end
-      should_redirect_to('plan index') {admin_project_plans_path( @project )}
+      should redirect_to('plan index') {admin_project_plans_path( @project )}
       
       should "delete the plan" do
         assert !Plan.exists?( @plan )

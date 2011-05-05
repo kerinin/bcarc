@@ -14,15 +14,15 @@ class Admin::TagsControllerTest < ActionController::TestCase
       setup do
         get :new
       end
-      should_respond_with :success
+      should respond_with( :success)
     end
     
     context "on POST to :create" do
       setup do
         post :create, :tag => {:name => 'New Tag' }
       end
-      should_assign_to :tag
-      should_redirect_to('edit tag') {edit_admin_tag_path(assigns['tag'])}
+      should assign_to( :tag)
+      should redirect_to('edit tag') {edit_admin_tag_path(assigns['tag'])}
       
       should "create a new tag" do
         assert_equal 1, Tag.find_all_by_name('New Tag').count
@@ -33,8 +33,8 @@ class Admin::TagsControllerTest < ActionController::TestCase
       setup do
         put :update, :id => @tag.id, :tag => { :name => 'Changed Name' }
       end
-      should_assign_to :tag
-      should_redirect_to('edit tag') {edit_admin_tag_path(assigns['tag'])}
+      should assign_to( :tag)
+      should redirect_to('edit tag') {edit_admin_tag_path(assigns['tag'])}
       
       should "update the tag" do
         assert_equal 'Changed Name', assigns['tag'].name
@@ -45,7 +45,7 @@ class Admin::TagsControllerTest < ActionController::TestCase
       setup do
         get :destroy, :id => @tag.id
       end
-      should_redirect_to('tag index') {admin_tags_path}
+      should redirect_to('tag index') {admin_tags_path}
       
       should "delete the tag" do
         assert !Tag.exists?( @tag )

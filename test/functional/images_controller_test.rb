@@ -24,14 +24,14 @@ class ImagesControllerTest < ActionController::TestCase
       Video.delete_all
     end
     
-    should_route :get, '/Project/:project_id/Images/:id', :controller => :images, :action => :show, :project_id => ':project_id', :id => ':id', :locale => :en
+    should route( :get, '/Project/:project_id/Images/:id').to( :controller => :images, :action => :show, :project_id => ':project_id', :id => ':id', :locale => :en)
     
     context "on GET to :show from project" do
       setup do
         get :show, :project_id => @project.to_param, :id => @image1.to_param
       end
-      should_respond_with :success
-      should_assign_to :tags
+      should respond_with( :success)
+      should assign_to( :tags)
       
       should "assign the image" do
         assert assigns['image'] == @image1
@@ -42,9 +42,10 @@ class ImagesControllerTest < ActionController::TestCase
       setup do
         get :show, :project_id => @project.to_param, :id => @deleted_image.to_param
       end
-      should_respond_with :success
-      should_assign_to :image, :next
-      should_not_assign_to :prev
+      should respond_with( :success)
+      should assign_to( :image )
+      should assign_to( :next)
+      should_not assign_to( :prev)
       
       should "assign the image" do
         assert_equal @deleted_image, assigns['image']
@@ -68,7 +69,7 @@ class ImagesControllerTest < ActionController::TestCase
         
         get :show, :project_id => previous_param, :id => @image1.to_param
       end
-      should_respond_with :success
+      should respond_with( :success)
       
       should "find the project from original" do
         assert assigns['project'] == @project
@@ -88,7 +89,7 @@ class ImagesControllerTest < ActionController::TestCase
         
         get :show, :project_id => second_param, :id => @image1.to_param
       end
-      should_respond_with :success
+      should respond_with( :success)
       
       should "find the project from second" do
         assert assigns['project'] == @project

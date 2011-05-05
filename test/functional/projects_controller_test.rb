@@ -25,16 +25,16 @@ class ProjectsControllerTest < ActionController::TestCase
       Video.delete_all
     end
     
-    should_route :get, '', :controller => :projects, :action => :index, :locale => :en
+    should route( :get, '').to( :controller => :projects, :action => :index, :locale => :en)
     
-    should_route :get, 'Project/project_id', :controller => :projects, :action => :show, :id => 'project_id', :locale => :en
+    should route( :get, 'Project/project_id').to( :controller => :projects, :action => :show, :id => 'project_id', :locale => :en)
 
     context "on GET to :show" do
       setup do
         get :show, :id => @project.to_param
       end
-      should_respond_with :success
-      should_assign_to :tags
+      should respond_with( :success)
+      should assign_to( :tags)
       
       should "not show link to map view when no lat/lon" do
         assert_select 'a', {:count =>0, :text => 'map'}
@@ -54,7 +54,7 @@ class ProjectsControllerTest < ActionController::TestCase
         
         get :show, :id => previous_param
       end
-      should_respond_with :success
+      should respond_with( :success)
       
       should "find the project from original" do
         assert assigns['project'] == @project
@@ -74,7 +74,7 @@ class ProjectsControllerTest < ActionController::TestCase
         
         get :show, :id => second_param
       end
-      should_respond_with :success
+      should respond_with( :success)
       
       should "find the project from second" do
         assert assigns['project'] == @project
@@ -113,8 +113,8 @@ class ProjectsControllerTest < ActionController::TestCase
       setup do
         get :index
       end
-      should_respond_with :success
-      should_assign_to :tags
+      should respond_with( :success)
+      should assign_to( :tags)
       
       should "include active projects" do
         assert_contains assigns['projects'], @project
@@ -145,7 +145,7 @@ class ProjectsControllerTest < ActionController::TestCase
       setup do
         get :show, :id => @project.to_param
       end
-      should_respond_with :success
+      should respond_with( :success)
       
       should "not show link to map" do
         assert_select 'a', {:count =>0, :text => 'map'}
@@ -162,7 +162,7 @@ class ProjectsControllerTest < ActionController::TestCase
       setup do
         get :show, :id => @project.to_param
       end
-      should_respond_with :success
+      should respond_with( :success)
       
       should "show link to map" do
         assert_select 'a', {:count =>1, :text => 'map'}

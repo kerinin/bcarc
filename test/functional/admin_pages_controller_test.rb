@@ -14,15 +14,15 @@ class Admin::PagesControllerTest < ActionController::TestCase
       setup do
         get :new
       end
-      should_respond_with :success
+      should respond_with( :success)
     end
     
     context "on POST to :create" do
       setup do
         post :create, :page => {:name => 'New Page', :content => 'New Content' }
       end
-      should_assign_to :page
-      should_redirect_to('edit page') {edit_admin_page_path(assigns['page'])}
+      should assign_to( :page)
+      should redirect_to('edit page') {edit_admin_page_path(assigns['page'])}
       
       should "create a new page" do
         assert_equal 1, Page.find_all_by_name('New Page').count
@@ -33,8 +33,8 @@ class Admin::PagesControllerTest < ActionController::TestCase
       setup do
         put :update, :id => @page.id, :page => { :name => 'Changed Name', :content => 'Changed Content' }
       end
-      should_assign_to :page
-      should_redirect_to('edit page') {edit_admin_page_path(assigns['page'])}
+      should assign_to( :page)
+      should redirect_to('edit page') {edit_admin_page_path(assigns['page'])}
       
       should "update the page" do
         assert_equal 'Changed Name', assigns['page'].name
@@ -46,7 +46,7 @@ class Admin::PagesControllerTest < ActionController::TestCase
       setup do
         get :destroy, :id => @page.id
       end
-      should_redirect_to('page index') {admin_pages_path}
+      should redirect_to('page index') {admin_pages_path}
       
       should "delete the page" do
         assert !Page.exists?( @page )

@@ -14,16 +14,16 @@ class Admin::ProjectsControllerTest < ActionController::TestCase
       setup do
         get :new
       end
-      should_respond_with :success
+      should respond_with( :success)
     end
       
     context "on POST to :create" do
       setup do
         post :create, :project => { :name => 'New Project', :description => 'New Description' }
       end
-      should_assign_to :project
-      should_redirect_to('edit project') { edit_admin_project_path(assigns['project']) }
-      should_set_the_flash_to "Successfully created!"
+      should assign_to( :project)
+      should redirect_to('edit project') { edit_admin_project_path(assigns['project']) }
+      should set_the_flash_to( "Successfully created!")
       
       should "create a new project" do
         assert_equal 1, Project.find_all_by_name('New Project').count
@@ -34,8 +34,8 @@ class Admin::ProjectsControllerTest < ActionController::TestCase
       setup do
         put :update, :id => @project.id, :project => { :name => 'Changed Name', :description => 'Changed Description' }
       end
-      should_assign_to :project
-      should_redirect_to('edit project') {edit_admin_project_path(assigns['project'])}
+      should assign_to( :project)
+      should redirect_to('edit project') {edit_admin_project_path(assigns['project'])}
       
       should "update the project" do
         assert_equal 'Changed Name', assigns['project'].name
@@ -47,7 +47,7 @@ class Admin::ProjectsControllerTest < ActionController::TestCase
       setup do
         get :destroy, :id => @project.id
       end
-      should_redirect_to('project index') {admin_projects_path}
+      should redirect_to('project index') {admin_projects_path}
       
       should "delete the video" do
         assert !Project.exists?( @project )

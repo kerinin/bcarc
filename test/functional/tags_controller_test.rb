@@ -26,13 +26,14 @@ class TagsControllerTest < ActionController::TestCase
       Tag.delete_all
     end
     
-    should_route :get, 'Work/tag_id', :controller => :tags, :action => :show, :id => 'tag_id', :locale => :en
+    should route( :get, 'Work/tag_id').to( :controller => :tags, :action => :show, :id => 'tag_id', :locale => :en)
     context "on GET to :show" do
       setup do
         get :show, :id => @tag1.to_param
       end
-      should_respond_with :success
-      should_assign_to :projects, :tags
+      should respond_with( :success)
+      should assign_to( :projects)
+      should assign_to( :tags)
       
       should "filter projects" do
         assert assigns['projects'].include? @project1
@@ -61,7 +62,7 @@ class TagsControllerTest < ActionController::TestCase
  
        get :show, :id => previous_param
      end
-     should_respond_with :success
+     should respond_with( :success)
 
      should "find the tag from original" do
        assert assigns['tag'] == @tag1
@@ -81,7 +82,7 @@ class TagsControllerTest < ActionController::TestCase
  
        get :show, :id => second_param
      end
-     should_respond_with :success
+     should respond_with( :success)
 
      should "find the tag from second" do
        assert assigns['tag'] == @tag1
@@ -92,8 +93,9 @@ class TagsControllerTest < ActionController::TestCase
       setup do
         get :show, :all => true
       end
-      should_respond_with :success
-      should_assign_to :projects, :tags
+      should respond_with( :success)
+      should assign_to( :projects)
+      should assign_to( :tags)
             
       should "include all active projects" do
         assert_contains assigns['projects'], @project1

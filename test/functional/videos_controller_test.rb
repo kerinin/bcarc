@@ -20,14 +20,14 @@ class VideosControllerTest < ActionController::TestCase
       Video.delete_all
     end
 
-    should_route :get, 'Project/project_id/videos/video_id', :controller => :videos, :action => :show, :project_id => 'project_id', :id => 'video_id', :locale => :en
+    should route( :get, 'Project/project_id/videos/video_id').to( :controller => :videos, :action => :show, :project_id => 'project_id', :id => 'video_id', :locale => :en)
 
     context "on GET to :show from project" do
       setup do
         get :show, :project_id => @project.to_param, :id => @video1.to_param
       end
-      should_respond_with :success
-      should_assign_to :tags
+      should respond_with( :success)
+      should assign_to( :tags)
     end
     
     context "on GET to :show from project with legacy URLs" do
@@ -43,7 +43,7 @@ class VideosControllerTest < ActionController::TestCase
         
         get :show, :project_id => previous_param, :id => @video1.to_param
       end
-      should_respond_with :success
+      should respond_with( :success)
       
       should "find the project from original" do
         assert assigns['project'] == @project
@@ -63,7 +63,7 @@ class VideosControllerTest < ActionController::TestCase
         
         get :show, :project_id => second_param, :id => @video1.to_param
       end
-      should_respond_with :success
+      should respond_with( :success)
       
       should "find the project from second" do
         assert assigns['project'] == @project

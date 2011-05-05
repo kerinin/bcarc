@@ -16,16 +16,16 @@ class Admin::VideosControllerTest < ActionController::TestCase
       setup do
         get :new, :project_id => @project.to_param
       end
-      should_respond_with :success
+      should respond_with( :success)
     end
     
     context "on POST to :create" do
       setup do
         post :create, :project_id => @project.to_param, :video => { :name => 'New Video', :uri => 'http://vimeo.com/8063014' }
       end
-      should_assign_to :video
-      should_redirect_to('edit video') { edit_admin_project_video_path(@project, assigns['video']) }
-      should_set_the_flash_to "Successfully created!"
+      should assign_to( :video)
+      should redirect_to('edit video') { edit_admin_project_video_path(@project, assigns['video']) }
+      should set_the_flash_to( "Successfully created!")
       
       should "create a new video" do
         assert_equal 1, Video.find_all_by_name('New Video').count
@@ -36,8 +36,8 @@ class Admin::VideosControllerTest < ActionController::TestCase
       setup do
         put :update, :project_id => @project.to_param, :id => @video.id, :video => { :name => 'Changed Name' }
       end
-      should_assign_to :video
-      should_redirect_to('edit video') {edit_admin_project_video_path(@project, assigns['video'])}
+      should assign_to( :video)
+      should redirect_to('edit video') {edit_admin_project_video_path(@project, assigns['video'])}
       
       should "update the video" do
         assert_equal 'Changed Name', assigns['video'].name

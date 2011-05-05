@@ -14,14 +14,14 @@ class PagesControllerTest < ActionController::TestCase
       Page.delete_all
     end
     
-    should_route :get, 'Page/page_id', :controller => :pages, :action => :show, :id => 'page_id', :locale => :en
+    should route( :get, 'Page/page_id').to( :controller => :pages, :action => :show, :id => 'page_id', :locale => :en)
 
     context "on GET to :show" do
       setup do
         get :show, :id => @page1.to_param
       end
-      should_respond_with :success
-      should_assign_to :tags
+      should respond_with( :success)
+      should assign_to( :tags)
     end
     
     context "on GET to :show with legacy URLs" do
@@ -37,7 +37,7 @@ class PagesControllerTest < ActionController::TestCase
         
         get :show, :id => previous_param
       end
-      should_respond_with :success
+      should respond_with( :success)
       
       should "find the page from original" do
         assert assigns['page'] == @page1
@@ -57,7 +57,7 @@ class PagesControllerTest < ActionController::TestCase
         
         get :show, :id => second_param
       end
-      should_respond_with :success
+      should respond_with( :success)
       
       should "find the page from second" do
         assert assigns['page'] == @page1

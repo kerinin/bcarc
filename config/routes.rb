@@ -8,22 +8,22 @@ Bcrails::Application.routes.draw do
   match 'Work/All', :controller => :tags, :action => :show, :all => true
 
   # basic routes
-  resources :projects, :as => 'Project' do
+  resources :projects, :path => 'Project' do
     member do
       get :map
       get :webcam
     end
     
-    resources :images
-    resources :videos
-    resources :plans
+    resources :images, :path => 'Images'
+    resources :videos, :path => 'Videos'
+    resources :plans, :path => 'Plans'
   end
   
-  resources :tags, :as => 'Work'
+  resources :tags, :path => 'Work'
   
-  resources :pages, :as => 'Page'
+  resources :pages, :path => 'Page'
   
-  resources :plans, :as => 'Plan'
+  resources :plans, :path => 'Plan'
 
   # admin interface
   namespace :admin do
@@ -64,10 +64,10 @@ Bcrails::Application.routes.draw do
   
   # Sitemaps
   
-  match '/sitemap/web.xml', :controller => :sitemap, :action => :web, :as => :web_sitemap
-  match '/sitemap/image.xml', :controller => :sitemap, :action => :image, :as => :image_sitemap
-  match '/sitemap/video.xml', :controller => :sitemap, :action => :video, :as => :video_sitemap
-  match '/sitemap/geo.xml', :controller => :sitemap, :action => :geo, :as => :geo_sitemap
+  match '/sitemap/web.xml', :controller => :sitemap, :action => :web, :path => :web_sitemap
+  match '/sitemap/image.xml', :controller => :sitemap, :action => :image, :path => :image_sitemap
+  match '/sitemap/video.xml', :controller => :sitemap, :action => :video, :path => :video_sitemap
+  match '/sitemap/geo.xml', :controller => :sitemap, :action => :geo, :path => :geo_sitemap
   #match '/sitemap.xml', :controller => :sitemap, :as => :sitemap
 
 =begin

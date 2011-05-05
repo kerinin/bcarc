@@ -3,7 +3,7 @@
   <% @tags.each do |tag| %>
     <li<%=' class=currentNav' if @tag == tag %>> <%= link_to( tag.name.downcase, tag_path(tag, :by => params[:by]) ) unless tag.name.nil? %> </li>
   <% end %>
-  <% unless @controller.class == ProjectsController %>
+  <% unless controller.class == ProjectsController %>
 	  <li class="li_spacer"><div>|</div></li>
 	  <li<%= ' class=currentNav' unless params[:by] == 'chronology' || params[:by] == 'location' %>> <%= link_to t('popular').downcase, url_for( :overwrite_params => { :by => 'popularity' } ) %> </li>
 	  <li<%= ' class=currentNav' if params[:by] == 'chronology' %>> <%= link_to t('_time').downcase, url_for( :overwrite_params => { :by => 'chronology' } ) %> </li>

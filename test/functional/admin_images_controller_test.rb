@@ -11,16 +11,16 @@ class Admin::ImagesControllerTest < ActionController::TestCase
       setup do
         get :new, :project_id => @project.to_param
       end
-      should_respond_with :success
+      should respond_with( :success)
     end
     
     context "on POST to :create" do
      setup do
        post :create, :project_id => @project.to_param, :image => { :name => 'New Image' }
      end
-     should_assign_to :image
-     should_redirect_to('edit image') { edit_admin_project_image_path(@project, assigns['image']) }
-     should_set_the_flash_to "Successfully created!"
+     should assign_to( :image)
+     should redirect_to('edit image') { edit_admin_project_image_path(@project, assigns['image']) }
+     should set_the_flash_to( "Successfully created!")
 
      should "create a new image" do
        assert_equal 1, Image.find_all_by_name('New Image').count
@@ -31,8 +31,8 @@ class Admin::ImagesControllerTest < ActionController::TestCase
      setup do
        put :update, :project_id => @project.to_param, :id => @image.id, :image => { :name => 'Changed Name' }
      end
-     should_assign_to :image
-     should_redirect_to('edit image') {edit_admin_project_image_path(@project, assigns['image'])}
+     should assign_to( :image)
+     should redirect_to('edit image') {edit_admin_project_image_path(@project, assigns['image'])}
 
      should "update the image" do
        assert_equal 'Changed Name', assigns['image'].name
@@ -43,7 +43,7 @@ class Admin::ImagesControllerTest < ActionController::TestCase
      setup do
        get :destroy, :project_id => @project.to_param, :id => @image.id
      end
-     should_redirect_to('image index') {admin_project_images_path( @project )}
+     should redirect_to('image index') {admin_project_images_path( @project )}
 
      should "delete the image" do
        assert !assigns['image'].deleted_at.nil?

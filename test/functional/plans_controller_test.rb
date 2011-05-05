@@ -22,14 +22,14 @@ class PlansControllerTest < ActionController::TestCase
       Plan.delete_all
     end
     
-    should_route :get, 'Project/project_id/plans/plan_id', :controller => :plans, :action => :show, :project_id => 'project_id', :id => 'plan_id', :locale => :en
+    should route( :get, 'Project/project_id/plans/plan_id').to( :controller => :plans, :action => :show, :project_id => 'project_id', :id => 'plan_id', :locale => :en)
 
     context "on GET to :show from project" do
       setup do
         get :show, :project_id => @project.to_param, :id => @plan1.to_param
       end
-      should_respond_with :success
-      should_assign_to :tags
+      should respond_with( :success)
+      should assign_to( :tags)
     end
     
     context "on GET to :show from project with legacy URLs" do
@@ -45,7 +45,7 @@ class PlansControllerTest < ActionController::TestCase
         
         get :show, :project_id => previous_param, :id => @plan1.to_param
       end
-      should_respond_with :success
+      should respond_with( :success)
       
       should "find the project from original" do
         assert assigns['project'] == @project
@@ -65,7 +65,7 @@ class PlansControllerTest < ActionController::TestCase
         
         get :show, :project_id => second_param, :id => @plan1.to_param
       end
-      should_respond_with :success
+      should respond_with( :success)
       
       should "find the project from second" do
         assert assigns['project'] == @project
