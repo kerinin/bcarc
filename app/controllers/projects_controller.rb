@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
   caches_action :show, :cache_path => Proc.new { |c| c.params.merge( {:version => c.read_fragment("project_#{c.params[:project_id]}")} ).delete_if { |k,v| k.starts_with?('utm_') } }
 
   def index
-    @projects = Project.active.random( 6, :conditions => { :priority => 1..3 }).sort_by {rand}
+    @projects = Project.active.where(:priority => 1..3).sample( 6 )
     
     respond_to do |format|
       format.html # index.html.erb
