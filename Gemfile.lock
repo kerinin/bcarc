@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/algorich/find_by_param.git
+  revision: 750353f89fd65f7a27c96500941b9f15d726ec4b
+  specs:
+    find_by_param (0.1.0)
+      activerecord (~> 3.0.3)
+      activesupport (~> 3.0.3)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -107,6 +115,7 @@ DEPENDENCIES
   authlogic
   aws-s3
   factory_girl
+  find_by_param!
   globalize3
   http_accept_language
   memcached-northscale

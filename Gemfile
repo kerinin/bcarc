@@ -20,4 +20,5 @@ gem 'translate_routes'
 gem 'globalize3'
 gem 'http_accept_language'
 gem 'paperclip'
+gem 'find_by_param', :git => 'git://github.com/algorich/find_by_param.git'
 
