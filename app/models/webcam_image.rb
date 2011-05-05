@@ -17,10 +17,10 @@ class WebcamImage < ActiveRecord::Base
                       
   belongs_to :project
   
-  before_validation :download_remote_image, :date_from_url
+  before_create :download_remote_image, :date_from_url
   
   validates_attachment_presence :attachment, :unless => Proc.new {Rails.env == 'test'}
-  validates_presence_of :project
+  validates_presence_of :project, :source_url
   
   def date_from_url
     r = /(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})(\d+)/
@@ -45,7 +45,7 @@ class WebcamImage < ActiveRecord::Base
     tempfile = Tempfile.new(self.source_url)
     ftp.getbinaryfile(self.source_url, tempfile.path)
 
-    self.attachment = tempfile
+    self.attachment = tempfile.path
     #self.attachment_file_name = self.source_url
   end
 end

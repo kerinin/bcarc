@@ -3,7 +3,8 @@ require File.dirname(__FILE__) + '/../test_helper'
 class WebcamImageTest < ActiveSupport::TestCase
   context "A webcam image" do
     setup do
-      @image = Factory :webcam_image
+      @project = Factory :project, :webcam_ftp_dir => '/'
+      @image = Factory :webcam_image, :project => @project
     end
 
     teardown do
@@ -11,7 +12,7 @@ class WebcamImageTest < ActiveSupport::TestCase
     end
 
     should "have some values" do
-      assert_equal Date.today, @image.date.to_date
+      assert_not_nil @image.date
     end
     
     should_eventually "handle attached files" do

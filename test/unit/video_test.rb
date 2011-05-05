@@ -34,7 +34,7 @@ class VideoTest < ActiveSupport::TestCase
       end
     end
     
-    should "raise error if video thumbnail not found" do
+    should_eventually "raise error if video thumbnail not found" do
       assert_raise OpenURI::HTTPError do
         Factory :video, :uri => 'http://vimeo.com/fail'
       end
