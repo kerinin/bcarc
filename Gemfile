@@ -8,7 +8,7 @@ gem 'rails', '3.0.7'
 gem 'sqlite3'
 
 gem "authlogic"
-gem "factory_girl"
+gem "factory_girl_rails"
 gem "shoulda"
 gem "acts_as_markup"
 gem "right_aws"

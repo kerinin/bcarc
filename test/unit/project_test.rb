@@ -60,7 +60,7 @@ class ProjectTest < ActiveSupport::TestCase
     end
     
     should "be active if it has a tag" do
-      assert_contains Project.active, @project
+      assert_contains Project.active.all, @project
     end
     
     should "not be active it it doesn't have a tag" do
@@ -68,7 +68,7 @@ class ProjectTest < ActiveSupport::TestCase
     end
     
     should "successfully chain scopes" do
-      assert_contains Project.active.random( 6, :conditions => { :priority => 1..3 } ), @project
+      assert_contains Project.active.where(:priority => 1..3).sample(6), @project
     end
     
     should "have some values" do
