@@ -24,14 +24,19 @@ class ImagesControllerTest < ActionController::TestCase
       Video.delete_all
     end
     
-    should route( :get, '/Project/:project_id/Images/:id').to( :controller => :images, :action => :show, :project_id => ':project_id', :id => ':id', :locale => :en)
-    
+    should route( :get, '/Project/:project_id/Images/:id').to( :controller => :images, :action => :show, :project_id => ':project_id', :id => ':id', :locale => 'en')
+    should route( :get, '/zh/Project/:project_id/Images/:id').to( :controller => :images, :action => :show, :project_id => ':project_id', :id => ':id', :locale => :zh)
+
     context "on GET to :show from project" do
       setup do
         get :show, :project_id => @project.to_param, :id => @image1.to_param
       end
       should respond_with( :success)
       should assign_to( :tags)
+      
+      should "set default locale" do
+        assert_equal :en, I18n.locale
+      end
       
       should "assign the image" do
         assert assigns['image'] == @image1

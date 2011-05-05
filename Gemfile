@@ -16,7 +16,8 @@ gem "aws-s3"
 gem "acts_as_list"
 gem "RedCloth"
 gem "memcached-northscale"
-gem 'translate_routes'
+#gem 'translate_routes'
+gem 'i18n_routing'
 gem 'globalize3'
 gem 'http_accept_language'
 gem 'paperclip'

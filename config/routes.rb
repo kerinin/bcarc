@@ -1,29 +1,31 @@
 Bcrails::Application.routes.draw do
-  resources :webcam_images
+  scope "/(:locale)", :defaults => {:locale => 'en'} do
+    resources :webcam_images
   
-  root :to => "projects#index"
+    root :to => "projects#index"
 
-  # All projects
-  match 'Work', :controller => :tags, :action => :show, :all => true
-  match 'Work/All', :controller => :tags, :action => :show, :all => true
+    # All projects
+    match 'Work', :controller => :tags, :action => :show, :all => true
+    match 'Work/All', :controller => :tags, :action => :show, :all => true
 
-  # basic routes
-  resources :projects, :path => 'Project' do
-    member do
-      get :map
-      get :webcam
-    end
+    # basic routes
+    resources :projects, :path => 'Project' do
+      member do
+        get :map
+        get :webcam
+      end
     
-    resources :images, :path => 'Images'
-    resources :videos, :path => 'Videos'
-    resources :plans, :path => 'Plans'
+      resources :images, :path => 'Images'
+      resources :videos, :path => 'Videos'
+      resources :plans, :path => 'Plans'
+    end
+  
+    resources :tags, :path => 'Work'
+  
+    resources :pages, :path => 'Page'
+  
+    resources :plans, :path => 'Plan'
   end
-  
-  resources :tags, :path => 'Work'
-  
-  resources :pages, :path => 'Page'
-  
-  resources :plans, :path => 'Plan'
 
   # admin interface
   namespace :admin do
