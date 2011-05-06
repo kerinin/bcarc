@@ -23,7 +23,7 @@ class Admin::ProjectsControllerTest < ActionController::TestCase
       end
       should assign_to( :project)
       should redirect_to('edit project') { edit_admin_project_path(assigns['project']) }
-      should set_the_flash_to( "Successfully created!")
+      should set_the_flash.to( "Project was successfully created.")
       
       should "create a new project" do
         assert_equal 1, Project.find_all_by_name('New Project').count

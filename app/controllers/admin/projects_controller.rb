@@ -13,6 +13,20 @@ class Admin::ProjectsController < Admin::BaseController
   #update.wants.html { redirect_to params[:return_to] || edit_admin_project_path(@project,@plan) }
   #destroy.wants.html { redirect_to admin_projects_path }
   
+  def create
+    create!{ edit_admin_project_path(@project) }
+  end
+
+  def update
+    update!{ edit_admin_project_path(@project) }
+  end
+  
+  def destroy
+    destroy! do |format|
+      format.html { redirect_to admin_projects_path }
+    end
+  end
+  
   private
   
   def expire_show

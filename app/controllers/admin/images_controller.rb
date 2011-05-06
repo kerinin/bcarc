@@ -5,7 +5,7 @@ class Admin::ImagesController < Admin::BaseController
   
   #resource_controller
   
-  #belongs_to :project
+  belongs_to :project
   
   #actions :all
 
@@ -14,7 +14,20 @@ class Admin::ImagesController < Admin::BaseController
   #create.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
   #update.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
   #destroy.wants.html { redirect_to admin_project_images_path(@project) }
+  def create
+    create!{ edit_admin_project_image_path(@project,@image) }
+  end
 
+  def update
+    update!{ edit_admin_project_image_path(@project,@image) }
+  end
+  
+  def destroy
+    destroy! do |format|
+      format.html { redirect_to admin_project_images_path(@project) }
+    end
+  end
+  
   def sort
     @project = Project.find_by_param(params[:id])
     @project.images.active.each do |i|

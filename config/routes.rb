@@ -53,24 +53,24 @@ Bcrails::Application.routes.draw do
           post :sort
         end
       end
-      
-      resources :tags
-      
-      resources :pages do
-        collection do
-          post :sort
-        end
+    end
+    
+    resources :tags
+    
+    resources :pages do
+      collection do
+        post :sort
       end
     end
   end
   
   # Sitemaps
   
-  match '/sitemap/web.xml', :controller => :sitemap, :action => :web, :path => :web_sitemap
-  match '/sitemap/image.xml', :controller => :sitemap, :action => :image, :path => :image_sitemap
-  match '/sitemap/video.xml', :controller => :sitemap, :action => :video, :path => :video_sitemap
-  match '/sitemap/geo.xml', :controller => :sitemap, :action => :geo, :path => :geo_sitemap
-  #match '/sitemap.xml', :controller => :sitemap, :as => :sitemap
+  match '/sitemap/web.xml', :controller => :sitemap, :action => :web, :as => :web_sitemap
+  match '/sitemap/image.xml', :controller => :sitemap, :action => :image, :as => :image_sitemap
+  match '/sitemap/video.xml', :controller => :sitemap, :action => :video, :as => :video_sitemap
+  match '/sitemap/geo.xml', :controller => :sitemap, :action => :geo, :as => :geo_sitemap
+  match '/sitemap.xml', :controller => :sitemap, :action => :index, :as => :sitemap
 
 =begin
   # 404 (legacy) routes

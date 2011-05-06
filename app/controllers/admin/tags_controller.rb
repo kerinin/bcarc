@@ -11,6 +11,20 @@ class Admin::TagsController < Admin::BaseController
   #update.wants.html { redirect_to edit_admin_tag_path(@tag) }
   #destroy.wants.html { redirect_to admin_tags_path }
   
+  def create
+    create!{ edit_admin_tag_path(@tag) }
+  end
+
+  def update
+    update!{ edit_admin_tag_path(@tag) }
+  end
+  
+  def destroy
+    destroy! do |format|
+      format.html { redirect_to admin_tags_path }
+    end
+  end
+  
   private
   
   def expire_show

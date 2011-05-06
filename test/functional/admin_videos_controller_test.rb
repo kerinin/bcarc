@@ -25,7 +25,7 @@ class Admin::VideosControllerTest < ActionController::TestCase
       end
       should assign_to( :video)
       should redirect_to('edit video') { edit_admin_project_video_path(@project, assigns['video']) }
-      should set_the_flash_to( "Successfully created!")
+      should set_the_flash.to( "Video was successfully created.")
       
       should "create a new video" do
         assert_equal 1, Video.find_all_by_name('New Video').count

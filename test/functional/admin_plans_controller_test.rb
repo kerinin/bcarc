@@ -25,7 +25,7 @@ class Admin::PlansControllerTest < ActionController::TestCase
       end
       should assign_to( :plan)
       should redirect_to('edit plan') { edit_admin_project_plan_path(@project, assigns['plan']) }
-      should set_the_flash_to( "Successfully created!")
+      should set_the_flash.to( "Plan was successfully created.")
       
       should "create a new plan" do
         assert_equal 1, Plan.find_all_by_name('New Plan').count
