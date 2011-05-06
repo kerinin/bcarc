@@ -98,10 +98,10 @@ class TagsControllerTest < ActionController::TestCase
       should assign_to( :tags)
             
       should "include all active projects" do
-        assert_contains assigns['projects'], @project1
-        assert_contains assigns['projects'], @project2
-        assert_contains assigns['projects'], @project3
-        assert_contains assigns['projects'], @project4
+        assert_contains assigns['projects'].all, @project1
+        assert_contains assigns['projects'].all, @project2
+        assert_contains assigns['projects'].all, @project3
+        assert_contains assigns['projects'].all, @project4
       end
       
       should "exclude inactive projects" do

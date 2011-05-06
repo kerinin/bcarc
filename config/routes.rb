@@ -16,8 +16,8 @@ Bcrails::Application.routes.draw do
       end
     
       resources :images, :path => 'Images'
-      resources :videos, :path => 'Videos'
-      resources :plans, :path => 'Plans'
+      resources :videos
+      resources :plans
     end
   
     resources :tags, :path => 'Work'

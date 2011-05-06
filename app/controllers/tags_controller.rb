@@ -6,9 +6,8 @@ class TagsController < ApplicationController
   caches_action :show, :cache_path => Proc.new { |c| c.params.merge( {:version => c.read_fragment(:tags_version)} ).delete_if { |k,v| k.starts_with?('utm_') } }
   
   def show
-    @tag = Tag.find(params[:id])
-    
     unless params[:all]
+      @tag = Tag.find(params[:id])
       @projects = @tag.projects.by_priority
     else
       @projects = Project.active.by_priority

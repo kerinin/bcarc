@@ -10,7 +10,7 @@ class VideosController < ApplicationController
   caches_action :show, :cache_path => Proc.new { |c| c.params.merge( {:version => c.read_fragment("project_#{c.params[:project_id]}")} ).delete_if { |k,v| k.starts_with?('utm_') } }
   
   def show
-    @video = Video.find(params[:id])
+    @object = @video = Video.find(params[:id])
     @project = @video.project
     
     unless @video == @project.videos.last

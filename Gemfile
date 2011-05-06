@@ -21,5 +21,5 @@ gem 'i18n_routing'
 gem 'globalize3'
 gem 'http_accept_language'
 gem 'paperclip'
-gem 'find_by_param', :git => 'git://github.com/algorich/find_by_param.git'
-
+#gem 'find_by_param', :git => 'git://github.com/algorich/find_by_param.git'
+gem "friendly_id"
