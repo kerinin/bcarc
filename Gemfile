@@ -19,7 +19,7 @@ gem "memcached-northscale"
 #gem 'translate_routes'
 gem 'i18n_routing'
 gem 'globalize3'
-gem 'http_accept_language'
+gem 'http_accept_language', :git => 'git://github.com/AF83/http_accept_language.git'
 gem 'paperclip'
 #gem 'find_by_param', :git => 'git://github.com/algorich/find_by_param.git'
 gem "friendly_id"
