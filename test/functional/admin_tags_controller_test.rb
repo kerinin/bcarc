@@ -9,7 +9,15 @@ class Admin::TagsControllerTest < ActionController::TestCase
     teardown do
       Tag.delete_all
     end
-        
+
+    context "on GET to :index" do
+      setup do
+        get :index
+      end
+      should assign_to( :tags)
+      should respond_with(:success)
+    end
+            
     context "on GET to :new" do
       setup do
         get :new
