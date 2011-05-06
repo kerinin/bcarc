@@ -48,7 +48,7 @@ class Admin::VideosControllerTest < ActionController::TestCase
       setup do
         get :destroy, :project_id => @project.to_param, :id => @video.id
       end
-      should_redirect_to('video index') {admin_project_videos_path( @project )}
+      should redirect_to('video index') {admin_project_videos_path( @project )}
       
       should "delete the video" do
         assert !Video.exists?( @video )

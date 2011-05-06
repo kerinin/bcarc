@@ -5,10 +5,10 @@
   <% end %>
   <% unless controller.class == ProjectsController %>
 	  <li class="li_spacer"><div>|</div></li>
-	  <li<%= ' class=currentNav' unless params[:by] == 'chronology' || params[:by] == 'location' %>> <%= link_to t('popular').downcase, url_for( :overwrite_params => { :by => 'popularity' } ) %> </li>
-	  <li<%= ' class=currentNav' if params[:by] == 'chronology' %>> <%= link_to t('_time').downcase, url_for( :overwrite_params => { :by => 'chronology' } ) %> </li>
+	  <li<%= ' class=currentNav' unless params[:by] == 'chronology' || params[:by] == 'location' %>> <%= link_to t('popular').downcase, url_for( :by => 'popularity' ) %> </li>
+	  <li<%= ' class=currentNav' if params[:by] == 'chronology' %>> <%= link_to t('_time').downcase, url_for( :by => 'chronology' ) %> </li>
 	  <% if @projects.to_map.count > 0 %>
-	    <li<%= ' class=currentNav' if params[:by] == 'location' %>> <%= link_to t('location').downcase, url_for( :overwrite_params => { :by => 'location' } ) %> </li>
+	    <li<%= ' class=currentNav' if params[:by] == 'location' %>> <%= link_to t('location').downcase, url_for( :by => 'location' ) %> </li>
 	  <% end %>
   <% end %>
 </ul>

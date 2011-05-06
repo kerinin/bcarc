@@ -16,7 +16,7 @@ class Admin::BaseController < InheritedResources::Base
   def expire_sitemap
     expire_action web_sitemap_path
     expire_action image_sitemap_path
-    expire_action video_sitemap_path
+    #expire_action video_sitemap_path
     expire_action geo_sitemap_path
     expire_action sitemap_path
   end

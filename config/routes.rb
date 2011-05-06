@@ -1,5 +1,5 @@
 Bcrails::Application.routes.draw do
-  filter :locale
+  filter :locale, :include_default_locale => false
   
   resources :webcam_images
 
@@ -68,7 +68,7 @@ Bcrails::Application.routes.draw do
   
   match '/sitemap/web.xml', :controller => :sitemap, :action => :web, :as => :web_sitemap
   match '/sitemap/image.xml', :controller => :sitemap, :action => :image, :as => :image_sitemap
-  match '/sitemap/video.xml', :controller => :sitemap, :action => :video, :as => :video_sitemap
+  #match '/sitemap/video.xml', :controller => :sitemap, :action => :video, :as => :video_sitemap
   match '/sitemap/geo.xml', :controller => :sitemap, :action => :geo, :as => :geo_sitemap
   match '/sitemap.xml', :controller => :sitemap, :action => :index, :as => :sitemap
 

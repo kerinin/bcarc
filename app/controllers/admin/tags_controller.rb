@@ -32,4 +32,8 @@ class Admin::TagsController < Admin::BaseController
     expire_fragment "show_tag_#{params[:id] || :all}_by_chronology"
     expire_fragment "show_tag_#{params[:id] || :all}_by_popularity"
   end
+  
+  def collection
+    @tags = Tag.scoped
+  end
 end

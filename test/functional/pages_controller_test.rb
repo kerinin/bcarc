@@ -14,7 +14,7 @@ class PagesControllerTest < ActionController::TestCase
       Page.delete_all
     end
     
-    should route( :get, 'Page/page_id').to( :controller => :pages, :action => :show, :id => 'page_id', :locale => :en)
+    should route( :get, 'Page/page_id').to( :controller => :pages, :action => :show, :id => 'page_id')
 
     context "on GET to :show" do
       setup do

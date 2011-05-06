@@ -4,7 +4,7 @@
     GMarker.new( 
       [project.latitude,project.longitude], 
       :title => project.name, 
-      :info_window => link_to( 
+      :info_window => project.thumbnail.blank? ? nil : link_to( 
         image_tag( project.thumbnail.attachment.url(:index), :size => '390x180')+'<br/><h2>'+project.name.to_s+'</h2>',
         project_path(project)
       ) )

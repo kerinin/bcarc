@@ -26,9 +26,9 @@ class TagsControllerTest < ActionController::TestCase
       Tag.delete_all
     end
     
-    should route( :get, 'Work/tag_id').to( :controller => :tags, :action => :show, :id => 'tag_id', :locale => :en)
-    should route( :get, 'Work').to( :controller => :tags, :action => :show, :id => 'tag_id', :locale => :en, :all => true)
-    should route( :get, 'Work/All').to( :controller => :tags, :action => :show, :id => 'tag_id', :locale => :en)
+    should route( :get, 'Work/tag_id').to( :controller => :tags, :action => :show, :id => 'tag_id')
+    should route( :get, 'Work').to( :controller => :tags, :action => :show, :all => true)
+    should_eventually route( :get, 'Work/All').to( :controller => :tags, :action => :show, :all => true)
     
     context "on GET to :show" do
       setup do
@@ -119,17 +119,18 @@ class TagsControllerTest < ActionController::TestCase
       
       should respond_with(:success)
       should assign_to(:projects)
-      should render_template(:partial => 'by_chronology')
+      should render_template('_by_chronology')
     end
     
     context "on GET to :show by location" do
       setup do
+        @project1.update_attributes(:show_map => true, :city => 'Austin')
         get :show, :id => @tag1.to_param, :by => 'location'
       end
       
       should respond_with(:success)
       should assign_to(:projects)
-      should render_template(:partial => 'by_location')
+      should render_template('_by_location')
     end
   end
 end

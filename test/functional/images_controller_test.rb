@@ -24,7 +24,7 @@ class ImagesControllerTest < ActionController::TestCase
       Video.delete_all
     end
     
-    should route( :get, '/Project/:project_id/Images/:id').to( :controller => :images, :action => :show, :project_id => ':project_id', :id => ':id', :locale => 'en')
+    should route( :get, '/Project/:project_id/Images/:id').to( :controller => :images, :action => :show, :project_id => ':project_id', :id => ':id')
     should route( :get, '/zh/Project/:project_id/Images/:id').to( :controller => :images, :action => :show, :project_id => ':project_id', :id => ':id', :locale => :zh)
 
     context "on GET to :show from project" do

@@ -8,7 +8,7 @@ require 'rails/test_help'
 #require 'logger'
 
 ActiveRecord::Base.logger = Logger.new(STDERR)
-ActiveRecord::Base.logger.level = Logger::INFO
+ActiveRecord::Base.logger.level = Logger::WARN
 
 class ActiveSupport::TestCase
 

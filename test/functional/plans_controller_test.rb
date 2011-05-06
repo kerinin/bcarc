@@ -22,7 +22,7 @@ class PlansControllerTest < ActionController::TestCase
       Plan.delete_all
     end
     
-    should route( :get, 'Project/project_id/plans/plan_id').to( :controller => :plans, :action => :show, :project_id => 'project_id', :id => 'plan_id', :locale => :en)
+    should route( :get, 'Project/project_id/plans/plan_id').to( :controller => :plans, :action => :show, :project_id => 'project_id', :id => 'plan_id')
 
     context "on GET to :show from project" do
       setup do

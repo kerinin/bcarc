@@ -3,9 +3,20 @@ require File.dirname(__FILE__) + '/../test_helper'
 class ProjectsControllerTest < ActionController::TestCase
   context "Given data" do
     setup do
+      @completed = 1.year.ago
       @tag = Factory :tag
       
-      @project = Factory :project, :thumbnail => Factory(:image), :priority => 1
+      @project = Factory :project, 
+        :name => 'Test Project',
+        :description => 'Project Description',
+        :short => 'Short Description',
+        :date_completed => @completed,
+        :address => '100 5th Street',
+        :city => 'San Francisco',
+        :state => 'CA',
+        :priority => 1,
+        :thumbnail => Factory(:image)
+        
       @project.tags << @tag
       @inactive_project = Factory :project, :priority => 1
       
@@ -40,7 +51,23 @@ class ProjectsControllerTest < ActionController::TestCase
         assert_select 'a', {:count =>0, :text => 'map'}
       end
     end
-
+    
+    context "on GET to :map" do
+      setup do 
+        get :map, :id => @project.to_param
+      end
+      
+      should respond_with(:success)
+    end
+    
+    context "on GET to :webcam" do
+      setup do
+        get :webcam, :id => @project.to_param
+      end
+      
+      should respond_with(:success)
+    end
+    
     context "on GET to :show with legacy URLs" do
       setup do
         previous_param = @project.to_param
@@ -177,5 +204,14 @@ class ProjectsControllerTest < ActionController::TestCase
         assert_select 'a', {:count =>1, :text => 'map'}
       end
     end   
+    
+    context "on GET to :show.kml" do
+      setup do
+        get :show, :id => @project.to_param, :format => :kml
+      end
+      
+      should respond_with(:success)
+      should render_template('show.kml')
+    end
   end
 end

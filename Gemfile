@@ -25,3 +25,4 @@ gem 'paperclip'
 gem "friendly_id"
 gem "inherited_resources"
 gem 'routing-filter'
+gem 'dynamic_form'

@@ -20,7 +20,7 @@ class VideosControllerTest < ActionController::TestCase
       Video.delete_all
     end
 
-    should route( :get, 'Project/project_id/videos/video_id').to( :controller => :videos, :action => :show, :project_id => 'project_id', :id => 'video_id', :locale => :en)
+    should route( :get, 'Project/project_id/videos/video_id').to( :controller => :videos, :action => :show, :project_id => 'project_id', :id => 'video_id')
 
     context "on GET to :show from project" do
       setup do

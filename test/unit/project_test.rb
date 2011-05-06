@@ -19,7 +19,8 @@ class ProjectTest < ActiveSupport::TestCase
         :city => 'San Francisco',
         :state => 'CA',
         :priority => 2,
-        :thumbnail => Factory(:image)
+        :thumbnail => Factory(:image),
+        :webcam_ftp_dir => '/'
         
       @inactive_project = Factory :project, :priority => 2
       @crappy_project = Factory :project, :priority => 8
