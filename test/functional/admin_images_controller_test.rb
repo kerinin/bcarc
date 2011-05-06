@@ -20,7 +20,7 @@ class Admin::ImagesControllerTest < ActionController::TestCase
      end
      should assign_to( :image)
      should redirect_to('edit image') { edit_admin_project_image_path(@project, assigns['image']) }
-     should set_the_flash_to( "Successfully created!")
+     should set_the_flash.to( "Successfully created!")
 
      should "create a new image" do
        assert_equal 1, Image.find_all_by_name('New Image').count
