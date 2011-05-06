@@ -1,3 +1,4 @@
+
 <% @projects.find(:all, :conditions => "date_completed IS NOT NULL").group_by(&:year).sort.reverse.each do |year, projects| %>
 	<div class="yeargroup">
 		<h3><%= year %></h3>

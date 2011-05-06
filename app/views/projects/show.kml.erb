@@ -14,11 +14,11 @@
               <a href="http://www.domain.com/">Company Name</a><br />
               Address: <%= @project.address %> <%= @project.city %>, <%= @project.state %> <%= @project.zip %><br />
             </address>
-            <p><%= @project.html_short %></p>
+            <p><%= raw @project.html_short %></p>
           <% elsif @project.short %>
-            <%= @project.html_short %>
+            <%= raw @project.html_short %>
           <% else %>
-            <%= @project.html_description %>
+            <%= raw @project.html_description %>
           <% end %>
         ]]>
       </description>

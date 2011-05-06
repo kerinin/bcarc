@@ -27,6 +27,9 @@ class TagsControllerTest < ActionController::TestCase
     end
     
     should route( :get, 'Work/tag_id').to( :controller => :tags, :action => :show, :id => 'tag_id', :locale => :en)
+    should route( :get, 'Work').to( :controller => :tags, :action => :show, :id => 'tag_id', :locale => :en, :all => true)
+    should route( :get, 'Work/All').to( :controller => :tags, :action => :show, :id => 'tag_id', :locale => :en)
+    
     context "on GET to :show" do
       setup do
         get :show, :id => @tag1.to_param
@@ -107,6 +110,26 @@ class TagsControllerTest < ActionController::TestCase
       should "exclude inactive projects" do
         assert_does_not_contain assigns['projects'], @inactive_project
       end
+    end
+    
+    context "on GET to :show by time" do
+      setup do
+        get :show, :id => @tag1.to_param, :by => 'chronology'
+      end
+      
+      should respond_with(:success)
+      should assign_to(:projects)
+      should render_template(:partial => 'by_chronology')
+    end
+    
+    context "on GET to :show by location" do
+      setup do
+        get :show, :id => @tag1.to_param, :by => 'location'
+      end
+      
+      should respond_with(:success)
+      should assign_to(:projects)
+      should render_template(:partial => 'by_location')
     end
   end
 end

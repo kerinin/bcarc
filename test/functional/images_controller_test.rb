@@ -41,6 +41,10 @@ class ImagesControllerTest < ActionController::TestCase
       should "assign the image" do
         assert assigns['image'] == @image1
       end
+      
+      should "highlight current image" do
+        assert_select "a.current_image[href=#{project_image_path(@project, @image1)}]"
+      end
     end
     
     context "on GET to :show from project for deleted image" do

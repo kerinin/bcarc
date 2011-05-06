@@ -127,11 +127,20 @@ class ProjectsControllerTest < ActionController::TestCase
     
     context "on GET to :index with locale" do
       setup do
-        get :index, :locale => 'zh'
+        get :index, :locale => 'es'
       end
       
-      should "set the locale to ZH" do
-        assert_equal :zh, I18n.locale
+      should "set the locale to ES" do
+        assert_equal :es, I18n.locale
+      end
+      
+      should "include the language switcher for recognized languages" do
+        assert_select '#language_switcher', :text => /español/
+        assert_select '#language_switcher', :text => /english/
+      end
+      
+      should "highlight the current language" do
+        assert_select '#language_switcher .current', :text => /español/
       end
     end
   end

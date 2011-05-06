@@ -29,7 +29,7 @@
 
 			<div class="bold_link">
 				<h1><%= @project.name %></h1>
-				<div class="<%= @project.images ? 'description_with_image' : 'description_without_image' %>"><%= @project.html_description %></div>
+				<div class="<%= @project.images ? 'description_with_image' : 'description_without_image' %>"><%= raw @project.html_description %></div>
 			</div>
 		</div>
 

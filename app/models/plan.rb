@@ -5,10 +5,10 @@ class Plan < ActiveRecord::Base
   
   acts_as_list :scope => :project
   
-  paperclip_params = YAML::load(File.open("#{Rails.root}/config/paperclip.yml"))[Rails.root.to_s]
+  paperclip_params = YAML::load(File.open("#{Rails.root}/config/paperclip.yml"))[Rails.env.to_s]
   params = { :styles => { :thumb => '55x40#', :full => '800x800>'},
     :default_style => :index,
-    :path => "projects/:id/plans/:style/:basename.:extension",
+    :path => "projects/:id/plans/:style/:basename.:extension"
     }
     
   has_attached_file :attachment, ( paperclip_params ? params.merge(paperclip_params) : params )

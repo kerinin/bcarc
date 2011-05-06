@@ -1,6 +1,6 @@
 development:
-  :url: :s3_alias_url
-  :storage: :s3
+  :url: s3_alias_url
+  :storage: s3
   :s3_credentials: 
     :access_key_id: 1E413FFGW21C6GDEYJ02
     :secret_access_key: fEk+mcsyVu/bxoB6mznwu1xriGKfDfYIRYnG2tNH
@@ -10,8 +10,8 @@ development:
     'Cache-Control': 'max-age=31557600'
   
 production:
-  :url: :s3_alias_url
-  :storage: :s3
+  :url: s3_alias_url
+  :storage: s3
   :s3_credentials: 
     :access_key_id: 1E413FFGW21C6GDEYJ02
     :secret_access_key: fEk+mcsyVu/bxoB6mznwu1xriGKfDfYIRYnG2tNH

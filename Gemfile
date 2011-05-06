@@ -24,3 +24,4 @@ gem 'paperclip'
 #gem 'find_by_param', :git => 'git://github.com/algorich/find_by_param.git'
 gem "friendly_id"
 gem "inherited_resources"
+gem 'routing-filter'
