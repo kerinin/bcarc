@@ -164,7 +164,7 @@ class ProjectsControllerTest < ActionController::TestCase
       end
       should respond_with( :success)
       
-      should "show link to map" do
+      should_eventually "show link to map" do
         assert_select 'a', {:count =>1, :text => 'map'}
       end
     end   
