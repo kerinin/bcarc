@@ -26,11 +26,13 @@ class Admin::VideosController < Admin::BaseController
   end
   
   def sort
-    @project = Project.find_by_param(params[:id])
+    @project = Project.find(params[:project_id])
     @project.videos.each do |i|
       i.position = params["video-list"].index(i.id.to_s)+1
 
       i.save
     end
+    
+    render :nothing => true
   end
 end

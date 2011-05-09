@@ -9,9 +9,12 @@ class Admin::BaseController < InheritedResources::Base
   # filter_parameter_logging :password
   # 
   
+  before_filter :set_locale
   after_filter :expire_sitemap, :only => [:create, :update, :destroy]
   
   layout 'admin'
+  
+  protected
   
   def expire_sitemap
     expire_action web_sitemap_path
@@ -19,5 +22,9 @@ class Admin::BaseController < InheritedResources::Base
     #expire_action video_sitemap_path
     expire_action geo_sitemap_path
     expire_action sitemap_path
+  end
+  
+  def set_locale
+    I18n.locale = params[:locale] || :en
   end
 end

@@ -5,6 +5,9 @@ class Admin::PlansControllerTest < ActionController::TestCase
     setup do
       @project = Factory :project
       @plan = Factory :plan, :project => @project
+      @plan2 = Factory :plan, :project => @project
+      @plan3 = Factory :plan, :project => @project
+      @plan4 = Factory :plan, :project => @project
     end
 
     teardown do
@@ -52,6 +55,21 @@ class Admin::PlansControllerTest < ActionController::TestCase
       
       should "delete the plan" do
         assert !Plan.exists?( @plan )
+      end
+    end
+    
+    context "on GET to :sort" do
+      setup do
+        get :sort, :project_id => @project.to_param, 'plan-list' => [@plan3.id.to_s, @plan2.id.to_s, @plan4.id.to_s, @plan.id.to_s]
+      end
+
+      should_eventually respond_with(:success)
+
+      should "update plan order" do
+        assert_equal @plan3, @project.plans[0]
+        assert_equal @plan2, @project.plans[1]
+        assert_equal @plan4, @project.plans[2]
+        assert_equal @plan, @project.plans[3]
       end
     end
   end

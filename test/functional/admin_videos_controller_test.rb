@@ -5,6 +5,9 @@ class Admin::VideosControllerTest < ActionController::TestCase
     setup do
       @project = Factory :project
       @video = Factory :video, :project => @project
+      @video2 = Factory :video, :project => @project
+      @video3 = Factory :video, :project => @project
+      @video4 = Factory :video, :project => @project
     end
 
     teardown do
@@ -52,6 +55,21 @@ class Admin::VideosControllerTest < ActionController::TestCase
       
       should "delete the video" do
         assert !Video.exists?( @video )
+      end
+    end
+    
+    context "on GET to :sort" do
+      setup do
+        get :sort, :project_id => @project.to_param, 'video-list' => [@video3.id.to_s, @video2.id.to_s, @video4.id.to_s, @video.id.to_s]
+      end
+
+      should_eventually respond_with(:success)
+
+      should "update video order" do
+        assert_equal @video3, @project.videos[0]
+        assert_equal @video2, @project.videos[1]
+        assert_equal @video4, @project.videos[2]
+        assert_equal @video, @project.videos[3]
       end
     end
   end

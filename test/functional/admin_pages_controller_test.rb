@@ -9,7 +9,15 @@ class Admin::PagesControllerTest < ActionController::TestCase
     teardown do
       Page.delete_all
     end
-        
+    
+    context "on GET to :index" do
+      setup do
+        get :index
+      end
+      
+      should respond_with(:success)
+    end
+    
     context "on GET to :new" do
       setup do
         get :new

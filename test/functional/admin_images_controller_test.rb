@@ -5,6 +5,9 @@ class Admin::ImagesControllerTest < ActionController::TestCase
     setup do
       @project = Factory :project
       @image = Factory :image, :project => @project
+      @image2 = Factory :image, :project => @project
+      @image3 = Factory :image, :project => @project
+      @image4 = Factory :image, :project => @project
     end
   
     context "on GET to :new from project" do
@@ -48,6 +51,21 @@ class Admin::ImagesControllerTest < ActionController::TestCase
      should "delete the image" do
        assert !assigns['image'].deleted_at.nil?
      end
+    end
+    
+    context "on GET to :sort" do
+      setup do
+        get :sort, :project_id => @project.to_param, 'image-list' => [@image3.id.to_s, @image2.id.to_s, @image4.id.to_s, @image.id.to_s]
+      end
+      
+      should_eventually respond_with(:success)
+      
+      should "update image order" do
+        assert_equal @image3, @project.images[0]
+        assert_equal @image2, @project.images[1]
+        assert_equal @image4, @project.images[2]
+        assert_equal @image, @project.images[3]
+      end
     end
   end
   

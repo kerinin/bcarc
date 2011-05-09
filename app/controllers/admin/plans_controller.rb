@@ -26,11 +26,13 @@ class Admin::PlansController < Admin::BaseController
   end
   
   def sort
-    @project = Project.find_by_param(params[:id])
+    @project = Project.find(params[:project_id])
     @project.plans.each do |p|
       p.position = params["plan-list"].index(p.id.to_s)+1
 
       p.save
     end
+    
+    render :nothing => true
   end
 end
