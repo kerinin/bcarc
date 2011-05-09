@@ -32,11 +32,13 @@ class ProjectsController < ApplicationController
     
     respond_to do |format|
       format.html # index.html.erb
+      format.kml
     end
   end
      
   def map
-    load_object     # From resource_controller
+    @project = Project.find(params[:id])
+    #load_object     # From resource_controller
     
     redirect_to project_path( @project ) and return unless @project.show_map && @project.latitude && @project.longitude
     
@@ -49,7 +51,8 @@ class ProjectsController < ApplicationController
   end
   
   def webcam
-    load_object
+    @project = Project.find(params[:id])
+    #load_object
 
     @next = @project
 

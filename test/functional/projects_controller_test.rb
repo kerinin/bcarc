@@ -15,8 +15,12 @@ class ProjectsControllerTest < ActionController::TestCase
         :city => 'San Francisco',
         :state => 'CA',
         :priority => 1,
-        :thumbnail => Factory(:image)
-        
+        :thumbnail => Factory(:image),
+        :webcam_current_url => '/foo',
+        :show_map => true,
+        :latitude => 0,
+        :longitude => 0
+          
       @project.tags << @tag
       @inactive_project = Factory :project, :priority => 1
       
@@ -36,9 +40,9 @@ class ProjectsControllerTest < ActionController::TestCase
       Video.delete_all
     end
     
-    should route( :get, '').to( :controller => :projects, :action => :index, :locale => :en)
+    should route( :get, '').to( :controller => :projects, :action => :index)
     
-    should route( :get, 'Project/project_id').to( :controller => :projects, :action => :show, :id => 'project_id', :locale => :en)
+    should route( :get, 'Project/project_id').to( :controller => :projects, :action => :show, :id => 'project_id')
 
     context "on GET to :show" do
       setup do
@@ -211,7 +215,7 @@ class ProjectsControllerTest < ActionController::TestCase
       end
       
       should respond_with(:success)
-      should render_template('show.kml')
+      should render_template('show')
     end
   end
 end

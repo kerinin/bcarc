@@ -29,7 +29,7 @@ class ImagesControllerTest < ActionController::TestCase
 
     context "on GET to :show from project" do
       setup do
-        get :show, :project_id => @project.to_param, :id => @image1.to_param
+        get :show, :project_id => @project.to_param, :id => @image2.to_param
       end
       should respond_with( :success)
       should assign_to( :tags)
@@ -39,11 +39,11 @@ class ImagesControllerTest < ActionController::TestCase
       end
       
       should "assign the image" do
-        assert assigns['image'] == @image1
+        assert assigns['image'] == @image2
       end
       
       should "highlight current image" do
-        assert_select "a.current_image[href=#{project_image_path(@project, @image1)}]"
+        assert_select "a.current_image[href*=#{project_image_path(@project, @image2)}]"
       end
     end
     
