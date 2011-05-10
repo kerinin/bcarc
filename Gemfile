@@ -26,3 +26,4 @@ gem "friendly_id"
 gem "inherited_resources"
 gem 'routing-filter'
 gem 'dynamic_form'
+gem 'yaml_db'

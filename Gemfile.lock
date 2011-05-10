@@ -113,6 +113,7 @@ GEM
     tzinfo (0.3.27)
     wikitext (2.1.1)
     xml-simple (1.0.15)
+    yaml_db (0.2.0)
 
 PLATFORMS
   ruby
@@ -136,3 +137,4 @@ DEPENDENCIES
   routing-filter
   shoulda
   sqlite3
+  yaml_db

@@ -1,4 +1,3 @@
 Flickr
 admin tests
 deferred tests
-make sure paperclip being passed file handles

@@ -8,7 +8,7 @@ module Paperclip
     end    
     
     def convert(src, dst)
-      command = "\"#{ File.expand_path( src.path ) }[0]\"\n#{ transformation }\n\"#{ File.expand_path(dst.path) }\"\n" 
+      command = "\"#{ File.expand_path( src.path ) }[0]\" #{ transformation } \"#{ File.expand_path(dst.path) }\"\n" 
       Paperclip.run('convert',command)
       dst
     end

@@ -3,5 +3,5 @@ Factory.define :image do |i|
   i.description "Image Description"
   i.sync_flickr false
   i.project {|p| p.association(:project)}
-  i.attachment "#{Rails.root}/public/images/logo_01.jpg"
+  i.attachment File.new("#{Rails.root}/public/images/logo_01.jpg")
 end

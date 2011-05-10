@@ -45,7 +45,7 @@ class WebcamImage < ActiveRecord::Base
     tempfile = Tempfile.new(self.source_url)
     ftp.getbinaryfile(self.source_url, tempfile.path)
 
-    self.attachment = tempfile.path
+    self.attachment = tempfile
     #self.attachment_file_name = self.source_url
   end
 end

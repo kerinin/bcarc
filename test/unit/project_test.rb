@@ -43,7 +43,7 @@ class ProjectTest < ActiveSupport::TestCase
       Tag.delete_all
       Project.delete_all
     end
-  
+    
     should "update legacy_permalinks on save" do
       old_param = @project.to_param
       
@@ -122,16 +122,16 @@ class ProjectTest < ActiveSupport::TestCase
       assert @project.longitude.blank?
     end
           
-    should_eventually "pull geocoded lat/lon on address save if map=true" do
+    should "pull geocoded lat/lon on address save if map=true" do
       @project.show_map = true
       @project.address = '1111 East 11th Street'
       @project.city = 'Austin'
       @project.state = 'TX'
       @project.save!
       
-      assert @project.latitude == 30.268807
-      assert @project.longitude == -97.728902
-      assert @project.map_accuracy == 8
+      assert_equal 30, @project.latitude.to_i
+      assert_equal -97, @project.longitude.to_i
+      assert_equal 8, @project.map_accuracy
     end
  
     should "save the first attached image as the thumbnail if none specified" do
