@@ -1,5 +1,5 @@
 <ul class="nav_left">
-  <% unless true #@project.latitude.blank? || @project.longitude.blank? || @project.show_map == false %>
+  <% unless @project.latitude.blank? || @project.longitude.blank? || @project.show_map == false %>
     <li style="float:left;"> <%= link_to t('map').downcase, map_project_path(@project) %> </li>
     
     <% unless @project.plans.empty? %>

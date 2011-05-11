@@ -28,7 +28,7 @@ class TagsControllerTest < ActionController::TestCase
     
     should route( :get, 'Work/tag_id').to( :controller => :tags, :action => :show, :id => 'tag_id')
     should route( :get, 'Work').to( :controller => :tags, :action => :show, :all => true)
-    should_eventually route( :get, 'Work/All').to( :controller => :tags, :action => :show, :all => true)
+    #should route( :get, 'Work/All').to( :controller => :tags, :action => :show, :all => true)
     
     context "on GET to :show" do
       setup do
@@ -45,10 +45,10 @@ class TagsControllerTest < ActionController::TestCase
         assert !( assigns['projects'].include? @project4 )
       end
       
-      should_eventually "default sort by priority (1 = most important)" do
-        assert assigns['projects'][0] == @project3
+      should "default sort by priority (1 = most important)" do
+        assert assigns['projects'][0] == @project2
         assert assigns['projects'][1] == @project1
-        assert assigns['projects'][2] == @project2
+        assert assigns['projects'][2] == @project3
       end
     end
 

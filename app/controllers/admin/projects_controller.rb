@@ -3,15 +3,7 @@ class Admin::ProjectsController < Admin::BaseController
   after_filter :expire_thumbnails, :only => [:destroy]
   after_filter :expire_tags, :only => [:create, :update, :destroy]
   
-  #resource_controller
-  
-  #actions :all
-  
   cache_sweeper :project_sweeper, :tag_sweeper
-    
-  #create.wants.html { redirect_to edit_admin_project_path(@project,@plan) }
-  #update.wants.html { redirect_to params[:return_to] || edit_admin_project_path(@project,@plan) }
-  #destroy.wants.html { redirect_to admin_projects_path }
   
   def create
     create!{ edit_admin_project_path(@project) }

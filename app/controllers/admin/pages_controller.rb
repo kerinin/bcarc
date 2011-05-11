@@ -1,13 +1,5 @@
 class Admin::PagesController < Admin::BaseController
-  #resource_controller
-  
-  #actions :all
-  
   cache_sweeper :page_sweeper
-  
-  #create.wants.html { redirect_to edit_admin_page_path(@page) }
-  #update.wants.html { redirect_to edit_admin_page_path(@page) }
-  #destroy.wants.html { redirect_to admin_pages_path }
   
   def create
     create!{ edit_admin_page_path(@page) }

@@ -3,17 +3,10 @@ class Admin::ImagesController < Admin::BaseController
   after_filter :expire_thumbnails, :only => [:create, :update, :destroy]
   after_filter :expire_tags, :only => [:create, :update, :destroy]
   
-  #resource_controller
-  
   belongs_to :project
-  
-  #actions :all
 
   cache_sweeper :project_sweeper, :tag_sweeper
       
-  #create.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
-  #update.wants.html { redirect_to edit_admin_project_image_path(@project,@image) }
-  #destroy.wants.html { redirect_to admin_project_images_path(@project) }
   def create
     create!{ edit_admin_project_image_path(@project,@image) }
   end
@@ -39,6 +32,8 @@ class Admin::ImagesController < Admin::BaseController
     render :nothing => true
   end
   
+  private 
+    
   def pull_flickr
     load_object         # From R_C
     
@@ -52,8 +47,6 @@ class Admin::ImagesController < Admin::BaseController
     flash[:notice] = "Data pulled from Flickr!"
     redirect_to edit_admin_project_image_path(@image.project, @image)    
   end
-  
-  private 
   
   def expire_show
     expire_fragment(:controller => 'images', :action => 'show')

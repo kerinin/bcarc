@@ -11,7 +11,7 @@ class Project < ActiveRecord::Base
   
   has_and_belongs_to_many :tags, :after_add => :set_has_tags, :after_remove => :set_has_tags
   
-  before_validation :geocode_address, :if => Proc.new {|p| p.show_map && ( p.city_changed? || p.address_changed? ) }, :unless => Proc.new {|p| p.city.empty? }
+  before_validation :geocode_address, :if => Proc.new {|p| p.show_map && ( p.city_changed? || p.address_changed? ) }, :unless => Proc.new {|p| p.city.nil? }
   before_save :handle_legacy_permalink
   
   validates_presence_of :name

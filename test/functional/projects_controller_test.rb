@@ -16,10 +16,7 @@ class ProjectsControllerTest < ActionController::TestCase
         :state => 'CA',
         :priority => 1,
         :thumbnail => Factory(:image),
-        :webcam_current_url => '/foo',
-        :show_map => true,
-        :latitude => 0,
-        :longitude => 0
+        :webcam_current_url => '/foo'
           
       @project.tags << @tag
       @inactive_project = Factory :project, :priority => 1
@@ -58,6 +55,7 @@ class ProjectsControllerTest < ActionController::TestCase
     
     context "on GET to :map" do
       setup do 
+        @project.update_attributes( :show_map => true, :latitude => 0, :longitude => 0, :map_accuracy => 8)
         get :map, :id => @project.to_param
       end
       
@@ -204,7 +202,7 @@ class ProjectsControllerTest < ActionController::TestCase
       end
       should respond_with( :success)
       
-      should_eventually "show link to map" do
+      should "show link to map" do
         assert_select 'a', {:count =>1, :text => 'map'}
       end
     end   

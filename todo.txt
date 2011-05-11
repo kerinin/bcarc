@@ -1,3 +1,2 @@
 Flickr
-admin tests
 deferred tests

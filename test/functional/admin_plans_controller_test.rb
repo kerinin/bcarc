@@ -63,7 +63,7 @@ class Admin::PlansControllerTest < ActionController::TestCase
         get :sort, :project_id => @project.to_param, 'plan-list' => [@plan3.id.to_s, @plan2.id.to_s, @plan4.id.to_s, @plan.id.to_s]
       end
 
-      should_eventually respond_with(:success)
+      should respond_with(:success)
 
       should "update plan order" do
         assert_equal @plan3, @project.plans[0]
