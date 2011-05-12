@@ -53,6 +53,8 @@ Bcrails::Application.routes.draw do
           post :sort
         end
       end
+      
+      resources :webcam_images
     end
     
     resources :tags

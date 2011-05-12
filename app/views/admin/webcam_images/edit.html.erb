@@ -1,0 +1,18 @@
+<h1>Editing webcam image of project <%=link_to @project.name, edit_admin_project_path(@project) %></h1>
+
+<%= render :partial => 'admin/shared/project_header' %>
+
+<% form_for([:admin, @project, @webcam_image]) do |f| %>
+  <%= f.error_messages %>
+  
+  <%= render :partial => 'admin/shared/languages' %>
+  
+  <p>
+    <%= f.submit 'Update' %>
+    or
+    <%= link_to 'Delete', admin_project_image_path(@project,@image), :confirm => 'Are you sure?', :method => :delete %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', project_image_path(@project, @image) %> |
+<%= link_to 'Back', admin_project_images_path(@project) %>

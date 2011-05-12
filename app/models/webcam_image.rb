@@ -17,7 +17,7 @@ class WebcamImage < ActiveRecord::Base
                       
   belongs_to :project
   
-  before_validation :download_remote_image, :date_from_url, :on => :create
+  before_validation :download_remote_image, :date_from_url, :on => :create, :unless => Proc.new {Rails.env == 'test'}
   
   validates_attachment_presence :attachment, :unless => Proc.new {Rails.env == 'test'}
   validates_presence_of :project, :source_url
