@@ -30,5 +30,6 @@ gem 'routing-filter'
 gem 'dynamic_form'
 gem 'yaml_db'
 gem 'will_paginate', '~> 3.0.pre2'
+gem 'jquery-rails', '>= 0.2.6'
 
 gem 'exception_notification', :require => 'exception_notifier'

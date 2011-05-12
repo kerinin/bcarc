@@ -1,3 +1,26 @@
+<% content_for :head do %>
+
+  <script type="text/javascript">
+    jQuery(document).ready( function($) {
+      $(".delete_webcam")
+        .bind("ajax:loading",  function(event, data, status, xhr) {
+          //jQuery(event.target).parent().find('img').unwrap('a');
+          //jQuery(event.target).replaceWith('Delete');
+          
+          //jQuery('div.webcam_thumb').first().find('img').unwrap()
+        })
+        //.bind("ajax:complete", toggleLoading)
+        .bind("ajax:success", function(event, data, status, xhr) {
+          jQuery(event.target).parent().fadeTo(100, .2);
+          //jQuery(event.target).parent().children('a').unwrap('a');
+        })
+        //.bind("ajax:failure", fail)
+        ;
+    });
+  </script>
+  
+<% end %>
+
 <h1>Listing webcam images of project <%=link_to @project.name, edit_admin_project_path(@project) %></h1>
 
 <%= render :partial => 'admin/shared/project_header' %>
@@ -15,7 +38,10 @@
     <p>
       <h2><%= image.date.to_date.to_s(:long)%></h2>
   <% end %>
-  <%= link_to image_tag( image.attachment.url(:thumb), :size => '55x40'), edit_admin_project_webcam_image_path(@project, image) %>
+  <div class="webcam_thumb">
+    <%= link_to image_tag( image.attachment.url(:thumb), :size => '55x40'), edit_admin_project_webcam_image_path(@project, image) %>
+    <%= link_to 'Delete', admin_project_webcam_image_path(@project, image), :confirm => 'Are you sure?', :method => :delete, :remote => true, :class => 'delete_webcam' %>
+  </div>
 <% end %>
 </p>
 

@@ -18,6 +18,7 @@ class Admin::WebcamImagesController < Admin::BaseController
   def destroy
     destroy! do |format|
       format.html { redirect_to admin_project_webcam_images_path(@project) }
+      format.js { render :nothing => true}
     end
   end
   

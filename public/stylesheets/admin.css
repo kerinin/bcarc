@@ -9,3 +9,11 @@ ul.inline {
   display: inline;
   font-size: inherit;
 }
+
+div.webcam_thumb {
+  display: inline-block;
+}
+
+.webcam_thumb a {
+  display: block;
+}
