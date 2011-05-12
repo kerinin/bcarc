@@ -48,5 +48,6 @@ Bcrails::Application.configure do
   config.active_support.deprecation = :notify
   
   # Memcached
-  config.cache_store = :mem_cache_store, Memcached::Rails.new
+  #config.cache_store = :mem_cache_store, Memcached::Rails.new
+  config.cache_store = :dalli_store
 end
