@@ -5,7 +5,7 @@
       [project.latitude,project.longitude], 
       :title => project.name, 
       :info_window => project.thumbnail.blank? ? nil : link_to( 
-        image_tag( project.thumbnail.attachment.url(:index), :size => '390x180')+'<br/><h2>'+project.name.to_s+'</h2>',
+        image_tag( project.thumbnail.attachment.url(:index), :size => '390x180'),
         project_path(project)
       ) )
   end
@@ -15,11 +15,11 @@
   @map.record_init group.center_and_zoom_on_markers
   %>
   
-  <%= GMap.header %>
+  <%= raw GMap.header %>
   <%= javascript_include_tag("markerGroup") %>
-  <%= @map.to_html %>
+  <%= raw @map.to_html %>
 <% end %>
 
-<%= @map.div(:width => 800, :height => 600) %>
+<%= raw @map.div(:width => 800, :height => 600) %>
 
 

@@ -3,8 +3,8 @@
     jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Projects', 'View', '<%= @project.name %>']); } );
   </script>
 
-	<%= GMap.header %>
-  <%= @map.to_html %>
+	<%= raw GMap.header %>
+  <%= raw @map.to_html %>
   
 	<title><%= @project.name %> Map @ Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>
 	<meta name="keywords" content="<%= @project.tags.map(&:name).join(' ') %> <%= @project.keywords || @project.name %>"/>
@@ -20,7 +20,7 @@
 <div class="content">
 	<div class="prop">
 	  <div class="image_container">
-  	  <%= @map.div(:width => 800, :height => 600) %>
+  	  <%= raw @map.div(:width => 800, :height => 600) %>
   	</div>
   	
   	<%= render :partial => 'plans' %>
