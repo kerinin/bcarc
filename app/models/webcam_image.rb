@@ -10,7 +10,7 @@ class WebcamImage < ActiveRecord::Base
       :full => '800x800>'
     }, 
     :default_style => :full,
-    :path => "projects/:project_id/webcam_images/:style/:basename.:extension"
+    :path => "projects/:project_id/webcam_images/:style/:source_url"
     }
     
   has_attached_file :attachment, ( paperclip_params ? params.merge(paperclip_params) : params )
@@ -50,6 +50,6 @@ class WebcamImage < ActiveRecord::Base
     ftp.getbinaryfile(self.source_url, tempfile.path)
     
     self.attachment = tempfile
-    self.attachment_file_name = self.source_url
+    #self.attachment_file_name = self.source_url
   end
 end

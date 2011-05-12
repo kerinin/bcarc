@@ -24,9 +24,9 @@
 	<div class="media" style='padding-top:4em;padding-bottom:4em;'>
 		<center>
 		  <% if @object.service == 'youtube' %>
-				<object width="<%= object.width %>" height="<%= object.height %>">
+				<object width="<%= @object.width %>" height="<%= @object.height %>">
 					<param name="movie" value="<%= @object.uri %>"></param>
-					<embed src="<%= @object.uri %>" type="application/x-shockwave-flash" width="<%= @object.width %>" height="<%= object.height %>"></embed>
+					<embed src="<%= @object.uri %>" type="application/x-shockwave-flash" width="<%= @object.width %>" height="<%= @object.height %>"></embed>
 				</object>
       <% elsif @object.service == 'vimeo' %>
 				<object width="800" height="450">
