@@ -1,3 +1,24 @@
 <h1>Listing webcam images of project <%=link_to @project.name, edit_admin_project_path(@project) %></h1>
 
 <%= render :partial => 'admin/shared/project_header' %>
+
+<p>
+  <%= page_entries_info @webcam_images %>
+</p>
+
+<p>
+<% date = nil %>
+<% @webcam_images.each do |image| %>
+  <% if image.date.to_date != date %>
+    <% date = image.date.to_date %>
+    </p>
+    <p>
+      <h2><%= image.date.to_date.to_s(:long)%></h2>
+  <% end %>
+  <%= link_to image_tag( image.attachment.url(:thumb), :size => '55x40'), edit_admin_project_webcam_image_path(@project, image) %>
+<% end %>
+</p>
+
+<%= will_paginate @webcam_images %>
+
+<p></p>

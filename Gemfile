@@ -29,5 +29,6 @@ gem "inherited_resources"
 gem 'routing-filter'
 gem 'dynamic_form'
 gem 'yaml_db'
+gem 'will_paginate', '~> 3.0.pre2'
 
 gem 'exception_notification', :require => 'exception_notifier'

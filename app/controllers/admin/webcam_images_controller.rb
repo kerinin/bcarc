@@ -6,7 +6,7 @@ class Admin::WebcamImagesController < Admin::BaseController
   belongs_to :project
 
   #cache_sweeper :project_sweeper, :tag_sweeper
-      
+  
   def create
     create!{ edit_admin_project_webcam_image_path(@project,@webcam_image) }
   end
@@ -22,6 +22,10 @@ class Admin::WebcamImagesController < Admin::BaseController
   end
   
   private 
+  
+  def collection
+    get_collection_ivar || set_collection_ivar(end_of_association_chain.paginate(:page => params[:page], :per_page => 200))
+  end
   
   def expire_show
     expire_fragment(:controller => 'webcam_images', :action => 'show')

@@ -113,6 +113,7 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (0.3.27)
     wikitext (2.1.1)
+    will_paginate (3.0.pre2)
     xml-simple (1.0.15)
     yaml_db (0.2.0)
 
@@ -139,4 +140,5 @@ DEPENDENCIES
   routing-filter
   shoulda
   sqlite3
+  will_paginate (~> 3.0.pre2)
   yaml_db
