@@ -51,3 +51,8 @@ Bcrails::Application.configure do
   #config.cache_store = :mem_cache_store, Memcached::Rails.new
   config.cache_store = :dalli_store
 end
+
+Bcrails::Application.config.middleware.use ExceptionNotifier,
+  :email_prefix => "[bcarc error] ",
+  :sender_address => %{"notifier" <notifier@bcarc.com>},
+  :exception_recipients => %w{ryan@bcarc.com}

@@ -56,6 +56,7 @@ GEM
     dynamic_form (1.1.4)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    exception_notification (2.4.0)
     factory_girl (1.3.3)
     factory_girl_rails (1.0.1)
       factory_girl (~> 1.3)
@@ -126,6 +127,7 @@ DEPENDENCIES
   aws-s3
   dalli
   dynamic_form
+  exception_notification
   factory_girl_rails
   friendly_id
   globalize3
