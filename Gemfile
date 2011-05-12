@@ -15,7 +15,8 @@ gem "acts_as_markup"
 gem "aws-s3"
 gem "acts_as_list"
 gem "RedCloth"
-gem "memcached-northscale"
+#gem "memcached-northscale"
+gem "memcached-northscale", :require => "memcached" 
 #gem 'translate_routes'
 gem 'i18n_routing'
 gem 'globalize3'
