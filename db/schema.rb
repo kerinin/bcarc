@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110506151059) do
+ActiveRecord::Schema.define(:version => 20110513164422) do
 
   create_table "image_translations", :force => true do |t|
     t.integer   "image_id"
@@ -140,12 +140,12 @@ ActiveRecord::Schema.define(:version => 20110506151059) do
   add_index "projects_tags", ["tag_id"], :name => "index_projects_tags_on_tag_id"
 
   create_table "slugs", :force => true do |t|
-    t.string   "name"
-    t.integer  "sluggable_id"
-    t.integer  "sequence",                     :default => 1, :null => false
-    t.string   "sluggable_type", :limit => 40
-    t.string   "scope"
-    t.datetime "created_at"
+    t.string    "name"
+    t.integer   "sluggable_id"
+    t.integer   "sequence",                     :default => 1, :null => false
+    t.string    "sluggable_type", :limit => 40
+    t.string    "scope"
+    t.timestamp "created_at"
   end
 
   add_index "slugs", ["name", "sluggable_type", "sequence", "scope"], :name => "index_slugs_on_n_s_s_and_s", :unique => true
@@ -210,6 +210,7 @@ ActiveRecord::Schema.define(:version => 20110506151059) do
     t.integer   "project_id"
     t.timestamp "created_at"
     t.timestamp "updated_at"
+    t.boolean   "daily_image"
   end
 
 end

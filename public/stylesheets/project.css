@@ -1,3 +1,25 @@
+img.timeline {
+  display : none;
+}
+
+img.timeline.current {
+  display : block;
+}
+
+.timeline_control {
+  position : absolute;
+  left : 810px;
+  top : 5px;
+  width : 50px;
+}
+
+.timeline_control div {
+  margin-bottom: 15px;
+}
+.timeline_control .slider {
+  height : 400px;
+}
+
 .description {
 	text-align: right;
 	width: 380px;

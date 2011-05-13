@@ -1,6 +1,21 @@
+<% images = @project.webcam_images.where(:daily_image => true).reorder("date DESC") %>
 <% content_for :head do %>  
+  <%= stylesheet_link_tag 'jquery-ui' %>
+  <%= javascript_include_tag 'jquery-ui.min'%>
+  
   <script type="text/javascript">
-    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Projects', 'View', '<%= @project.name %>']); } );
+    jQuery(document).ready( function() { 
+      _gaq.push(['_trackEvent', 'Projects', 'View', '<%= @project.name %>']); 
+      
+      jQuery(".slider").slider({
+        orientation: "vertical",
+        value: <%= images.count %>,
+        min: 0,
+        max: <%= images.count %>,
+        step: 1
+      });
+    } );
+    
 	</script>
 	
   <title><%= @project.name %> Webcam @ Bercy Chen Studio: <%= t('architecture') %> + <%= t('construction') %></title>
@@ -18,10 +33,26 @@
 <%= render :partial => 'shared/project_thumbnails' %>
 
 <div class="content">
+  <div class="timeline_control">
+    <center>
+      <div class="last_image">
+        <%= image_tag images.first.attachment.url(:thumb) %>
+      </div>
+      <div class="slider"></div>
+      <div class="first_image">
+        <%= image_tag images.last.attachment.url(:thumb) %>
+      </div>
+    </center>
+  </div>
+  
 	<div class="media">
 		<center>
 			<div class="image_container">
-			  <%= image_tag (@project.webcam_current_url)%>
+			  <%#= image_tag (@project.webcam_current_url)%>
+			  <%= image_tag @project.webcam_images.last.attachment.url, :class => 'current timeline'%>
+			  <% @project.webcam_images.where(:daily_image => true).reorder("date DESC").each do |image| %>
+			    <%= image_tag image.attachment.url, :class => 'timeline' %>
+			  <% end %>
 			</div>
 		</center>
 	</div>
