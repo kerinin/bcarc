@@ -17,3 +17,7 @@ div.webcam_thumb {
 .webcam_thumb a {
   display: block;
 }
+
+.webcam_thumb img {
+  display: block;
+}
