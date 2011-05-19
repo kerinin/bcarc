@@ -18,6 +18,7 @@ class WebcamImage < ActiveRecord::Base
   belongs_to :project
   
   before_validation :download_remote_image, :date_from_url, :on => :create, :unless => Proc.new {Rails.env == 'test'}
+  before_save :update_daily_image, :if => Proc.new {|i| i.daily_image_changed? && i.daily_image}
   
   validates_attachment_presence :attachment, :unless => Proc.new {Rails.env == 'test'}
   validates_presence_of :project, :source_url
@@ -34,6 +35,14 @@ class WebcamImage < ActiveRecord::Base
   end
   
   private
+  
+  def update_daily_image
+    day_start = DateTime.new(self.date.year, self.date.month, self.date.day, 0)
+    day_end = DateTime.new(self.date.year, self.date.month, self.date.day, 24)
+    self.project.webcam_images.where('date >= ? AND date < ?', day_start, day_end ).where(:daily_image => true).each do |image|
+      image.update_attributes(:daily_image => false)
+    end
+  end
   
   def download_remote_image
     self.attachment = do_download_remote_image

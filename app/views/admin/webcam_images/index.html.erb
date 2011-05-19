@@ -36,6 +36,12 @@
       <h2><%= image.date.to_date.to_s(:long)%></h2>
   <% end %>
   <div class="webcam_thumb">
+    <%= form_for [:admin, @project, image] do |f| %>
+      <%= f.check_box :daily_image, :onchange => "submit();" %>
+      <%= f.label :daily_image, image.date.to_time.strftime("%l:%M")%>
+      <%= hidden_field_tag :redirect_to, admin_project_webcam_images_path(@project) %>
+    <% end %>
+    
     <%= link_to image_tag( image.attachment.url(:thumb), :size => '55x40'), edit_admin_project_webcam_image_path(@project, image) %>
     <%= link_to 'Delete', admin_project_webcam_image_path(@project, image), :confirm => 'Are you sure?', :method => :delete, :remote => true, :class => 'delete_webcam' %>
   </div>

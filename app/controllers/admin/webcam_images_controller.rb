@@ -12,7 +12,7 @@ class Admin::WebcamImagesController < Admin::BaseController
   end
 
   def update
-    update!{ edit_admin_project_webcam_image_path(@project,@webcam_image) }
+    update!{ params[:redirect_to].nil? ? edit_admin_project_webcam_image_path(@project,@webcam_image) : params[:redirect_to] }
   end
   
   def destroy

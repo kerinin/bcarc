@@ -12,7 +12,7 @@ task :cron => :environment do
   
   #r = /(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})(\d+).jpg/
   r = /(\d{4})(\d{2})(\d{2})_(\d{2})(\d{2})(.*).jpg/
-  
+
   #Project.where(:has_webcam => true).each do |project|
   Project.all(:conditions => { :has_webcam => true }).each do |project|
     ftp.chdir(project.webcam_ftp_dir)
@@ -37,7 +37,7 @@ task :cron => :environment do
   end
   
   ftp.quit()
-  
+
   puts "determining daily images"
   WebcamImage.where(:daily_image => nil).each do |image|
     noon = DateTime.new(image.date.year, image.date.month, image.date.day, 12)
