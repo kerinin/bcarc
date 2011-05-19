@@ -2,11 +2,18 @@
 <% content_for :head do %>  
   <%= stylesheet_link_tag 'jquery-ui' %>
   <%= javascript_include_tag 'jquery-ui.min'%>
+  <%= javascript_include_tag 'jquery.mousewheel.min'%>
   
   <script type="text/javascript">
     jQuery(document).ready( function() { 
       _gaq.push(['_trackEvent', 'Projects', 'ViewWebcam', '<%= @project.name %>']); 
       _gaq.push(['_trackEvent', 'Webcam', 'View', '<%= @project.name %>']); 
+      
+      function handleSlide(event, ui) {
+        offset = <%= images.count %> - ui.value;
+        jQuery('.image_container img').removeClass('current');
+        jQuery('.image_container img:eq('+offset+')').addClass('current');        
+      }
       
       jQuery(".slider").slider({
         orientation: "vertical",
@@ -14,12 +21,15 @@
         min: 0,
         max: <%= images.count %>,
         step: 1,
-        slide: function(event, ui) {
-          offset = <%= images.count %> - ui.value;
-          jQuery('.image_container img').removeClass('current');
-          jQuery('.image_container img:eq('+offset+')').addClass('current');
-        }
+        slide: handleSlide,
+        change: handleSlide
       });
+      
+      jQuery('.timeline, .timeline_control').bind('mousewheel', function(event, delta) {
+        slider = jQuery(".slider");
+        if( delta > 0 ) { slider.slider('value', slider.slider('value')+1 ); }
+        else { slider.slider('value', slider.slider('value')-1 ); }
+      })
     } );
     
 	</script>
