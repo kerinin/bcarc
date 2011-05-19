@@ -5,7 +5,8 @@
   
   <script type="text/javascript">
     jQuery(document).ready( function() { 
-      _gaq.push(['_trackEvent', 'Projects', 'View', '<%= @project.name %>']); 
+      _gaq.push(['_trackEvent', 'Projects', 'ViewWebcam', '<%= @project.name %>']); 
+      _gaq.push(['_trackEvent', 'Webcam', 'View', '<%= @project.name %>']); 
       
       jQuery(".slider").slider({
         orientation: "vertical",
