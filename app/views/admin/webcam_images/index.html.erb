@@ -33,13 +33,21 @@
     <% date = image.date.to_date %>
     </p>
     <p>
-      <h2><%= image.date.to_date.to_s(:long)%></h2>
+      <h2>
+        <%= image.date.to_date.to_s(:long)%>
+        <% day_start = DateTime.new(date.year, date.month, date.day, 0) %>
+        <% day_end = DateTime.new(date.year, date.month, date.day, 24) %>
+        <% daily_image = WebcamImage.where('date >= ? AND date < ?', day_start, day_end).where(:daily_image => true).first %>
+        <% unless daily_image.nil? %>
+          <%= image_tag daily_image.attachment.url(:thumb), :size => '55x40' %>
+        <% end %>
+      </h2>
   <% end %>
   <div class="webcam_thumb">
     <%= form_for [:admin, @project, image] do |f| %>
       <%= f.check_box :daily_image, :onchange => "submit();" %>
       <%= f.label :daily_image, image.date.to_time.strftime("%l:%M")%>
-      <%= hidden_field_tag :redirect_to, admin_project_webcam_images_path(@project) %>
+      <%= hidden_field_tag :redirect_to, url_for(:page => params[:page]) %>
     <% end %>
     
     <%= link_to image_tag( image.attachment.url(:thumb), :size => '55x40'), edit_admin_project_webcam_image_path(@project, image) %>
@@ -50,4 +58,4 @@
 
 <%= will_paginate @webcam_images %>
 
-<p></p>
+<p>&nbsp;</p>
