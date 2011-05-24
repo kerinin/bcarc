@@ -18,9 +18,14 @@ task :cron => :environment do
     ftp.chdir(project.webcam_ftp_dir)
     files =  ftp.nlst().select {|v| v.include?(project.webcam_file_prefix) && v=~ r && !WebcamImage.exists?(:source_url => v)}
     files.each do |url|
+      #image = WebcamImage.new(:project => project, :source_url => url)
+      #image.download_remote_image
+      #image.save!
+      
       begin
         image = WebcamImage.new(:project => project, :source_url => url)
-        #image.date_from_url
+        image.date_from_url
+        image.download_remote_image
         image.save!
         
       rescue
