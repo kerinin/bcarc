@@ -64,8 +64,8 @@
 	<div class="media">
 		<center>
 			<div class="image_container">
-			  <%#= image_tag (@project.webcam_current_url)%>
-			  <%= image_tag @project.webcam_images.last.attachment.url, :class => 'current timeline'%>
+			  <%= image_tag (@project.webcam_current_url), :class => 'current timeline' %>
+			  <%#= image_tag @project.webcam_images.last.attachment.url, :class => 'current timeline'%>
 			  <% images.each do |image| %>
 			    <%= image_tag image.attachment.url, :class => 'timeline' %>
 			  <% end %>
