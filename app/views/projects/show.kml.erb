@@ -12,7 +12,7 @@
           <% if @project.address && @project.city && @project.state %>
             <address>
               <a href="http://www.domain.com/">Company Name</a><br />
-              Address: <%= @project.address %> <%= @project.city %>, <%= @project.state %> <%= @project.zip %><br />
+              Address: <%= @project.address %> <%= @project.city %>, <%= @project.state %><br />
             </address>
             <p><%= raw @project.html_short %></p>
           <% elsif @project.short %>
