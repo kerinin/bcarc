@@ -1,0 +1,27 @@
+-content_for :head do 	
+  :javascript
+    // init work text
+    jQuery(document).ready(
+      function(){
+      	jQuery(".work_text").hide();
+      	jQuery("div.work_container").hover(showWorkText,hideWorkText);
+      }
+    );
+
+	 
+  %title
+    Bercy Chen Studio: 
+    = t('architecture') 
+    +
+    = t('construction')
+  %meta{ :name => "keywords", :content => "Bercy Chen Studio Architecture Architect Austin Design Build Construction Green Building Contemporary Modern Lakehouse Sustainability design-build Greenroof Green Roof House Home"}
+  %meta{ :name => "description", :content => "Bercy Chen Studio LP is an architecture and urban planning firm with design/build capabilities based in Austin, Texas founded in 2001 by partners Thomas Bercy and Calvin Chen.  Bercy Chen Studio LP is committed to collaborating with clients in identifying design solutions and planning strategies to create innovative designs based on environmentally sustainable and financially viable business models. Having experience as a design/build operation, the firm's first hand knowledge of construction and finance is crucial in ensuring successful project implementation. The firm has been a member of the City of Austin's Green Building Program and USGBC with certified 3 Star projects."}
+
+-content_for :nav_left do
+  = render :partial => 'shared/project_index_nav'
+
+.content
+  -@projects.each do |project|
+    = render :partial => 'shared/work_container', :locals => {:project => project}
+
+

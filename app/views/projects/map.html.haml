@@ -1,0 +1,24 @@
+-content_for :head do
+  :javascript
+    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Projects', 'View', '#{ @project.name }']); } );
+
+  = raw GMap.header
+  = raw @map.to_html
+
+  %title= "#{@project.name} Map @ Bercy Chen Studio: #{ t('architecture') } + #{ t('construction') }"
+  %meta{ :name => "keywords", :content => "#{ @project.tags.map(&:name).join(' ') } #{ @project.keywords || @project.name }"}
+  %meta{ :name => "description", :content => @project.short }
+
+-content_for :nav_left do
+  =render :partial => 'shared/project_show_nav'
+  
+= render :partial => 'shared/project_thumbnails'
+
+.content
+  .prop
+    .image_container
+      =raw @map.div(:width => 800, :height => 600)
+
+    =render :partial => 'plans'
+
+=render :partial => 'shared/project_footer'

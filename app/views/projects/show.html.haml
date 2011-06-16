@@ -1,0 +1,38 @@
+-content_for :head do
+  :javascript
+    // init plan js
+    jQuery(document).ready( init_plans );
+    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Projects', 'View', '#{ @project.name }']); } );
+    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Projects', 'ViewIndex', '#{ @project.name }>']); } );
+    
+	
+  %title
+    = @project.name 
+    @ Bercy Chen Studio: 
+    = t('architecture')
+    + 
+    = t('construction')
+  %meta{ :name => "keywords", :content => "#{ @project.tags.map(&:name).join(' ') } #{ @project.keywords || @project.name }" }
+  %meta{ :name => "description", :content => @project.short}
+
+-content_for :nav_left do
+  = render :partial => 'shared/project_show_nav'
+
+= render :partial => 'shared/project_thumbnails'
+
+.content
+  .prop
+    .image_container
+      -image_style = @project.description.blank? ? :full : :project_description
+      -if @next and @project.images.count > 0 
+        =link_to image_tag(@project.images[0].attachment.url( image_style ), :class => 'description_image'), project_image_path(@project,@next)
+      -elsif @project.images.count > 0
+        =image_tag @project.images[0].attachment.url( image_style ), :class => 'description_image'
+
+      .bold_link
+        %h1= @project.name
+        %div{ :class => @project.images ? 'description_with_image' : 'description_without_image'}=raw @project.html_description
+
+    = render :partial => 'plans'
+
+= render :partial => 'shared/project_footer'

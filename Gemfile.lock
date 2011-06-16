@@ -52,6 +52,8 @@ GEM
       xml-simple
     babosa (0.2.2)
     builder (2.1.2)
+    compass (0.10.6)
+      haml (>= 3.0.4)
     dalli (1.0.2)
     dynamic_form (1.1.4)
     erubis (2.6.6)
@@ -66,6 +68,12 @@ GEM
     globalize3 (0.0.11)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
+    haml (3.0.25)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     has_scope (0.5.0)
     i18n (0.5.0)
     i18n_routing (0.4.7)
@@ -129,12 +137,14 @@ DEPENDENCIES
   acts_as_markup
   authlogic
   aws-s3
+  compass (>= 0.10.6)
   dalli
   dynamic_form
   exception_notification
   factory_girl_rails
   friendly_id
   globalize3
+  haml-rails
   http_accept_language!
   i18n_routing
   inherited_resources

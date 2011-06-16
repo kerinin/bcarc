@@ -1,0 +1,63 @@
+-images = @project.webcam_images.where(:daily_image => true).reorder("date DESC")
+-content_for :head do 
+  = stylesheet_link_tag 'jquery-ui'
+  = javascript_include_tag 'jquery-ui.min'
+  = javascript_include_tag 'jquery.mousewheel.min'
+  
+  :javascript
+    jQuery(document).ready( function() { 
+      _gaq.push(['_trackEvent', 'Projects', 'ViewWebcam', '#{ @project.name }']); 
+      _gaq.push(['_trackEvent', 'Webcam', 'View', '#{ @project.name }']); 
+      
+      function handleSlide(event, ui) {
+        offset = #{ images.count } - ui.value;
+        jQuery('.image_container img').removeClass('current');
+        jQuery('.image_container img:eq('+offset+')').addClass('current');        
+      }
+      
+      jQuery(".slider").slider({
+        orientation: "vertical",
+        value: #{ images.count },
+        min: 0,
+        max: #{ images.count },
+        step: 1,
+        slide: handleSlide,
+        change: handleSlide
+      });
+      
+      jQuery('.timeline, .timeline_control').bind('mousewheel', function(event, delta) {
+        slider = jQuery(".slider");
+        if( delta > 0 ) { slider.slider('value', slider.slider('value')+1 ); }
+        else { slider.slider('value', slider.slider('value')-1 ); }
+      })
+    } );
+	
+  %title= "#{@project.name} Webcam @ Bercy Chen Studio: #{ t('architecture') } + #{ t('construction')}"
+
+  %meta{ :name => "keywords", :content => "images #{ @project.tags.map(&:name).join(' ') } #{ @project.name }" }
+  -if @project.description
+    %meta{ :name => "description", :content => @project.description  }
+
+-content_for :nav_left do
+  = render :partial => 'shared/project_show_nav'
+
+= render :partial => 'shared/project_thumbnails'
+
+.content
+  .timeline_control
+    %center
+      .last_image
+        = image_tag images.first.attachment.url(:thumb)
+      .slider
+      .first_image
+        = image_tag images.last.attachment.url(:thumb)
+
+  .media
+    %center
+      .image_container
+        = image_tag (@project.webcam_current_url), :class => 'current timeline'
+        =# image_tag @project.webcam_images.last.attachment.url, :class => 'current timeline'
+        -images.each do |image|
+          = image_tag image.attachment.url, :class => 'timeline'
+
+= render :partial => 'shared/project_footer'
