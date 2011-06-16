@@ -6,6 +6,12 @@ development:
   pool: 5
   timeout: 5000
 
+development_cached:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
+    
 #development:
 #  adapter: mysql
 #  database: bcstudio_rails_dev
