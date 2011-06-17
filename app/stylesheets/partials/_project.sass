@@ -1,9 +1,7 @@
 img.timeline 
   display : none
-
-
-img.timeline.current 
-  display : block
+  &.current 
+    display : block
 
 
 .timeline_control 
@@ -11,13 +9,10 @@ img.timeline.current
   left : 810px
   top : 5px
   width : 50px
-
-
-.timeline_control div 
-  margin-bottom: 15px
-
-.timeline_control .slider 
-  height : 400px
+  div 
+    margin-bottom: 15px
+  .slider 
+    height : 400px
 
 
 .description 
@@ -37,10 +32,8 @@ img.timeline.current
   position: relative
   top: 30px
   margin-bottom: 10px
-
-
-.content img 
-  border: 1px solid #8e8e8e
+  img 
+    border: 1px solid #8e8e8e
 
 
 .prop 
@@ -87,10 +80,8 @@ img.timeline.current
 
 .locator
   position:absolute
-
-
-.locator img 
-  border: 0
+  img 
+    border: 0
 
 
 .current_locator 
