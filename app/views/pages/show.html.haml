@@ -1,0 +1,8 @@
+-content_for :head do
+	%title="#{ @page.name } @ Bercy Chen Studio: #{ t('architecture') } + #{ t('construction') }"
+	%meta{ :name => "keywords", :content => @page.name}
+
+.content.page_content{:id => "page_#{@page.id}"}
+	%h1= t( @page.name.downcase )
+	= raw @page.html_content
+

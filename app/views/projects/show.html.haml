@@ -20,7 +20,7 @@
 
 = render :partial => 'shared/project_thumbnails'
 
-.content
+.content.project_content{:id => "project_#{@project.id}"}
   .prop
     .image_container
       -image_style = @project.description.blank? ? :full : :project_description

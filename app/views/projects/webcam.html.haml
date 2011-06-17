@@ -43,7 +43,7 @@
 
 = render :partial => 'shared/project_thumbnails'
 
-.content
+.content.webcam_content{:id => "project_#{@project.id}"}
   .timeline_control
     %center
       .last_image

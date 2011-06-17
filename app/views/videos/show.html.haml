@@ -16,7 +16,7 @@
 
 = render :partial => 'shared/project_thumbnails'
 	
-.content
+.content.video_content{:id => "video_#{@video.id}"}
   .media{ :style => 'padding-top:4em;padding-bottom:4em;'}
     %center
       -if @object.service == 'youtube'
