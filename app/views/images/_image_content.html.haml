@@ -1,0 +1,13 @@
+.content.image_content{:id => "image_#{@image.id}"}
+  .media
+    %center
+      .image_container
+        -if @next and @next.class.name == 'Image'
+          =link_to image_tag( @image.attachment.url(:full) ), project_image_path(@project,@next)
+        -else
+          =image_tag( @image.attachment.url(:full) )
+          
+      =render :partial => 'projects/plans'
+
+  .media_text.bold_link
+    = raw @image.html_description

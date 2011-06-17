@@ -1,0 +1,16 @@
+.content.video_content{:id => "video_#{@video.id}"}
+  .media{ :style => 'padding-top:4em;padding-bottom:4em;'}
+    %center
+      -if @object.service == 'youtube'
+        %object{ :width => @object.width, :height => @object.height }
+          %param{ :name => "movie", :value => @object.uri }
+          %embed{ :src => @object.uri, :type => "application/x-shockwave-flash", :width => @object.width, :height => @object.height}
+
+      -elsif @object.service == 'vimeo'
+        %object{ :width => "800", :height => "450"}
+          %param{ :name => "allowfullscreen", :value => "true" }
+          %param{ :name => "allowscriptaccess", :value => "always" }
+          %param{ :name => "movie", :value => "http://vimeo.com/moogaloop.swf?clip_id=#{ @object.vimeo_id }&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1" }
+          %embed{ :src => "http://vimeo.com/moogaloop.swf?clip_id=#{ @object.vimeo_id }&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1&amp;autoplay=1", :type => "application/x-shockwave-flash", :allowfullscreen => "true", :allowscriptaccess => "always", :width => "800", :height => "450" }
+    .media_text
+      = raw @video.html_description

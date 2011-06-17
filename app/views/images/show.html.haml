@@ -1,35 +1,23 @@
 -content_for :head do 
+  =javascript_include_tag 'prerender.js'
+  
   :javascript
     // init plan js
     jQuery(document).ready(init_plans);
     jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Projects', 'View', '#{ @project.name }']); } );
     jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Images', 'View', '#{ @project.name }/#{ @image.id }']); } );
 
-	
   %title= "#{ @project.name } - #{ t('images') } (#{ @image.position }) @ Bercy Chen Studio: #{ t('architecture') } + #{ t('construction') }"
 
   %meta{ :name => "keywords", :content => "images #{ @project.tags.map(&:name).join(' ') } #{ @project.name }"}
   -if @image.description
     %meta{ :name => "description", :content => @image.description }  
 
-
 -content_for :nav_left do
   =render :partial => 'shared/project_show_nav'
 
 =render :partial => 'shared/project_thumbnails'
 
-.content.image_content{:id => "image_#{@image.id}"}
-  .media
-    %center
-      .image_container
-        -if @next and @next.class.name == 'Image'
-          =link_to image_tag( @image.attachment.url(:full) ), project_image_path(@project,@next)
-        -else
-          =image_tag( @image.attachment.url(:full) )
-          
-      =render :partial => 'projects/plans'
-
-  .media_text.bold_link
-    = raw @image.html_description
+=render :partial => 'image_content'
 
 = render :partial => 'shared/project_footer'
