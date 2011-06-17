@@ -6,7 +6,13 @@
       <meta http-equiv="content-language" content="<%= I18n.locale.to_s.split('-')[0] %><%= I18n.locale==:en ? nil : ',en'%>">
       <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
       
-      <%= stylesheet_link_tag 'css-bcstudio', 'header', 'work', 'project', 'project_images', 'page', 'footer', 'tipTip' %>      
+      <%= stylesheet_link_tag 'compiled/screen', :media => 'screen, projection' %>
+      <%= stylesheet_link_tag 'compiled/print.css', :media => 'print' %>
+      <% # if IE %>
+        <% #= stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection' %>
+      <% # end %>
+        
+      <%= stylesheet_link_tag 'tipTip' %>      
       
       <%= javascript_include_tag 'jquery.min' %>
       <%= javascript_include_tag 'prototype' %>
