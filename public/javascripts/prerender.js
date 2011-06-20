@@ -41,7 +41,7 @@ function cache_path(path) {
 
 function refresh_DOM() {
   if( window.location.hash ) load_path( window.location.hash.replace(/^#/,'') );
-  else load_path( window.location.pathname);
+  else load_path( window.location.href);
   cache_images();
 }
 
@@ -67,8 +67,8 @@ $(document).ready( function() {
   $(window).bind('htmlhistory', refresh_DOM);
 
   // Cache the current page
-  current_DOM_path = window.location.pathname;
-  content_list[window.location.pathname] = {
+  current_DOM_path = window.location.href;
+  content_list[window.location.href] = {
     ".project_header.thumb_container" : $(".project_header.thumb_container").clone(),
     ".content" : $(".content").clone()
   }

@@ -2,40 +2,40 @@
   <% unless @prev.nil? %>
   	<div id="prev_button">
   	  <% if @prev.class.name == 'Image' and @prev == @project.images.first %>
-  	    <%= link_to image_tag('arrow_l_start.gif'), project_path(@project), {:rel => 'prerender'} %>
+  	    <%= link_to image_tag('arrow_l_start.gif'), project_url(@project), {:rel => 'prerender'} %>
   	  <% elsif @prev.class.name == 'Image' %>
-  	    <%= link_to image_tag('arrow_l_start.gif'), project_image_path(@project, @prev), {:rel => 'prerender'} %>
+  	    <%= link_to image_tag('arrow_l_start.gif'), project_image_url(@project, @prev), {:rel => 'prerender'} %>
   	  <% elsif @prev.class.name == 'Video' %>
-  	    <%= link_to image_tag('arrow_l_start.gif'), project_video_path(@project, @prev), {:rel => 'prerender'} %>
+  	    <%= link_to image_tag('arrow_l_start.gif'), project_video_url(@project, @prev), {:rel => 'prerender'} %>
 	    <% elsif @prev.class.name == 'Project' %>
-  	    <%= link_to image_tag('arrow_l_start.gif'), project_path(@project), {:rel => 'prerender'} %>
+  	    <%= link_to image_tag('arrow_l_start.gif'), project_url(@project), {:rel => 'prerender'} %>
 	    <% elsif @prev.class.name == 'WebcamImage' %>
-  	    <%= link_to image_tag('arrow_l_start.gif'), webcam_project_path(@project), {:rel => 'prerender'} %>
+  	    <%= link_to image_tag('arrow_l_start.gif'), webcam_project_url(@project), {:rel => 'prerender'} %>
   	  <% end %>
   	</div>
   <% end %>
   
   <% if @project.has_webcam %>
-    <%= link_to image_tag( @project.webcam_images.last.attachment.url(:thumb_ds), :size => '55x40', :swapover => @project.webcam_images.last.attachment.url(:thumb)), webcam_project_path(@project) %>
+    <%= link_to image_tag( @project.webcam_images.last.attachment.url(:thumb_ds), :size => '55x40', :swapover => @project.webcam_images.last.attachment.url(:thumb)), webcam_project_url(@project) %>
   <% end %>
   
   <% unless @project.images.active.count == 0 %>
     <% @project.images.active.all[1..-1].each do |image| %>
-      <%= link_to project_image(image), project_image_path(@project, image), {:rel => 'prerender', :class => (image == @object ? 'current_image' : nil)} %>
+      <%= link_to project_image(image), project_image_url(@project, image), {:rel => 'prerender', :class => (image == @object ? 'current_image' : nil)} %>
     <% end %>
     <% @project.videos.each do |video| %>
-      <%= link_to project_video(video), project_video_path(@project, video), {:rel => 'prerender', :class => (video == @object ? 'current_image' : nil)} %>
+      <%= link_to project_video(video), project_video_url(@project, video), {:rel => 'prerender', :class => (video == @object ? 'current_image' : nil)} %>
     <% end %>
   <% end %>
   
   <% unless @next.nil? %>
   	<div id="next_button">
   	  <% if @next.class.name == 'Image' %>
-  	    <%= link_to image_tag('arrow_r_start.gif'), project_image_path(@project, @next), {:rel => 'prerender'} %>
+  	    <%= link_to image_tag('arrow_r_start.gif'), project_image_url(@project, @next), {:rel => 'prerender'} %>
   	  <% elsif @next.class.name == 'Video' %>
-  	    <%= link_to image_tag('arrow_r_start.gif'), project_video_path(@project, @next), {:rel => 'prerender'} %>
+  	    <%= link_to image_tag('arrow_r_start.gif'), project_video_url(@project, @next), {:rel => 'prerender'} %>
 	    <% elsif @next.class.name == 'Project' %>
-  	    <%= link_to image_tag('arrow_r_start.gif'), project_path(@project), {:rel => 'prerender'} %>
+  	    <%= link_to image_tag('arrow_r_start.gif'), project_url(@project), {:rel => 'prerender'} %>
       <% end %>
   	</div>
   <% end %>
