@@ -2,6 +2,11 @@
 var content_list = {}
 var current_DOM_path = null
 
+function show_spinner() {
+  $('.content').replaceWith( $('.spinner').clone().removeClass('hidden').addClass('current') );
+  $('.spinner.current').wrap("<div class='content'>");
+}
+
 // Load content from a given path
 function load_path( path ) {
   if( content = content_list[path] ){
@@ -18,7 +23,8 @@ function load_path( path ) {
     }
   // If the path hasn't been requested, call an ajax request for it
   } else {
-    cache_path(path)
+    show_spinner();
+    cache_path(path);
   }
 }
 

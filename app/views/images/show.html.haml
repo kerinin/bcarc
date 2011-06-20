@@ -17,8 +17,13 @@
 -content_for :nav_left do
   =render :partial => 'shared/project_show_nav'
 
+.spinner.hidden
+  %center
+    =image_tag '/images/spinner.gif'
+      
 =render :partial => 'shared/project_thumbnails'
 
 =render :partial => 'image_content'
 
 = render :partial => 'shared/project_footer'
+
