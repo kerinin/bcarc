@@ -1,5 +1,5 @@
 // If the URL has been reloaded from a gimpy browser (url#/url), redirect before it renders
-if( window.location.hash ) window.location.href = window.location.hash.slice(1);
+if( window.location.hash ) window.location.href = window.location.hash.replace(/^#/,'');
 
 // List of HTML content for insertion, indexed by URL
 var content_list = {}
@@ -40,7 +40,7 @@ function cache_path(path) {
 }
 
 function refresh_DOM() {
-  if( window.location.hash ) load_path( window.location.hash.slice(1) );
+  if( window.location.hash ) load_path( window.location.hash.replace(/^#/,'') );
   else load_path( window.location.pathname);
   cache_images();
 }
