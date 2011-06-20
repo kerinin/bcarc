@@ -33,6 +33,7 @@ class ProjectsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.kml
+      format.js
     end
   end
      
@@ -56,6 +57,9 @@ class ProjectsController < ApplicationController
 
     @next = @project
 
-    render :action => :webcam
+    respond_to do |format|
+      format.html { render :action => :webcam }
+      format.js
+    end
   end
 end

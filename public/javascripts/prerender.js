@@ -6,7 +6,7 @@ var content_list = {}
 var current_DOM_path = null
 
 function show_spinner() {
-  $('.content').replaceWith( $('.spinner').clone().removeClass('hidden').addClass('current') );
+  $('.content').replaceWith( $('.spinner.hidden').clone().removeClass('hidden').addClass('current') );
   $('.spinner.current').wrap("<div class='content'>");
 }
 

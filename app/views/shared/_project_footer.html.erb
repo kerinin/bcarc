@@ -1,7 +1,7 @@
 <div class="project_footer">
 	<div class="project_name heading">
 	  <% @project.tags.each do |tag| %>
-	    <%= link_to tag.name, tag_path(tag), {:class => 'item'} %> > <%= link_to @project.name, project_path(@project), {:class => 'item'} %>
+	    <%= link_to tag.name, tag_path(tag), {:class => 'item'} %> > <%= link_to @project.name, project_url(@project), {:class => 'item', :rel => 'prerender'} %>
     <% end %>
 	</div>
 </div>

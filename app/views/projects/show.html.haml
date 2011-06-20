@@ -23,19 +23,6 @@
 
 = render :partial => 'shared/project_thumbnails'
 
-.content.project_content{:id => "project_#{@project.id}"}
-  .prop
-    .image_container
-      -image_style = @project.description.blank? ? :full : :project_description
-      -if @next and @project.images.count > 0 
-        =link_to image_tag(@project.images[0].attachment.url( image_style ), :class => 'description_image'), project_image_path(@project,@next)
-      -elsif @project.images.count > 0
-        =image_tag @project.images[0].attachment.url( image_style ), :class => 'description_image'
-
-      .bold_link
-        %h1= @project.name
-        %div{ :class => @project.images ? 'description_with_image' : 'description_without_image'}=raw @project.html_description
-
-    = render :partial => 'plans'
+= render :partial => 'project_content'
 
 = render :partial => 'shared/project_footer'

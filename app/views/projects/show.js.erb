@@ -1,0 +1,4 @@
+content_list['<%= project_url(@project) %>'] = {
+  ".project_header.thumb_container" : $("<%= escape_javascript( render(:partial => 'shared/project_thumbnails') ) %>"),
+  ".content" : $("<%= escape_javascript( render( :partial => 'project_content') ) %>")
+};
