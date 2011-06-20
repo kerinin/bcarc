@@ -12,7 +12,6 @@ function show_spinner() {
 
 // Load content from a given path
 function load_path( path ) {
-  
   if( content = content_list[path] ){
     // If the path has changed, and the content has downloaded (IE, we're not still waiting for it)
     // The AJAX request triggers a DOM refresh, so we can terminate if it's caching - when it arrives
@@ -47,7 +46,7 @@ function refresh_DOM() {
 }
 
 function cache_images( scope ) {
-  // Cache the next 2 images
+  // Cache the next 4 images
   $('a.current_image').nextAll('a[rel=prerender]:lt(4)').each( function(i,elem) {
     cache_path( $(elem).attr('href') );
   });  

@@ -1,7 +1,8 @@
 -images = @project.webcam_images.where(:daily_image => true).reorder("date DESC")
 -content_for :head do 
   = stylesheet_link_tag 'jquery-ui'
-  = javascript_include_tag 'prerender.js'
+  =javascript_include_tag 'jquery-html-history.js'
+  =javascript_include_tag 'prerender.js'
   = javascript_include_tag 'jquery-ui.min'
   = javascript_include_tag 'jquery.mousewheel.min'
   
