@@ -56,21 +56,30 @@ function cache_images( scope ) {
   });
 }
 
-$(document).ready( function() {
-  $.htmlhistory.init({ interceptLinks: false });
-
-  $('body').delegate('a[rel=prerender]', 'click', function(e) {
-    $.htmlhistory.changeTo( $(this).attr('href') );
-    e.preventDefault();
-  })
-
-  $(window).bind('htmlhistory', refresh_DOM);
-
+function init() {
   // Cache the current page
   current_DOM_path = window.location.href;
   content_list[window.location.href] = {
     ".project_header.thumb_container" : $(".project_header.thumb_container").clone(),
     ".content" : $(".content").clone()
   }
-  cache_images();
+  
+  // Init the history
+  $.htmlhistory.init({ interceptLinks: false });    
+
+  // Bind behaviors to the history plugin
+  $('body').delegate('a[rel=prerender]', 'click', function(e) {
+    $.htmlhistory.changeTo( $(this).attr('href') );
+    e.preventDefault();
+  })
+  $(window).bind('htmlhistory', refresh_DOM);
+
+  // Cache the next couple images
+  cache_images();  
+}
+
+$(document).ready( function() {
+  // This keeps the browser spinner from going while the ajax loads
+  // May also avoid some page loads if people click back quickly
+  var t=setTimeout(init,1500);
 });
