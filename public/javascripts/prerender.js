@@ -1,3 +1,6 @@
+// If the URL has been reloaded from a gimpy browser (url#/url), redirect before it renders
+if( window.location.hash ) window.location.href = window.location.hash.slice(1);
+
 // List of HTML content for insertion, indexed by URL
 var content_list = {}
 var current_DOM_path = null
@@ -9,6 +12,7 @@ function show_spinner() {
 
 // Load content from a given path
 function load_path( path ) {
+  
   if( content = content_list[path] ){
     // If the path has changed, and the content has downloaded (IE, we're not still waiting for it)
     // The AJAX request triggers a DOM refresh, so we can terminate if it's caching - when it arrives
@@ -37,7 +41,8 @@ function cache_path(path) {
 }
 
 function refresh_DOM() {
-  load_path(window.location.pathname);
+  if( window.location.hash ) load_path( window.location.hash.slice(1) );
+  else load_path( window.location.pathname);
   cache_images();
 }
 
@@ -54,16 +59,14 @@ function cache_images( scope ) {
 
 $(document).ready( function() {
   $.htmlhistory.init({ interceptLinks: false });
-  
+
   $('body').delegate('a[rel=prerender]', 'click', function(e) {
     $.htmlhistory.changeTo( $(this).attr('href') );
     e.preventDefault();
   })
-  
-  $(window).bind('htmlhistory', function(e) {
-    load_path( window.location.pathname);
-  });
-  
+
+  $(window).bind('htmlhistory', refresh_DOM);
+
   // Cache the current page
   current_DOM_path = window.location.pathname;
   content_list[window.location.pathname] = {
