@@ -16,7 +16,7 @@
   <% end %>
   
   <% if @project.has_webcam %>
-    <%= link_to image_tag( @project.webcam_images.last.attachment.url(:thumb_ds), :size => '55x40', :swapover => @project.webcam_images.last.attachment.url(:thumb)), webcam_project_url(@project) %>
+    <%= link_to image_tag( @project.webcam_images.last.attachment.url(:thumb_ds), :size => '55x40', :swapover => @project.webcam_images.last.attachment.url(:thumb)), webcam_project_url(@project), {:rel => 'prerender'} %>
   <% end %>
   
   <% unless @project.images.active.count == 0 %>

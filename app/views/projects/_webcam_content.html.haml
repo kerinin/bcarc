@@ -1,12 +1,15 @@
 .content.webcam_content{:id => "project_#{@project.id}"}
   -images = @project.webcam_images.where(:daily_image => true).reorder("date DESC")
   = stylesheet_link_tag 'jquery-ui'
-  = javascript_include_tag 'jquery-html-history.js'
-  = javascript_include_tag 'prerender.js'
   = javascript_include_tag 'jquery-ui.min'
   = javascript_include_tag 'jquery.mousewheel.min'
 
   :javascript
+    jQuery(document).ready( init_plans );
+    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Projects', 'View', '#{ @project.name }']); } );
+    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Projects', 'ViewIndex', '#{ @project.name }>']); } );
+
+    jQuery(document).ready( function() {
       function handleSlide(event, ui) {
         offset = #{ images.count } - ui.value;
         jQuery('.image_container img').removeClass('current');
@@ -28,6 +31,7 @@
         if( delta > 0 ) { slider.slider('value', slider.slider('value')+1 ); }
         else { slider.slider('value', slider.slider('value')-1 ); }
       })
+    });
 
   
   .timeline_control

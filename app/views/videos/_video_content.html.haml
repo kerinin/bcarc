@@ -1,4 +1,10 @@
 .content.video_content{:id => "video_#{@video.id}"}
+  :javascript
+    // init plan js
+    jQuery(document).ready(init_plans);
+    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Projects', 'View', '#{ @project.name }']); } );
+    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Video', 'View', '#{ @project.name }/#{ @video.id }']); } );
+
   .media{ :style => 'padding-top:4em;padding-bottom:4em;'}
     %center
       -if @object.service == 'youtube'

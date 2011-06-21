@@ -1,10 +1,4 @@
 -content_for :head do 
-  :javascript
-    // init plan js
-    jQuery(document).ready(init_plans);
-    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Projects', 'View', '#{ @project.name }']); } );
-    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Images', 'View', '#{ @project.name }/#{ @image.id }']); } );
-
   %title= "#{ @project.name } - #{ t('images') } (#{ @image.position }) @ Bercy Chen Studio: #{ t('architecture') } + #{ t('construction') }"
 
   %meta{ :name => "keywords", :content => "images #{ @project.tags.map(&:name).join(' ') } #{ @project.name }"}

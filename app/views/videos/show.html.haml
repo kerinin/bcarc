@@ -1,13 +1,4 @@
 -content_for :head do
-  =javascript_include_tag 'jquery-html-history.js'
-  =javascript_include_tag 'prerender.js'
-  
-  :javascript
-    // init plan js
-    jQuery(document).ready(init_plans);
-    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Projects', 'View', '#{ @project.name }']); } );
-    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Video', 'View', '#{ @project.name }/#{ @video.id }']); } );
-	
   %title= "#{@project.name} - Videos  (#{ @video.position }) @ Bercy Chen Studio: Architecture + Construction"
 
   %meta{ :name => "keywords", :content => "video #{ @project.tags.map(&:name).join(' ') } #{ @project.name }" }
