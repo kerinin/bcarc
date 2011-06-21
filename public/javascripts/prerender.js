@@ -82,4 +82,7 @@ $(document).ready( function() {
   // This keeps the browser spinner from going while the ajax loads
   // May also avoid some page loads if people click back quickly
   var t=setTimeout(init,1500);
+  
+  // Put the footer inside the content
+  //$('.content').after( $('.footer') );
 });

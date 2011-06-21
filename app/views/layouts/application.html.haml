@@ -80,7 +80,9 @@
       = yield
 
       .footer
-        .credits.footer
+        = yield :footer
+        
+        .credits
           %p
             %strong Austin
             | 1111 E. 11th Street Suite 200  : Austin Texas 78702 : United States of America | +1 512 481 0092
@@ -97,13 +99,13 @@
             |
             = link_to t('subscribe'), "http://eepurl.com/cs8F"
             = t('to_our_newsletter').downcase
-          .badges
-            = link_to image_tag( 'badges/architizer.png' ), 'http://www.architizer.com/en_us/firms/view/bercy-chen-studio-lp/8249/', :title => t('bercy_chen_on_', :network => 'Architizer'), :class => 'tip'
-            = link_to image_tag( 'badges/behance.png'), 'http://www.behance.net/bcstudio', :title => t('bercy_chen_on_', :network => 'Behance'), :class => 'tip'
-            = link_to image_tag( 'badges/facebook.png'), 'http://www.facebook.com/pages/Austin/Bercy-Chen-Studio/350315618648', :title => t('bercy_chen_on_', :network => 'Facebook'), :class => 'tip'
-            = link_to image_tag( 'badges/flickr.png'), 'http://www.flickr.com/photos/bercychenstudio/', :title => t('bercy_chen_on_', :network => 'Flickr'), :class => 'tip'
-            = link_to image_tag( 'badges/twitter.png'), 'http://twitter.com/BercyChenStudio', :title => t('bercy_chen_on_', :network => 'Twitter'), :class => 'tip'
-            = link_to image_tag( 'badges/vimeo.png'), 'http://vimeo.com/bcarc', :title => t('bercy_chen_on_', :network => 'Vimeo'), :class => 'tip'
+        .badges
+          = link_to image_tag( 'badges/architizer.png' ), 'http://www.architizer.com/en_us/firms/view/bercy-chen-studio-lp/8249/', :title => t('bercy_chen_on_', :network => 'Architizer'), :class => 'tip'
+          = link_to image_tag( 'badges/behance.png'), 'http://www.behance.net/bcstudio', :title => t('bercy_chen_on_', :network => 'Behance'), :class => 'tip'
+          = link_to image_tag( 'badges/facebook.png'), 'http://www.facebook.com/pages/Austin/Bercy-Chen-Studio/350315618648', :title => t('bercy_chen_on_', :network => 'Facebook'), :class => 'tip'
+          = link_to image_tag( 'badges/flickr.png'), 'http://www.flickr.com/photos/bercychenstudio/', :title => t('bercy_chen_on_', :network => 'Flickr'), :class => 'tip'
+          = link_to image_tag( 'badges/twitter.png'), 'http://twitter.com/BercyChenStudio', :title => t('bercy_chen_on_', :network => 'Twitter'), :class => 'tip'
+          = link_to image_tag( 'badges/vimeo.png'), 'http://vimeo.com/bcarc', :title => t('bercy_chen_on_', :network => 'Vimeo'), :class => 'tip'
 
           %p &nbsp;
 

@@ -12,7 +12,8 @@
 
 =render :partial => 'image_content'
 
-= render :partial => 'shared/project_footer'
+-content_for :footer do
+  = render :partial => 'shared/project_footer'
 
 =javascript_include_tag 'jquery-html-history.js'
 =javascript_include_tag 'prerender.js'

@@ -1,9 +1,11 @@
 .header
   position: relative
   width: 100%
-  top: 40px
+  margin-top : 0
+  //top: 2px
   margin-bottom: 10px
   font-size: .9em
+
   a 
     text-decoration: none
     color: #DDDDDD
@@ -12,16 +14,27 @@
     color: #5D0000
 
 
-.link_home img 
-  position: absolute
-  right: 0px
-  bottom: 34px
-  z-index: 0
+  .link_home
+    float : right
 
-  display: block
-  padding: 0
-  margin: 0
+    display: block
+    padding: 0
+    margin: 0
 
+  .section_links 
+    clear : both
+    position: relative
+    display: block
+    height: 18px
+    width: 800px
+
+    border-top-style: solid
+    border-top-color: #8e8e8e
+    border-top-width: 1px
+
+    border-bottom-style: solid
+    border-bottom-color: #8e8e8e
+    border-bottom-width: 1px
 
 .currentNav a 
   color: #5D0000
@@ -51,19 +64,7 @@ ul.nav_right
   margin-left: .5em
 
 
-.section_links 
-  position: relative
-  display: block
-  height: 18px
-  width: 800px
 
-  border-top-style: solid
-  border-top-color: #8e8e8e
-  border-top-width: 1px
-
-  border-bottom-style: solid
-  border-bottom-color: #8e8e8e
-  border-bottom-width: 1px
 
 
 .tag_name 
@@ -75,7 +76,8 @@ ul.nav_right
 
 .project_header 
   position: relative
-  top: 30px
+  //margin-top : 30px
+  // top: 30px
   margin-bottom: 10px
   a 
     text-decoration: none
