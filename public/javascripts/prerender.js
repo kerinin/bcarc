@@ -18,11 +18,39 @@ If we've only ever got two panes, we can probably set left/right to 0
 */
 
 function slide_left() {
-  $('.content > *').animate( {left: '-=800'}, 1000 );
+  $('.content').animate( {left: '-=800'}, 1000 );
 }
 
 function slide_right() {
-  $('.content > *').animate( {left: '+=800'}, 1000 );
+  $('.content').animate( {left: '+=800'}, 1000 );
+}
+
+function slide_spinner_from_left() {
+  $('.content').removeClass('swap_target');
+  
+  $('.slide_box').css({'left': null, 'right': 0}).append( 
+    $('.spinner.hidden').clone().removeClass('hidden').addClass('current')
+  );
+  $('.slide_box > .spinner').wrap("<div class='content swap_target' style='position:absolute;right:800px;top:0px;'>");
+  
+  $('.slide_box > *').animate({'right' : '-=800'}, 1000, 'swing', function(){
+    $('.content').not('.swap_target').remove();
+    $('.content').removeAttr("style");
+  });  
+}
+
+function slide_spinner_from_right() {
+  $('.content').removeClass('swap_target');
+  
+  $('.slide_box').css({'left': 0, 'right': null}).append( 
+    $('.spinner.hidden').clone().removeClass('hidden').addClass('current')
+  );
+  $('.slide_box > .spinner').wrap("<div class='content swap_target' style='position:absolute;left:800px;top:0px;'>");
+  
+  $('.slide_box > *').animate({'left': '-=800'}, 1000, 'swing', function(){
+    $('.content').not('.swap_target').remove();
+    $('.content').removeAttr("style");
+  });
 }
 
 function show_spinner() {
@@ -104,5 +132,5 @@ $(document).ready( function() {
   var t=setTimeout(init,1500);
   
   // Put the footer inside the content
-  $('.content').append( $('.footer') );
+  $('.content').addClass('swap_target').append( $('.footer') );
 });
