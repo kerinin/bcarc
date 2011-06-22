@@ -5,6 +5,26 @@ if( window.location.hash ) window.location.href = window.location.hash.replace(/
 var content_list = {}
 var current_DOM_path = null
 
+/*
+I think we're going to want to anchor to the opposite side we're inserting on.
+
+So, if we're adding an image on the right, we anchor to the left,
+insert the content, the animate the left property
+
+If we're adding an image on the left, we anchor on the right, insert
+the content on the left, then animate the right property.
+
+If we've only ever got two panes, we can probably set left/right to 0
+*/
+
+function slide_left() {
+  $('.content > *').animate( {left: '-=800'}, 1000 );
+}
+
+function slide_right() {
+  $('.content > *').animate( {left: '+=800'}, 1000 );
+}
+
 function show_spinner() {
   $('.content').replaceWith( $('.spinner.hidden').clone().removeClass('hidden').addClass('current') );
   $('.spinner.current').wrap("<div class='content'>");
@@ -84,5 +104,5 @@ $(document).ready( function() {
   var t=setTimeout(init,1500);
   
   // Put the footer inside the content
-  //$('.content').after( $('.footer') );
+  $('.content').append( $('.footer') );
 });
