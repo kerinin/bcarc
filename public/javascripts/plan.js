@@ -1,88 +1,60 @@
-var planCurrentView;
+var pin_plan = false;
 
-function init_plans(){
-	jQuery('.plan').hide();
-	planCurrentView = currentImage = jQuery('.image_container');
-	
+function insert_locators() {
 	jQuery('.locator a').each(function(i){
 		locator = Raphael(this,50,50);
 		img = locator.image("/images/icons/arrow_"+((+jQuery(this).attr('current'))?'over':'start')+".png",0,0,50,50);
 		img.rotate(jQuery(this).attr('angle'),25,25);
 		this.rimg = img;
-		
-		jQuery(this).hover(
-			function(e){
-				anchor = jQuery(this);
-				jQuery("#thumb_"+anchor.attr('locator')).trigger('mouseenter');
-				if(!( +anchor.attr('current')) ) this.rimg.attr('src', '/images/icons/arrow_over.png' );
-			},function(e){
-				anchor = jQuery(this);
-				jQuery("#thumb_"+anchor.attr('locator')).trigger('mouseleave');
-				if(!( +anchor.attr('current')) ) this.rimg.attr('src','/images/icons/arrow_start.png');
-			}
-		);
-	});
-		
-	jQuery('.plan_link').each(function() {
-		jQuery(this).hover(
-			function(e){ 
-				//show plan
-				plan = jQuery('#plan_'+jQuery(e.target).attr('href').split('plans/')[1])
-				
-				if( planCurrentView[0] != plan[0] ){
-					currentImage.css('opacity',0);
-					plan.show();
-				}
-				
-			}, function(e){ 
-				//hide plan
-				plan = jQuery('#plan_'+jQuery(e.target).attr('href').split('plans/')[1])
-				
-				if( planCurrentView[0] != plan[0] ){
-					plan.hide();
-					currentImage.css('opacity',1);
-				}
-			} 
-		).click(function(e){
-			plan = jQuery('#plan_'+jQuery(e.target).attr('href').split('maps/')[1]);
-			
-			planCurrentView.find('.locator a:not(.current_locator)').addClass('other_locator');
-			
-			if( plan[0] == planCurrentView[0] ){
-				// re-clicking on plan - show image again
-				
-				//remove previous view
-				plan.hide().removeClass('current_view');
-				jQuery(e.target).removeClass('current_view');
-				
-				//prepare image
-				currentImage.addClass('curent_view');
-				planCurrentView = currentImage;
-				
-				//show image
-				currentImage.css('opacity',1);
-				
-			} else {
-				// changing view to a plan
-				
-				//remove previous view
-				currentImage.css('opacity',0);
-				if( planCurrentView[0] != currentImage[0] ){
-					planCurrentView.hide();
-					jQuery('.plan_link').removeClass('current_view');
-				}				
-				
-				//prepare new view
-				plan.find('.locator a').removeClass('other_locator');
-				plan.addClass('current_view');
-				jQuery(e.target).addClass('current_view');
-				planCurrentView =plan;
-				
-				//show new view
-				plan.show();
-			}
-			return false;
-		});
-		
-	});
+	});  
+}
+
+function show_plan( plan ){
+  // Turn off the previous plan
+  $('.plan.current').removeClass('current');
+  // Turn on the plan given the link's href
+  plan.addClass('current');
+  // Change view state
+  $('.content').removeClass('image_content').addClass('plan_content');  
+}
+
+function hide_plan() {
+  if( !pin_plan ){
+    $('.content').removeClass('plan_content').addClass('image_content');
+  }  
+}
+
+function init_plans() {
+  insert_locators();
+
+  // When the locators are mouseover'd, trigger the same event on the corresponding thumbnail
+  $('body').delegate('.locator a', 'mouseover mouseout', function(e) {
+    if( e.type == 'mouseover' ){
+  		anchor = jQuery(this);
+  		jQuery("#thumb_"+anchor.attr('locator')).find('img').trigger('mouseover');
+  		if(!( +anchor.attr('current')) ) this.rimg.attr('src', '/images/icons/arrow_over.png' );      
+    } else {
+  		anchor = jQuery(this);
+  		jQuery("#thumb_"+anchor.attr('locator')).find('img').trigger('mouseout');
+  		if(!( +anchor.attr('current')) ) this.rimg.attr('src','/images/icons/arrow_start.png');
+    }
+  });
+  
+  // In case we're preloading, hide the plan on click
+  $('body').delegate('.locator a', 'click', function(){ pin_plan = false; hide_plan() } );
+  
+  $('body').delegate('.plan_link', "mouseover mouseout", function(e){
+    if (e.type == 'mouseover') {
+      show_plan( $('#plan_'+$(e.target).attr('href').split('plans/')[1]) ); 
+    } else {
+      hide_plan();
+    }
+  });
+  
+  $('body').delegate('.plan_link', 'click', function(e){
+    // Toggle state
+    pin_plan = !pin_plan;
+    
+    e.preventDefault();
+  })
 }

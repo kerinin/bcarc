@@ -1,3 +1,27 @@
+.content
+  // UI States
+  &.project_content, &.image_content, &.video_content
+    .image_container
+      display : block
+    .plan
+      display : none
+      
+  &.plan_content
+    .image_container, .plan
+      display : none
+    .plan.current
+      display: block
+      
+      
+.plan
+  position : relative
+
+  .locator
+    position : absolute
+    img 
+      border : 0
+      
+      
 img.timeline 
   display : none
   &.current 
@@ -52,36 +76,10 @@ img.timeline
 #next_button img 
   border: 0px
 
-
-.plan
-  position: absolute
-  left: 0
-  top: 0
-  z-index: 10
-  width: 800px
-
-
-.locator
-  position:absolute
-  img 
-    border: 0
-
-
-.current_locator 
-
-
 a.current_view 
   z-index: 0
   color: #5D0000
 
-
-.other_locator 
-  opacity: .5
-
-
 .zoom_button img
   border: 0px
 
-
-.locator 
-  position: absolute

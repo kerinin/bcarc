@@ -21,7 +21,7 @@
   
   <% unless @project.images.active.count == 0 %>
     <% @project.images.active.all[1..-1].each do |image| %>
-      <%= link_to project_image(image), project_image_url(@project, image), {:rel => 'prerender', :class => (image == @object ? 'current_image' : nil)} %>
+      <%= link_to project_image(image), project_image_url(@project, image), {:id => "thumb_#{image.id}", :rel => 'prerender', :class => (image == @object ? 'current_image' : nil)} %>
     <% end %>
     <% @project.videos.each do |video| %>
       <%= link_to project_video(video), project_video_url(@project, video), {:rel => 'prerender', :class => (video == @object ? 'current_image' : nil)} %>
