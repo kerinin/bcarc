@@ -1,2 +1,9 @@
-=javascript_include_tag 'jquery-html-history.js'
+:javascript
+  if ( typeof window.JSON === 'undefined' ) { 
+    document.write( '#{ escape_javascript( javascript_include_tag( 'json2.js' ) ) }' ); 
+  }
+=javascript_include_tag 'history.adapter.jquery.js'
+=javascript_include_tag 'history.js'
+=javascript_include_tag 'history.html4.js'
+=#javascript_include_tag 'jquery-html-history.js'
 =javascript_include_tag 'prerender.js'
