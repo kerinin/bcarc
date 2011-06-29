@@ -1,6 +1,7 @@
 // List of HTML content for insertion, indexed by URL
 var content_list = {};
 var DOM_state = null;
+var transition_state = null;
 
 function cache_path(path) {
   if( !content_list[path] ){
@@ -32,33 +33,53 @@ function insert_content() {
       }
     } else {
       $('.content.swap_target').replaceWith( $('.spinner.hidden').clone().removeClass('hidden').addClass('current') );
-      $('.spinner.current').wrap("<div class='content'>");      
+      $('.spinner.current').wrap("<div class='content swap_target'>");      
     }
     DOM_state = path;
   }
 }
 
 function prepare_for_transition( name ) {
-  if( name == 'from_right' ) { 
+  if( name == 'from_right' && transition_state != name ) { 
+    //$('.slide_window').css({'left':0,'right':null});
+    
+    // Wrap anything that isn't already wrapped
+    $('.slide_window > .content').wrap( "<div class='slide_box' style='position:relative;left:0px;top:0px;'>" );
+    
+    // Make a new swap target
     $('.content').removeClass('swap_target');
-    $('.slide_box').css({'left':0,'right':null}).append( $("<div class='content swap_target' style='position:absolute;left:800px;top:0px;'></div>") )
-  } else if( name == 'from_left' ) {
+    $('.slide_window').append( $("<div class='content swap_target''></div>") );
+    
+    // Wrap the new swap target, and start it offscreen
+    $('.content.swap_target').wrap( "<div class='slide_box' style='position:absolute;left:800px;top:0px;'>" );
+    
+  } else if( name == 'from_left' && transition_state != name ) {
+    //$('.slide_window').css({'left':null, 'right':0});
+    
+    $('.slide_window > .content').wrap( "<div class='slide_box' style='position:relative;right:0px;top:0px;'>" );
+    
     $('.content').removeClass('swap_target');
-    $('.slide_box').css({'left':null, 'right':0}).append( $("<div class='content swap_target' style='position:absolute;right:800px;top:0px;'></div>"))
+    $('.slide_window').append( $("<div class='content swap_target'></div>") );
+    
+    $('.content.swap_target').wrap( "<div class='slide_box' style='position:absolute;right:800px;top:0px;'>" )
   }
+  transition_state = name;
+}
+
+function animation_callback() {
+  // Remove content that isn't the current view
+  $('.content').not('.swap_target').parent().remove();
+  // Reset the slide box's CSS
+  $('.slide_box').attr('style', 'position:relative;left:0px;top:0px;');
+  
+  transition_state = null;  
 }
 
 function animation_for( transition ) {
   if( transition == 'from_right' ) {
-    $('.slide_box > *').animate({'left': '-=800'}, 1000, 'swing', function(){
-      $('.content').not('.swap_target').remove();
-      $('.content').removeAttr("style");
-    });      
+    $('.slide_window > *').animate({'left': '-=800'}, 1000, 'swing', animation_callback);      
   } else if( transition == 'from_left' ) {
-    $('.slide_box > *').animate({'right' : '-=800'}, 1000, 'swing', function(){
-      $('.content').not('.swap_target').remove();
-      $('.content').removeAttr("style");
-    });
+    $('.slide_window > *').animate({'right' : '-=800'}, 1000, 'swing', animation_callback);
   }
 }
 
@@ -70,23 +91,28 @@ function init() {
   $(window).bind('statechange',function(e){
     var State = History.getState();
     var path = State.url;
-    var transition = null;
-    if( path == $('#next_button a[rel=prerender]').attr('href') ) { 
-      transition = 'from_right';
-    } else if( path == $('#prev_button a[rel=prerender]').attr('href') ) {
-      transition = 'from_left';
-    }    
     
-    prepare_for_transition( transition );
+    // Event triggers multiple times for some reason
+    if( DOM_state != path ){
+
+      var transition = null;
+      if( path == $('#next_button a[rel=prerender]').attr('href') ) { 
+        transition = 'from_right';
+      } else if( path == $('#prev_button a[rel=prerender]').attr('href') ) {
+        transition = 'from_left';
+      }    
     
-    /*
-    Inserting the content clears out the style attributes that are being animate, short circuiting the
-    whole animation.  Probably need to dynamically wrap the content in an animation container and then
-    unwrap it (and delete the old content) when the transition is over.
-    */
-    insert_content();
+      prepare_for_transition( transition );
     
-    //animation_for( transition );
+      /*
+      Inserting the content clears out the style attributes that are being animate, short circuiting the
+      whole animation.  Probably need to dynamically wrap the content in an animation container and then
+      unwrap it (and delete the old content) when the transition is over.
+      */
+      insert_content();
+    
+      animation_for( transition );
+    }
   });
   
   // State change triggers
