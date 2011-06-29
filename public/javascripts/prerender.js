@@ -1,3 +1,83 @@
+function animation_callback() {
+  var State = History.getState();
+  var path = State.url;
+  
+  if( $(this).find('.content').is('[id="'+path+'"]') ) {
+    console.log("Animation callback for path "+path);
+
+    // Remove non-active panes from the flow
+    $('.slide_box').css('position', 'absolute');
+
+    // And insert the current one (controls overflow on the slide window)
+    $('.content[id="'+path+'"]').closest('.slide_box').css('position', 'relative');  
+    console.log( $('.content[id="'+path+'"]').closest('.slide_box').css('position') );  
+  }
+}
+
+function transition_for( transition, target ) {
+  delta = -$(".content[id='"+target+"']").first().closest('.slide_box').position().left;
+
+  console.log("transitioning to "+target+", delta="+delta);
+  switch( transition ) {
+  case 'slide':
+    $('.slide_window > *').animate({'left': '-='+delta}, 1000, 'swing', animation_callback);
+    break;
+  case 'swap':
+    $('.slide_window > *').animate({'left': '-='+delta}, 0, 'swing', animation_callback);
+    break;
+  }
+}
+
+$(document).ready( function() {
+  // Set the current content's ID to the current URL
+  $('.slide_window > .content').attr('id', window.location.href).wrap( '<div class="slide_box" style="position: relative; left: 0px; top: 0px" />');
+  
+  // Construct the slider pane
+  $('.thumb_container > a[rel=prerender]:not(.current_image)').each( function() {
+    // Determine the image index
+    index = $(this).index('.thumb_container a[rel=prerender]') - $('.thumb_container a.current_image').index('.thumb_container a[rel=prerender]');
+
+    // Add a spinner for the image
+    $('.slide_window').append( $('.spinner.hidden').clone().removeClass('hidden') );
+    
+    // Wrap and position the added spinner
+    $('.slide_window > .spinner').wrap( 
+      "<div class='slide_box' style='position: absolute; left: "+(index * 800)+"px; top: 0px' ><div class='content' id='"+$(this).attr('href')+"'></div></div>"
+    );
+  });
+  
+  // Init History
+  var History = window.History;
+  $(window).bind('statechange',function(e){
+    var State = History.getState();
+    var path = State.url;
+    
+    var transition = null;
+    if( path == $('.thumb_container a.current_image').attr('href') ) {
+      // Do nothing
+    } else if( path == $('#next_button a[rel=prerender]').attr('href') || path == $('#prev_button a[rel=prerender]').attr('href') ) {
+      transition = 'slide';
+    } else {
+      transition = 'swap';
+    }
+    
+    $('.thumb_container a.current_image').removeClass('current_image');
+    $('.thumb_container a[href="'+path+'"]').addClass('current_image');
+    transition_for( transition, path );
+  });
+  
+  // Init Behavior
+  $('body').delegate('a[rel=prerender]', 'click', function(e) {
+    var State = History.getState();
+    var path = State.url;
+    
+    History.pushState(null, null, $(this).attr('href') );     
+    e.preventDefault();
+  })
+  
+} );
+
+/*
 // List of HTML content for insertion, indexed by URL
 var content_list = {};
 var DOM_state = null;
@@ -6,7 +86,7 @@ var transition_state = null;
 function cache_path(path) {
   if( !content_list[path] ){
     // Request the path, when it get back make sure the UI is updated (possible that it'll be requested during the page load)
-    $.getScript(path, insert_content);
+    $.getScript(path);
     content_list[path] = 'caching';
   }
 }
@@ -27,50 +107,45 @@ function insert_content() {
   var path = State.url;
   
   if( path != DOM_state ) {
-    if( content = content_list[path] ) {
+    content = content_list[path];
+    if( content && content != 'caching' ) {
       for( var selector in content ) {
         $(selector).replaceWith( content[selector].clone() );
       }
+      DOM_state = path;
     } else {
       $('.content.swap_target').replaceWith( $('.spinner.hidden').clone().removeClass('hidden').addClass('current') );
       $('.spinner.current').wrap("<div class='content swap_target'>");      
+      cache_path(path);
     }
-    DOM_state = path;
   }
 }
 
 function prepare_for_transition( name ) {
-  if( name == 'from_right' && transition_state != name ) { 
-    //$('.slide_window').css({'left':0,'right':null});
-    
+  if( name && transition_state != name ) {
     // Wrap anything that isn't already wrapped
-    $('.slide_window > .content').wrap( "<div class='slide_box' style='position:relative;left:0px;top:0px;'>" );
+    $('.slide_window > .content').wrap( "<div class='slide_box' style='position: relative; left: 0px; top: 0px;'>" );
     
     // Make a new swap target
     $('.content').removeClass('swap_target');
-    $('.slide_window').append( $("<div class='content swap_target''></div>") );
+    $('.slide_window').append( $("<div class='content swap_target''></div>") );    
     
     // Wrap the new swap target, and start it offscreen
-    $('.content.swap_target').wrap( "<div class='slide_box' style='position:absolute;left:800px;top:0px;'>" );
-    
-  } else if( name == 'from_left' && transition_state != name ) {
-    //$('.slide_window').css({'left':null, 'right':0});
-    
-    $('.slide_window > .content').wrap( "<div class='slide_box' style='position:relative;right:0px;top:0px;'>" );
-    
-    $('.content').removeClass('swap_target');
-    $('.slide_window').append( $("<div class='content swap_target'></div>") );
-    
-    $('.content.swap_target').wrap( "<div class='slide_box' style='position:absolute;right:800px;top:0px;'>" )
+    if( name == 'from_right' ) { 
+      $('.content.swap_target').wrap( "<div class='slide_box' style='position: absolute; left: 800px; top: 0px;'>" );
+    } else if( name == 'from_left' ) {
+      $('.content.swap_target').wrap( "<div class='slide_box' style='position: absolute; left: -800px; top: 0px;'>" );
+    }
+    transition_state = name;    
   }
-  transition_state = name;
 }
 
 function animation_callback() {
   // Remove content that isn't the current view
   $('.content').not('.swap_target').parent().remove();
+  $('.slide_box:empty').remove();
   // Reset the slide box's CSS
-  $('.slide_box').attr('style', 'position:relative;left:0px;top:0px;');
+  $('.slide_box').attr('style', 'position: relative; left: 0px; top: 0px;');
   
   transition_state = null;  
 }
@@ -79,7 +154,7 @@ function animation_for( transition ) {
   if( transition == 'from_right' ) {
     $('.slide_window > *').animate({'left': '-=800'}, 1000, 'swing', animation_callback);      
   } else if( transition == 'from_left' ) {
-    $('.slide_window > *').animate({'right' : '-=800'}, 1000, 'swing', animation_callback);
+    $('.slide_window > *').animate({'left' : '+=800'}, 1000, 'swing', animation_callback);
   }
 }
 
@@ -104,11 +179,6 @@ function init() {
     
       prepare_for_transition( transition );
     
-      /*
-      Inserting the content clears out the style attributes that are being animate, short circuiting the
-      whole animation.  Probably need to dynamically wrap the content in an animation container and then
-      unwrap it (and delete the old content) when the transition is over.
-      */
       insert_content();
     
       animation_for( transition );
@@ -125,6 +195,9 @@ function init() {
 }
 
 $(document).ready( function() {
+  // Put the footer inside the content
+  $('.content').addClass('swap_target').append( $('.footer') );
+  
   // Cache the current page
   DOM_state = window.location.href;
   content_list[window.location.href] = {
@@ -136,6 +209,6 @@ $(document).ready( function() {
   // May also avoid some page loads if people click back quickly
   var t=setTimeout(init,1500);
   
-  // Put the footer inside the content
-  $('.content').addClass('swap_target').append( $('.footer') );
+
 });
+*/
