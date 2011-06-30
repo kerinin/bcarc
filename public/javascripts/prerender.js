@@ -1,23 +1,38 @@
+function cache_path(path) {
+  if( !content_list[path] ){
+    // Request the path, when it get back make sure the UI is updated (possible that it'll be requested during the page load)
+    $.getScript(path);
+    content_list[path] = 'caching';
+  }
+}
+
+function cache_images( scope ) {
+  // Cache the next 4 images
+  $('a.current_image').nextAll('a[rel=prerender]:lt(4)').each( function(i,elem) {
+    cache_path( $(elem).attr('href') );
+  });  
+  // And cache the first 2 images
+  $('a[rel=prerender]:lt(2)').each( function(e,elem) {
+    cache_path( $(elem).attr('href') );  
+  });
+}
+
 function animation_callback() {
   var State = History.getState();
   var path = State.url;
   
   if( $(this).find('.content').is('[id="'+path+'"]') ) {
-    console.log("Animation callback for path "+path);
-
     // Remove non-active panes from the flow
     $('.slide_box').css('position', 'absolute');
 
     // And insert the current one (controls overflow on the slide window)
     $('.content[id="'+path+'"]').closest('.slide_box').css('position', 'relative');  
-    console.log( $('.content[id="'+path+'"]').closest('.slide_box').css('position') );  
   }
 }
 
 function transition_for( transition, target ) {
-  delta = -$(".content[id='"+target+"']").first().closest('.slide_box').position().left;
+  delta = $(".content[id='"+target+"']").first().closest('.slide_box').position().left;
 
-  console.log("transitioning to "+target+", delta="+delta);
   switch( transition ) {
   case 'slide':
     $('.slide_window > *').animate({'left': '-='+delta}, 1000, 'swing', animation_callback);
@@ -25,6 +40,29 @@ function transition_for( transition, target ) {
   case 'swap':
     $('.slide_window > *').animate({'left': '-='+delta}, 0, 'swing', animation_callback);
     break;
+  }
+}
+
+function update_nav(current_path) {
+  $('.thumb_container > a.current_image').removeClass('current_image');
+  $('.thumb_container > a[href="'+current_path+'"]').addClass('current_image');
+  
+  var prev = $('.thumb_container a.current_image').prev('a');
+  if( prev.is('[rel=prerender]') ){
+    $('#prev_button a').attr('href', prev.attr('href') ).show();
+  } else if( prev.is() ) {
+    $('#prev_button a').attr( {'href': next.attr('href'),'rel': null } ).show();
+  } else {
+    $('#prev_button a').hide();
+  }
+  
+  var next = $('.thumb_container a.current_image').next('a');
+  if( next.is('[rel=prerender]') ){
+    $('#next_button a').attr('href', next.attr('href') ).show();
+  } else if( next.is() ) {
+    $('#next_button a').attr( {'href': next.attr('href'),'rel': null } ).show();
+  } else {
+    $('#next_button a').hide();
   }
 }
 
@@ -60,10 +98,10 @@ $(document).ready( function() {
     } else {
       transition = 'swap';
     }
-    
-    $('.thumb_container a.current_image').removeClass('current_image');
-    $('.thumb_container a[href="'+path+'"]').addClass('current_image');
-    transition_for( transition, path );
+
+    update_nav(path);
+
+    transition_for( transition, path );      
   });
   
   // Init Behavior
@@ -71,8 +109,12 @@ $(document).ready( function() {
     var State = History.getState();
     var path = State.url;
     
-    History.pushState(null, null, $(this).attr('href') );     
+    if( path != $(this).attr('href') ) {
+      History.pushState(null, null, $(this).attr('href') );
+    }
+    
     e.preventDefault();
+    e.stopImmediatePropagation();
   })
   
 } );
