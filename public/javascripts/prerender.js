@@ -1,13 +1,5 @@
 var content_list = [];
 
-function insert_content(url) {
-  content = content_list[url];
-  
-  for( var selector in content ) {
-    $(selector).replaceWith( content[selector].clone() );
-  }  
-}
-
 function cache_path(path) {
   if( !content_list[path] ){
     // Request the path, when it get back make sure the UI is updated (possible that it'll be requested during the page load)
@@ -22,9 +14,9 @@ function cache_content( scope ) {
     cache_path( $(elem).attr('href') );
   });  
   // And cache the first 2 images
-  $('a[rel=prerender]:lt(2)').each( function(e,elem) {
-    cache_path( $(elem).attr('href') );  
-  });
+  //$('a[rel=prerender]:lt(2)').each( function(e,elem) {
+  //  cache_path( $(elem).attr('href') );  
+  //});
 }
 
 function animation_callback() {
@@ -82,6 +74,7 @@ $(document).ready( function() {
   
   // Cache the current content
   var content = $('.container > .content').wrap('<div class="slide_window"><div class="slide_bar" style="position: relative; left: 0; top: 0;">').detach();
+  content[window.location.href] = 'loaded';
   
   // Construct the slider pane
   $('.thumb_container > a[rel=prerender]').each( function() {
@@ -124,7 +117,13 @@ $(document).ready( function() {
 
     update_nav(path);
 
-    transition_for( transition, path );      
+    transition_for( transition, path );
+    
+    // Make sure the current path has been requested
+    cache_path(path);     
+    
+    // Request the next couple bits
+    cache_content();
   });
   
   // Init Behavior
