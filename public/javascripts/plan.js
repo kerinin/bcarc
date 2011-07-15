@@ -2,10 +2,12 @@ var pin_plan = false;
 
 function insert_locators() {
 	jQuery('.locator a').each(function(i){
-		locator = Raphael(this,50,50);
-		img = locator.image("/images/icons/arrow_"+((+jQuery(this).attr('current'))?'over':'start')+".png",0,0,50,50);
-		img.rotate(jQuery(this).attr('angle'),25,25);
-		this.rimg = img;
+	  if( $(this).find('svg').length == 0 ) {
+  		locator = Raphael(this,50,50);
+  		img = locator.image("/images/icons/arrow_"+((+jQuery(this).attr('current'))?'over':'start')+".png",0,0,50,50);
+  		img.rotate(jQuery(this).attr('angle'),25,25);
+  		this.rimg = img;	    
+	  }
 	});  
 }
 
@@ -34,14 +36,22 @@ function init_plans() {
   		jQuery("#thumb_"+anchor.attr('locator')).find('img').trigger('mouseover');
   		if(!( +anchor.attr('current')) ) this.rimg.attr('src', '/images/icons/arrow_over.png' );      
     } else {
+      console.log('mouse out');
   		anchor = jQuery(this);
   		jQuery("#thumb_"+anchor.attr('locator')).find('img').trigger('mouseout');
   		if(!( +anchor.attr('current')) ) this.rimg.attr('src','/images/icons/arrow_start.png');
     }
+    
+    e.stopImmediatePropagation();
   });
   
   // In case we're preloading, hide the plan on click
-  $('body').delegate('.locator a', 'click', function(){ pin_plan = false; hide_plan() } );
+  $('body').delegate('.locator a', 'click', function(){ 
+    pin_plan = false; 
+    hide_plan() 
+    
+    e.stopImmediatePropagation();
+  } );
   
   $('body').delegate('.plan_link', "mouseover mouseout", function(e){
     if (e.type == 'mouseover') {
@@ -49,6 +59,8 @@ function init_plans() {
     } else {
       hide_plan();
     }
+    
+    e.stopImmediatePropagation();
   });
   
   $('body').delegate('.plan_link', 'click', function(e){
@@ -56,5 +68,6 @@ function init_plans() {
     pin_plan = !pin_plan;
     
     e.preventDefault();
+    e.stopImmediatePropagation();
   })
 }
