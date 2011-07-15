@@ -1,3 +1,13 @@
+var content_list = [];
+
+function insert_content(url) {
+  content = content_list[url];
+  
+  for( var selector in content ) {
+    $(selector).replaceWith( content[selector].clone() );
+  }  
+}
+
 function cache_path(path) {
   if( !content_list[path] ){
     // Request the path, when it get back make sure the UI is updated (possible that it'll be requested during the page load)
@@ -6,9 +16,9 @@ function cache_path(path) {
   }
 }
 
-function cache_images( scope ) {
-  // Cache the next 4 images
-  $('a.current_image').nextAll('a[rel=prerender]:lt(4)').each( function(i,elem) {
+function cache_content( scope ) {
+  // Cache the next 4 pages
+  $('a.current_image').nextAll('a[rel=prerender]:lt(1)').each( function(i,elem) {
     cache_path( $(elem).attr('href') );
   });  
   // And cache the first 2 images
@@ -31,14 +41,12 @@ function animation_callback() {
 }
 
 function transition_for( transition, target ) {
-  delta = $(".content[id='"+target+"']").first().closest('.slide_box').position().left;
-
   switch( transition ) {
   case 'slide':
-    $('.slide_window > *').animate({'left': '-='+delta}, 1000, 'swing', animation_callback);
+    $('.slide_bar').stop().animate({'left': -get_offset(target)}, 1000, 'swing', animation_callback);
     break;
   case 'swap':
-    $('.slide_window > *').animate({'left': '-='+delta}, 0, 'swing', animation_callback);
+    $('.slide_bar').stop().animate({'left': -get_offset(target)}, 0, 'swing', animation_callback);
     break;
   }
 }
@@ -66,24 +74,39 @@ function update_nav(current_path) {
   }
 }
 
+function get_offset(url) {
+  return $('.content[id="'+url+'"]').position()['left'];
+}
+
 $(document).ready( function() {
-  // Set the current content's ID to the current URL
-  $('.slide_window > .content').attr('id', window.location.href).wrap( '<div class="slide_box" style="position: relative; left: 0px; top: 0px" />');
+  
+  // Cache the current content
+  var content = $('.container > .content').wrap('<div class="slide_window"><div class="slide_bar" style="position: relative; left: 0; top: 0;">').detach();
   
   // Construct the slider pane
-  $('.thumb_container > a[rel=prerender]:not(.current_image)').each( function() {
+  $('.thumb_container > a[rel=prerender]').each( function() {
     // Determine the image index
-    index = $(this).index('.thumb_container a[rel=prerender]') - $('.thumb_container a.current_image').index('.thumb_container a[rel=prerender]');
-
-    // Add a spinner for the image
-    $('.slide_window').append( $('.spinner.hidden').clone().removeClass('hidden') );
+    var index = $(this).index('.thumb_container > a[rel=prerender]') - $('.thumb_container > a.current_image').index('.thumb_container > a[rel=prerender]');
+    var href = $(this).attr('href');
+    var current = (href == window.location.href);
+    var pos = ( current ? 'relative' : 'absolute' );
     
-    // Wrap and position the added spinner
-    $('.slide_window > .spinner').wrap( 
-      "<div class='slide_box' style='position: absolute; left: "+(index * 800)+"px; top: 0px' ><div class='content' id='"+$(this).attr('href')+"'></div></div>"
-    );
+    if( ( $('.content[id="'+href+'"]').length == 0 ) && current ) {
+      // Insert the cached content
+      content.attr('id', href).css({position: pos, left: (index * 800)+'px', top: 0});
+      $('.slide_bar').append( content );
+    } else if( $('.content[id="'+href+'"]').length == 0 ) {
+      // Add a spinner for the image
+      $('.slide_bar').append( $('.spinner.hidden').clone().removeClass('hidden') );
+
+      // Wrap the added spinner
+      $('.slide_bar > .spinner').wrap( '<div class="content" id="'+$(this).attr('href')+'">' );      
+      
+      // Position the added spinner
+      $('.content[id="'+href+'"]').css({position: pos, left: (index * 800)+'px', top: 0});
+    }
   });
-  
+    
   // Init History
   var History = window.History;
   $(window).bind('statechange',function(e){
@@ -117,6 +140,7 @@ $(document).ready( function() {
     e.stopImmediatePropagation();
   })
   
+  cache_content();
 } );
 
 /*

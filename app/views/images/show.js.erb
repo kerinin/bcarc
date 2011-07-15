@@ -2,4 +2,5 @@ content_list['<%= project_image_url(@project, @image) %>'] = {
   ".project_header.thumb_container" : $("<%= escape_javascript( render(:partial => 'shared/project_thumbnails') ) %>"),
   ".content.swap_target" : $("<%= escape_javascript( render( :partial => 'image_content') ) %>")
 };
-insert_content();
+insert_content('<%= project_image_url(@project, @image) %>');
+
