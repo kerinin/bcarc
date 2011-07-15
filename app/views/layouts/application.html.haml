@@ -45,6 +45,8 @@
         jQuery('[swapOver]').hover(swapOver,swapOut);
       })
     
+    = render :partial => 'shared/prerender_support'
+    
     = yield :head
 
   %body{ :bgcolor => "#666666", :text => "#FFFFFF", :link => "#FF0000", :vlink => "#FF0000", :alink => "#FF0000"}
@@ -109,5 +111,5 @@
 
           %p &nbsp;
 
-    = render :partial => 'shared/prerender_support'
+    
 

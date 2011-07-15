@@ -4,7 +4,7 @@
   %meta{ :name => "keywords", :content => "images #{ @project.tags.map(&:name).join(' ') } #{ @project.name }"}
   -if @image.description
     %meta{ :name => "description", :content => @image.description }  
-
+    
 -content_for :nav_left do
   =render :partial => 'shared/project_show_nav'
       
@@ -15,5 +15,4 @@
 -content_for :footer do
   = render :partial => 'shared/project_footer'
 
-=javascript_include_tag 'jquery-html-history.js'
-=javascript_include_tag 'prerender.js'
+

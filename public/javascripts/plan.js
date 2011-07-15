@@ -33,12 +33,11 @@ function init_plans() {
   $('body').delegate('.locator a', 'mouseover mouseout', function(e) {
     if( e.type == 'mouseover' ){
   		anchor = jQuery(this);
-  		jQuery("#thumb_"+anchor.attr('locator')).find('img').trigger('mouseover');
+  		jQuery(".thumb_"+anchor.attr('locator')).find('img').trigger('mouseover');
   		if(!( +anchor.attr('current')) ) this.rimg.attr('src', '/images/icons/arrow_over.png' );      
     } else {
-      console.log('mouse out');
   		anchor = jQuery(this);
-  		jQuery("#thumb_"+anchor.attr('locator')).find('img').trigger('mouseout');
+  		jQuery(".thumb_"+anchor.attr('locator')).find('img').trigger('mouseout');
   		if(!( +anchor.attr('current')) ) this.rimg.attr('src','/images/icons/arrow_start.png');
     }
     
@@ -46,16 +45,16 @@ function init_plans() {
   });
   
   // In case we're preloading, hide the plan on click
-  $('body').delegate('.locator a', 'click', function(){ 
+  $('body').delegate('.locator a', 'click', function(e){ 
     pin_plan = false; 
-    hide_plan() 
+    hide_plan();
     
     e.stopImmediatePropagation();
   } );
   
   $('body').delegate('.plan_link', "mouseover mouseout", function(e){
     if (e.type == 'mouseover') {
-      show_plan( $('#plan_'+$(e.target).attr('href').split('plans/')[1]) ); 
+      show_plan( $('.plan_'+$(e.target).attr('href').split('plans/')[1]) ); 
     } else {
       hide_plan();
     }

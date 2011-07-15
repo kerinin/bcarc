@@ -1,7 +1,7 @@
 -@project.plans.each do |plan|
-  .plan{ :id => "plan_#{ plan.id }" }
+  .plan{ :class => "plan_#{ plan.id }" }
     -plan.images.each do |locator|
-      .locator{ :id => "locator_#{ locator.id }", :style => "left:#{ locator.plan_x-25 }px;top:#{ locator.plan_y-25 }px;"}
+      .locator{ :class => "locator_#{ locator.id }", :style => "left:#{ locator.plan_x-25 }px;top:#{ locator.plan_y-25 }px;"}
         = link_to ' ', project_image_path(@project, locator), |
           :class => (locator == @image ? 'current_locator' : 'other_locator' ), |
           :current => "#{(@image==locator) ? 1 : 0}", |

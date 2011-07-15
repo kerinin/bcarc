@@ -1,10 +1,4 @@
 .content.image_content{:id => "image_#{@image.id}"}
-  :javascript
-    // init plan js
-    jQuery(document).ready(init_plans);
-    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Projects', 'View', '#{ @project.name }']); } );
-    jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Images', 'View', '#{ @project.name }/#{ @image.id }']); } );
-
   .media
     %center
       .image_container

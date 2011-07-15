@@ -1,8 +1,5 @@
-//content_list['<%= project_image_url(@project, @image) %>'] = {
-//  ".project_header.thumb_container" : $("<%= escape_javascript( render(:partial => 'shared/project_thumbnails') ) %>"),
-//  ".content.swap_target" : $("<%= escape_javascript( render( :partial => 'image_content') ) %>")
-//};
-//insert_content('<%= project_image_url(@project, @image) %>');
-
 $('.content[id="<%= project_image_url(@project,@image) %>"]').children().remove();
-$('.content[id="<%= project_image_url(@project,@image) %>"]').append( $('<%= escape_javascript( render(:partial => 'image_content') ) %>').children() );
+$('.content[id="<%= project_image_url(@project,@image) %>"]').addClass('image_content').append( $('<%= escape_javascript( render(:partial => 'image_content') ) %>').children() );
+
+init_plans();
+
