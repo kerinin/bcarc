@@ -3,3 +3,8 @@ $('.content[id="<%= project_image_url(@project,@image) %>"]').addClass('image_co
 
 init_plans();
 
+tracking_list["<%= project_image_url(@project,@image) %>"] = [
+  ['_trackEvent', 'Projects', 'View', '<%= @project.name %>'],
+  ['_trackEvent', 'Image', 'View', '<%= @project.name %>/<%= @image.id %>']
+];
+

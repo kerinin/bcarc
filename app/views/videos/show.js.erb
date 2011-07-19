@@ -2,3 +2,8 @@ $('.content[id="<%= project_video_url(@project,@video) %>"]').children().remove(
 $('.content[id="<%= project_video_url(@project,@video) %>"]').append( $('<%= escape_javascript( render( :partial => 'video_content') ) %>').children() );
 
 init_plans();
+
+tracking_list["<%= project_video_url(@project,@video) %>"] = [
+  ['_trackEvent', 'Projects', 'View', '<%= @project.name %>'],
+  ['_trackEvent', 'Video', 'View', '<%= @project.name %>/<%= @video.id %>']
+];

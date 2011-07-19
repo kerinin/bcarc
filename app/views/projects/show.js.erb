@@ -1,4 +1,9 @@
-$('.content[id="<%= project_url(@project,@image) %>"]').children().remove();
-$('.content[id="<%= project_url(@project,@image) %>"]').append( $('<%= escape_javascript( render( :partial => 'project_content') ) %>').children() );
+$('.content[id="<%= project_url(@project) %>"]').children().remove();
+$('.content[id="<%= project_url(@project) %>"]').append( $('<%= escape_javascript( render( :partial => 'project_content') ) %>').children() );
 
 init_plans();
+
+tracking_list["<%= project_url(@project) %>"] = [
+  ['_trackEvent', 'Projects', 'View', '<%= @project.name %>'],
+  ['_trackEvent', 'Projects', 'ViewIndex', '<%= @project.name %>']
+];

@@ -1,4 +1,5 @@
 var content_list = [];
+var tracking_list = {};
 
 function cache_path(path) {
   if( !content_list[path] ){
@@ -31,12 +32,13 @@ function animation_callback() {
 }
 
 function transition_for( transition, target ) {
-  //_gaq.push(['_trackEvent', 'Projects', 'View', '#{ @project.name }']);
-  //_gaq.push(['_trackEvent', 'Images', 'View', '#{ @project.name }/#{ @image.id }']);
-  
+  for( var e in tracking_list[target] ) {
+    _gaq.push( tracking_list[target][e] );
+  }
+
   switch( transition ) {
   case 'slide':
-    $('.slide_bar').stop().animate({'left': -get_offset(target)}, 1000, 'swing', animation_callback);
+    $('.slide_bar').stop().animate({'left': -get_offset(target)}, 500, 'swing', animation_callback);
     break;
   case 'swap':
     $('.slide_bar').stop().animate({'left': -get_offset(target)}, 0, 'swing', animation_callback);

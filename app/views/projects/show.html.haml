@@ -19,3 +19,7 @@
 
 -content_for :footer do
   = render :partial => 'shared/project_footer'
+  
+:javascript
+  jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Projects', 'View', '#{ @project.name }']); } );
+  jQuery(document).ready( function() { _gaq.push(['_trackEvent', 'Projects', 'ViewIndex', '#{ @project.name }>']); } );
