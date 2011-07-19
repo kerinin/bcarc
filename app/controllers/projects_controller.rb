@@ -17,6 +17,7 @@ class ProjectsController < ApplicationController
   
   def show
     @project = Project.find(params[:id])
+    @object = @project
     
     if @project.images.active.count > 1
       @next = @project.images.active[1]

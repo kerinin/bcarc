@@ -5,6 +5,8 @@
   -unless @video.description.empty?
     %meta{ :name => "description", :content => @video.description  }
 
+  = render :partial => 'shared/prerender_support'
+    
 -content_for :nav_left do
   = render :partial => 'shared/project_show_nav'
 

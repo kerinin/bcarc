@@ -8,6 +8,8 @@
   %meta{ :name => "keywords", :content => "#{ @project.tags.map(&:name).join(' ') } #{ @project.keywords || @project.name }" }
   %meta{ :name => "description", :content => @project.short}
 
+  = render :partial => 'shared/prerender_support'
+    
 -content_for :nav_left do
   = render :partial => 'shared/project_show_nav'
 

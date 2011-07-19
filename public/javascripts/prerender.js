@@ -74,7 +74,7 @@ function get_offset(url) {
 $(document).ready( function() {
   // Cache the current content
   var content = $('.container > .content').wrap('<div class="slide_window"><div class="slide_bar" style="position: relative; left: 0; top: 0;">').detach();
-  content[window.location.href] = 'loaded';
+  content_list[window.location.href] = 'loaded';
   
   // Construct the slider pane
   $('.thumb_container > a[rel=prerender]').each( function() {
