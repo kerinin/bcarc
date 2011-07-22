@@ -37,4 +37,4 @@ gem 'exception_notification', :require => 'exception_notifier'
 gem 'haml-rails'
 gem 'compass', ">= 0.10.6"
 
-gem 'omniauth'
+gem 'omniauth', '0.2.5'
