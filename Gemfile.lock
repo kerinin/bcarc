@@ -211,7 +211,7 @@ DEPENDENCIES
   i18n_routing
   inherited_resources
   jquery-rails (>= 0.2.6)
-  omniauth (= 0.2.5)
+  omniauth
   paperclip
   rails (= 3.0.7)
   routing-filter
