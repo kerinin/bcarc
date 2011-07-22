@@ -1,0 +1,17 @@
+%h1 You must log in using your Bercy Chen Studio 'Google Apps' account
+
+%p
+  Click the link below.  If this is the first time you've seen this message
+  and you're already logged in to google, just click 'Allow' and you'll be
+  redirected to the page you requested.  If you're not logged in already, you'll
+  need to enter your password first
+  
+%p
+  %b
+    If you're signed into a personal Google account, be sure to select the @bcarc.com account first
+  
+%p
+  If you've already gone through this process, you'll be redirected to the page
+  you requested as soon as you click the link
+  
+=link_to "Log in with Google Apps", "/auth/openid?origin=#{session[:auth_redirect]}"

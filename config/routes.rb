@@ -74,6 +74,10 @@ Bcrails::Application.routes.draw do
   match '/sitemap/geo.xml', :controller => :sitemap, :action => :geo, :as => :geo_sitemap
   match '/sitemap.xml', :controller => :sitemap, :action => :index, :as => :sitemap
 
+  match '/auth/:provider/callback', :to => 'sessions#create'
+  match '/auth/failure', :to => 'sessions#failure'
+  match '/auth/new', :to => 'sessions#new'
+
 =begin
   # 404 (legacy) routes
   map.connect 'project', :controller => :projects, :action => :index

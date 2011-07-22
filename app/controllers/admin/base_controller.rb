@@ -9,12 +9,18 @@ class Admin::BaseController < InheritedResources::Base
   # filter_parameter_logging :password
   # 
   
+  before_filter :require_authentication
   before_filter :set_locale
   after_filter :expire_sitemap, :only => [:create, :update, :destroy]
   
   layout 'admin'
   
   protected
+  
+  def require_authentication
+    session[:auth_redirect] = request.env['PATH_INFO']
+    redirect_to '/auth/new' if session[:auth].nil?
+  end
   
   def expire_sitemap
     expire_action web_sitemap_path
