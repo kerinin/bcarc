@@ -1,0 +1,9 @@
+%h1 Authentication Failed
+
+%p
+  You may have authenticated with a personal Gmail account.  Make sure you
+  select the @bcarc.com account when authenticating.  If this applies to you,
+  =link_to 'click here to try again', "/auth/openid?origin=#{session[:auth_redirect]}"
+  
+%p
+  If you don't work at Bercy Chen, go away.

@@ -7,7 +7,11 @@
   need to enter your password first
   
 %p
+  %b
+    If you're signed into a personal Google account, be sure to select the @bcarc.com account first
+  
+%p
   If you've already gone through this process, you'll be redirected to the page
   you requested as soon as you click the link
   
-=link_to "Log in with Google Apps", "/auth/admin?origin=#{session[:auth_redirect]}"
+=link_to "Log in with Google Apps", "/auth/openid?origin=#{session[:auth_redirect]}"

@@ -1,4 +1,10 @@
 class SessionsController < ApplicationController
+  skip_before_filter :verify_authenticity_token
+  
+  def handle_unverified_request
+      true
+  end
+  
   def new
     respond_to do |format|
       format.html {
@@ -8,11 +14,19 @@ class SessionsController < ApplicationController
   end
   
   def create
-    session[:auth] = request.env['omniauth.auth']
-    redirect_to request.env['omniauth.origin'] || '/admin'
+    if request.env['omniauth.auth']['user_info']['email'].end_with?( '@bcarc.com')
+      session[:auth] = request.env['omniauth.auth']
+      redirect_to request.env['omniauth.origin'] || '/admin'
+    else
+      redirect_to '/auth/failure'
+    end
   end
   
   def failure
-    render :text => 'You must log in using your Bercy Chen google apps to use this page'
+    respond_to do |format|
+      format.html {
+        render :failure, :layout => nil
+      }
+    end
   end
 end
