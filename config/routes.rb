@@ -36,10 +36,6 @@ Bcrails::Application.routes.draw do
         collection do
           post :sort
         end
-        
-        member do
-          get :pull_flickr
-        end
       end
       
       resources :videos do

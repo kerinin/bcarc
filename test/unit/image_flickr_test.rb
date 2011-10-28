@@ -1,5 +1,5 @@
 require File.dirname(__FILE__) + '/../test_helper'
-require 'flickr'
+#require 'flickr'
 
 class ImageFlickrTest < ActiveSupport::TestCase
 =begin

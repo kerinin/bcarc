@@ -6,10 +6,10 @@
   .prop
     .image_container
       -image_style = @project.description.blank? ? :full : :project_description
-      -if @next and @project.images.count > 0 
-        =link_to image_tag(@project.images[0].attachment.url( image_style ), :class => 'description_image'), project_image_path(@project,@next)
-      -elsif @project.images.count > 0
-        =image_tag @project.images[0].attachment.url( image_style ), :class => 'description_image'
+      -if @next and @project.images.active.count > 0 
+        =link_to image_tag(@project.images.active[0].attachment.url( image_style ), :class => 'description_image'), project_image_path(@project,@next)
+      -elsif @project.images.active.count > 0
+        =image_tag @project.images.active[0].attachment.url( image_style ), :class => 'description_image'
 
       .bold_link
         %h1= @project.name

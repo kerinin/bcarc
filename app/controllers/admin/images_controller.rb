@@ -34,19 +34,19 @@ class Admin::ImagesController < Admin::BaseController
   
   private 
     
-  def pull_flickr
-    load_object         # From R_C
-    
-    begin
-      @image.pull_data_from_flickr
-      @image.save!
-    rescue XMLRPC::FaultException
-      flash[:error] = "Error pulling from Flickr! (#{$!})"
-    end
-    
-    flash[:notice] = "Data pulled from Flickr!"
-    redirect_to edit_admin_project_image_path(@image.project, @image)    
-  end
+  #def pull_flickr
+  #  load_object         # From R_C
+  #  
+  #  begin
+  #    @image.pull_data_from_flickr
+  #    @image.save!
+  #  rescue XMLRPC::FaultException
+  #    flash[:error] = "Error pulling from Flickr! (#{$!})"
+  #  end
+  #  
+  #  flash[:notice] = "Data pulled from Flickr!"
+  #  redirect_to edit_admin_project_image_path(@image.project, @image)    
+  #end
   
   def expire_show
     expire_fragment(:controller => 'images', :action => 'show')

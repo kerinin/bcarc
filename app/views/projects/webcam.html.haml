@@ -13,5 +13,14 @@
 
 =render :partial => 'webcam_content'
 
+.timeline_control
+  %center
+    -images = @project.webcam_images.where(:daily_image => true).reorder("date DESC")
+    .last_image
+      = image_tag images.first.attachment.url(:thumb)
+    .slider
+    .first_image
+      = image_tag images.last.attachment.url(:thumb)
+      
 -content_for :footer do
   = render :partial => 'shared/project_footer'

@@ -15,17 +15,6 @@
   
   <%= render :partial => 'admin/shared/languages' %>
   
-  <p>
-    <%= f.label :name %> <%= f.text_field :name %>
-    <%= f.label :flickr_id, 'Flickr ID (ex: 4601892842)' %> <%= f.text_field :flickr_id %>
-    <% unless @image.flickr_id.blank? %>
-      <%= f.label :sync_flickr, 'Push to Flickr on save' %> <%= f.check_box :sync_flickr %>
-      <% link_to pull_flickr_admin_project_image_path(@project, @image) do %>
-        <button>Pull title & description from Flickr</button>
-      <% end %>
-    <% end %>
-  </p>
-  
   <%= image_tag @image.attachment.url(:full) %>
   
   <p>
