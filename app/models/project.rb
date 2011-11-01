@@ -65,8 +65,10 @@ class Project < ActiveRecord::Base
   end
 
   def set_has_tags(*args)
-    self.has_tags = self.tags.count > 0
-    self.save!
+    unless self.destroyed?
+      self.has_tags = self.tags.count > 0
+      self.save!
+    end
   end
     
   private
