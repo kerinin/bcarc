@@ -35,4 +35,8 @@ class ApplicationController < ActionController::Base
   def load_tags
     @tags = Tag.all
   end
+  
+  def not_found
+    raise ActionController::RoutingError.new('Not Found')
+  end
 end
