@@ -1,5 +1,7 @@
 == Welcome to Rails
 
+[ ![Codeship Status for kerinin/bcarc](https://www.codeship.io/projects/f5748530-0ac5-0132-ac4a-66e9c0f364c1/status)](https://www.codeship.io/projects/31855)
+
 Rails is a web-application framework that includes everything needed to create
 database-backed web applications according to the Model-View-Control pattern.
 
