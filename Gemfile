@@ -1,17 +1,17 @@
 source 'http://rubygems.org'
-ruby "1.8.7"
+# ruby "1.8.7"
 
-gem 'rails', '3.0.7'
+gem 'rails', '~> 3.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'pg'
 
 gem "authlogic"
 gem "factory_girl_rails"
 gem "shoulda"
-gem "acts_as_markup"
+gem "acts_as_markup", '~> 2.0'
 #gem "right_aws"
 gem "aws-s3"
 gem "acts_as_list"
