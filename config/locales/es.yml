@@ -26,14 +26,3 @@ es:
   sustainability: Sostenibilidad
   work: Trabajo
   date_completed: Fecha
-  
-  date:
-    order: [ :year, :month, :day ]
-    formats:
-      default: "%Y-%m-%d"
-      short: "%b %d"
-      long: "%B %d, %Y"
-    day_names: [Domingo, Lunes, Martes, Miercoles, Jueves, Viernes, Sabado]
-    abbr_day_names: [D, L, Ma, Mi, J, V, S]
-    month_names: [~, Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
-    abbr_month_names: [~, Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic]
