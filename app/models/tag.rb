@@ -4,7 +4,8 @@ class Tag < ActiveRecord::Base
   before_save :handle_legacy_permalink
   
   #make_permalink :with => :name
-  has_friendly_id :name, :use_slug => true, :approximate_ascii => true
+  extend FriendlyId
+  friendly_id :name, :use => :slugged
   
   validates_presence_of :name
   
