@@ -39,3 +39,4 @@ gem 'haml-rails'
 gem 'compass', ">= 0.10.6"
 
 gem 'omniauth'
+gem 'omniauth-openid'

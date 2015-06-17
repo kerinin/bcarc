@@ -1,7 +1,7 @@
-require "openid/fetchers"
+require "omniauth-openid"
 OpenID.fetcher.ca_file = "#{Rails.root}/cacert.crt"
 
-require 'openid/store/filesystem'
+require 'omniauth-openid/store/filesystem'
 
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :openid, OpenID::Store::Filesystem.new('./tmp')
