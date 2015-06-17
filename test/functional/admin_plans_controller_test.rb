@@ -3,11 +3,11 @@ require File.dirname(__FILE__) + '/../test_helper'
 class Admin::PlansControllerTest < ActionController::TestCase
   context "Given data" do
     setup do
-      @project = Factory :project
-      @plan = Factory :plan, :project => @project
-      @plan2 = Factory :plan, :project => @project
-      @plan3 = Factory :plan, :project => @project
-      @plan4 = Factory :plan, :project => @project
+      @project = FactoryGirl.create :project
+      @plan = FactoryGirl.create :plan, :project => @project
+      @plan2 = FactoryGirl.create :plan, :project => @project
+      @plan3 = FactoryGirl.create :plan, :project => @project
+      @plan4 = FactoryGirl.create :plan, :project => @project
     end
 
     teardown do

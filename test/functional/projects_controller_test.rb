@@ -4,9 +4,9 @@ class ProjectsControllerTest < ActionController::TestCase
   context "Given data" do
     setup do
       @completed = 1.year.ago
-      @tag = Factory :tag
+      @tag = FactoryGirl.create :tag
       
-      @project = Factory :project, 
+      @project = FactoryGirl.create :project, 
         :name => 'Test Project',
         :description => 'Project Description',
         :short => 'Short Description',
@@ -15,20 +15,20 @@ class ProjectsControllerTest < ActionController::TestCase
         :city => 'San Francisco',
         :state => 'CA',
         :priority => 1,
-        :thumbnail => Factory(:image),
+        :thumbnail => FactoryGirl.create(:image),
         :webcam_current_url => '/foo'
           
       @project.tags << @tag
-      @inactive_project = Factory :project, :priority => 1
+      @inactive_project = FactoryGirl.create :project, :priority => 1
       
-      @image1 = Factory :image, :project => @project
-      @image2 = Factory :image, :project => @project
+      @image1 = FactoryGirl.create :image, :project => @project
+      @image2 = FactoryGirl.create :image, :project => @project
       
-      @video1 = Factory :video, :project => @project
-      @video2 = Factory :video, :project => @project
+      @video1 = FactoryGirl.create :video, :project => @project
+      @video2 = FactoryGirl.create :video, :project => @project
       
-      @plan1 = Factory :plan, :project => @project
-      @plan2 = Factory :plan, :project => @project
+      @plan1 = FactoryGirl.create :plan, :project => @project
+      @plan2 = FactoryGirl.create :plan, :project => @project
     end
     
     teardown do
@@ -176,7 +176,7 @@ class ProjectsControllerTest < ActionController::TestCase
   
   context "Given project w/ location, show_map -> false" do
     setup do
-      @project = Factory :project, :thumbnail => Factory(:image), :latitude => 90, :longitude => 90, :show_map => false, :city => 'Austin'
+      @project = FactoryGirl.create :project, :thumbnail => FactoryGirl.create(:image), :latitude => 90, :longitude => 90, :show_map => false, :city => 'Austin'
     end
     
     context "on GET to :show" do
@@ -193,7 +193,7 @@ class ProjectsControllerTest < ActionController::TestCase
   
   context "Given project w/ location, show_map -> true" do
     setup do
-      @project = Factory :project, :thumbnail => Factory(:image), :show_map => true, :city => 'Austin'
+      @project = FactoryGirl.create :project, :thumbnail => FactoryGirl.create(:image), :show_map => true, :city => 'Austin'
     end
     
     context "on GET to :show" do

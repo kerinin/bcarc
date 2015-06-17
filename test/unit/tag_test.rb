@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/../test_helper'
 class TagTest < ActiveSupport::TestCase
   context "A tag" do
     setup do
-      @tag = Factory :tag, :name => 'Test Tag'
+      @tag = FactoryGirl.create :tag, :name => 'Test Tag'
     end
 
     teardown do

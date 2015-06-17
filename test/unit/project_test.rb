@@ -10,7 +10,7 @@ class ProjectTest < ActiveSupport::TestCase
     setup do
       @completed = 1.year.ago
       
-      @project = Factory :project, 
+      @project = FactoryGirl.create :project, 
         :name => 'Test Project',
         :description => 'Project Description',
         :short => 'Short Description',
@@ -19,19 +19,19 @@ class ProjectTest < ActiveSupport::TestCase
         :city => 'San Francisco',
         :state => 'CA',
         :priority => 2,
-        :thumbnail => Factory(:image),
+        :thumbnail => FactoryGirl.create(:image),
         :webcam_ftp_dir => '/'
         
-      @inactive_project = Factory :project, :priority => 2
-      @crappy_project = Factory :project, :priority => 8
+      @inactive_project = FactoryGirl.create :project, :priority => 2
+      @crappy_project = FactoryGirl.create :project, :priority => 8
         
-      @plan1 = Factory :plan, :project => @project
-      @plan2 = Factory :plan, :project => @project
+      @plan1 = FactoryGirl.create :plan, :project => @project
+      @plan2 = FactoryGirl.create :plan, :project => @project
       
-      @video1 = Factory :video, :project => @project
-      @video2 = Factory :video, :project => @project
+      @video1 = FactoryGirl.create :video, :project => @project
+      @video2 = FactoryGirl.create :video, :project => @project
       
-      @tag = Factory :tag
+      @tag = FactoryGirl.create :tag
       
       @project.tags << @tag
     end
@@ -91,8 +91,8 @@ class ProjectTest < ActiveSupport::TestCase
     end
     
     should "have associated images" do
-      @image1 = Factory :image, :project => @project
-      @image2 = Factory :image, :project => @project
+      @image1 = FactoryGirl.create :image, :project => @project
+      @image2 = FactoryGirl.create :image, :project => @project
       
       assert @project.images.include? @image1
       assert @project.images.include? @image2
@@ -135,8 +135,8 @@ class ProjectTest < ActiveSupport::TestCase
     end
  
     should "save the first attached image as the thumbnail if none specified" do
-      @project2 = Factory :project
-      @image = Factory :image
+      @project2 = FactoryGirl.create :project
+      @image = FactoryGirl.create :image
       @project2.images << @image
       
       assert_equal @image, @project2.thumbnail

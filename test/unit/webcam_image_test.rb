@@ -3,8 +3,8 @@ require File.dirname(__FILE__) + '/../test_helper'
 class WebcamImageTest < ActiveSupport::TestCase
   context "A webcam image" do
     setup do
-      @project = Factory :project, :webcam_ftp_dir => '/'
-      @image = Factory :webcam_image, :project => @project, :date => Date::today
+      @project = FactoryGirl.create :project, :webcam_ftp_dir => '/'
+      @image = FactoryGirl.create :webcam_image, :project => @project, :date => Date::today
     end
 
     teardown do
@@ -29,8 +29,8 @@ class WebcamImageTest < ActiveSupport::TestCase
     end
     
     should "set 'daily_image' to false for other images in the same day" do
-      @image2 = Factory :webcam_image, :project => @project, :date => Date::today
-      @image3 = Factory :webcam_image, :project => @project, :date => Date::today + 1, :daily_image => true
+      @image2 = FactoryGirl.create :webcam_image, :project => @project, :date => Date::today
+      @image3 = FactoryGirl.create :webcam_image, :project => @project, :date => Date::today + 1, :daily_image => true
       
       @image.update_attributes(:daily_image => true)
       

@@ -1,4 +1,4 @@
-Factory.define :video do |v|
+FactoryGirl.define :video do |v|
   v.name "Video Name"
   v.description "Video Description"
   v.width 800

@@ -1,4 +1,4 @@
-Factory.define :project do |p|
+FactoryGirl.define :project do |p|
   p.name "Project Name"
   p.short "Project Short Description"
   p.description "Project Description"

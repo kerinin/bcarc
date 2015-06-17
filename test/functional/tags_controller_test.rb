@@ -3,22 +3,22 @@ require File.dirname(__FILE__) + '/../test_helper'
 class TagsControllerTest < ActionController::TestCase
   context "Given data" do
     setup do
-      @tag1 = Factory :tag
-      @tag2 = Factory :tag
+      @tag1 = FactoryGirl.create :tag
+      @tag2 = FactoryGirl.create :tag
       
-      @project1 = Factory :project, :date_completed => 3.month.ago, :priority => 2
+      @project1 = FactoryGirl.create :project, :date_completed => 3.month.ago, :priority => 2
       @project1.tags << [@tag1, @tag2]
-      @project2 = Factory :project, :date_completed => 1.months.ago, :priority => 1
+      @project2 = FactoryGirl.create :project, :date_completed => 1.months.ago, :priority => 1
       @project2.tags << @tag1
-      @project3 = Factory :project, :date_completed => 2.months.ago, :priority => 3
+      @project3 = FactoryGirl.create :project, :date_completed => 2.months.ago, :priority => 3
       @project3.tags << @tag1
-      @project4 = Factory :project, :priority => 0
+      @project4 = FactoryGirl.create :project, :priority => 0
       @project4.tags << @tag2
-      @inactive_project = Factory :project
+      @inactive_project = FactoryGirl.create :project
 
-      @image1 = Factory :image, :project => @project1
-      @image2 = Factory :image, :project => @project2
-      @image3 = Factory :image, :project => @project3
+      @image1 = FactoryGirl.create :image, :project => @project1
+      @image2 = FactoryGirl.create :image, :project => @project2
+      @image3 = FactoryGirl.create :image, :project => @project3
     end
     
     teardown do

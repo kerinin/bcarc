@@ -3,8 +3,8 @@ require File.dirname(__FILE__) + '/../test_helper'
 class ImageTest < ActiveSupport::TestCase
   context "An image" do
     setup do
-      @image = Factory :image
-      @deleted_image = Factory :image
+      @image = FactoryGirl.create :image
+      @deleted_image = FactoryGirl.create :image
       @deleted_image.destroy
     end
 

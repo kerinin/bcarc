@@ -1,4 +1,4 @@
-Factory.define :image do |i|
+FactoryGirl.define :image do |i|
   i.name "Image Name"
   i.description "Image Description"
   #i.sync_flickr false

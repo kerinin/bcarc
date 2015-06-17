@@ -3,16 +3,16 @@ require File.dirname(__FILE__) + '/../test_helper'
 class ImagesControllerTest < ActionController::TestCase
   context "Given data" do
     setup do
-      @project = Factory :project
+      @project = FactoryGirl.create :project
       
-      @image1 = Factory :image, :project => @project, :position => 1
-      @image2 = Factory :image, :project => @project, :position => 2
-      @image3 = Factory :image, :project => @project, :position => 3
-      @deleted_image = Factory :image, :project => @project
+      @image1 = FactoryGirl.create :image, :project => @project, :position => 1
+      @image2 = FactoryGirl.create :image, :project => @project, :position => 2
+      @image3 = FactoryGirl.create :image, :project => @project, :position => 3
+      @deleted_image = FactoryGirl.create :image, :project => @project
       @deleted_image.destroy
       
-      @video1 = Factory :video, :project => @project
-      @video2 = Factory :video, :project => @project
+      @video1 = FactoryGirl.create :video, :project => @project
+      @video2 = FactoryGirl.create :video, :project => @project
       
       @project.thumbnail = @image1
       @project.save!

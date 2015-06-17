@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/../test_helper'
 class PageTest < ActiveSupport::TestCase
   context "A page" do
     setup do
-      @page = Factory :page, :name => 'Test Page', :content => 'Test Content'
+      @page = FactoryGirl.create :page, :name => 'Test Page', :content => 'Test Content'
     end
 
     teardown do
@@ -28,7 +28,7 @@ class PageTest < ActiveSupport::TestCase
   context "An i18n'd page" do
     setup do
       I18n.locale = 'en'
-      @page = Factory :page, :name => 'Test Page', :content => 'Test Content'
+      @page = FactoryGirl.create :page, :name => 'Test Page', :content => 'Test Content'
       I18n.locale = 'es'
       @page.content = 'Spanish Page'
       @page.save!

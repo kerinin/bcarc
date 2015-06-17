@@ -3,8 +3,8 @@ require File.dirname(__FILE__) + '/../test_helper'
 class VideoTest < ActiveSupport::TestCase
   context "A video" do
     setup do
-      @youtube_video = Factory :video, :uri => 'http://www.youtube.com/v/-w9yeGIqcLg'
-      @vimeo_video = Factory :video, :uri => 'http://vimeo.com/8063014'
+      @youtube_video = FactoryGirl.create :video, :uri => 'http://www.youtube.com/v/-w9yeGIqcLg'
+      @vimeo_video = FactoryGirl.create :video, :uri => 'http://vimeo.com/8063014'
     end
 
     teardown do
@@ -36,7 +36,7 @@ class VideoTest < ActiveSupport::TestCase
     
     should_eventually "raise error if video thumbnail not found" do
       assert_raise OpenURI::HTTPError do
-        Factory :video, :uri => 'http://vimeo.com/fail'
+        FactoryGirl.create :video, :uri => 'http://vimeo.com/fail'
       end
     end
   end

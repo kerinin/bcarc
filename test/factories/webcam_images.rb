@@ -1,4 +1,4 @@
-Factory.define :webcam_image do |i|
+FactoryGirl.define :webcam_image do |i|
   i.date DateTime.now
   i.project {|p| p.association(:project)}
   i.attachment File.new("#{Rails.root}/public/images/logo_01.jpg")

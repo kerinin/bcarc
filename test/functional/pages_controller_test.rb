@@ -4,10 +4,10 @@ class PagesControllerTest < ActionController::TestCase
   
   context "Given data" do
     setup do
-      @page1 = Factory :page, :name => 'Test Page'
-      @page2 = Factory :page, :name => 'Test Page2'
+      @page1 = FactoryGirl.create :page, :name => 'Test Page'
+      @page2 = FactoryGirl.create :page, :name => 'Test Page2'
       
-      @tag = Factory :tag
+      @tag = FactoryGirl.create :tag
     end
     
     teardown do

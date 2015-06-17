@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/../test_helper'
 class PlanTest < ActiveSupport::TestCase
   context "A plan" do
     setup do
-      @plan = Factory :plan
+      @plan = FactoryGirl.create :plan
     end
 
     teardown do

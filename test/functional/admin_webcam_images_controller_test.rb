@@ -3,11 +3,11 @@ require File.dirname(__FILE__) + '/../test_helper'
 class Admin::WebcamImagesControllerTest < ActionController::TestCase
   context "Given data" do
     setup do
-      @project = Factory :project, :has_webcam => true
-      @image = Factory :webcam_image, :project => @project
-      @image2 = Factory :webcam_image, :project => @project
-      @image3 = Factory :webcam_image, :project => @project
-      @image4 = Factory :webcam_image, :project => @project
+      @project = FactoryGirl.create :project, :has_webcam => true
+      @image = FactoryGirl.create :webcam_image, :project => @project
+      @image2 = FactoryGirl.create :webcam_image, :project => @project
+      @image3 = FactoryGirl.create :webcam_image, :project => @project
+      @image4 = FactoryGirl.create :webcam_image, :project => @project
     end
 
     context "on GET to :index" do

@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/../test_helper'
 class Admin::ProjectsControllerTest < ActionController::TestCase
   context "Given data" do
     setup do
-      @project = Factory :project
+      @project = FactoryGirl.create :project
     end
 
     teardown do

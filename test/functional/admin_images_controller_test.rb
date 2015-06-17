@@ -3,11 +3,11 @@ require File.dirname(__FILE__) + '/../test_helper'
 class Admin::ImagesControllerTest < ActionController::TestCase
   context "Given data" do
     setup do
-      @project = Factory :project
-      @image = Factory :image, :project => @project
-      @image2 = Factory :image, :project => @project
-      @image3 = Factory :image, :project => @project
-      @image4 = Factory :image, :project => @project
+      @project = FactoryGirl.create :project
+      @image = FactoryGirl.create :image, :project => @project
+      @image2 = FactoryGirl.create :image, :project => @project
+      @image3 = FactoryGirl.create :image, :project => @project
+      @image4 = FactoryGirl.create :image, :project => @project
     end
   
     context "on GET to :new from project" do
@@ -72,13 +72,13 @@ class Admin::ImagesControllerTest < ActionController::TestCase
 =begin
   context "Given data" do
     setup do
-      @project = Factory :project
+      @project = FactoryGirl.create :project
       
-      @image1 = Factory :image, :project => @project, :flickr_id => 4601892842
-      @image2 = Factory :image, :project => @project
+      @image1 = FactoryGirl.create :image, :project => @project, :flickr_id => 4601892842
+      @image2 = FactoryGirl.create :image, :project => @project
       
-      @video1 = Factory :video, :project => @project
-      @video2 = Factory :video, :project => @project
+      @video1 = FactoryGirl.create :video, :project => @project
+      @video2 = FactoryGirl.create :video, :project => @project
       
       @project.thumbnail = @image1
       @project.save!
