@@ -18,8 +18,9 @@ class Project < ActiveRecord::Base
   validates_presence_of :city, :if => Proc.new {|p| p.show_map}, :message => "City (at minimum) required to show map"
   
   #make_permalink :with => :name
-  extend FriendlyId
-  friendly_id :name, :use => :slugged
+  
+  # extend FriendlyId
+  # friendly_id :name, :use => :slugged
   
   translates :short, :description
   

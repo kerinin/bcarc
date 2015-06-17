@@ -1,8 +1,9 @@
 class Page < ActiveRecord::Base
   before_save :handle_legacy_permalink
   #make_permalink :with => :name
-  extend FriendlyId
-  friendly_id :name, :use => :slugged
+
+  # extend FriendlyId
+  # friendly_id :name, :use => :slugged
   
   acts_as_list
   
