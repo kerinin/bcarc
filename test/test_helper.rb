@@ -6,6 +6,7 @@ require 'rails/test_help'
 #require 'active_record'
 #require 'test/unit'
 #require 'logger'
+require 'factory_girl'
 
 ActiveRecord::Base.logger = Logger.new(STDERR)
 ActiveRecord::Base.logger.level = Logger::WARN
