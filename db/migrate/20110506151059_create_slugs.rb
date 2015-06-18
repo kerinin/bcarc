@@ -1,6 +1,6 @@
 class CreateSlugs < ActiveRecord::Migration
   def self.up
-    drop_table :slugs
+    # drop_table :slugs
     
     create_table :slugs do |t|
       t.string :name
