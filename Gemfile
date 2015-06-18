@@ -7,7 +7,6 @@ gem 'rails', '~> 3.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'sqlite3'
 
 gem "authlogic"
 gem "factory_girl_rails"
