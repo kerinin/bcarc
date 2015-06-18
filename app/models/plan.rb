@@ -16,8 +16,6 @@ class Plan < ActiveRecord::Base
   validates_attachment_presence :attachment, :unless => Proc.new {Rails.env == 'test'}
   validates_presence_of :name, :project_id
   
-  #translates :name
-  
   scope :by_position, lambda { order(:position) }
   #named_scope :by_position, :order => 'position'
   

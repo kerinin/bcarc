@@ -22,7 +22,7 @@ class Project < ActiveRecord::Base
   # extend FriendlyId
   # friendly_id :name, :use => :slugged
   
-  translates :short, :description
+  # translates :short, :description
   
   scope :active, lambda { where(:has_tags => true) }
   #named_scope :active, :conditions => { :has_tags => true }

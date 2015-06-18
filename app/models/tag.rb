@@ -13,8 +13,6 @@ class Tag < ActiveRecord::Base
   scope :by_name, lambda { order(:name) }
   #named_scope :by_name, :order => 'name'
   
-  #translates :name
-  
   private
   
   def save_permalink

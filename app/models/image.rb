@@ -28,8 +28,6 @@ class Image < ActiveRecord::Base
   #validates_presence_of :flickr_id, :if => Proc.new {|i| i.sync_flickr}
   validates_presence_of :project_id
   
-  #translates :name, :description
-  
   acts_as_list :scope => :project
   
   scope :active, lambda { where( {:deleted_at => nil} ) }
