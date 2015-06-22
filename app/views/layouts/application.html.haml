@@ -72,6 +72,7 @@
             - Page.all.each do |page|
               %li= link_to t( page.name.downcase ).downcase, page_path(page)
 
+            %li= link_to t('news').downcase, "https://www.facebook.com/pages/Bercy-Chen-Studio/350315618648"
       = flash[:notice]
 
       = yield
