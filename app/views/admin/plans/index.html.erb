@@ -29,4 +29,4 @@
   <%= f.submit 'Upload' %>
 <% end %>
 
-<%= sortable_element 'plan-list', :url => {:action => "sort", :id => @project}, :handle => :dragger, :only => :draggable, :complete => visual_effect(:highlight, "plan-list") %>
+<%= sortable_element 'plan-list', :url => {:action => "sort", :id => @project}, :handle => :dragger, :only => :draggable %>

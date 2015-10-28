@@ -33,4 +33,4 @@
   <%= f.submit 'Upload' %>
 <% end %>
 
-<%= sortable_element 'image-list', :url => { :action => "sort", :id => @project}, :handle => :dragger, :only => :draggable, :complete => visual_effect(:highlight, "image-list") %>
+<%= sortable_element 'image-list', :url => { :action => "sort", :id => @project}, :handle => :dragger, :only => :draggable %>
