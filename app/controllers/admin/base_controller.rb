@@ -9,7 +9,7 @@ class Admin::BaseController < InheritedResources::Base
   # filter_parameter_logging :password
   # 
   
-  before_filter :require_authentication
+  # before_filter :require_authentication
   before_filter :set_locale
   after_filter :expire_sitemap, :only => [:create, :update, :destroy]
   
