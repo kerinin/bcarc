@@ -29,7 +29,8 @@ test:
   timeout: 5000
 
 production:
-  adapter: pg
+  adapter: postgresql
+  encoding: unicode
   database: production
   username: pg
   password: password

@@ -6,7 +6,7 @@ Bcrails::Application.configure do
   # since you don't have to restart the webserver when you make code changes.
   config.cache_classes = false
 
-  config.serve_static_assets = true
+  config.serve_static_files = true
 
   # Log error messages when you accidentally call methods on nil.
   config.whiny_nils = true
@@ -23,5 +23,7 @@ Bcrails::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+
+  config.eager_load = false
 end
 

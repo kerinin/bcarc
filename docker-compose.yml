@@ -1,0 +1,18 @@
+postgres:
+  image: postgres
+  environment:
+    POSTGRES_USER: pg
+    POSTGRES_PASSWORD: password
+
+app:
+  build: .
+  links:
+    - postgres
+  volumes:
+    - .:/usr/src/app
+  ports:
+    "3000:3000"
+  environment:
+    RAILS_ENV: production
+    SESSION_SECRET: sekret
+

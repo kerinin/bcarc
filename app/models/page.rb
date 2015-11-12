@@ -7,9 +7,9 @@ class Page < ActiveRecord::Base
   
   acts_as_list
   
-  # translates :content
+  translates :content
   
-  default_scope :order => 'position ASC'
+  default_scope { where(:order => 'position ASC') }
   
   validates_presence_of :name
   

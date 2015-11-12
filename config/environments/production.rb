@@ -19,7 +19,7 @@ Bcrails::Application.configure do
   # just comment this out and Rails will serve the files
 
   # See everything in the log (default is :info)
-  # config.log_level = :debug
+  config.log_level = :info
 
   # Use a different logger for distributed setups
   # config.logger = SyslogLogger.new
@@ -29,7 +29,7 @@ Bcrails::Application.configure do
 
   # Disable Rails's static asset server
   # In production, Apache or nginx will already do this
-  config.serve_static_assets = true
+  config.serve_static_files = true
 
   # Enable serving of images, stylesheets, and javascripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"
@@ -50,4 +50,6 @@ Bcrails::Application.configure do
   # Memcached
   #config.cache_store = :mem_cache_store, Memcached::Rails.new
   #config.cache_store = :dalli_store
+
+  config.eager_load = true
 end
