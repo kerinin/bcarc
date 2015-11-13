@@ -62,7 +62,7 @@ module Bcrails
       config.email_filter = /bcarc\.com$/
       config.auth_url = "/auth/open_id?openid_url=www.google.com/accounts/o8/id"
       config.failure_message = "Authentication failed - did you use your '@bcarc.com' email?"
-      config.public_path_regexes = [/^(?!admin).*/]
+      config.public_path_regexes = [/^(?!\/admin).*/]
     end
   end
 end
