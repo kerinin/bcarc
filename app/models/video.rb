@@ -34,7 +34,9 @@ class Video < ActiveRecord::Base
   
   acts_as_list :scope => :project
   
-  scope :by_position, lambda { order(:position) }
+  def self.by_position
+    order(:position)
+  end
   #named_scope :by_position, :order => 'position'
 
   def html_description

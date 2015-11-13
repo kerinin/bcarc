@@ -16,7 +16,9 @@ class Plan < ActiveRecord::Base
   validates_attachment_presence :attachment, :unless => Proc.new {Rails.env == 'test'}
   validates_presence_of :name, :project_id
   
-  scope :by_position, lambda { order(:position) }
+  def self.by_position
+    order(:position)
+  end
   #named_scope :by_position, :order => 'position'
   
   def upload_to_s3

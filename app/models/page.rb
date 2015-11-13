@@ -13,7 +13,9 @@ class Page < ActiveRecord::Base
   
   validates_presence_of :name
   
-  scope :by_position, lambda { order(:position) }
+  def self.by_position
+    order(:position)
+  end
   #named_scope :by_position, :order => 'position'
   
   def html_content

@@ -30,7 +30,9 @@ class Image < ActiveRecord::Base
   
   acts_as_list :scope => :project
   
-  scope :active, lambda { where( {:deleted_at => nil} ) }
+  def self.active
+    where( {:deleted_at => nil} )
+  end
   #named_scope :active, :conditions => { :deleted_at => nil }
   
   #after_save :push_data_to_flickr, :if => Proc.new {|i| i.sync_flickr }, :unless => Proc.new {|i| i.flickr_id.blank?}

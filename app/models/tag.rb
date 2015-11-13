@@ -10,7 +10,9 @@ class Tag < ActiveRecord::Base
   
   validates_presence_of :name
   
-  scope :by_name, lambda { order(:name) }
+  def self.by_name
+    order(:name)
+  end
   #named_scope :by_name, :order => 'name'
   
   private
