@@ -19,8 +19,7 @@ class Plan < ActiveRecord::Base
   def self.by_position
     order(:position)
   end
-  #named_scope :by_position, :order => 'position'
-  
+
   def upload_to_s3
     if self.attachment_file_size.nil?
       begin

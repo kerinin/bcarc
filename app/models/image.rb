@@ -33,7 +33,6 @@ class Image < ActiveRecord::Base
   def self.active
     where( {:deleted_at => nil} )
   end
-  #named_scope :active, :conditions => { :deleted_at => nil }
   
   #after_save :push_data_to_flickr, :if => Proc.new {|i| i.sync_flickr }, :unless => Proc.new {|i| i.flickr_id.blank?}
   

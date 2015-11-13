@@ -26,27 +26,22 @@ class Project < ActiveRecord::Base
   def self.active
     where(:has_tags => true)
   end
-  #named_scope :active, :conditions => { :has_tags => true }
 
   def self.by_priority
     order(:priority)
   end
-  #named_scope :by_priority, :order => 'priority'
 
   def self.by_date
     order(:completed_at)
   end
-  #named_scope :by_date, :order => 'completed_at'
 
   def self.by_name
     order(:name)
   end
-  #named_scope :by_name, :order => 'name'
 
   def self.to_map
     where(:show_map => true)
   end
-  #named_scope :to_map, :conditions => { :show_map => true }
   
   def kml?
     !( latitude.nil? || longitude.nil? )

@@ -9,14 +9,15 @@ class Page < ActiveRecord::Base
   
   translates :content
   
-  default_scope { where(:order => 'position ASC') }
-  
   validates_presence_of :name
   
+  def self.default_scope
+    order(:position)
+  end
+
   def self.by_position
     order(:position)
   end
-  #named_scope :by_position, :order => 'position'
   
   def html_content
     #Wikitext::Parser.new().parse( content.to_s )

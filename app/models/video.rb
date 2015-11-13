@@ -37,7 +37,6 @@ class Video < ActiveRecord::Base
   def self.by_position
     order(:position)
   end
-  #named_scope :by_position, :order => 'position'
 
   def html_description
     #Wikitext::Parser.new().parse( description.to_s )
