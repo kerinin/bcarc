@@ -26,6 +26,6 @@ class Admin::TagsController < Admin::BaseController
   end
   
   def collection
-    @tags = Tag.scoped
+    @tags = Tag
   end
 end

@@ -1,4 +1,6 @@
 class Tag < ActiveRecord::Base
+  attr_accessor :name
+
   has_and_belongs_to_many :projects
   
   before_save :handle_legacy_permalink

@@ -25,5 +25,7 @@ Bcrails::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 
   config.eager_load = false
+
+  config.log_level = :debug
 end
 

@@ -2,6 +2,9 @@ require 'rexml/document'
 require 'open-uri'
 
 class Video < ActiveRecord::Base
+  attr_accessor :name, :position, :description, :width, :height, :uri, :thumbnail_file_name,
+    :thumbnail_content_type, :thumbnail_file_size, :thumbnail_updated_at,
+    :project_id
   
   paperclip_params = YAML::load(File.open("#{Rails.root}/config/paperclip.yml"))[Rails.env.to_s]
   params = { :styles => { 

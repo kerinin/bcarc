@@ -1,4 +1,7 @@
 class Plan < ActiveRecord::Base
+  attr_accessor :name, :position, :attachment_file_name, :attachment_content_type,
+    :attachment_file_size, :attachment_updated_at, :project_id
+
   belongs_to :project
   
   has_many :images

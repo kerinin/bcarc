@@ -1,4 +1,6 @@
 class Page < ActiveRecord::Base
+  attr_accessor :name, :position, :content
+
   before_save :handle_legacy_permalink
   #make_permalink :with => :name
 
