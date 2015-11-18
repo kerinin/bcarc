@@ -1,20 +1,40 @@
 class Admin::PlansController < Admin::BaseController
-  belongs_to :project
-
   cache_sweeper :project_sweeper
 
+  def index
+    @project = Project.find(params[:project_id])
+    @plans = @project.plans
+  end
+
+  def get
+    @project = Project.find(params[:project_id])
+    @plan = @project.plans.find(params[:id])
+  end
+
+  def edit
+    @project = Project.find(params[:project_id])
+    @plan = @project.plans.find(params[:id])
+  end
+
   def create
-    create!{ edit_admin_project_plan_path(@project,@plan) }
+    @project = Project.find(params[:project_id])
+    @plan = @project.plans.new(plan_params)
+    @plan.save!
+    redirect_to edit_admin_project_plan_path(@project,@plan)
   end
 
   def update
-    update!{ edit_admin_project_plan_path(@project,@plan) }
+    @project = Project.find(params[:project_id])
+    @plan = @project.find(params[:id])
+    @plan.update!(plan_params)
+    redirect_to edit_admin_project_plan_path(@project,@plan)
   end
   
   def destroy
-    destroy! do |format|
-      format.html { redirect_to admin_project_plans_path(@project) }
-    end
+    @project = Project.find(params[:project_id])
+    @plan = @project.find(params[:id])
+    @plan.destroy!
+    redirect_to admin_project_plans_path(@project)
   end
   
   def sort
@@ -26,5 +46,14 @@ class Admin::PlansController < Admin::BaseController
     end
     
     render :nothing => true
+  end
+
+  private
+
+  def plan_params
+    params.require(:plan).permit(
+      :name, :position, :attachment_file_name, :attachment_content_type,
+      :attachment_file_size, :attachment_updated_at, :project_id
+    )
   end
 end

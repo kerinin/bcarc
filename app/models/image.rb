@@ -3,10 +3,6 @@ require 'yaml'
 class Image < ActiveRecord::Base
   include ActionView::Helpers::UrlHelper
   
-  attr_accessor :name, :position, :description, :plan_x, :plan_y, :locator_angle,
-    :sync_flickr, :flickr_id, :attachment_file_name, :attachment_content_type,
-    :attachment_file_size, :attachment_updated_at, :plan_id, :project_id, :deleted_at
-
   #attr_accessor :flickr
   
   paperclip_params = YAML::load(File.open("#{Rails.root}/config/paperclip.yml"))[Rails.env.to_s]

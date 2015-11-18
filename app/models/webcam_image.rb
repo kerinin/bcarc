@@ -3,9 +3,6 @@ require 'yaml'
 class WebcamImage < ActiveRecord::Base
   include ActionView::Helpers::UrlHelper
 
-  attr_accessor :date, :source_url, :attachment_file_name, :attachment_content_type,
-    :attachment_file_size, :attachment_updated_at, :project_id, :daily_image
-  
   paperclip_params = YAML::load(File.open("#{Rails.root}/config/paperclip.yml"))[Rails.env.to_s]
   params = { :styles => { 
       :thumb => '55x40#', 

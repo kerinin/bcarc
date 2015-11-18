@@ -1,21 +1,41 @@
 class Admin::VideosController < Admin::BaseController
   
-  belongs_to :project
-  
   cache_sweeper :project_sweeper
     
+  def index
+    @project = Project.find(params[:project_id])
+    @videos = @project.videos
+  end
+
+  def get
+    @project = Project.find(params[:project_id])
+    @video = @project.videos.find(params[:id])
+  end
+
+  def edit
+    @project = Project.find(params[:project_id])
+    @video = @project.videos.find(params[:id])
+  end
+
   def create
-    create!{ edit_admin_project_video_path(@project,@video) }
+    @project = Project.find(params[:project_id])
+    @video = @project.videos.new(video_params)
+    @video.save!
+    redirect_to edit_admin_project_video_path(@project,@video)
   end
 
   def update
-    update!{ edit_admin_project_video_path(@project,@video) }
+    @project = Project.find(params[:project_id])
+    @video = @project.videos.find(params[:id])
+    @video.update!(video_params)
+    redirect_to edit_admin_project_video_path(@project,@video)
   end
   
   def destroy
-    destroy! do |format|
-      format.html { redirect_to admin_project_videos_path(@project) }
-    end
+    @project = Project.find(params[:project_id])
+    @video = @project.videos.find(params[:id])
+    @video.destroy!
+    redirect_to admin_project_videos_path(@project)
   end
   
   def sort
@@ -27,5 +47,15 @@ class Admin::VideosController < Admin::BaseController
     end
     
     render :nothing => true
+  end
+
+  private
+
+  def video_params
+    params.require(:video).permit(
+      :name, :position, :description, :width, :height, :uri, :thumbnail_file_name,
+      :thumbnail_content_type, :thumbnail_file_size, :thumbnail_updated_at,
+      :project_id
+    )
   end
 end

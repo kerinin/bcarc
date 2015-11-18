@@ -1,18 +1,34 @@
 class Admin::PagesController < Admin::BaseController
   cache_sweeper :page_sweeper
   
+  def index
+    @pages = Page.all
+  end
+
+  def get
+    @page = Page.find(params[:id])
+  end
+
+  def edit
+    @page = Page.find(params[:id])
+  end
+
   def create
-    create!{ edit_admin_page_path(@page) }
+    @page = Page.new(page_params)
+    @page.save!
+    redirect_to edit_admin_page_path(@page)
   end
 
   def update
-    update!{ edit_admin_page_path(@page) }
+    @page = Page.find(params[:id])
+    @page.update!(page_params)
+    redirect_to edit_admin_page_path(@page)
   end
   
   def destroy
-    destroy! do |format|
-      format.html { redirect_to admin_pages_path }
-    end
+    @page = Page.find(params[:id])
+    @page.destroy!
+    redirect_to admin_pages_path
   end
   
   def sort
@@ -21,5 +37,13 @@ class Admin::PagesController < Admin::BaseController
 
       i.save
     end
+  end
+
+  private
+
+  def page_params
+    params.require(:page).permit(
+      :name, :position, :content
+    )
   end
 end

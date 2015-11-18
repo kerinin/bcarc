@@ -3,29 +3,60 @@ class Admin::WebcamImagesController < Admin::BaseController
   #after_filter :expire_thumbnails, :only => [:create, :update, :destroy]
   #after_filter :expire_tags, :only => [:create, :update, :destroy]
   
-  belongs_to :project
-
   #cache_sweeper :project_sweeper, :tag_sweeper
   
+  def index
+    @project = Project.find(params[:project_id])
+    @webcam_images = @project.webcam_images.paginate(page: params[:page], per_page: 200)
+  end
+
+  def get
+    @project = Project.find(params[:project_id])
+    @webcam_image = @project.webcam_images.find(params[:id])
+  end
+
+  def edit
+    @project = Project.find(params[:project_id])
+    @webcam_image = @project.webcam_images.find(params[:id])
+  end
+
   def create
-    create!{ edit_admin_project_webcam_image_path(@project,@webcam_image) }
+    @project = Project.find(params[:project_id])
+    @webcam_image = @project.webcam_images.new(webcam_image_params)
+    @webcam_image.save!
+    redirect_to edit_admin_project_webcam_image_path(@project,@webcam_image)
   end
 
   def update
-    update!{ params[:redirect_to].nil? ? edit_admin_project_webcam_image_path(@project,@webcam_image) : params[:redirect_to] }
+    @project = Project.find(params[:project_id])
+    @webcam_image = @project.webcam_images.find(params[:id])
+    @webcam_image.update!(webcam_image_params)
+
+    if params[:redirect_to].nil?
+      redirect_to edit_admin_project_webcam_image_path(@project,@webcam_image)
+    else 
+      redirect_to params[:redirect_to]
+    end
   end
   
   def destroy
-    destroy! do |format|
+    @project = Project.find(params[:project_id])
+    @webcam_image = @project.webcam_images.find(params[:id])
+    @webcam_image.destroy!
+
+    respond_to do |format|
       format.html { redirect_to admin_project_webcam_images_path(@project) }
       format.js { render :nothing => true}
     end
   end
   
   private 
-  
-  def collection
-    get_collection_ivar || set_collection_ivar(end_of_association_chain.paginate(:page => params[:page], :per_page => 200))
+
+  def webcam_image_params
+    params.require(:webcam_image).permit(
+      :date, :source_url, :attachment_file_name, :attachment_content_type,
+      :attachment_file_size, :attachment_updated_at, :project_id, :daily_image
+    )
   end
   
   def expire_show

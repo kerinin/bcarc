@@ -3,22 +3,42 @@ class Admin::ImagesController < Admin::BaseController
   after_filter :expire_thumbnails, :only => [:create, :update, :destroy]
   after_filter :expire_tags, :only => [:create, :update, :destroy]
   
-  belongs_to :project
-
   cache_sweeper :project_sweeper, :tag_sweeper
       
+  def index
+    @project = Project.find(params[:project_id])
+    @images = @project.images
+  end
+
+  def get
+    @project = Project.find(params[:project_id])
+    @image = @project.images.find(params[:id])
+  end
+
+  def edit
+    @project = Project.find(params[:project_id])
+    @image = @project.images.find(params[:id])
+  end
+
   def create
-    create!{ edit_admin_project_image_path(@project,@image) }
+    @project = Project.find(params[:project_id])
+    @image = @project.images.new(image_params)
+    @image.save!
+    redirect_to edit_admin_project_image_path(@project,@image)
   end
 
   def update
-    update!{ edit_admin_project_image_path(@project,@image) }
+    @project = Project.find(params[:project_id])
+    @image = @project.images.find(params[:id])
+    @image.update!(image_params)
+    redirect_to edit_admin_project_image_path(@project,@image)
   end
   
   def destroy
-    destroy! do |format|
-      format.html { redirect_to admin_project_images_path(@project) }
-    end
+    @project = Project.find(params[:project_id])
+    @image = @project.images.find(params[:id])
+    @image.destroy!
+    redirect_to admin_project_images_path(@project)
   end
   
   def sort
@@ -33,6 +53,14 @@ class Admin::ImagesController < Admin::BaseController
   end
   
   private 
+
+  def image_params
+    params.require(:image).permit(
+      :name, :position, :description, :plan_x, :plan_y, :locator_angle,
+      :sync_flickr, :flickr_id, :attachment_file_name, :attachment_content_type,
+      :attachment_file_size, :attachment_updated_at, :plan_id, :project_id, :deleted_at
+    )
+  end
     
   #def pull_flickr
   #  load_object         # From R_C

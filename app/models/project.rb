@@ -1,9 +1,4 @@
 class Project < ActiveRecord::Base  
-  attr_accessor :name, :short, :date_completed, :description, :priority, :thumbnail_id,
-    :latitude, :longitude, :address, :city, :state, :keywords, :show_map, :map_accuracy,
-    :flickr_id, :has_tags, :has_webcam, :webcam_current_url, :webcam_ftp_dir, 
-    :webcam_file_prefix
-
   has_many :images, 
     :dependent => :destroy,
     :after_add => [ :set_default_thumbnail, Proc.new {|p,i| p.thumbnail.blank?} ]
