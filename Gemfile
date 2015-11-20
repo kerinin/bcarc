@@ -16,7 +16,7 @@ gem "shoulda"
 gem "acts_as_markup", '~> 2.0'
 #gem "right_aws"
 # gem "aws-s3"
-gem "aws-sdk"
+gem "aws-sdk-v1"
 gem "acts_as_list"
 gem "RedCloth"
 #gem "memcached-northscale"

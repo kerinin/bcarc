@@ -12,6 +12,7 @@ class Plan < ActiveRecord::Base
     }
     
   has_attached_file :attachment, ( paperclip_params ? params.merge(paperclip_params) : params )
+  validates_attachment_content_type :attachment, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   
   validates_attachment_presence :attachment, :unless => Proc.new {Rails.env == 'test'}
   validates_presence_of :name, :project_id

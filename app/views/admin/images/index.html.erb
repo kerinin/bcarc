@@ -2,7 +2,7 @@
 
 <%= render :partial => 'admin/shared/project_header' %>
 
-<% form_for [:admin, @project] do |f| %>
+<%= form_for [:admin, @project] do |f| %>
   <%= hidden_field_tag :return_to, admin_project_images_path(@project) %>
   
   <ul id="image-list" style="display:table;">
@@ -28,7 +28,7 @@
 <br />
 
 <p>Upload New Image</p>
-<% form_for [:admin,@project,Image.new], :html => { :multipart => true } do |f| %>
+<%= form_for [:admin,@project,Image.new], :html => { :multipart => true } do |f| %>
   <%= f.file_field :attachment %>
   <%= f.submit 'Upload' %>
 <% end %>

@@ -2,7 +2,7 @@
 
 <%= render :partial => 'admin/shared/project_header' %>
 
-<% form_for([:admin, @project, @webcam_image]) do |f| %>
+<%= form_for([:admin, @project, @webcam_image]) do |f| %>
   <%= f.error_messages %>
   
   <%= render :partial => 'admin/shared/languages' %>

@@ -10,7 +10,7 @@
   <%= link_to "Next Image", edit_admin_project_image_path(@project, @image.lower_item) %>
 <% end %>
 
-<% form_for([:admin, @project, @image]) do |f| %>
+<%= form_for([:admin, @project, @image]) do |f| %>
   <%= f.error_messages %>
   
   <%= render :partial => 'admin/shared/languages' %>

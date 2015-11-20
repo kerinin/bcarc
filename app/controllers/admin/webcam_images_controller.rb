@@ -10,9 +10,9 @@ class Admin::WebcamImagesController < Admin::BaseController
     @webcam_images = @project.webcam_images.paginate(page: params[:page], per_page: 200)
   end
 
-  def get
+  def new
     @project = Project.find(params[:project_id])
-    @webcam_image = @project.webcam_images.find(params[:id])
+    @webcam_image = @project.webcam_images.build
   end
 
   def edit
@@ -54,8 +54,7 @@ class Admin::WebcamImagesController < Admin::BaseController
 
   def webcam_image_params
     params.require(:webcam_image).permit(
-      :date, :source_url, :attachment_file_name, :attachment_content_type,
-      :attachment_file_size, :attachment_updated_at, :project_id, :daily_image
+      :date, :source_url, :attachment, :project_id, :daily_image
     )
   end
   

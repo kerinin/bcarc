@@ -7,8 +7,8 @@ class Admin::TagsController < Admin::BaseController
     @tags = Tag.all
   end
 
-  def get
-    @tag = Tag.find(params[:id])
+  def new
+    @tag = Tag.new
   end
 
   def edit

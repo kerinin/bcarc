@@ -14,6 +14,7 @@ class WebcamImage < ActiveRecord::Base
     }
     
   has_attached_file :attachment, ( paperclip_params ? params.merge(paperclip_params) : params )
+  validates_attachment_content_type :attachment, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
                       
   belongs_to :project
   

@@ -57,12 +57,9 @@ GEM
       activesupport (>= 3.2)
       request_store (~> 1.0)
       scrypt (>= 1.2, < 3.0)
-    aws-sdk (2.1.36)
-      aws-sdk-resources (= 2.1.36)
-    aws-sdk-core (2.1.36)
-      jmespath (~> 1.0)
-    aws-sdk-resources (2.1.36)
-      aws-sdk-core (= 2.1.36)
+    aws-sdk-v1 (1.66.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
     builder (3.2.2)
     chunky_png (1.3.5)
     climate_control (0.0.3)
@@ -132,7 +129,6 @@ GEM
       has_scope (~> 0.6.0.rc)
       railties (>= 3.2, < 5)
       responders
-    jmespath (1.1.3)
     jquery-rails (4.0.5)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -145,7 +141,7 @@ GEM
     mime-types (2.6.2)
     mimemagic (0.3.0)
     mini_portile (0.6.2)
-    minitest (5.8.2)
+    minitest (5.8.3)
     multi_json (1.11.2)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
@@ -155,15 +151,13 @@ GEM
     omniauth-openid (1.0.1)
       omniauth (~> 1.0)
       rack-openid (~> 1.3.1)
-    paperclip (4.3.1)
+    paperclip (4.3.2)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
     pg (0.18.3)
-    protected_attributes (1.1.3)
-      activemodel (>= 4.0.1, < 5.0)
     rack (1.6.4)
     rack-federated-auth (0.3.0)
       omniauth
@@ -281,7 +275,7 @@ DEPENDENCIES
   acts_as_list
   acts_as_markup (~> 2.0)
   authlogic
-  aws-sdk
+  aws-sdk-v1
   compass-rails
   dalli
   dynamic_form
@@ -297,7 +291,6 @@ DEPENDENCIES
   omniauth-openid
   paperclip
   pg
-  protected_attributes
   rack-federated-auth
   rails (~> 4.2)
   rails-observers

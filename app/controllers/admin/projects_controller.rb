@@ -9,8 +9,8 @@ class Admin::ProjectsController < Admin::BaseController
     @projects = Project.all
   end
 
-  def get
-    @project = Project.find(params[:id])
+  def new
+    @project = Project.new
   end
 
   def edit

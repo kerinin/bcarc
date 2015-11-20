@@ -6,9 +6,9 @@ class Admin::PlansController < Admin::BaseController
     @plans = @project.plans
   end
 
-  def get
+  def new
     @project = Project.find(params[:project_id])
-    @plan = @project.plans.find(params[:id])
+    @plan = @project.plans.build
   end
 
   def edit
@@ -52,8 +52,7 @@ class Admin::PlansController < Admin::BaseController
 
   def plan_params
     params.require(:plan).permit(
-      :name, :position, :attachment_file_name, :attachment_content_type,
-      :attachment_file_size, :attachment_updated_at, :project_id
+      :name, :position, :attachment, :project_id
     )
   end
 end

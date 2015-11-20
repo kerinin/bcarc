@@ -7,9 +7,9 @@ class Admin::VideosController < Admin::BaseController
     @videos = @project.videos
   end
 
-  def get
+  def new
     @project = Project.find(params[:project_id])
-    @video = @project.videos.find(params[:id])
+    @video = @project.videos.build
   end
 
   def edit
@@ -53,9 +53,7 @@ class Admin::VideosController < Admin::BaseController
 
   def video_params
     params.require(:video).permit(
-      :name, :position, :description, :width, :height, :uri, :thumbnail_file_name,
-      :thumbnail_content_type, :thumbnail_file_size, :thumbnail_updated_at,
-      :project_id
+      :name, :position, :description, :width, :height, :uri, :thumbnail, :project_id
     )
   end
 end

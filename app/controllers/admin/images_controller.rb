@@ -10,9 +10,9 @@ class Admin::ImagesController < Admin::BaseController
     @images = @project.images
   end
 
-  def get
+  def new
     @project = Project.find(params[:project_id])
-    @image = @project.images.find(params[:id])
+    @image = @project.images.build
   end
 
   def edit
@@ -57,8 +57,7 @@ class Admin::ImagesController < Admin::BaseController
   def image_params
     params.require(:image).permit(
       :name, :position, :description, :plan_x, :plan_y, :locator_angle,
-      :sync_flickr, :flickr_id, :attachment_file_name, :attachment_content_type,
-      :attachment_file_size, :attachment_updated_at, :plan_id, :project_id, :deleted_at
+      :sync_flickr, :flickr_id, :attachment, :plan_id, :project_id, :deleted_at
     )
   end
     

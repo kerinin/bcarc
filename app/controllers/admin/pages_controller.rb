@@ -5,8 +5,8 @@ class Admin::PagesController < Admin::BaseController
     @pages = Page.all
   end
 
-  def get
-    @page = Page.find(params[:id])
+  def new
+    @page = Page.new
   end
 
   def edit
