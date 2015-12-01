@@ -65,4 +65,11 @@ Bcrails::Application.configure do
     config.failure_message = "Authentication failed - did you use your '@bcarc.com' email?"
     config.public_path_regexes = [/^(?!\/admin).*/]
   end
+
+
+  config.assets.compress = true
+
+  config.assets.compile = true
+
+  config.assets.digest = true
 end
