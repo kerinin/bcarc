@@ -70,5 +70,5 @@ Bcrails::Application.configure do
   config.assets.compress = true
   config.assets.compile = true
   config.assets.digest = true
-  config.assets.version = '1.0'
+  config.assets.version = '1.1'
 end
