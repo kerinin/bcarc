@@ -53,19 +53,18 @@ Bcrails::Application.configure do
 
   config.eager_load = true
 
-  config.middleware.insert_before(ActionDispatch::Static, Rack::Session::Cookie, :secret => ENV['SESSION_SECRET'])
-
-  config.middleware.insert_after(Rack::Session::Cookie, OmniAuth::Builder) do
-    provider :open_id, :store => OpenID::Store::Filesystem.new('/tmp')
-  end
-
-  config.middleware.insert_after(OmniAuth::Builder, RackFederatedAuth::Authentication) do |config|
-    config.email_filter = /bcarc\.com$/
-    config.auth_url = "/auth/open_id?openid_url=www.google.com/accounts/o8/id"
-    config.failure_message = "Authentication failed - did you use your '@bcarc.com' email?"
-    config.public_path_regexes = [/^(?!\/admin).*/]
-  end
-
+  # config.middleware.insert_before(ActionDispatch::Static, Rack::Session::Cookie, :secret => ENV['SESSION_SECRET'])
+  #
+  # config.middleware.insert_after(Rack::Session::Cookie, OmniAuth::Builder) do
+  #   provider :open_id, :store => OpenID::Store::Filesystem.new('/tmp')
+  # end
+  #
+  # config.middleware.insert_after(OmniAuth::Builder, RackFederatedAuth::Authentication) do |config|
+  #   config.email_filter = /bcarc\.com$/
+  #   config.auth_url = "/auth/open_id?openid_url=www.google.com/accounts/o8/id"
+  #   config.failure_message = "Authentication failed - did you use your '@bcarc.com' email?"
+  #   config.public_path_regexes = [/^(?!\/admin).*/]
+  # end
 
   config.assets.compress = true
   config.assets.compile = true
