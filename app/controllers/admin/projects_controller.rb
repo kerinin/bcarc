@@ -42,7 +42,8 @@ class Admin::ProjectsController < Admin::BaseController
       :name, :short, :date_completed, :description, :priority, :thumbnail_id,
       :latitude, :longitude, :address, :city, :state, :keywords, :show_map, :map_accuracy,
       :flickr_id, :has_tags, :has_webcam, :webcam_current_url, :webcam_ftp_dir, 
-      :webcam_file_prefix
+      :webcam_file_prefix,
+      tag_ids: []
     )
   end
 
