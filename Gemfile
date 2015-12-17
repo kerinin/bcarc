@@ -49,4 +49,6 @@ gem 'rspec-rails'
 gem 'puma'
 gem 'rails_12factor', group: :production
 
+gem 'jquery-ui-rails'
+
 ruby "2.2.2"
