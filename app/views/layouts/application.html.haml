@@ -70,7 +70,7 @@
           %ul.nav_right
             %li= link_to t('work').downcase, projects_path
             - Page.all.each do |page|
-              %li= link_to t( page.name.downcase ).downcase, page_path(page)
+              %li= link_to t( page.name.downcase ).downcase.html_safe, page_path(page)
 
             %li= link_to t('news').downcase, "https://www.facebook.com/pages/Bercy-Chen-Studio/350315618648"
             %li= link_to t('blog').downcase, "http://blog.bcarc.com"

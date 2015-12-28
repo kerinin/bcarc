@@ -10,7 +10,7 @@
   <% unless @project.plans.empty? %>
   	<li style="float:left;"> <%= t('floor_plans').downcase %> ></li>
   	<% @project.plans.each do |plan| %>
-  	  <li><%= link_to plan.name.downcase, project_plan_path(@project, plan), :class => (plan == @plan ? 'plan_link current_view' : 'plan_link') %></li>
+  	  <li><%= link_to plan.name.downcase.html_safe, project_plan_path(@project, plan), :class => (plan == @plan ? 'plan_link current_view' : 'plan_link') %></li>
     <% end %>
   <% end %>
 </ul>
