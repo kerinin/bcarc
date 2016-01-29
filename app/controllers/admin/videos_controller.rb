@@ -41,7 +41,7 @@ class Admin::VideosController < Admin::BaseController
   def sort
     @project = Project.find(params[:project_id])
     @project.videos.each do |i|
-      i.position = params["video-list"].index(i.id.to_s)+1
+      i.position = params["list-items"].index(i.id.to_s)+1
 
       i.save
     end

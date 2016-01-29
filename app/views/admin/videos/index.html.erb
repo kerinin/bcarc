@@ -4,14 +4,14 @@
 
 <%= form_for [:admin, @project] do |f| %>
 
-  <ul id="video-list" style="display:table;">
+  <ul id="video-list" style="display:table;" class="sortable" data-action="<%= sort_admin_project_videos_path(@project) %>">
     <li style="display:table-row;">
       <th>Thumb</th>
       <th>Name</th>
     </li>
 
   <% @videos.by_position.each do |video| %>
-    <li id="item_<%= video.id %>" style="display:table-row", class="draggable">
+    <li data-item-id="<%= video.id %>" id="item_<%= video.id %>" style="display:table-row", class="draggable">
       <span style="display:table-cell;" class="dragger"><%= image_tag video.thumbnail.url(:thumb) %></span>
       <span style="display:table-cell;" class="dragger"><%=h video.name %></span>
       <span style="display:table-cell;"><%= link_to 'Show', project_video_path(@project, video) %></span>

@@ -33,7 +33,7 @@ class Admin::PagesController < Admin::BaseController
   
   def sort
     Page.all.each do |i|
-      i.position = params["page-list"].index(i.id.to_s)+1
+      i.position = params["list-items"].index(i.id.to_s)+1
 
       i.save
     end

@@ -40,7 +40,7 @@ class Admin::PlansController < Admin::BaseController
   def sort
     @project = Project.find(params[:project_id])
     @project.plans.each do |p|
-      p.position = params["plan-list"].index(p.id.to_s)+1
+      p.position = params["list-items"].index(p.id.to_s)+1
 
       p.save
     end

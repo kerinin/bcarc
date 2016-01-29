@@ -15,7 +15,7 @@ class Plan < ActiveRecord::Base
   validates_attachment_content_type :attachment, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   
   validates_attachment_presence :attachment, :unless => Proc.new {Rails.env == 'test'}
-  validates_presence_of :name, :project_id
+  validates_presence_of :project_id
   
   def self.by_position
     order(:position)

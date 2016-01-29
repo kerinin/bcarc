@@ -2,13 +2,13 @@
 
 <%= link_to 'New page', new_admin_page_path %>
 
-<ul id="page-list" style="display:table;">
+<ul id="page-list" style="display:table;" class="sortable" data-action="<%= sort_admin_pages_path %>">
   <li style="display:table-row;">
     <span style="display:table-cell;">Name</span>
   </li>
 
 <% @pages.by_position.each do |page| %>
-  <li id="item_<%= page.id %>" style="display:table-row", class="draggable">
+  <li data-item-id="<%= page.id %>" id="item_<%= page.id %>" style="display:table-row", class="draggable">
     <span style="display:table-cell;cursor:move;" class="dragger"><%=h page.name %></span>
     <span style="display:table-cell;"><%= link_to 'Show', page %></span>
     <span style="display:table-cell;"><%= link_to 'Edit', edit_admin_page_path(page) %></span>

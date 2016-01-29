@@ -5,7 +5,7 @@
 <%= form_for [:admin, @project] do |f| %>
   <%= hidden_field_tag :return_to, admin_project_images_path(@project) %>
   
-  <ul id="image-list" style="display:table;" class="sortable">
+  <ul id="image-list" style="display:table;" class="sortable" data-action="<%= sort_admin_project_images_path(@project) %>">
     <li style="display:table-row;">
       <span style="display:table-cell;">Image</span>
       <span style="display:table-cell;">Name</span>

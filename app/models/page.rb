@@ -1,4 +1,6 @@
 class Page < ActiveRecord::Base
+  default_scope { order(:position) }
+
   before_save :handle_legacy_permalink
   #make_permalink :with => :name
 

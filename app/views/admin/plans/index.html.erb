@@ -3,14 +3,14 @@
 <%= render :partial => 'admin/shared/project_header' %>
 
 <%= form_for [:admin, @project] do |f| %>
-  <ul id="plan-list" style="display:table;">
+  <ul id="plan-list" style="display:table;" class="sortable" data-action="<%= sort_admin_project_plans_path(@project) %>">
     <li style="display:table-row;">
       <span style="display:table-cell;">Thumbnail</span>
       <span style="display:table-cell;">Name</span>
     </li>
 
   <% @plans.by_position.each do |plan| %>
-    <li id="item_<%= plan.id %>" style="display:table-row", class="draggable">
+    <li data-item-id="<%= plan.id %>" id="item_<%= plan.id %>" style="display:table-row", class="draggable">
       <span style="display:table-cell;" class="dragger"><%= image_tag plan.attachment.url(:thumb) %></span>
       <span style="display:table-cell;" class="dragger"><%=h plan.name %></span>
       <span style="display:table-cell;"><%= link_to 'Show', project_plan_path(@project, plan) %></span>

@@ -25,18 +25,15 @@ $( document ).ready(function() {
             new_order.push(item_id);
           });
 
-
-          // TODO: Figure out how to send `new_order` to the server...
-          // item_id = ui.item.data('item-id');
-          // position = ui.item.index();
-          // $.ajax({
-          //     "type": 'POST',
-          //     "url": '/things/update_row_order',
-          //     "dataType": 'json',
-          //     "data": {
-          //       "image-list": new_order
-          //     }
-          // })
+          action = ui.item.parent().data('action');
+          $.ajax({
+              "type": 'POST',
+              "url": action,
+              "dataType": 'json',
+              "data": {
+                "list-items": new_order
+              }
+          })
         }
     });
   }

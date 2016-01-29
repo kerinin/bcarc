@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base  
-  has_many :images, 
+  has_many :images, -> { order(:position) },
     :dependent => :destroy,
     :after_add => [ :set_default_thumbnail, Proc.new {|p,i| p.thumbnail.blank?} ]
   has_many :videos, -> { order(:position) }, :dependent => :destroy 
